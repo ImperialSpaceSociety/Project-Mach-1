@@ -22,22 +22,22 @@ The following is intended to provide a view for the casual browser of the projec
 
 The repository describes the four electronic Modules:
 
-* The **GCM - Ground control module** has these key roles:
+* The [GCM - Ground control module](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/GCM/README.md) has these key roles:
   * Ensure a safe launch by control of safety mechanisms and firing control
   * Ensure time synchronization of all electronic modules and launch procedures
   * Support successful recovery of rocket parts
-  * Recover flight data from the **Nose Cone Data Recording and Telemetry Module**
+  * Recover flight data from the **NAM - Nosecone Avionics Module**
 
-* The **NAM - Nosecone Avionics Module** has these key role:
+* The [NAM - Nosecone Avionics Module](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/NAM/README.md) has these key role:
   * Unambiguously capture flight data for subsequent analysis
   * Verify and prove performance record data ( Mach)
   * Support it's own successful recovery
 
-* The **SAM - Secondary Avionics Module** has this key roles:
+* The [SAM - Secondary Avionics Module](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/SAM/README.md) has this key roles:
   * Ensure successful ignition of the second stage rocket based on mission data and status
   * Ensure successful separation of the first stage rocket
 
-* The **PDM - Parachute Deployment Module** has these key roles:
+* The [PDM - Parachute Deployment Module](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/PDM/README.md) has these key roles:
   * To trigger the deployment of the main parachute to ensure safety
   * To trigger the deployment of the main parachute to aid recovery
 
