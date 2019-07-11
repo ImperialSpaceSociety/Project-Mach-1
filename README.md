@@ -4,10 +4,11 @@ This repository contains information to support the high powered rocketry projec
 ## Repository Structure
 The repository structure is based on the high level electronics modules:
 
-* Ground Station
-* Stage separation
-* Nose Cone data recording and telemetry
-* Parachute Deployment
+* [GCM - Ground control module](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/GCM/README.md)
+* [NAM - Nosecone Avionics Module](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/NAM/README.md)
+* [SAM - Secondary Avionics Module](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/SAM/README.md)
+* [PDM - Parachute Deployment Module](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/PDM/README.md)
+* [docs - Top Level Specfications and Documents](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/docs/README.md)
 
 Each Module description has the following structure:
 
