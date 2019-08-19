@@ -1,6 +1,5 @@
 # Project-Mach-1
-# **Fligh Computer**
-
+# **Flight Computer**
 
 ## Rocket flight computer requirements:
 * flexible for two stage or one stage rocket
