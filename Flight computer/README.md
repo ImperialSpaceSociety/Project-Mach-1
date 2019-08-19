@@ -15,6 +15,7 @@
 * Mosfet must be able to supply 1.2 amps for at least 10milliseconds. Bridge wire resistance is 1.2-1.8 Ohms
 * Small package of 18mm diameter by around 40mm long package to fit within the nose cone of the smallest model rockets
 * Must be able to run for at least 1 hour continueously
+* must be hand solderable. Perferably
 
 
 
