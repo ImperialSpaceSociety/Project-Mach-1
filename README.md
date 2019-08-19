@@ -4,9 +4,9 @@ This repository contains information to support the high powered rocketry projec
 ## Repository Structure
 The repository structure is based on the high level electronics modules:
 
-* [Ground control module](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/GCM/README.md)
-* [Flight Computer](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/NAM/README.md)
-* [Parachute deployer](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/PDM/README.md)
+* [Ground control module](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/Ground%20Control%20module/README.md)
+* [Flight Computer](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/Flight%20computer/README.md)
+* [Parachute deployer](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/Parachute%20deployer/README.md)
 * [docs - Top Level Specfications and Documents](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/docs/README.md)
 
 Each Module description has the following structure:
@@ -22,19 +22,19 @@ The following is intended to provide a view for the casual browser of the projec
 
 The repository describes the four electronic Modules:
 
-* The [Ground control module](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/GCM/README.md) has these key roles:
+* The [Ground control module](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/Ground%20Control%20module/README.md) has these key roles:
   * Ensure a safe launch by control of safety mechanisms and firing control
   * Ensure time synchronization of all electronic modules and launch procedures
   * Support successful recovery of rocket parts
   * Recover flight data from the **Flight Computer**
 
-* The [Flight Computer](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/NAM/README.md) has these key role:
+* The [Flight Computer](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/Flight%20computer/README.md) has these key role:
   * Unambiguously capture flight data for subsequent analysis
   * Verify and prove performance record data ( Mach)
   * Support it's own successful recovery
 
-* The [Parachute Deployer](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/PDM/README.md) has these key roles:
-  * To trigger the deployment of the main parachute to ensure safety
+* The [Parachute Deployer](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/Parachute%20deployer/README.md) has these key roles:
+  * To trigger the deployment of the main parachute when 300m above ground to ensure the rocket does not drift too far
   * To trigger the deployment of the main parachute to aid recovery
 
 
