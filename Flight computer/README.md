@@ -16,6 +16,13 @@
 * Small package of 18mm diameter by around 40mm long package to fit within the nose cone of the smallest model rockets
 * Must be able to run for at least 1 hour continueously
 * must be hand solderable. Perferably
+* 100Hz sample rate from sensors(except GPS)
+* must record data continueously for at least 3min
+* 14 parameters to record: *4 characters*:{accl_x, accl_y, accl_z, gyro_x, gyro_y, gyro_z, compass_x, compass_y, compass_z} + *6 characters:*{pressure}+ *3 characters:*{temperature}+ *7 characters*{Longitude, latitude}+*4 characters:*{altitude}
+Assuming ascii encoding, 504 bits per string for raw data. Including commas and carriage return, each reading is ~600 bits.
+* Total data storage required: 600bits * 60s * 100hz * 3min = 10.8 Mbits = 10800000 bits
+
+
 
 
 
@@ -27,3 +34,4 @@
 * 9dof acclerometer(not chosen)
 * 3.7v lipo(not chosen)
 * buck converter to bring battery voltage to 3.3V(not chosen)
+* [Winbond W74M64FVSSIQ/TUBE, SPI 64Mbit Flash Memory Chip, 8-Pin SOIC](https://uk.rs-online.com/web/p/flash-memory/1712242/)
