@@ -10,7 +10,7 @@
 * rocket to ground telemetry link
 * GPS for tracking and recovery
 * runs at 3.3V logic levels(CMOS)
-* 9 dof acclermoeter, gyroscope, compass
+* 9 dof acclermoeter, gyroscope, compass. Max accleration would be 20g
 * current sensing to see the amount of current going into fuses
 * Mosfet must be able to supply 1.2 amps for at least 10milliseconds. Bridge wire resistance is 1.2-1.8 Ohms
 * Small package of 18mm diameter by around 40mm long package to fit within the nose cone of the smallest model rockets
