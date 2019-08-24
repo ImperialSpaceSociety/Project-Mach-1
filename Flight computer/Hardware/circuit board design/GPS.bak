@@ -153,30 +153,6 @@ $EndComp
 Wire Wire Line
 	4900 2400 4900 2500
 $Comp
-L Device:R_Small R6
-U 1 1 5D5E3875
-P 5650 2150
-F 0 "R6" H 5709 2196 50  0000 L CNN
-F 1 "47k" H 5709 2105 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 5650 2150 50  0001 C CNN
-F 3 "~" H 5650 2150 50  0001 C CNN
-	1    5650 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR074
-U 1 1 5D5E418A
-P 5650 2350
-F 0 "#PWR074" H 5650 2100 50  0001 C CNN
-F 1 "GND" H 5655 2177 50  0000 C CNN
-F 2 "" H 5650 2350 50  0001 C CNN
-F 3 "" H 5650 2350 50  0001 C CNN
-	1    5650 2350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5650 2350 5650 2250
-$Comp
 L Device:L_Small L21
 U 1 1 5D61FE97
 P 2050 1900
@@ -212,8 +188,6 @@ Text HLabel 4200 4450 0    50   Input ~ 0
 GPS_NRES
 Wire Wire Line
 	3000 2050 3250 2050
-Wire Wire Line
-	5650 2050 5650 1900
 $Comp
 L ICSSPicoTracker2-rescue:Johanson1575-ICSSPicoTracker ANT1
 U 1 1 5D521711
@@ -238,8 +212,6 @@ Wire Wire Line
 	1900 1600 1900 1500
 Wire Wire Line
 	1900 1500 1800 1500
-Wire Wire Line
-	5650 1900 6800 1900
 Wire Wire Line
 	5450 3650 4200 3650
 $Comp
@@ -270,9 +242,6 @@ F 3 "" H 5850 3350 50  0001 C CNN
 	1    5850 3350
 	1    0    0    -1  
 $EndComp
-Connection ~ 5650 1900
-Wire Wire Line
-	3250 1900 5650 1900
 Wire Wire Line
 	3250 2050 3250 1900
 Wire Wire Line
@@ -336,8 +305,8 @@ F 3 "https://www.u-blox.com/sites/default/files/MAX-M8-FW3_DataSheet_%28UBX-1503
 	1    0    0    -1  
 $EndComp
 $Bitmap
-Pos 9650 3400
-Scale 1.000000
+Pos 9200 2900
+Scale 2.000000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 02 CC 00 00 01 56 08 02 00 00 00 F2 A6 5C 
 F5 00 00 00 03 73 42 49 54 08 08 08 DB E1 4F E0 00 00 00 09 70 48 59 73 00 00 12 5C 00 00 12 5C 
@@ -1300,6 +1269,22 @@ A8 5B 60 90 81 10 42 08 A1 6E 81 41 06 42 08 21 84 BA 05 06 19 08 21 84 10 EA 16
 82 
 EndData
 $EndBitmap
-Text Notes 8600 4150 0    50   ~ 0
+Text Notes 8500 4000 0    50   ~ 0
 Do we need the section that is already inside the MAX?\n
+Wire Wire Line
+	3250 1900 6800 1900
+Wire Notes Line
+	4200 1950 4200 2650
+Wire Notes Line
+	4200 2650 5250 2650
+Wire Notes Line
+	5250 2650 5250 1950
+Wire Notes Line
+	5250 1950 4200 1950
+Wire Notes Line
+	5000 1950 5000 1300
+Wire Notes Line
+	5000 1300 5300 1300
+Text Notes 4800 1250 0    50   ~ 0
+What are the capacitors and inductors for? they are not on the hardware integration manual\n
 $EndSCHEMATC

@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 4 6
 Title ""
 Date ""
 Rev ""
@@ -14,17 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L RF:Si4463 U3
-U 1 1 5D5CB5C3
-P 5900 3150
-F 0 "U3" H 5650 3850 50  0000 C CNN
-F 1 "Si4463" H 5650 3950 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm_ThermalVias" H 5900 4350 50  0001 C CNN
-F 3 "https://www.silabs.com/documents/public/data-sheets/Si4464-63-61-60.pdf" H 5600 3050 50  0001 C CNN
-	1    5900 3150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5900 3850 5900 4300
 $Comp
@@ -38,4 +27,122 @@ F 3 "" H 5900 4300 50  0001 C CNN
 	1    5900 4300
 	1    0    0    -1  
 $EndComp
+$Comp
+L Oscillator:IQXO-70 X1
+U 1 1 5D61BDEA
+P 3900 2000
+F 0 "X1" H 4244 2046 50  0000 L CNN
+F 1 "IQXO-70" H 4244 1955 50  0000 L CNN
+F 2 "Oscillator:Oscillator_SMD_IQD_IQXO70-4Pin_7.5x5.0mm" H 4575 1675 50  0001 C CNN
+F 3 "http://www.iqdfrequencyproducts.com/products/details/iqxo-70-11-30.pdf" H 3800 2000 50  0001 C CNN
+	1    3900 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2000 4850 2000
+Wire Wire Line
+	4850 2850 5500 2850
+$Comp
+L power:+3.3V #PWR015
+U 1 1 5D61DCA7
+P 3900 800
+F 0 "#PWR015" H 3900 650 50  0001 C CNN
+F 1 "+3.3V" H 3915 973 50  0000 C CNN
+F 2 "" H 3900 800 50  0001 C CNN
+F 3 "" H 3900 800 50  0001 C CNN
+	1    3900 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2000 4850 2850
+Wire Wire Line
+	3900 1050 4350 1050
+Connection ~ 3900 1050
+Wire Wire Line
+	3900 1050 3900 1700
+$Comp
+L power:GND #PWR017
+U 1 1 5D6241AC
+P 4350 1550
+F 0 "#PWR017" H 4350 1300 50  0001 C CNN
+F 1 "GND" H 4355 1377 50  0000 C CNN
+F 2 "" H 4350 1550 50  0001 C CNN
+F 3 "" H 4350 1550 50  0001 C CNN
+	1    4350 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5D625FA7
+P 4350 1250
+AR Path="/5D5B165E/5D625FA7" Ref="C?"  Part="1" 
+AR Path="/5D5B17D8/5D625FA7" Ref="C8"  Part="1" 
+F 0 "C8" H 4550 1350 50  0000 C CNN
+F 1 "100nF" H 4550 1250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4350 1250 50  0001 C CNN
+F 3 "~" H 4350 1250 50  0001 C CNN
+	1    4350 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 1150 4350 1050
+Wire Wire Line
+	4350 1550 4350 1350
+Wire Wire Line
+	3900 800  3900 1050
+$Comp
+L power:GND #PWR016
+U 1 1 5D626EB1
+P 3900 2450
+F 0 "#PWR016" H 3900 2200 50  0001 C CNN
+F 1 "GND" H 3905 2277 50  0000 C CNN
+F 2 "" H 3900 2450 50  0001 C CNN
+F 3 "" H 3900 2450 50  0001 C CNN
+	1    3900 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2450 3900 2300
+NoConn ~ 3600 2000
+Text HLabel 5150 3250 0    50   Input ~ 0
+RF_SCLK
+Wire Wire Line
+	5150 3250 5500 3250
+Text HLabel 5150 3450 0    50   Output ~ 0
+RF_MISO
+Wire Wire Line
+	5150 3450 5500 3450
+Text HLabel 5150 3350 0    50   Input ~ 0
+RF_MOSI
+Wire Wire Line
+	5150 3350 5500 3350
+Text HLabel 5150 3550 0    50   Input ~ 0
+RF_NSEL
+Wire Wire Line
+	5150 3550 5500 3550
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5D62941F
+P 5900 2150
+F 0 "#PWR?" H 5900 2000 50  0001 C CNN
+F 1 "+3.3V" H 5915 2323 50  0000 C CNN
+F 2 "" H 5900 2150 50  0001 C CNN
+F 3 "" H 5900 2150 50  0001 C CNN
+	1    5900 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 2450 5900 2150
+$Comp
+L RF:Si4463 U3
+U 1 1 5D5CB5C3
+P 5900 3150
+F 0 "U3" H 5650 3850 50  0000 C CNN
+F 1 "Si4463" H 5650 3950 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm_ThermalVias" H 5900 4350 50  0001 C CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/Si4464-63-61-60.pdf" H 5600 3050 50  0001 C CNN
+	1    5900 3150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5500 3650
 $EndSCHEMATC
