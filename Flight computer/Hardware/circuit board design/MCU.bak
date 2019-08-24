@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:circuit board design-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 6 6
 Title ""
 Date ""
 Rev ""
@@ -786,7 +787,7 @@ MCU_RXD0
 Text HLabel 4550 3100 0    50   Input ~ 0
 MCU_PA02
 $Comp
-L ICSSPicoTracker:W25Q16DW U2
+L ICSSPicoTracker2-rescue:W25Q16DW-ICSSPicoTracker U2
 U 1 1 5D77FBCE
 P 8100 3150
 F 0 "U2" H 8375 3875 50  0000 C CNN
@@ -899,4 +900,6 @@ Text Label 7650 4300 2    50   ~ 0
 MCU_NSEL4
 Text Label 4550 4100 0    50   ~ 0
 MCU_MISO4
+Text Notes 8400 4950 0    50   ~ 0
+TODO: get the Microcontroller to run on 3.3V
 $EndSCHEMATC
