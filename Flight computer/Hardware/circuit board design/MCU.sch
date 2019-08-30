@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 6 7
 Title ""
 Date ""
 Rev ""
@@ -101,17 +101,6 @@ Wire Wire Line
 	4000 1400 4000 1500
 Connection ~ 4000 1500
 $Comp
-L power:+1V8 #PWR01
-U 1 1 5D2A014F
-P 3000 1500
-F 0 "#PWR01" H 3000 1350 50  0001 C CNN
-F 1 "+1V8" H 3015 1673 50  0000 C CNN
-F 2 "" H 3000 1500 50  0001 C CNN
-F 3 "" H 3000 1500 50  0001 C CNN
-	1    3000 1500
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR08
 U 1 1 5D2B6380
 P 1600 5350
@@ -120,17 +109,6 @@ F 1 "GND" H 1605 5177 50  0000 C CNN
 F 2 "" H 1600 5350 50  0001 C CNN
 F 3 "" H 1600 5350 50  0001 C CNN
 	1    1600 5350
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+1V8 #PWR07
-U 1 1 5D2B6F68
-P 1650 3600
-F 0 "#PWR07" H 1650 3450 50  0001 C CNN
-F 1 "+1V8" H 1665 3773 50  0000 C CNN
-F 2 "" H 1650 3600 50  0001 C CNN
-F 3 "" H 1650 3600 50  0001 C CNN
-	1    1650 3600
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -194,17 +172,6 @@ Wire Wire Line
 Wire Wire Line
 	4400 2400 4400 2500
 $Comp
-L Device:L_Core_Ferrite L1
-U 1 1 5D298AE9
-P 3500 1900
-F 0 "L1" V 3725 1900 50  0000 C CNN
-F 1 "L_Core_Ferrite" V 3634 1900 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric" H 3500 1900 50  0001 C CNN
-F 3 "~" H 3500 1900 50  0001 C CNN
-	1    3500 1900
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x02 J2
 U 1 1 5D2A0018
 P 3650 5300
@@ -216,20 +183,9 @@ F 3 "~" H 3650 5300 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	3650 1900 3850 1900
+	3450 1900 3750 1900
 Wire Wire Line
 	7600 950  7600 750 
-$Comp
-L power:+1V8 #PWR06
-U 1 1 5D29F7C2
-P 7600 750
-F 0 "#PWR06" H 7600 600 50  0001 C CNN
-F 1 "+1V8" H 7615 923 50  0000 C CNN
-F 2 "" H 7600 750 50  0001 C CNN
-F 3 "" H 7600 750 50  0001 C CNN
-	1    7600 750 
-	1    0    0    -1  
-$EndComp
 Connection ~ 7050 950 
 Wire Wire Line
 	7050 950  7600 950 
@@ -281,10 +237,6 @@ F 3 "~" H 6650 1250 50  0001 C CNN
 	1    6650 1250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3350 1900 3000 1900
-Wire Wire Line
-	3000 1500 3000 1900
 $Comp
 L Connector_Generic:Conn_01x04 J1
 U 1 1 5D3DC905
@@ -308,19 +260,6 @@ F 1 "GND" H 7905 3077 50  0000 C CNN
 F 2 "" H 7900 3250 50  0001 C CNN
 F 3 "" H 7900 3250 50  0001 C CNN
 	1    7900 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10600 2650 10600 2450
-$Comp
-L power:+1V8 #PWR092
-U 1 1 5D64067C
-P 10600 2450
-F 0 "#PWR092" H 10600 2300 50  0001 C CNN
-F 1 "+1V8" H 10615 2623 50  0000 C CNN
-F 2 "" H 10600 2450 50  0001 C CNN
-F 3 "" H 10600 2450 50  0001 C CNN
-	1    10600 2450
 	1    0    0    -1  
 $EndComp
 Connection ~ 10050 2650
@@ -478,22 +417,11 @@ Wire Wire Line
 	6400 950  6650 950 
 Connection ~ 6650 950 
 Wire Wire Line
-	6200 950  5950 950 
+	6200 950  6050 950 
 Connection ~ 5950 950 
 Connection ~ 4550 950 
 Wire Wire Line
 	4550 950  4550 750 
-$Comp
-L power:+1V8 #PWR088
-U 1 1 5D6940E6
-P 4550 750
-F 0 "#PWR088" H 4550 600 50  0001 C CNN
-F 1 "+1V8" H 4565 923 50  0000 C CNN
-F 2 "" H 4550 750 50  0001 C CNN
-F 3 "" H 4550 750 50  0001 C CNN
-	1    4550 750 
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4850 6550 4850 5900
 Wire Wire Line
@@ -724,17 +652,6 @@ F 3 "" H 4450 7100 50  0001 C CNN
 	1    4450 7100
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+1V8 #PWR086
-U 1 1 5D70DB62
-P 4450 5950
-F 0 "#PWR086" H 4450 5800 50  0001 C CNN
-F 1 "+1V8" H 4465 6123 50  0000 C CNN
-F 2 "" H 4450 5950 50  0001 C CNN
-F 3 "" H 4450 5950 50  0001 C CNN
-	1    4450 5950
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	4450 6700 4450 6550
 Wire Wire Line
@@ -787,7 +704,7 @@ MCU_RXD0
 Text HLabel 4550 3100 0    50   Input ~ 0
 MCU_PA02
 $Comp
-L ICSSPicoTracker2-rescue:W25Q16DW-ICSSPicoTracker U2
+L circuit-board-design-rescue:W25Q16DW-ICSSPicoTracker-ICSSPicoTracker2-rescue U2
 U 1 1 5D77FBCE
 P 8100 3150
 F 0 "U2" H 8375 3875 50  0000 C CNN
@@ -884,7 +801,6 @@ MCU_PA13
 NoConn ~ 5100 4900
 NoConn ~ 5100 5000
 NoConn ~ 5100 5500
-NoConn ~ 7100 4600
 NoConn ~ 7100 4700
 Text HLabel 7650 4000 2    50   Output ~ 0
 MCU_PB03
@@ -901,5 +817,158 @@ MCU_NSEL4
 Text Label 4550 4100 0    50   ~ 0
 MCU_MISO4
 Text Notes 8400 4950 0    50   ~ 0
-TODO: get the Microcontroller to run on 3.3V
+TODO: get the Microcontroller to run on 3.3V// Done\n
+$Comp
+L Device:Buzzer BZ1
+U 1 1 5D650F14
+P 8000 4700
+F 0 "BZ1" H 8152 4729 50  0000 L CNN
+F 1 "Buzzer" H 8152 4638 50  0000 L CNN
+F 2 "" V 7975 4800 50  0001 C CNN
+F 3 "~" V 7975 4800 50  0001 C CNN
+	1    8000 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4600 7900 4600
+$Comp
+L power:GND #PWR021
+U 1 1 5D659D89
+P 7850 5100
+F 0 "#PWR021" H 7850 4850 50  0001 C CNN
+F 1 "GND" H 7855 4927 50  0000 C CNN
+F 2 "" H 7850 5100 50  0001 C CNN
+F 3 "" H 7850 5100 50  0001 C CNN
+	1    7850 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 5100 7850 4800
+Wire Wire Line
+	7850 4800 7900 4800
+$Comp
+L power:+3.3V #PWR022
+U 1 1 5D667177
+P 10600 2250
+F 0 "#PWR022" H 10600 2100 50  0001 C CNN
+F 1 "+3.3V" H 10615 2423 50  0000 C CNN
+F 2 "" H 10600 2250 50  0001 C CNN
+F 3 "" H 10600 2250 50  0001 C CNN
+	1    10600 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 2650 10600 2250
+$Comp
+L power:+3.3V #PWR020
+U 1 1 5D699E9A
+P 7600 750
+F 0 "#PWR020" H 7600 600 50  0001 C CNN
+F 1 "+3.3V" H 7615 923 50  0000 C CNN
+F 2 "" H 7600 750 50  0001 C CNN
+F 3 "" H 7600 750 50  0001 C CNN
+	1    7600 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR019
+U 1 1 5D6A08FD
+P 4550 750
+F 0 "#PWR019" H 4550 600 50  0001 C CNN
+F 1 "+3.3V" H 4565 923 50  0000 C CNN
+F 2 "" H 4550 750 50  0001 C CNN
+F 3 "" H 4550 750 50  0001 C CNN
+	1    4550 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1500 3000 1900
+$Comp
+L power:+3.3V #PWR06
+U 1 1 5D6AE562
+P 3000 1500
+F 0 "#PWR06" H 3000 1350 50  0001 C CNN
+F 1 "+3.3V" H 3015 1673 50  0000 C CNN
+F 2 "" H 3000 1500 50  0001 C CNN
+F 3 "" H 3000 1500 50  0001 C CNN
+	1    3000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR018
+U 1 1 5D6BAA49
+P 4450 5950
+F 0 "#PWR018" H 4450 5800 50  0001 C CNN
+F 1 "+3.3V" H 4465 6123 50  0000 C CNN
+F 2 "" H 4450 5950 50  0001 C CNN
+F 3 "" H 4450 5950 50  0001 C CNN
+	1    4450 5950
+	1    0    0    -1  
+$EndComp
+Text Notes 3400 6850 0    50   ~ 0
+Why this 100nF cap?
+Wire Notes Line
+	550  3200 2550 3200
+Wire Notes Line
+	2550 3200 2550 5900
+Wire Notes Line
+	2550 5900 550  5900
+Wire Notes Line
+	550  5900 550  3200
+Text Notes 1050 5800 0    50   ~ 0
+Programming interface\n
+Text Notes 7750 4400 0    50   ~ 0
+For flash memory chip\n
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5D6C8291
+P 1650 3600
+F 0 "#PWR0102" H 1650 3450 50  0001 C CNN
+F 1 "+3.3V" H 1665 3773 50  0000 C CNN
+F 2 "" H 1650 3600 50  0001 C CNN
+F 3 "" H 1650 3600 50  0001 C CNN
+	1    1650 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5D6D0649
+P 3750 1900
+F 0 "#FLG0101" H 3750 1975 50  0001 C CNN
+F 1 "PWR_FLAG" H 3750 2073 50  0000 C CNN
+F 2 "" H 3750 1900 50  0001 C CNN
+F 3 "~" H 3750 1900 50  0001 C CNN
+	1    3750 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5D6D0FB6
+P 6050 950
+F 0 "#FLG0102" H 6050 1025 50  0001 C CNN
+F 1 "PWR_FLAG" H 6050 1123 50  0000 C CNN
+F 2 "" H 6050 950 50  0001 C CNN
+F 3 "~" H 6050 950 50  0001 C CNN
+	1    6050 950 
+	1    0    0    -1  
+$EndComp
+Connection ~ 6050 950 
+Wire Wire Line
+	6050 950  5950 950 
+Connection ~ 3750 1900
+Wire Wire Line
+	3750 1900 3850 1900
+Wire Wire Line
+	3000 1900 3150 1900
+$Comp
+L Device:L_Core_Ferrite L1
+U 1 1 5D298AE9
+P 3300 1900
+F 0 "L1" V 3525 1900 50  0000 C CNN
+F 1 "L_Core_Ferrite" V 3450 1900 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 3300 1900 50  0001 C CNN
+F 3 "~" H 3300 1900 50  0001 C CNN
+	1    3300 1900
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

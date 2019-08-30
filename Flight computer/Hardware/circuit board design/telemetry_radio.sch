@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -145,4 +145,15 @@ F 3 "https://www.silabs.com/documents/public/data-sheets/Si4464-63-61-60.pdf" H 
 	1    0    0    -1  
 $EndComp
 NoConn ~ 5500 3650
+NoConn ~ 6300 3650
+NoConn ~ 6300 3550
+NoConn ~ 6300 3450
+NoConn ~ 6300 3350
+NoConn ~ 6300 3150
+NoConn ~ 6300 3050
+NoConn ~ 6300 2850
+NoConn ~ 6300 2650
+NoConn ~ 5500 2650
+NoConn ~ 5500 3050
+NoConn ~ 6000 2450
 $EndSCHEMATC

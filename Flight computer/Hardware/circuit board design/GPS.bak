@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 6
+Sheet 5 7
 Title ""
 Date ""
 Rev ""
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ICSSPicoTracker2-rescue:MAX2659ELT+-ICSSPicoTracker U12
+L circuit-board-design-rescue:MAX2659ELT+-ICSSPicoTracker-ICSSPicoTracker2-rescue U12
 U 1 1 5D44B218
 P 2300 2350
 F 0 "U12" H 2600 3115 50  0000 C CNN
@@ -26,7 +26,7 @@ F 3 "https://datasheets.maximintegrated.com/en/ds/MAX2659.pdf" H 2300 2350 50  0
 	1    0    0    -1  
 $EndComp
 $Comp
-L ICSSPicoTracker2-rescue:SAFEB1G57KE0F00-ICSSPicoTracker U13
+L circuit-board-design-rescue:SAFEB1G57KE0F00-ICSSPicoTracker-ICSSPicoTracker2-rescue U13
 U 1 1 5D44BB5C
 P 3400 2450
 F 0 "U13" H 3725 2925 50  0000 C CNN
@@ -71,54 +71,10 @@ F 3 "" H 4250 2750 50  0001 C CNN
 	1    4250 2750
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C_Small C67
-U 1 1 5D45CE50
-P 4400 2200
-F 0 "C67" V 4171 2200 50  0000 C CNN
-F 1 "47pF" V 4262 2200 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 4400 2200 50  0001 C CNN
-F 3 "~" H 4400 2200 50  0001 C CNN
-	1    4400 2200
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:L_Small L20
-U 1 1 5D45D95F
-P 4600 2450
-F 0 "L20" H 4450 2500 50  0000 L CNN
-F 1 "8.2nH" H 4350 2400 50  0000 L CNN
-F 2 "Inductor_SMD:L_0402_1005Metric" H 4600 2450 50  0001 C CNN
-F 3 "~" H 4600 2450 50  0001 C CNN
-	1    4600 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C68
-U 1 1 5D45EA6D
-P 4900 2300
-F 0 "C68" H 4808 2254 50  0000 R CNN
-F 1 "2.7pF" H 4808 2345 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 4900 2300 50  0001 C CNN
-F 3 "~" H 4900 2300 50  0001 C CNN
-	1    4900 2300
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4600 2900 4600 2550
-Wire Wire Line
-	4600 2350 4600 2200
-Wire Wire Line
-	4600 2200 4500 2200
-Wire Wire Line
-	4900 2200 4600 2200
-Connection ~ 4600 2200
 Wire Wire Line
 	4150 2400 4250 2400
 Wire Wire Line
 	4250 2400 4250 2750
-Wire Wire Line
-	4150 2200 4300 2200
 Wire Wire Line
 	3300 2200 3000 2200
 Wire Wire Line
@@ -139,19 +95,6 @@ Wire Wire Line
 Connection ~ 2100 2200
 Wire Wire Line
 	2100 2200 2100 2550
-$Comp
-L power:GND #PWR061
-U 1 1 5D46AB52
-P 4900 2500
-F 0 "#PWR061" H 4900 2250 50  0001 C CNN
-F 1 "GND" H 4905 2327 50  0000 C CNN
-F 2 "" H 4900 2500 50  0001 C CNN
-F 3 "" H 4900 2500 50  0001 C CNN
-	1    4900 2500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4900 2400 4900 2500
 $Comp
 L Device:L_Small L21
 U 1 1 5D61FE97
@@ -189,7 +132,7 @@ GPS_NRES
 Wire Wire Line
 	3000 2050 3250 2050
 $Comp
-L ICSSPicoTracker2-rescue:Johanson1575-ICSSPicoTracker ANT1
+L circuit-board-design-rescue:Johanson1575-ICSSPicoTracker-ICSSPicoTracker2-rescue ANT1
 U 1 1 5D521711
 P 1400 1500
 AR Path="/5D521711" Ref="ANT1"  Part="1" 
@@ -1287,4 +1230,64 @@ Wire Notes Line
 	5000 1300 5300 1300
 Text Notes 4800 1250 0    50   ~ 0
 What are the capacitors and inductors for? they are not on the hardware integration manual\n
+Wire Wire Line
+	4900 2400 4900 2500
+$Comp
+L power:GND #PWR061
+U 1 1 5D46AB52
+P 4900 2500
+F 0 "#PWR061" H 4900 2250 50  0001 C CNN
+F 1 "GND" H 4905 2327 50  0000 C CNN
+F 2 "" H 4900 2500 50  0001 C CNN
+F 3 "" H 4900 2500 50  0001 C CNN
+	1    4900 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2200 4300 2200
+Wire Wire Line
+	4900 2200 4600 2200
+Wire Wire Line
+	4600 2200 4500 2200
+Connection ~ 4600 2200
+Wire Wire Line
+	4600 2350 4600 2200
+Wire Wire Line
+	4600 2900 4600 2550
+$Comp
+L Device:C_Small C68
+U 1 1 5D45EA6D
+P 4900 2300
+F 0 "C68" H 4808 2254 50  0000 R CNN
+F 1 "2.7pF" H 4808 2345 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4900 2300 50  0001 C CNN
+F 3 "~" H 4900 2300 50  0001 C CNN
+	1    4900 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:L_Small L20
+U 1 1 5D45D95F
+P 4600 2450
+F 0 "L20" H 4450 2500 50  0000 L CNN
+F 1 "8.2nH" H 4350 2400 50  0000 L CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" H 4600 2450 50  0001 C CNN
+F 3 "~" H 4600 2450 50  0001 C CNN
+	1    4600 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C67
+U 1 1 5D45CE50
+P 4400 2200
+F 0 "C67" V 4171 2200 50  0000 C CNN
+F 1 "47pF" V 4262 2200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4400 2200 50  0001 C CNN
+F 3 "~" H 4400 2200 50  0001 C CNN
+	1    4400 2200
+	0    1    1    0   
+$EndComp
+Text Notes 7850 4950 0    50   ~ 0
+http://www.explorelabs.com/blog/designing-a-gps-receiver/#ref-ublox-datasheet\n\nImportant info on why we use the components\n
+NoConn ~ 5450 4250
 $EndSCHEMATC

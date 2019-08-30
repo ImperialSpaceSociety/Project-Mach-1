@@ -1,0 +1,223 @@
+EESchema Schematic File Version 4
+LIBS:circuit board design-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 7
+Title "Pyro drivers"
+Date "2019-08-26"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 6750 6200 0    50   ~ 0
+Pyro drivers based on the Telementrum design\n
+$Comp
+L Comparator:LM2903 U5
+U 1 1 5D6C6230
+P 3050 1550
+F 0 "U5" H 3050 1917 50  0000 C CNN
+F 1 "LM2903" H 3050 1826 50  0000 C CNN
+F 2 "" H 3050 1550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm393-n.pdf" H 3050 1550 50  0001 C CNN
+	1    3050 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_FET:Si7232DN U6
+U 1 1 5D696EFB
+P 4400 1500
+F 0 "U6" H 4506 1046 50  0000 L CNN
+F 1 "Si7232DN" H 4506 955 50  0000 L CNN
+F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 4250 1750 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 4400 1500 50  0001 C CNN
+	1    4400 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 5D69AE81
+P 4400 2400
+F 0 "#PWR024" H 4400 2150 50  0001 C CNN
+F 1 "GND" H 4405 2227 50  0000 C CNN
+F 2 "" H 4400 2400 50  0001 C CNN
+F 3 "" H 4400 2400 50  0001 C CNN
+	1    4400 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 2400 4400 2150
+$Comp
+L Device:R R5
+U 1 1 5D6A50BE
+P 5050 1750
+F 0 "R5" V 5250 1750 50  0000 C CNN
+F 1 "100K" V 5150 1750 50  0000 C CNN
+F 2 "" V 4980 1750 50  0001 C CNN
+F 3 "~" H 5050 1750 50  0001 C CNN
+	1    5050 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5D6A6316
+P 5500 2200
+F 0 "R6" H 5570 2246 50  0000 L CNN
+F 1 "27K" H 5570 2155 50  0000 L CNN
+F 2 "" V 5430 2200 50  0001 C CNN
+F 3 "~" H 5500 2200 50  0001 C CNN
+	1    5500 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 1750 5500 1750
+Wire Wire Line
+	5500 2050 5500 1750
+Wire Wire Line
+	5500 2400 5500 2350
+$Comp
+L power:GND #PWR025
+U 1 1 5D6A67BF
+P 5500 2400
+F 0 "#PWR025" H 5500 2150 50  0001 C CNN
+F 1 "GND" H 5505 2227 50  0000 C CNN
+F 2 "" H 5500 2400 50  0001 C CNN
+F 3 "" H 5500 2400 50  0001 C CNN
+	1    5500 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 1750 4700 1750
+Wire Wire Line
+	4500 1650 4700 1650
+Wire Wire Line
+	4700 1750 4700 1650
+Connection ~ 4700 1750
+Wire Wire Line
+	4700 1750 4900 1750
+Connection ~ 4700 1650
+Wire Wire Line
+	4700 1650 6000 1650
+Connection ~ 5500 1750
+Wire Wire Line
+	5500 1750 6000 1750
+Text HLabel 6000 1750 2    50   Output ~ 0
+sense_fet_a
+Text Label 6000 1650 0    50   ~ 0
+fet_a
+Wire Wire Line
+	3350 1550 3800 1550
+Wire Wire Line
+	3800 1550 3800 1950
+Wire Wire Line
+	3800 1950 4100 1950
+Wire Wire Line
+	3800 1950 3500 1950
+Connection ~ 3800 1950
+Wire Wire Line
+	3000 1950 3000 2100
+Connection ~ 3000 1950
+Wire Wire Line
+	3000 1950 2250 1950
+$Comp
+L power:GND #PWR023
+U 1 1 5D6AF664
+P 3000 2500
+F 0 "#PWR023" H 3000 2250 50  0001 C CNN
+F 1 "GND" H 3005 2327 50  0000 C CNN
+F 2 "" H 3000 2500 50  0001 C CNN
+F 3 "" H 3000 2500 50  0001 C CNN
+	1    3000 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5D6AFE1F
+P 3000 2250
+F 0 "R3" H 3070 2296 50  0000 L CNN
+F 1 "3.3" H 3070 2205 50  0000 L CNN
+F 2 "" V 2930 2250 50  0001 C CNN
+F 3 "~" H 3000 2250 50  0001 C CNN
+	1    3000 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2400 3000 2500
+$Comp
+L Device:R R4
+U 1 1 5D6B06F6
+P 3350 1950
+F 0 "R4" V 3143 1950 50  0000 C CNN
+F 1 "100" V 3234 1950 50  0000 C CNN
+F 2 "" V 3280 1950 50  0001 C CNN
+F 3 "~" H 3350 1950 50  0001 C CNN
+	1    3350 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3200 1950 3000 1950
+Text HLabel 2250 1950 0    50   Output ~ 0
+fire_a
+$Comp
+L power:GND #PWR027
+U 1 1 5D6B2880
+P 10150 4200
+F 0 "#PWR027" H 10150 3950 50  0001 C CNN
+F 1 "GND" H 10155 4027 50  0000 C CNN
+F 2 "" H 10150 4200 50  0001 C CNN
+F 3 "" H 10150 4200 50  0001 C CNN
+	1    10150 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 3950 10150 4200
+$Comp
+L power:+3.3V #PWR026
+U 1 1 5D6B231C
+P 10150 3200
+F 0 "#PWR026" H 10150 3050 50  0001 C CNN
+F 1 "+3.3V" H 10165 3373 50  0000 C CNN
+F 2 "" H 10150 3200 50  0001 C CNN
+F 3 "" H 10150 3200 50  0001 C CNN
+	1    10150 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Comparator:LM2903 U5
+U 3 1 5D6B191C
+P 10250 3650
+F 0 "U5" H 10208 3696 50  0000 L CNN
+F 1 "LM2903" H 10208 3605 50  0000 L CNN
+F 2 "" H 10250 3650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm393-n.pdf" H 10250 3650 50  0001 C CNN
+	3    10250 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 3350 10150 3200
+Text Notes 7250 5350 0    50   ~ 0
+Put in a block connector, like the TE connectivity ones\n
+$Comp
+L Connector:Conn_01x06_Female J4
+U 1 1 5D6BBFA3
+P 2100 4100
+F 0 "J4" H 2128 4076 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 2128 3985 50  0000 L CNN
+F 2 "" H 2100 4100 50  0001 C CNN
+F 3 "~" H 2100 4100 50  0001 C CNN
+	1    2100 4100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2750 1650
+NoConn ~ 2750 1450
+NoConn ~ 1900 3900
+NoConn ~ 1900 4000
+NoConn ~ 1900 4100
+NoConn ~ 1900 4200
+NoConn ~ 1900 4300
+NoConn ~ 1900 4400
+$EndSCHEMATC
