@@ -36,8 +36,6 @@ F 3 "https://www.murata.com/en-eu/products/productdata/8797690593310/DS-SAFEB1G5
 	1    3400 2450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5450 3950 4200 3950
 $Comp
 L power:GND #PWR052
 U 1 1 5D458C8C
@@ -117,18 +115,6 @@ F 3 "~" H 1900 1700 50  0001 C CNN
 	1    1900 1700
 	1    0    0    -1  
 $EndComp
-Text HLabel 4200 3750 0    50   Output ~ 0
-GPS_TXD
-Text HLabel 4200 3650 0    50   Input ~ 0
-GPS_RXD
-Text HLabel 4200 4050 0    50   BiDi ~ 0
-GPS_SCL
-Text HLabel 4200 3950 0    50   BiDi ~ 0
-GPS_SDA
-Text HLabel 4200 4350 0    50   Input ~ 0
-GPS_NSAFEBOOT
-Text HLabel 4200 4450 0    50   Input ~ 0
-GPS_NRES
 Wire Wire Line
 	3000 2050 3250 2050
 $Comp
@@ -156,97 +142,30 @@ Wire Wire Line
 Wire Wire Line
 	1900 1500 1800 1500
 Wire Wire Line
-	5450 3650 4200 3650
-$Comp
-L power:GND #PWR011
-U 1 1 5D67FE0F
-P 6050 4900
-F 0 "#PWR011" H 6050 4650 50  0001 C CNN
-F 1 "GND" H 6055 4727 50  0000 C CNN
-F 2 "" H 6050 4900 50  0001 C CNN
-F 3 "" H 6050 4900 50  0001 C CNN
-	1    6050 4900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6800 3850 6650 3850
-Wire Wire Line
-	6800 1900 6800 3850
-Wire Wire Line
 	4600 2900 6900 2900
-$Comp
-L power:+3.3V #PWR010
-U 1 1 5D692740
-P 5850 3350
-F 0 "#PWR010" H 5850 3200 50  0001 C CNN
-F 1 "+3.3V" H 5865 3523 50  0000 C CNN
-F 2 "" H 5850 3350 50  0001 C CNN
-F 3 "" H 5850 3350 50  0001 C CNN
-	1    5850 3350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3250 2050 3250 1900
-Wire Wire Line
-	6250 3350 6250 1800
 Wire Wire Line
 	6250 1800 3150 1800
 Wire Wire Line
 	3150 1800 3150 1900
 Wire Wire Line
 	3150 1900 3000 1900
-Wire Wire Line
-	6900 4050 6900 2900
-Wire Wire Line
-	6900 4050 6650 4050
 Text HLabel 7200 4350 2    50   Output ~ 0
 GPS_1PPS
-Wire Wire Line
-	6650 4350 7200 4350
 Text Notes 3000 5800 0    50   ~ 0
 Arranged according to Figure 7 in the MAX-8 / MAX-M8 u-blox 8 / M8 GNSS modules Hardware Integration Manual. Page 12.
+Text Notes 8500 4000 0    50   ~ 0
+Do we need the section that is already inside the MAX?\n
 Wire Wire Line
-	6050 4900 6050 4800
+	3250 1900 6800 1900
+Text Notes 7850 4950 0    50   ~ 0
+http://www.explorelabs.com/blog/designing-a-gps-receiver/#ref-ublox-datasheet\n\nImportant info on why we use the components\n
 Wire Wire Line
-	6800 3850 6800 4800
+	4600 2200 4600 2900
 Wire Wire Line
-	6800 4800 6600 4800
-Connection ~ 6800 3850
-Connection ~ 6050 4800
-Wire Wire Line
-	6050 4800 6050 4750
-$Comp
-L Device:R R2
-U 1 1 5D69D778
-P 6450 4800
-F 0 "R2" V 6700 4800 50  0000 C CNN
-F 1 "10K" V 6600 4800 50  0000 C CNN
-F 2 "" V 6380 4800 50  0001 C CNN
-F 3 "~" H 6450 4800 50  0001 C CNN
-	1    6450 4800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6300 4800 6050 4800
-Wire Wire Line
-	5450 4350 4200 4350
-Wire Wire Line
-	4200 3750 5450 3750
-Wire Wire Line
-	4200 4450 5450 4450
-Wire Wire Line
-	4200 4050 5450 4050
-$Comp
-L RF_GPS:MAX-M8C U4
-U 1 1 5D610F77
-P 6050 4050
-F 0 "U4" H 6050 4900 50  0000 C CNN
-F 1 "MAX-M8C" H 6050 5000 50  0000 C CNN
-F 2 "RF_GPS:ublox_MAX" H 6450 3400 50  0001 C CNN
-F 3 "https://www.u-blox.com/sites/default/files/MAX-M8-FW3_DataSheet_%28UBX-15031506%29.pdf" H 6050 4050 50  0001 C CNN
-	1    6050 4050
-	1    0    0    -1  
-$EndComp
+	4150 2200 4600 2200
+NoConn ~ 5450 4250
 $Bitmap
 Pos 9200 2900
 Scale 2.000000
@@ -1212,82 +1131,96 @@ A8 5B 60 90 81 10 42 08 A1 6E 81 41 06 42 08 21 84 BA 05 06 19 08 21 84 10 EA 16
 82 
 EndData
 $EndBitmap
-Text Notes 8500 4000 0    50   ~ 0
-Do we need the section that is already inside the MAX?\n
-Wire Wire Line
-	3250 1900 6800 1900
-Wire Notes Line
-	4200 1950 4200 2650
-Wire Notes Line
-	4200 2650 5250 2650
-Wire Notes Line
-	5250 2650 5250 1950
-Wire Notes Line
-	5250 1950 4200 1950
-Wire Notes Line
-	5000 1950 5000 1300
-Wire Notes Line
-	5000 1300 5300 1300
-Text Notes 4800 1250 0    50   ~ 0
-What are the capacitors and inductors for? they are not on the hardware integration manual\n
-Wire Wire Line
-	4900 2400 4900 2500
 $Comp
-L power:GND #PWR061
-U 1 1 5D46AB52
-P 4900 2500
-F 0 "#PWR061" H 4900 2250 50  0001 C CNN
-F 1 "GND" H 4905 2327 50  0000 C CNN
-F 2 "" H 4900 2500 50  0001 C CNN
-F 3 "" H 4900 2500 50  0001 C CNN
-	1    4900 2500
+L RF_GPS:MAX-M8C U4
+U 1 1 5D610F77
+P 6050 4050
+F 0 "U4" H 6050 4900 50  0000 C CNN
+F 1 "MAX-M8C" H 6050 5000 50  0000 C CNN
+F 2 "RF_GPS:ublox_MAX" H 6450 3400 50  0001 C CNN
+F 3 "https://www.u-blox.com/sites/default/files/MAX-M8-FW3_DataSheet_%28UBX-15031506%29.pdf" H 6050 4050 50  0001 C CNN
+	1    6050 4050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4150 2200 4300 2200
+	4200 4050 5450 4050
 Wire Wire Line
-	4900 2200 4600 2200
+	4200 4450 5450 4450
 Wire Wire Line
-	4600 2200 4500 2200
-Connection ~ 4600 2200
+	4200 3750 5450 3750
 Wire Wire Line
-	4600 2350 4600 2200
+	5450 4350 4200 4350
 Wire Wire Line
-	4600 2900 4600 2550
+	6300 4800 6050 4800
 $Comp
-L Device:C_Small C68
-U 1 1 5D45EA6D
-P 4900 2300
-F 0 "C68" H 4808 2254 50  0000 R CNN
-F 1 "2.7pF" H 4808 2345 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 4900 2300 50  0001 C CNN
-F 3 "~" H 4900 2300 50  0001 C CNN
-	1    4900 2300
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:L_Small L20
-U 1 1 5D45D95F
-P 4600 2450
-F 0 "L20" H 4450 2500 50  0000 L CNN
-F 1 "8.2nH" H 4350 2400 50  0000 L CNN
-F 2 "Inductor_SMD:L_0402_1005Metric" H 4600 2450 50  0001 C CNN
-F 3 "~" H 4600 2450 50  0001 C CNN
-	1    4600 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C67
-U 1 1 5D45CE50
-P 4400 2200
-F 0 "C67" V 4171 2200 50  0000 C CNN
-F 1 "47pF" V 4262 2200 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 4400 2200 50  0001 C CNN
-F 3 "~" H 4400 2200 50  0001 C CNN
-	1    4400 2200
+L Device:R R2
+U 1 1 5D69D778
+P 6450 4800
+F 0 "R2" V 6700 4800 50  0000 C CNN
+F 1 "10K" V 6600 4800 50  0000 C CNN
+F 2 "" V 6380 4800 50  0001 C CNN
+F 3 "~" H 6450 4800 50  0001 C CNN
+	1    6450 4800
 	0    1    1    0   
 $EndComp
-Text Notes 7850 4950 0    50   ~ 0
-http://www.explorelabs.com/blog/designing-a-gps-receiver/#ref-ublox-datasheet\n\nImportant info on why we use the components\n
-NoConn ~ 5450 4250
+Wire Wire Line
+	6050 4800 6050 4750
+Connection ~ 6050 4800
+Connection ~ 6800 3850
+Wire Wire Line
+	6800 4800 6600 4800
+Wire Wire Line
+	6800 3850 6800 4800
+Wire Wire Line
+	6050 4900 6050 4800
+Wire Wire Line
+	6650 4350 7200 4350
+Wire Wire Line
+	6900 4050 6650 4050
+Wire Wire Line
+	6900 4050 6900 2900
+Wire Wire Line
+	6250 3350 6250 1800
+$Comp
+L power:+3.3V #PWR010
+U 1 1 5D692740
+P 5850 3350
+F 0 "#PWR010" H 5850 3200 50  0001 C CNN
+F 1 "+3.3V" H 5865 3523 50  0000 C CNN
+F 2 "" H 5850 3350 50  0001 C CNN
+F 3 "" H 5850 3350 50  0001 C CNN
+	1    5850 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 1900 6800 3850
+Wire Wire Line
+	6800 3850 6650 3850
+$Comp
+L power:GND #PWR011
+U 1 1 5D67FE0F
+P 6050 4900
+F 0 "#PWR011" H 6050 4650 50  0001 C CNN
+F 1 "GND" H 6055 4727 50  0000 C CNN
+F 2 "" H 6050 4900 50  0001 C CNN
+F 3 "" H 6050 4900 50  0001 C CNN
+	1    6050 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3650 4200 3650
+Text HLabel 4200 4450 0    50   Input ~ 0
+GPS_NRES
+Text HLabel 4200 4350 0    50   Input ~ 0
+GPS_NSAFEBOOT
+Text HLabel 4200 3950 0    50   BiDi ~ 0
+GPS_SDA
+Text HLabel 4200 4050 0    50   BiDi ~ 0
+GPS_SCL
+Text HLabel 4200 3650 0    50   Input ~ 0
+GPS_RXD
+Text HLabel 4200 3750 0    50   Output ~ 0
+GPS_TXD
+Wire Wire Line
+	5450 3950 4200 3950
 $EndSCHEMATC

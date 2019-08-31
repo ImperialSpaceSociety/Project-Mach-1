@@ -113,7 +113,7 @@ U 5D6468D5
 F0 "pyro_driver" 50
 F1 "pyro_driver.sch" 50
 F2 "sense_fet_a" O L 7950 5200 50 
-F3 "fire_a" O L 7950 5300 50 
+F3 "fire_a" O L 7950 5350 50 
 $EndSheet
 Wire Wire Line
 	2700 1550 1400 1550
