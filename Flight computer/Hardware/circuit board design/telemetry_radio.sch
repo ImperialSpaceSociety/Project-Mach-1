@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 7
+Sheet 7 7
 Title "Silabs radio chip for telemetry to ground"
 Date "2019-08-31"
 Rev ""
@@ -25,10 +25,8 @@ F 3 "http://www.cel.com/pdf/datasheets/CG2179M2.pdf" H 2950 3300 50  0001 C CNN
 	1    2950 2950
 	1    0    0    -1  
 $EndComp
-Text Notes 7550 1350 0    50   ~ 0
+Text Notes 1150 1550 0    50   ~ 0
 Verify that the CG2179 has the right package. \nThe datasheet says 6 pi n mini mold but\n I suspect it is the more standard SOT-363. Verify
-Wire Wire Line
-	7450 4500 6800 4500
 Wire Wire Line
 	7150 4900 6800 4900
 Text HLabel 7150 4900 2    50   Input ~ 0
@@ -45,9 +43,8 @@ Wire Wire Line
 	7150 5200 6800 5200
 Text HLabel 7150 5200 2    50   Input ~ 0
 RF_NSEL
-NoConn ~ 6300 4100
 Wire Wire Line
-	6400 4100 6400 3800
+	6400 4100 6400 3950
 $Comp
 L power:+3.3V #PWR0101
 U 1 1 5D62941F
@@ -83,12 +80,6 @@ F 3 "https://www.silabs.com/documents/public/data-sheets/Si4464-63-61-60.pdf" H 
 	1    6400 4800
 	-1   0    0    -1  
 $EndComp
-Text Notes 8200 4550 0    50   ~ 0
-Verify if this is the right way to place the xtal
-Text HLabel 2800 1950 2    50   Input ~ 0
-RF_GPIO_2
-Text HLabel 2800 2100 2    50   Input ~ 0
-RF_GPIO_0
 Wire Wire Line
 	2800 1950 2250 1950
 Wire Wire Line
@@ -230,10 +221,6 @@ Wire Wire Line
 	3600 3100 3600 3350
 Wire Wire Line
 	3600 3800 3200 3800
-Wire Wire Line
-	3200 3800 3200 4300
-Wire Wire Line
-	3200 4300 3450 4300
 $Comp
 L Device:L L5
 U 1 1 5D6C5384
@@ -247,22 +234,8 @@ F 3 "~" H 4250 4300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4400 4300 4600 4300
-$Comp
-L Device:L L3
-U 1 1 5D6C560A
-P 3600 4300
-F 0 "L3" V 3419 4300 50  0000 C CNN
-F 1 "L" V 3510 4300 50  0000 C CNN
-F 2 "" H 3600 4300 50  0001 C CNN
-F 3 "~" H 3600 4300 50  0001 C CNN
-	1    3600 4300
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3750 4300 3900 4300
 Wire Wire Line
 	3900 4300 3900 4550
-Connection ~ 3900 4300
 Wire Wire Line
 	3900 4300 4100 4300
 $Comp
@@ -387,32 +360,14 @@ Wire Notes Line
 	2150 3850 650  3850
 Wire Notes Line
 	650  3850 650  2200
-Text Notes 1400 2400 0    50   ~ 0
-Low Pass filter
+Text Notes 650  3950 0    50   ~ 0
+Low Pass filter part 1\n
 Wire Wire Line
 	5800 2150 4800 2150
-Wire Wire Line
-	3700 2150 3700 2450
 Wire Wire Line
 	3700 2900 3300 2900
 Wire Wire Line
 	5950 1350 4800 1350
-Wire Wire Line
-	3700 1350 3700 2150
-Connection ~ 3700 2150
-$Comp
-L Device:C_Small C13
-U 1 1 5D6D666F
-P 3700 2550
-F 0 "C13" H 3608 2504 50  0000 R CNN
-F 1 "C_Small" H 3608 2595 50  0000 R CNN
-F 2 "" H 3700 2550 50  0001 C CNN
-F 3 "~" H 3700 2550 50  0001 C CNN
-	1    3700 2550
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3700 2650 3700 2900
 $Comp
 L Device:C_Small C15
 U 1 1 5D6D6FFF
@@ -458,8 +413,6 @@ F 3 "~" H 4200 2150 50  0001 C CNN
 	1    4200 2150
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	4050 2150 3700 2150
 Wire Wire Line
 	4800 2150 4800 2450
 $Comp
@@ -514,34 +467,12 @@ F 3 "~" H 4600 4650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4600 4750 4600 4900
-NoConn ~ 6800 5300
-$Comp
-L Device:Crystal_GND2 Y1
-U 1 1 5D6E9278
-P 7500 3300
-F 0 "Y1" H 7500 3568 50  0000 C CNN
-F 1 "Crystal_GND2" H 7500 3477 50  0000 C CNN
-F 2 "" H 7500 3300 50  0001 C CNN
-F 3 "~" H 7500 3300 50  0001 C CNN
-	1    7500 3300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7250 3300 7350 3300
-Wire Wire Line
-	7650 3300 7750 3300
-Wire Wire Line
-	7550 4700 6800 4700
 Wire Notes Line
 	3400 5200 4400 5200
 Wire Notes Line
 	4400 5200 4400 4050
-Wire Notes Line
-	4400 4050 3400 4050
-Wire Notes Line
-	3400 4050 3400 5200
-Text Notes 3450 5350 0    50   ~ 0
-Low pass filter?
+Text Notes 3350 5500 0    50   ~ 0
+Low pass filter part 2. See AN648\nsection6: Lowpass Filter Design Methodology \nfor RF Switch Board Configuration
 Wire Wire Line
 	5950 4800 5950 1350
 Wire Wire Line
@@ -552,28 +483,146 @@ Connection ~ 5600 4300
 Wire Wire Line
 	5800 4700 6000 4700
 Wire Wire Line
-	7550 4000 7550 4700
+	4050 2150 3700 2150
 Wire Wire Line
-	7750 4000 7550 4000
-Wire Wire Line
-	7750 3300 7750 4000
-Wire Wire Line
-	7450 4000 7450 4500
-Wire Wire Line
-	7250 4000 7250 3300
-Wire Wire Line
-	7450 4000 7250 4000
+	3700 2650 3700 2900
 $Comp
-L power:GND #PWR?
-U 1 1 5D7012E8
-P 7500 3650
-F 0 "#PWR?" H 7500 3400 50  0001 C CNN
-F 1 "GND" H 7505 3477 50  0000 C CNN
-F 2 "" H 7500 3650 50  0001 C CNN
-F 3 "" H 7500 3650 50  0001 C CNN
-	1    7500 3650
-	1    0    0    -1  
+L Device:C_Small C13
+U 1 1 5D6D666F
+P 3700 2550
+F 0 "C13" H 3608 2504 50  0000 R CNN
+F 1 "C_Small" H 3608 2595 50  0000 R CNN
+F 2 "" H 3700 2550 50  0001 C CNN
+F 3 "~" H 3700 2550 50  0001 C CNN
+	1    3700 2550
+	-1   0    0    1   
+$EndComp
+Connection ~ 3700 2150
+Wire Wire Line
+	3700 1350 3700 2150
+Wire Wire Line
+	3700 2150 3700 2450
+Connection ~ 3900 4300
+Wire Notes Line
+	3400 4050 3400 5200
+Wire Notes Line
+	4400 4050 3400 4050
+Wire Wire Line
+	3750 4300 3900 4300
+$Comp
+L Device:L L3
+U 1 1 5D6C560A
+P 3600 4300
+F 0 "L3" V 3419 4300 50  0000 C CNN
+F 1 "L" V 3510 4300 50  0000 C CNN
+F 2 "" H 3600 4300 50  0001 C CNN
+F 3 "~" H 3600 4300 50  0001 C CNN
+	1    3600 4300
+	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7500 3650 7500 3500
+	3200 4300 3450 4300
+Wire Wire Line
+	3200 3800 3200 4300
+Wire Notes Line
+	5400 3700 5400 4100
+Wire Notes Line
+	5400 4100 5750 4100
+Wire Notes Line
+	5750 4100 5750 3700
+Wire Notes Line
+	5750 3700 5400 3700
+Text Notes 5350 3700 0    50   ~ 0
+Lchoke\n
+Wire Wire Line
+	6300 4100 6300 3950
+Wire Wire Line
+	6300 3950 6400 3950
+Connection ~ 6400 3950
+Wire Wire Line
+	6400 3950 6400 3800
+Wire Wire Line
+	7150 4300 6800 4300
+Text HLabel 7150 4300 2    50   Input ~ 0
+RF_SDN_shutdown
+Text Notes 8850 4550 0    50   ~ 0
+Verify if this is the right way to place the xtal
+NoConn ~ 6000 4500
+Text Label 2800 1950 0    50   ~ 0
+RF_GPIO_2
+Wire Wire Line
+	6000 5000 5800 5000
+Wire Wire Line
+	6000 5100 5800 5100
+Text Label 2800 2100 0    50   ~ 0
+RF_GPIO_0
+Text Label 5800 5000 2    50   ~ 0
+RF_GPIO_2
+Text Label 5800 5100 2    50   ~ 0
+RF_GPIO_0
+Text Notes 2800 3300 0    50   ~ 0
+RF switch
+NoConn ~ 6000 5200
+NoConn ~ 6000 5300
+$Comp
+L Oscillator:TM-32.000-AF3-33-S X1
+U 1 1 5D6B4DFE
+P 9000 3600
+F 0 "X1" H 9344 3646 50  0000 L CNN
+F 1 "TM-32.000-AF3-33-S" H 8000 3950 50  0000 L CNN
+F 2 "" H 9450 3250 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc7d9.pdf" H 8900 3600 50  0001 C CNN
+	1    9000 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR032
+U 1 1 5D6B5C3D
+P 9000 2900
+F 0 "#PWR032" H 9000 2750 50  0001 C CNN
+F 1 "+3.3V" H 9015 3073 50  0000 C CNN
+F 2 "" H 9000 2900 50  0001 C CNN
+F 3 "" H 9000 2900 50  0001 C CNN
+	1    9000 2900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 2900 9000 3300
+NoConn ~ 9300 3600
+$Comp
+L power:GND #PWR033
+U 1 1 5D6BDDD0
+P 9000 4100
+F 0 "#PWR033" H 9000 3850 50  0001 C CNN
+F 1 "GND" H 9005 3927 50  0000 C CNN
+F 2 "" H 9000 4100 50  0001 C CNN
+F 3 "" H 9000 4100 50  0001 C CNN
+	1    9000 4100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 4100 9000 3900
+Wire Wire Line
+	8700 3600 8250 3600
+Wire Wire Line
+	8250 3600 8250 3900
+Wire Wire Line
+	6800 4500 8250 4500
+$Comp
+L Device:C_Small C20
+U 1 1 5D6C2DE3
+P 8250 4000
+F 0 "C20" H 8500 4000 50  0000 C CNN
+F 1 "10nF" H 8500 3900 50  0000 C CNN
+F 2 "" H 8250 4000 50  0001 C CNN
+F 3 "~" H 8250 4000 50  0001 C CNN
+	1    8250 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8250 4100 8250 4500
+Text HLabel 7150 5300 2    50   Input ~ 0
+RF_NIRQ
+Wire Wire Line
+	6800 5300 7150 5300
 $EndSCHEMATC

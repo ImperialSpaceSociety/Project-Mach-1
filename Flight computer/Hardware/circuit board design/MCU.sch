@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 7
+Sheet 5 7
 Title ""
 Date ""
 Rev ""
@@ -971,4 +971,6 @@ F 3 "~" H 3300 1900 50  0001 C CNN
 	1    3300 1900
 	0    -1   -1   0   
 $EndComp
+Text Notes 2200 2050 0    50   ~ 0
+Do we need 2 crystals?
 $EndSCHEMATC
