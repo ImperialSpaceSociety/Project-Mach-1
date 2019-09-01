@@ -28,9 +28,11 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm393-n.pdf" H 2700 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Driver_FET:Si7232DN U6
+L circuit-board-design-rescue:Si7232DN-Driver_FET U6
 U 1 1 5D696EFB
 P 4050 1150
+AR Path="/5D696EFB" Ref="U6"  Part="1" 
+AR Path="/5D6468D5/5D696EFB" Ref="U6"  Part="1" 
 F 0 "U6" H 4156 696 50  0000 L CNN
 F 1 "Si7232DN" H 4156 605 50  0000 L CNN
 F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 3900 1400 50  0001 C CNN
