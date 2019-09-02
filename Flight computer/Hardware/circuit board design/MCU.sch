@@ -704,7 +704,7 @@ MCU_RXD0
 Text HLabel 4550 3100 0    50   Input ~ 0
 MCU_PA02
 $Comp
-L circuit-board-design-rescue:W25Q16DW-ICSSPicoTracker-ICSSPicoTracker2-rescue U2
+L flight-computer:ICSSPicoTracker2-rescue_W25Q16DW-ICSSPicoTracker U2
 U 1 1 5D77FBCE
 P 8100 3150
 F 0 "U2" H 8375 3875 50  0000 C CNN
@@ -905,8 +905,6 @@ F 3 "" H 4450 5950 50  0001 C CNN
 	1    4450 5950
 	1    0    0    -1  
 $EndComp
-Text Notes 3400 6850 0    50   ~ 0
-Why this 100nF cap?
 Wire Notes Line
 	550  3200 2550 3200
 Wire Notes Line

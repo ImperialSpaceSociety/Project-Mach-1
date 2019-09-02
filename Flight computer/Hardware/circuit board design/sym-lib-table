@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name circuit-board-design-rescue)(type Legacy)(uri "${KIPRJMOD}/circuit board design-rescue.lib")(options "")(descr ""))
   (lib (name BMI088)(type Legacy)(uri ${KIPRJMOD}/BMI088.lib)(options "")(descr ""))
+  (lib (name flight-computer)(type Legacy)(uri "${KIPRJMOD}/flight computer.lib")(options "")(descr ""))
 )
