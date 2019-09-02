@@ -324,17 +324,6 @@ F 3 "" H 6000 6600 50  0001 C CNN
 	1    6000 6600
 	1    0    0    -1  
 $EndComp
-$Comp
-L MCU_Microchip_SAML:ATSAML21G18B-MUT U1
-U 1 1 5D6544DB
-P 6100 4400
-F 0 "U1" H 6650 6250 50  0000 C CNN
-F 1 "ATSAML21G18B-MUT" H 5400 2650 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm" H 7400 6200 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf" H 6100 4400 50  0001 C CNN
-	1    6100 4400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6000 6600 6000 6450
 Wire Wire Line
@@ -799,8 +788,8 @@ U 1 1 5D650F14
 P 8000 4700
 F 0 "BZ1" H 8152 4729 50  0000 L CNN
 F 1 "Buzzer" H 8152 4638 50  0000 L CNN
-F 2 "" V 7975 4800 50  0001 C CNN
-F 3 "~" V 7975 4800 50  0001 C CNN
+F 2 "Buzzer_Beeper:Buzzer_12x9.5RM7.6" V 7975 4800 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/1581/0900766b815810c5.pdf" V 7975 4800 50  0001 C CNN
 	1    8000 4700
 	1    0    0    -1  
 $EndComp
@@ -980,4 +969,29 @@ Wire Wire Line
 	3300 4400 5100 4400
 Wire Wire Line
 	3900 4300 5100 4300
+$Comp
+L MCU_Microchip_SAML:ATSAML21J18B-MUT U11
+U 1 1 5D729B41
+P 6100 4400
+F 0 "U11" H 6100 2411 50  0000 C CNN
+F 1 "ATSAML21J18B-MUT" H 6100 2320 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm" H 7400 6200 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf" H 6100 4400 50  0001 C CNN
+	1    6100 4400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7100 5400
+NoConn ~ 7100 5300
+NoConn ~ 7100 5200
+NoConn ~ 7100 5100
+NoConn ~ 7100 5000
+NoConn ~ 7100 4900
+NoConn ~ 7100 4800
+NoConn ~ 7100 3900
+NoConn ~ 7100 3800
+NoConn ~ 7100 3700
+NoConn ~ 7100 3600
+NoConn ~ 7100 3500
+NoConn ~ 7100 3400
+NoConn ~ 7100 3300
 $EndSCHEMATC

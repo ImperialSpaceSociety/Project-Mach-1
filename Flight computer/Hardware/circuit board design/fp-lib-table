@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name BMI088)(type Legacy)(uri "D:/Long term storage and temp/dead weight program downloads/BMI088/BMI088.mod")(options "")(descr ""))
   (lib (name flight-computer)(type KiCad)(uri "${KIPRJMOD}/flight computer.pretty")(options "")(descr ""))
+  (lib (name pico_tracker)(type KiCad)(uri ${KIPRJMOD}/pico_tracker.pretty)(options "")(descr ""))
 )
