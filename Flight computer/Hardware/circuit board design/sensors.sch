@@ -283,9 +283,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 1500 5150 1500
 NoConn ~ 3900 2400
-NoConn ~ 3900 2300
 NoConn ~ 3900 2200
-NoConn ~ 3900 2100
 $Comp
 L Sensor_Pressure:MS5607-02BA U8
 U 1 1 5D36B493
@@ -297,4 +295,12 @@ F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&D
 	1    3300 4400
 	1    0    0    -1  
 $EndComp
+Text HLabel 4150 2100 2    50   Input ~ 0
+ACCL_RDY
+Wire Wire Line
+	3900 2100 4150 2100
+Text HLabel 4150 2300 2    50   Input ~ 0
+GYRO_RDY
+Wire Wire Line
+	3900 2300 4150 2300
 $EndSCHEMATC

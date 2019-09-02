@@ -597,7 +597,6 @@ F 3 "" H 3300 4850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3300 4500 3300 4400
-Connection ~ 3300 4400
 Wire Wire Line
 	3300 4400 3200 4400
 Wire Wire Line
@@ -615,10 +614,6 @@ Wire Wire Line
 	3900 4300 3900 4050
 Wire Wire Line
 	3900 4050 2800 4050
-Wire Wire Line
-	3900 4300 5100 4300
-Wire Wire Line
-	3300 4400 5100 4400
 $Comp
 L Device:R R12
 U 1 1 5D70BAB2
@@ -668,8 +663,6 @@ Wire Wire Line
 Wire Wire Line
 	2250 5700 2250 4450
 Wire Wire Line
-	5100 4500 4550 4500
-Wire Wire Line
 	5100 4600 4550 4600
 Wire Wire Line
 	5100 4700 4550 4700
@@ -703,17 +696,6 @@ Text HLabel 4550 3900 0    50   Input ~ 0
 MCU_RXD0
 Text HLabel 4550 3100 0    50   Input ~ 0
 MCU_PA02
-$Comp
-L flight-computer:W74M64FV U2
-U 1 1 5D77FBCE
-P 8100 3150
-F 0 "U2" H 8375 3875 50  0000 C CNN
-F 1 "W74M64FV" H 8375 3784 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm" H 8100 3150 50  0001 C CNN
-F 3 "https://docs-emea.rs-online.com/webdocs/1623/0900766b81623058.pdf" H 8100 3150 50  0001 C CNN
-	1    8100 3150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8750 2650 8900 2650
 Connection ~ 9650 2650
@@ -794,11 +776,8 @@ Text Label 7300 2650 0    50   ~ 0
 MCU_NSEL4
 Text Label 9250 3100 2    50   ~ 0
 MCU_MOSI4
-Wire Wire Line
-	5100 4200 4550 4200
 Text HLabel 4550 4200 0    50   BiDi ~ 0
 MCU_PA13
-NoConn ~ 5100 5500
 NoConn ~ 7100 4700
 Text HLabel 7650 4000 2    50   Output ~ 0
 MCU_PB03
@@ -806,8 +785,6 @@ Text HLabel 7650 4100 2    50   Output ~ 0
 MCU_PB02
 Text HLabel 7650 4200 2    50   Input ~ 0
 MCU_PB08
-Wire Wire Line
-	5100 4100 4550 4100
 Wire Wire Line
 	7100 4300 7650 4300
 Text Label 7650 4300 2    50   ~ 0
@@ -977,4 +954,30 @@ Text HLabel 4550 5000 0    50   Input ~ 0
 MCU_PA21
 Wire Wire Line
 	4550 5000 5100 5000
+Text HLabel 4550 5500 0    50   Input ~ 0
+MCU_PA27
+Wire Wire Line
+	4550 5500 5100 5500
+$Comp
+L flight-computer:W74M64FV U7
+U 1 1 5D77FBCE
+P 8100 3150
+F 0 "U7" H 8375 3875 50  0000 C CNN
+F 1 "W74M64FV" H 8375 3784 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm" H 8100 3150 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/1623/0900766b81623058.pdf" H 8100 3150 50  0001 C CNN
+	1    8100 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 3300 4400
+Wire Wire Line
+	5100 4100 4550 4100
+Wire Wire Line
+	5100 4200 4550 4200
+Wire Wire Line
+	5100 4500 4550 4500
+Wire Wire Line
+	3300 4400 5100 4400
+Wire Wire Line
+	3900 4300 5100 4300
 $EndSCHEMATC
