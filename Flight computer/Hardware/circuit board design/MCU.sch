@@ -798,9 +798,6 @@ Wire Wire Line
 	5100 4200 4550 4200
 Text HLabel 4550 4200 0    50   BiDi ~ 0
 MCU_PA13
-NoConn ~ 5100 4900
-NoConn ~ 5100 5000
-NoConn ~ 5100 5500
 NoConn ~ 7100 4700
 Text HLabel 7650 4000 2    50   Output ~ 0
 MCU_PB03
@@ -971,4 +968,16 @@ F 3 "~" H 3300 1900 50  0001 C CNN
 $EndComp
 Text Notes 2200 2050 0    50   ~ 0
 Do we need 2 crystals?
+Text HLabel 4550 4900 0    50   Input ~ 0
+MCU_PA20
+Wire Wire Line
+	4550 4900 5100 4900
+Text HLabel 4550 5000 0    50   Input ~ 0
+MCU_PA21
+Wire Wire Line
+	4550 5000 5100 5000
+Text HLabel 4550 5500 0    50   Input ~ 0
+MCU_PA27
+Wire Wire Line
+	4550 5500 5100 5500
 $EndSCHEMATC
