@@ -108,9 +108,9 @@ Connection ~ 5150 1400
 Wire Wire Line
 	5150 1400 5650 1400
 Text HLabel 5650 1400 2    50   Output ~ 0
-sense_fet_a
+SENSE_FET_A
 Text Label 5650 1300 0    50   ~ 0
-fet_a
+FET_A
 Wire Wire Line
 	3000 1200 3450 1200
 Wire Wire Line
@@ -163,7 +163,7 @@ $EndComp
 Wire Wire Line
 	2850 1600 2650 1600
 Text HLabel 1900 1600 0    50   Output ~ 0
-fire_a
+FIRE_A
 $Comp
 L power:GND #PWR027
 U 1 1 5D6B2880

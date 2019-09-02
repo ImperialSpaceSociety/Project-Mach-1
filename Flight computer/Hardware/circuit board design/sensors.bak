@@ -105,8 +105,8 @@ U 1 1 5D6DBE05
 P 3200 2100
 F 0 "U10" H 3200 3067 50  0000 C CNN
 F 1 "BMI088" H 3200 2976 50  0000 C CNN
-F 2 "fligh computer:PQFN50P450X300X100-16N" H 3200 2100 50  0001 L BNN
-F 3 "" H 3200 2100 50  0001 L BNN
+F 2 "flight-computer:PQFN50P450X300X100-16N" H 3200 2100 50  0001 L BNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMI088-DS001.pdf" H 3200 2100 50  0001 L BNN
 F 4 "None" H 3200 2100 50  0001 L BNN "Field4"
 F 5 "High-performance 6-axis inertial sensor _accelerometer + gyroscope_" H 3200 2100 50  0001 L BNN "Field5"
 F 6 "BMI088" H 3200 2100 50  0001 L BNN "Field6"

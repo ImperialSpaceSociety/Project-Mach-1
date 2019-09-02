@@ -704,13 +704,13 @@ MCU_RXD0
 Text HLabel 4550 3100 0    50   Input ~ 0
 MCU_PA02
 $Comp
-L flight-computer:ICSSPicoTracker2-rescue_W25Q16DW-ICSSPicoTracker U2
+L flight-computer:W74M64FV U2
 U 1 1 5D77FBCE
 P 8100 3150
 F 0 "U2" H 8375 3875 50  0000 C CNN
-F 1 "W25Q16DW" H 8375 3784 50  0000 C CNN
-F 2 "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm" H 8100 3150 50  0001 C CNN
-F 3 "" H 8100 3150 50  0001 C CNN
+F 1 "W74M64FV" H 8375 3784 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm" H 8100 3150 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/1623/0900766b81623058.pdf" H 8100 3150 50  0001 C CNN
 	1    8100 3150
 	1    0    0    -1  
 $EndComp
