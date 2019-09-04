@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 7
+Sheet 5 7
 Title ""
 Date ""
 Rev ""
@@ -400,8 +400,6 @@ Connection ~ 3800 3150
 Wire Wire Line
 	3800 3150 4000 3150
 Wire Wire Line
-	6250 3100 6800 3100
-Wire Wire Line
 	7250 3100 7250 2900
 $Comp
 L power:+3.3V #PWR01
@@ -416,7 +414,6 @@ F 3 "" H 7250 2900 50  0001 C CNN
 $EndComp
 Text Notes 2650 4150 0    50   ~ 0
 Why the 100nF capactitor?
-Connection ~ 3300 3250
 $Comp
 L power:PWR_FLAG #FLG0104
 U 1 1 5D62CCB0
@@ -428,4 +425,7 @@ F 3 "~" H 3300 3250 50  0001 C CNN
 	1    3300 3250
 	1    0    0    -1  
 $EndComp
+Connection ~ 3300 3250
+Wire Wire Line
+	6250 3100 6800 3100
 $EndSCHEMATC

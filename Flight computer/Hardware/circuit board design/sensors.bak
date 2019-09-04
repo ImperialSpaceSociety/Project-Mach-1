@@ -184,8 +184,6 @@ F 3 "" H 3950 1850 50  0001 C CNN
 	1    3950 1850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4150 3150 3950 3150
 $Comp
 L power:GND #PWR014
 U 1 1 5D730B8F
@@ -492,4 +490,6 @@ Text HLabel 1650 5900 0    50   Output ~ 0
 MAG_RDY
 Wire Wire Line
 	1650 5900 2400 5900
+Wire Wire Line
+	3950 3150 4150 3150
 $EndSCHEMATC
