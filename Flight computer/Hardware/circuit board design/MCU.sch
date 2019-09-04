@@ -330,13 +330,11 @@ Text Label 4250 4300 2    50   ~ 0
 XIN
 Text Label 4250 4400 2    50   ~ 0
 XOUT
-Text Label 4250 5600 2    50   ~ 0
-SWCLK
 Text Label 4250 5700 2    50   ~ 0
 SWDIO
-Text Label 4250 5300 2    50   ~ 0
+Text Label 3850 5300 2    50   ~ 0
 USB_DM
-Text Label 4250 5400 2    50   ~ 0
+Text Label 3850 5400 2    50   ~ 0
 USB_DP
 Wire Wire Line
 	3850 5300 5100 5300
@@ -682,29 +680,17 @@ Wire Wire Line
 Wire Wire Line
 	8100 2600 8100 2750
 Wire Wire Line
-	5100 3200 4550 3200
-Wire Wire Line
-	5100 3300 4550 3300
-Wire Wire Line
 	5100 3400 4550 3400
 Wire Wire Line
 	5100 3500 4550 3500
 Wire Wire Line
 	5100 3600 4550 3600
-Wire Wire Line
-	5100 3700 4550 3700
-Text HLabel 4550 3200 0    50   BiDi ~ 0
-MCU_PA03
-Text HLabel 4550 3300 0    50   BiDi ~ 0
-MCU_PA04
 Text HLabel 4550 3400 0    50   BiDi ~ 0
 MCU_PA05
 Text HLabel 4550 3500 0    50   BiDi ~ 0
 MCU_PA06
 Text HLabel 4550 3600 0    50   BiDi ~ 0
 MCU_PA07
-Text HLabel 4550 3700 0    50   BiDi ~ 0
-MCU_PA08
 Wire Wire Line
 	5100 3800 4550 3800
 Text HLabel 4550 3800 0    50   Output ~ 0
@@ -909,8 +895,6 @@ Text HLabel 4550 5000 0    50   Input ~ 0
 MCU_PA21
 Wire Wire Line
 	4550 5000 5100 5000
-Text HLabel 4550 5500 0    50   Input ~ 0
-MCU_PA27
 Wire Wire Line
 	4550 5500 5100 5500
 $Comp
@@ -954,8 +938,6 @@ NoConn ~ 7100 5300
 NoConn ~ 7100 5200
 NoConn ~ 7100 5100
 NoConn ~ 7100 5000
-NoConn ~ 7100 4900
-NoConn ~ 7100 4800
 Wire Notes Line
 	7450 1500 7450 3100
 Wire Notes Line
@@ -1021,7 +1003,7 @@ U 1 1 5D7395BE
 P 9000 5200
 F 0 "J5" H 9057 5667 50  0000 C CNN
 F 1 "USB_B_Micro" H 9057 5576 50  0000 C CNN
-F 2 "" H 9150 5150 50  0001 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 9150 5150 50  0001 C CNN
 F 3 "~" H 9150 5150 50  0001 C CNN
 	1    9000 5200
 	1    0    0    -1  
@@ -1058,4 +1040,27 @@ Text HLabel 7650 4600 2    50   Output ~ 0
 MCU_PB13
 Text HLabel 7650 4700 2    50   Output ~ 0
 MCU_PB14
+Wire Wire Line
+	7100 3900 7650 3900
+Wire Wire Line
+	7100 4000 7650 4000
+Text HLabel 7650 3900 2    50   Input ~ 0
+MCU_PB06
+Text HLabel 7650 4000 2    50   Input ~ 0
+MCU_PB07
+Wire Wire Line
+	7100 4800 7650 4800
+Wire Wire Line
+	7100 4900 7650 4900
+Text HLabel 7650 4800 2    50   Output ~ 0
+MCU_PB15
+Text HLabel 7650 4900 2    50   Output ~ 0
+MCU_PB16
+Text HLabel 4550 5500 0    50   Input ~ 0
+MCU_PA27
+Text Label 4250 5600 2    50   ~ 0
+SWCLK
+NoConn ~ 5100 3700
+NoConn ~ 5100 3300
+NoConn ~ 5100 3200
 $EndSCHEMATC
