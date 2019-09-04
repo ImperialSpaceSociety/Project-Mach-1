@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -428,4 +428,50 @@ $EndComp
 Connection ~ 3300 3250
 Wire Wire Line
 	6250 3100 6800 3100
+NoConn ~ 9550 4700
+Wire Wire Line
+	9150 4900 9150 5200
+$Comp
+L power:GND #PWR?
+U 1 1 5D941F2E
+P 9150 5200
+F 0 "#PWR?" H 9150 4950 50  0001 C CNN
+F 1 "GND" H 9155 5027 50  0000 C CNN
+F 2 "" H 9150 5200 50  0001 C CNN
+F 3 "" H 9150 5200 50  0001 C CNN
+	1    9150 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 4900 9250 5200
+Wire Wire Line
+	9900 4500 9550 4500
+Wire Wire Line
+	9550 4600 9900 4600
+$Comp
+L power:GND #PWR?
+U 1 1 5D941F37
+P 9250 5200
+F 0 "#PWR?" H 9250 4950 50  0001 C CNN
+F 1 "GND" H 9255 5027 50  0000 C CNN
+F 2 "" H 9250 5200 50  0001 C CNN
+F 3 "" H 9250 5200 50  0001 C CNN
+	1    9250 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5D941F3D
+P 9250 4500
+F 0 "J?" H 9307 4967 50  0000 C CNN
+F 1 "USB_B_Micro" H 9307 4876 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 9400 4450 50  0001 C CNN
+F 3 "~" H 9400 4450 50  0001 C CNN
+	1    9250 4500
+	1    0    0    -1  
+$EndComp
+Text HLabel 9900 4600 2    50   Input ~ 0
+USB_DM
+Text HLabel 9900 4500 2    50   Input ~ 0
+USB_DP
 $EndSCHEMATC
