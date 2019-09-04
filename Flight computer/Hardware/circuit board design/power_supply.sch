@@ -399,22 +399,8 @@ $EndComp
 Connection ~ 3800 3150
 Wire Wire Line
 	3800 3150 4000 3150
-$Comp
-L power:PWR_FLAG #FLG0104
-U 1 1 5D62CCB0
-P 3300 3250
-F 0 "#FLG0104" H 3300 3325 50  0001 C CNN
-F 1 "PWR_FLAG" H 3300 3423 50  0000 C CNN
-F 2 "" H 3300 3250 50  0001 C CNN
-F 3 "~" H 3300 3250 50  0001 C CNN
-	1    3300 3250
-	1    0    0    -1  
-$EndComp
-Connection ~ 3300 3250
 Wire Wire Line
 	6250 3100 6800 3100
-Text Notes 5050 5000 0    50   ~ 0
-TODO: change the resistors to bring the voltage up to 3.3V// Done\n\n
 Wire Wire Line
 	7250 3100 7250 2900
 $Comp
@@ -428,8 +414,18 @@ F 3 "" H 7250 2900 50  0001 C CNN
 	1    7250 2900
 	1    0    0    -1  
 $EndComp
-Text Notes 1050 5900 0    50   ~ 0
-Measure battery voltage when needed by setting the gate high from \nthe MCU and then sending the output to an ADC pin the  MCU. Thats what I think it is. \nMedad\n
 Text Notes 2650 4150 0    50   ~ 0
 Why the 100nF capactitor?
+Connection ~ 3300 3250
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5D62CCB0
+P 3300 3250
+F 0 "#FLG0104" H 3300 3325 50  0001 C CNN
+F 1 "PWR_FLAG" H 3300 3423 50  0000 C CNN
+F 2 "" H 3300 3250 50  0001 C CNN
+F 3 "~" H 3300 3250 50  0001 C CNN
+	1    3300 3250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

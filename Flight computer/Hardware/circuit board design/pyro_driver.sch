@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Comparator:LM2903 U1
-U 1 1 5D6C6230
-P 2600 1050
-F 0 "U1" H 2600 1417 50  0000 C CNN
-F 1 "LM2903" H 2600 1326 50  0000 C CNN
-F 2 "" H 2600 1050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm393-n.pdf" H 2600 1050 50  0001 C CNN
-	1    2600 1050
-	1    0    0    -1  
-$EndComp
-$Comp
 L circuit-board-design-rescue:Si7232DN-Driver_FET U6
 U 1 1 5D696EFB
 P 3950 1000
@@ -35,6 +24,7 @@ F 0 "U6" H 4056 546 50  0000 L CNN
 F 1 "Si7232DN" H 4056 455 50  0000 L CNN
 F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 3800 1250 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 3950 1000 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 3950 1000 50  0001 C CNN "Purchase link"
 	1    3950 1000
 	1    0    0    -1  
 $EndComp
@@ -110,15 +100,6 @@ SENSE_FET_A
 Text Label 5550 1150 0    50   ~ 0
 FET_A
 Wire Wire Line
-	2900 1050 3350 1050
-Wire Wire Line
-	3350 1050 3350 1450
-Wire Wire Line
-	3350 1450 3650 1450
-Wire Wire Line
-	3350 1450 3050 1450
-Connection ~ 3350 1450
-Wire Wire Line
 	2550 1450 2550 1600
 Connection ~ 2550 1450
 Wire Wire Line
@@ -162,44 +143,7 @@ Wire Wire Line
 	2750 1450 2550 1450
 Text HLabel 1800 1450 0    50   Output ~ 0
 FIRE_A
-$Comp
-L power:GND #PWR027
-U 1 1 5D6B2880
-P 10150 4200
-F 0 "#PWR027" H 10150 3950 50  0001 C CNN
-F 1 "GND" H 10155 4027 50  0000 C CNN
-F 2 "" H 10150 4200 50  0001 C CNN
-F 3 "" H 10150 4200 50  0001 C CNN
-	1    10150 4200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10150 3950 10150 4200
-$Comp
-L power:+3.3V #PWR026
-U 1 1 5D6B231C
-P 10150 3200
-F 0 "#PWR026" H 10150 3050 50  0001 C CNN
-F 1 "+3.3V" H 10165 3373 50  0000 C CNN
-F 2 "" H 10150 3200 50  0001 C CNN
-F 3 "" H 10150 3200 50  0001 C CNN
-	1    10150 3200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Comparator:LM2903 U5
-U 3 1 5D6B191C
-P 10250 3650
-F 0 "U5" H 10208 3696 50  0000 L CNN
-F 1 "LM2903" H 10208 3605 50  0000 L CNN
-F 2 "" H 10250 3650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm393-n.pdf" H 10250 3650 50  0001 C CNN
-	3    10250 3650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10150 3350 10150 3200
-Text Notes 1050 4850 0    50   ~ 0
+Text Notes 1000 5300 0    50   ~ 0
 Put in a block connector, like the TE connectivity ones\n
 $Comp
 L Connector:Conn_01x06_Female J4
@@ -212,28 +156,12 @@ F 3 "~" H 2100 4100 50  0001 C CNN
 	1    2100 4100
 	1    0    0    -1  
 $EndComp
-NoConn ~ 2300 1150
-NoConn ~ 2300 950 
-NoConn ~ 1900 4000
-NoConn ~ 1900 4100
-NoConn ~ 1900 4200
 NoConn ~ 1900 4300
 NoConn ~ 1900 4400
 Text Label 1350 3900 2    50   ~ 0
 FET_A
 Wire Wire Line
 	1350 3900 1900 3900
-$Comp
-L Comparator:LM2903 U5
-U 2 1 5D743B77
-P 4450 3250
-F 0 "U5" H 4450 3617 50  0000 C CNN
-F 1 "LM2903" H 4450 3526 50  0000 C CNN
-F 2 "" H 4450 3250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm393-n.pdf" H 4450 3250 50  0001 C CNN
-	2    4450 3250
-	1    0    0    -1  
-$EndComp
 $Comp
 L circuit-board-design-rescue:Si7232DN-Driver_FET U?
 U 2 1 5D743B81
@@ -244,6 +172,7 @@ F 0 "U6" H 5906 2746 50  0000 L CNN
 F 1 "Si7232DN" H 5906 2655 50  0000 L CNN
 F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5650 3450 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5800 3200 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5800 3200 50  0001 C CNN "Purchase link"
 	2    5800 3200
 	1    0    0    -1  
 $EndComp
@@ -317,15 +246,6 @@ SENSE_FET_B
 Text Label 7400 3350 0    50   ~ 0
 FET_B
 Wire Wire Line
-	4750 3250 5200 3250
-Wire Wire Line
-	5200 3250 5200 3650
-Wire Wire Line
-	5200 3650 5500 3650
-Wire Wire Line
-	5200 3650 4900 3650
-Connection ~ 5200 3650
-Wire Wire Line
 	4400 3650 4400 3800
 Connection ~ 4400 3650
 Wire Wire Line
@@ -369,12 +289,38 @@ Wire Wire Line
 	4600 3650 4400 3650
 Text HLabel 3650 3650 0    50   Output ~ 0
 FIRE_B
-NoConn ~ 4150 3350
-NoConn ~ 4150 3150
-Text Label 1350 4000 2    50   ~ 0
+Text Label 1350 4100 2    50   ~ 0
 FET_B
 Wire Wire Line
-	1350 4000 1900 4000
+	1350 4100 1900 4100
 Wire Wire Line
 	5800 4100 5800 3850
+$Comp
+L power:GND #PWR045
+U 1 1 5D70E267
+P 1600 4900
+F 0 "#PWR045" H 1600 4650 50  0001 C CNN
+F 1 "GND" H 1605 4727 50  0000 C CNN
+F 2 "" H 1600 4900 50  0001 C CNN
+F 3 "" H 1600 4900 50  0001 C CNN
+	1    1600 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 4000 1600 4000
+Wire Wire Line
+	1600 4000 1600 4700
+Wire Wire Line
+	1900 4200 1700 4200
+Wire Wire Line
+	1700 4700 1600 4700
+Wire Wire Line
+	1700 4200 1700 4700
+Connection ~ 1600 4700
+Wire Wire Line
+	1600 4700 1600 4900
+Wire Wire Line
+	3050 1450 3650 1450
+Wire Wire Line
+	4900 3650 5500 3650
 $EndSCHEMATC

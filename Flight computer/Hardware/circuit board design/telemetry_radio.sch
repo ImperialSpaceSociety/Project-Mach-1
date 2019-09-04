@@ -301,13 +301,15 @@ F 3 "~" H 8800 3000 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L flight-computer:ICSSPicoTracker_Yageo434 AE1
+L flight-computer:ICSSPicoTracker_Yageo434 ANT2
 U 1 1 5D6B791C
 P 10150 2250
-F 0 "AE1" H 10150 2650 50  0000 L CNN
-F 1 "Antenna" H 10100 2500 50  0000 L CNN
+F 0 "ANT2" H 10150 2650 50  0000 L CNN
+F 1 "ICSSPicoTracker_Yageo434" H 10100 2500 50  0000 L CNN
 F 2 "pico_tracker:Yageo434" H 10150 2250 50  0001 C CNN
-F 3 "~" H 10150 2250 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/447/An_SMD_UHF_433_1204_0-595178.pdf" H 10150 2250 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/Yageo/ANT1204F002R0433A?qs=CqAAFKzD4h9Rz96OVrhbMw%3D%3D" H 10150 2250 50  0001 C CNN "Purchase link"
+F 5 "1.33" H 10150 2250 50  0001 C CNN "Cost"
 	1    10150 2250
 	-1   0    0    -1  
 $EndComp
@@ -407,17 +409,6 @@ Wire Wire Line
 	1550 2900 1550 3150
 Wire Wire Line
 	1550 3900 1550 4000
-$Comp
-L Oscillator:IQXO-70 X1
-U 1 1 5D766DA4
-P 1550 3600
-F 0 "X1" H 1894 3646 50  0000 L CNN
-F 1 "32MHz TCXO" H 1600 3350 50  0000 L CNN
-F 2 "Oscillator:Oscillator_SMD_IQD_IQXO70-4Pin_7.5x5.0mm" H 2225 3275 50  0001 C CNN
-F 3 "http://www.iqdfrequencyproducts.com/products/details/iqxo-70-11-30.pdf" H 1450 3600 50  0001 C CNN
-	1    1550 3600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	800  3150 1550 3150
 Connection ~ 1550 3150
@@ -817,4 +808,17 @@ Wire Wire Line
 Wire Wire Line
 	10600 2250 10600 3000
 NoConn ~ 9850 2250
+$Comp
+L flight-computer:TM-32.000-AF3-33-S-Oscillator X1
+U 1 1 5D703E49
+P 1550 3600
+F 0 "X1" H 1500 4800 50  0000 L CNN
+F 1 "TM-32.000-AF3-33-S-Oscillator" H 1000 4700 50  0000 L CNN
+F 2 "Oscillator:Oscillator_SMD_SeikoEpson_SG210-4Pin_2.5x2.0mm_HandSoldering" H 2000 3250 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc7d9.pdf" H 1450 3600 50  0001 C CNN
+F 4 "3.43" H 1550 3600 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/tcxo-oscillators/1442366/" H 1550 3600 50  0001 C CNN "Purchase link"
+	1    1550 3600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
