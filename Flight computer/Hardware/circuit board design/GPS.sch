@@ -61,39 +61,6 @@ Wire Wire Line
 Connection ~ 3200 2400
 Wire Wire Line
 	3200 2400 3200 2700
-$Comp
-L Device:C_Small C72
-U 1 1 5D622CC0
-P 1800 1700
-F 0 "C72" H 1892 1746 50  0000 L CNN
-F 1 "1nF" H 1892 1655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 1800 1700 50  0001 C CNN
-F 3 "~" H 1800 1700 50  0001 C CNN
-	1    1800 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L flight-computer:ICSSPicoTracker_Johanson1575 ANT1
-U 1 1 5D521711
-P 1300 1500
-AR Path="/5D521711" Ref="ANT1"  Part="1" 
-AR Path="/5D2ABE03/5D521711" Ref="ANT1"  Part="1" 
-AR Path="/5D5B165E/5D521711" Ref="ANT1"  Part="1" 
-F 0 "ANT1" H 1250 1765 50  0000 C CNN
-F 1 "Johanson1575" H 1250 1674 50  0000 C CNN
-F 2 "pico_tracker:Johanson1575" H 1300 1500 50  0001 C CNN
-F 3 "https://www.mouser.co.uk/datasheet/2/611/JTI_Antenna-1575AT43A40_2006-09-399627.pdf" H 1300 1500 50  0001 C CNN
-F 4 "0.753" H 1300 1500 50  0001 C CNN "Cost"
-F 5 "https://www.mouser.co.uk/ProductDetail/Johanson-Technology/1575AT43A0040E?qs=qF3SSroohZWOIHwrK8wTew%3D%3D" H 1300 1500 50  0001 C CNN "Purchase link"
-	1    1300 1500
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	1800 1900 1800 1800
-Wire Wire Line
-	1800 1600 1800 1500
-Wire Wire Line
-	1800 1500 1700 1500
 Wire Wire Line
 	3250 2050 3250 1900
 Text HLabel 7200 4350 2    50   Output ~ 0
@@ -206,13 +173,48 @@ Wire Wire Line
 Wire Wire Line
 	6250 1800 3150 1800
 Wire Wire Line
-	3300 2200 2900 2200
+	5850 3150 5850 3250
 Wire Wire Line
-	2900 2050 3250 2050
+	5950 3350 5950 3250
 Wire Wire Line
-	3150 1900 2900 1900
+	5950 3250 5850 3250
+Connection ~ 5850 3250
 Wire Wire Line
-	1850 1900 1800 1900
+	5850 3250 5850 3350
+NoConn ~ 6050 3350
+$Comp
+L power:GND #PWR052
+U 1 1 5D458C8C
+P 2000 2550
+F 0 "#PWR052" H 2000 2300 50  0001 C CNN
+F 1 "GND" H 2005 2377 50  0000 C CNN
+F 2 "" H 2000 2550 50  0001 C CNN
+F 3 "" H 2000 2550 50  0001 C CNN
+	1    2000 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 2050 2000 2200
+Connection ~ 2000 2200
+Wire Wire Line
+	2000 2200 2000 2550
+$Comp
+L Device:L_Small L21
+U 1 1 5D61FE97
+P 1950 1900
+F 0 "L21" V 1900 1850 50  0000 L CNN
+F 1 "6.8nH" V 2000 1800 50  0000 L CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" H 1950 1900 50  0001 C CNN
+F 3 "~" H 1950 1900 50  0001 C CNN
+	1    1950 1900
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	2050 1900 2100 1900
+Wire Wire Line
+	2100 2050 2000 2050
+Wire Wire Line
+	2100 2200 2000 2200
 $Comp
 L flight-computer:ICSSPicoTracker_MAX2659ELT+ U12
 U 1 1 5D44B218
@@ -226,45 +228,44 @@ F 4 "https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX2659ELT+T?qs=GxO
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2100 2200 2000 2200
+	1850 1900 1800 1900
 Wire Wire Line
-	2100 2050 2000 2050
+	3150 1900 2900 1900
 Wire Wire Line
-	2050 1900 2100 1900
+	2900 2050 3250 2050
+Wire Wire Line
+	3300 2200 2900 2200
+Wire Wire Line
+	1800 1500 1700 1500
+Wire Wire Line
+	1800 1600 1800 1500
+Wire Wire Line
+	1800 1900 1800 1800
 $Comp
-L Device:L_Small L21
-U 1 1 5D61FE97
-P 1950 1900
-F 0 "L21" V 1900 1850 50  0000 L CNN
-F 1 "6.8nH" V 2000 1800 50  0000 L CNN
-F 2 "Inductor_SMD:L_0402_1005Metric" H 1950 1900 50  0001 C CNN
-F 3 "~" H 1950 1900 50  0001 C CNN
-	1    1950 1900
-	0    1    -1   0   
+L flight-computer:ICSSPicoTracker_Johanson1575 ANT1
+U 1 1 5D521711
+P 1300 1500
+AR Path="/5D521711" Ref="ANT1"  Part="1" 
+AR Path="/5D2ABE03/5D521711" Ref="ANT1"  Part="1" 
+AR Path="/5D5B165E/5D521711" Ref="ANT1"  Part="1" 
+F 0 "ANT1" H 1250 1765 50  0000 C CNN
+F 1 "Johanson1575" H 1250 1674 50  0000 C CNN
+F 2 "pico_tracker:Johanson1575" H 1300 1500 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/611/JTI_Antenna-1575AT43A40_2006-09-399627.pdf" H 1300 1500 50  0001 C CNN
+F 4 "0.753" H 1300 1500 50  0001 C CNN "Cost"
+F 5 "https://www.mouser.co.uk/ProductDetail/Johanson-Technology/1575AT43A0040E?qs=qF3SSroohZWOIHwrK8wTew%3D%3D" H 1300 1500 50  0001 C CNN "Purchase link"
+	1    1300 1500
+	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	2000 2200 2000 2550
-Connection ~ 2000 2200
-Wire Wire Line
-	2000 2050 2000 2200
 $Comp
-L power:GND #PWR052
-U 1 1 5D458C8C
-P 2000 2550
-F 0 "#PWR052" H 2000 2300 50  0001 C CNN
-F 1 "GND" H 2005 2377 50  0000 C CNN
-F 2 "" H 2000 2550 50  0001 C CNN
-F 3 "" H 2000 2550 50  0001 C CNN
-	1    2000 2550
+L Device:C_Small C72
+U 1 1 5D622CC0
+P 1800 1700
+F 0 "C72" H 1892 1746 50  0000 L CNN
+F 1 "1nF" H 1892 1655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1800 1700 50  0001 C CNN
+F 3 "~" H 1800 1700 50  0001 C CNN
+	1    1800 1700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5850 3150 5850 3250
-Wire Wire Line
-	5950 3350 5950 3250
-Wire Wire Line
-	5950 3250 5850 3250
-Connection ~ 5850 3250
-Wire Wire Line
-	5850 3250 5850 3350
 $EndSCHEMATC

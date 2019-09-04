@@ -1,5 +1,10 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP IIS2MDC
+D High-accuracy, ultra-low-power, 3-axis digital output magnetometer
+F https://www.mouser.co.uk/datasheet/2/389/iis2mdc-1309412.pdf
+$ENDCMP
+#
 $CMP TM-32.000-AF3-33-S-Oscillator
 D 32 Mhz RS Pro TCXO
 F https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc7d9.pdf

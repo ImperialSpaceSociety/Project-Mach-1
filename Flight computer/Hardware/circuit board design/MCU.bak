@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 7 7
 Title ""
 Date ""
 Rev ""
@@ -171,17 +171,6 @@ Wire Wire Line
 	3850 2500 4400 2500
 Wire Wire Line
 	4400 2400 4400 2500
-$Comp
-L Connector_Generic:Conn_01x02 J2
-U 1 1 5D2A0018
-P 3650 5300
-F 0 "J2" H 3730 5292 50  0000 L CNN
-F 1 "Conn_01x02" H 3730 5201 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Vertical" H 3650 5300 50  0001 C CNN
-F 3 "~" H 3650 5300 50  0001 C CNN
-	1    3650 5300
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	3450 1900 3750 1900
 Wire Wire Line
@@ -693,10 +682,6 @@ Wire Wire Line
 Wire Wire Line
 	8100 2600 8100 2750
 Wire Wire Line
-	7100 4400 7650 4400
-Wire Wire Line
-	7100 4500 7650 4500
-Wire Wire Line
 	5100 3200 4550 3200
 Wire Wire Line
 	5100 3300 4550 3300
@@ -725,11 +710,7 @@ Wire Wire Line
 Text HLabel 4550 3800 0    50   Output ~ 0
 MCU_PA09
 Wire Wire Line
-	7100 4000 7650 4000
-Wire Wire Line
-	7100 4100 7650 4100
-Wire Wire Line
-	7100 4200 7650 4200
+	7100 3500 7650 3500
 Wire Wire Line
 	8100 1750 9100 1750
 Wire Wire Line
@@ -743,16 +724,16 @@ Wire Wire Line
 	8950 2300 9100 2300
 Wire Wire Line
 	9100 2300 9100 2150
-Text Label 7650 4400 2    50   ~ 0
+Text Label 7650 4300 2    50   ~ 0
 MCU_MOSI4
-Text Label 7650 4500 2    50   ~ 0
+Text Label 7650 4400 2    50   ~ 0
 MCU_SCLK4
 Text Label 9450 2450 2    50   ~ 0
 MCU_SCLK4
 Wire Wire Line
 	9100 2150 9850 2150
 Wire Wire Line
-	8950 2450 9450 2450
+	8950 2450 9100 2450
 Wire Wire Line
 	8200 2150 7500 2150
 Wire Wire Line
@@ -768,16 +749,10 @@ MCU_MOSI4
 Text HLabel 4550 4200 0    50   BiDi ~ 0
 MCU_PA13
 NoConn ~ 7100 4700
-Text HLabel 7650 4000 2    50   Output ~ 0
-MCU_PB03
-Text HLabel 7650 4100 2    50   Output ~ 0
+Text HLabel 7650 3500 2    50   Output ~ 0
 MCU_PB02
-Text HLabel 7650 4200 2    50   Input ~ 0
+Text HLabel 7650 4100 2    50   Input ~ 0
 MCU_PB08
-Wire Wire Line
-	7100 4300 7650 4300
-Text Label 7650 4300 2    50   ~ 0
-MCU_NSEL4
 Text Label 4550 4100 0    50   ~ 0
 MCU_MISO4
 $Comp
@@ -793,8 +768,6 @@ F 5 "https://uk.rs-online.com/web/p/magnetic-buzzer-components/6173081/?searchTe
 	1    8000 4700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7100 4600 7900 4600
 $Comp
 L power:GND #PWR021
 U 1 1 5D659D89
@@ -986,22 +959,15 @@ NoConn ~ 7100 5100
 NoConn ~ 7100 5000
 NoConn ~ 7100 4900
 NoConn ~ 7100 4800
-NoConn ~ 7100 3900
-NoConn ~ 7100 3800
-NoConn ~ 7100 3700
-NoConn ~ 7100 3600
-NoConn ~ 7100 3500
-NoConn ~ 7100 3400
-NoConn ~ 7100 3300
 $Comp
 L Connector:USB_B_Micro J5
 U 1 1 5D7395BE
-P 3350 6250
-F 0 "J5" H 3407 6717 50  0000 C CNN
-F 1 "USB_B_Micro" H 3407 6626 50  0000 C CNN
-F 2 "" H 3500 6200 50  0001 C CNN
-F 3 "~" H 3500 6200 50  0001 C CNN
-	1    3350 6250
+P 9650 4700
+F 0 "J5" H 9707 5167 50  0000 C CNN
+F 1 "USB_B_Micro" H 9707 5076 50  0000 C CNN
+F 2 "" H 9800 4650 50  0001 C CNN
+F 3 "~" H 9800 4650 50  0001 C CNN
+	1    9650 4700
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
@@ -1014,4 +980,57 @@ Wire Notes Line
 	11050 1500 7450 1500
 Text Notes 7450 1450 0    50   ~ 0
 SPI flash chip
+$Comp
+L power:GND #PWR0103
+U 1 1 5D7AB0A9
+P 9650 5400
+F 0 "#PWR0103" H 9650 5150 50  0001 C CNN
+F 1 "GND" H 9655 5227 50  0000 C CNN
+F 2 "" H 9650 5400 50  0001 C CNN
+F 3 "" H 9650 5400 50  0001 C CNN
+	1    9650 5400
+	1    0    0    -1  
+$EndComp
+Text Label 10000 4800 0    50   ~ 0
+USB_DM
+Wire Wire Line
+	9950 4800 10300 4800
+Wire Wire Line
+	10300 4700 9950 4700
+Wire Wire Line
+	9650 5100 9650 5400
+$Comp
+L power:GND #PWR0104
+U 1 1 5D7F3C59
+P 9550 5400
+F 0 "#PWR0104" H 9550 5150 50  0001 C CNN
+F 1 "GND" H 9555 5227 50  0000 C CNN
+F 2 "" H 9550 5400 50  0001 C CNN
+F 3 "" H 9550 5400 50  0001 C CNN
+	1    9550 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 5100 9550 5400
+Text Label 10000 4700 0    50   ~ 0
+USB_DP
+NoConn ~ 9950 4900
+Wire Wire Line
+	9300 2450 9450 2450
+Text HLabel 7650 3600 2    50   Output ~ 0
+MCU_PB03
+Wire Wire Line
+	7100 3600 7650 3600
+Text Label 7650 4200 2    50   ~ 0
+MCU_NSEL4
+Wire Wire Line
+	7100 4100 7650 4100
+Wire Wire Line
+	7100 4200 7650 4200
+Wire Wire Line
+	7100 4300 7650 4300
+Wire Wire Line
+	7100 4400 7650 4400
+Wire Wire Line
+	7100 4600 7900 4600
 $EndSCHEMATC

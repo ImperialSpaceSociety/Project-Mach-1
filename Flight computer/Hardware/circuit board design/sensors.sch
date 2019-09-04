@@ -88,10 +88,6 @@ Wire Wire Line
 Wire Wire Line
 	4450 4700 4950 4700
 NoConn ~ 4550 5150
-Text HLabel 2850 4150 0    50   BiDi ~ 0
-SENS_SDA
-Text HLabel 2850 4400 0    50   BiDi ~ 0
-SENS_SCL
 Wire Wire Line
 	5650 3550 5650 3650
 Connection ~ 5650 3650
@@ -100,17 +96,11 @@ Wire Wire Line
 Wire Wire Line
 	5550 3650 5650 3650
 Wire Wire Line
-	2850 4150 3700 4150
-Wire Wire Line
-	2850 4400 3550 4400
-Wire Wire Line
 	3550 2950 3550 4400
-Connection ~ 3550 4400
 Wire Wire Line
 	3550 4400 4200 4400
 Wire Wire Line
 	3700 3050 3700 4150
-Connection ~ 3700 4150
 Wire Wire Line
 	3700 4150 4350 4150
 Wire Wire Line
@@ -158,17 +148,6 @@ $EndComp
 Connection ~ 6800 2350
 Wire Wire Line
 	6800 2350 6800 1800
-$Comp
-L power:+3.3V #PWR013
-U 1 1 5D6AE039
-P 4950 4650
-F 0 "#PWR013" H 4950 4500 50  0001 C CNN
-F 1 "+3.3V" H 4965 4823 50  0000 C CNN
-F 2 "" H 4950 4650 50  0001 C CNN
-F 3 "" H 4950 4650 50  0001 C CNN
-	1    4950 4650
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3.3V #PWR038
 U 1 1 5D71FC72
@@ -280,9 +259,9 @@ Wire Wire Line
 	4150 3250 3950 3250
 NoConn ~ 5550 3250
 NoConn ~ 5550 3050
-Text HLabel 5800 3150 2    50   Input ~ 0
+Text HLabel 5800 3150 2    50   Output ~ 0
 GYRO_RDY
-Text HLabel 5800 2950 2    50   Input ~ 0
+Text HLabel 5800 2950 2    50   Output ~ 0
 ACCL_RDY
 Wire Wire Line
 	5550 2950 5800 2950
@@ -301,4 +280,216 @@ F 5 "https://www.mouser.co.uk/ProductDetail/Bosch-Sensortec/BMI088?qs=f9yNj16SXr
 	1    4850 2950
 	1    0    0    -1  
 $EndComp
+Connection ~ 3700 4150
+Connection ~ 3550 4400
+Wire Wire Line
+	1300 4400 2150 4400
+Wire Wire Line
+	1300 4150 1950 4150
+Text HLabel 1300 4400 0    50   BiDi ~ 0
+SENS_SCL
+Text HLabel 1300 4150 0    50   BiDi ~ 0
+SENS_SDA
+Wire Wire Line
+	2250 6250 2400 6250
+$Comp
+L power:GND #PWR026
+U 1 1 5D8453A2
+P 2250 6800
+F 0 "#PWR026" H 2250 6550 50  0001 C CNN
+F 1 "GND" H 2255 6627 50  0000 C CNN
+F 2 "" H 2250 6800 50  0001 C CNN
+F 3 "" H 2250 6800 50  0001 C CNN
+	1    2250 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 5600 2150 5600
+Wire Wire Line
+	2150 5600 2150 4400
+Connection ~ 2150 4400
+Wire Wire Line
+	2150 4400 3550 4400
+Wire Wire Line
+	2400 5700 1950 5700
+Wire Wire Line
+	1950 5700 1950 4150
+Connection ~ 1950 4150
+Wire Wire Line
+	1950 4150 3700 4150
+Wire Wire Line
+	1900 6150 1900 6250
+Wire Wire Line
+	2400 6150 1900 6150
+$Comp
+L Device:C_Small C30
+U 1 1 5D8480A6
+P 1900 6350
+F 0 "C30" H 1992 6396 50  0000 L CNN
+F 1 "220nF" H 1992 6305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1900 6350 50  0001 C CNN
+F 3 "~" H 1900 6350 50  0001 C CNN
+	1    1900 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 6250 2250 6600
+Wire Wire Line
+	1900 6450 1900 6600
+Wire Wire Line
+	1900 6600 2250 6600
+Connection ~ 2250 6600
+Wire Wire Line
+	2250 6600 2250 6800
+Wire Wire Line
+	3950 6250 3950 5700
+Wire Wire Line
+	3950 5050 3850 5050
+Wire Wire Line
+	3450 5050 3450 5600
+Wire Wire Line
+	3450 5600 3300 5600
+Wire Wire Line
+	3450 5050 3450 4900
+Connection ~ 3450 5050
+$Comp
+L power:+3.3V #PWR013
+U 1 1 5D6AE039
+P 4950 4650
+F 0 "#PWR013" H 4950 4500 50  0001 C CNN
+F 1 "+3.3V" H 4965 4823 50  0000 C CNN
+F 2 "" H 4950 4650 50  0001 C CNN
+F 3 "" H 4950 4650 50  0001 C CNN
+	1    4950 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR027
+U 1 1 5D8636CD
+P 3450 4900
+F 0 "#PWR027" H 3450 4750 50  0001 C CNN
+F 1 "+3.3V" H 3465 5073 50  0000 C CNN
+F 2 "" H 3450 4900 50  0001 C CNN
+F 3 "" H 3450 4900 50  0001 C CNN
+	1    3450 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C31
+U 1 1 5D863BFF
+P 3750 5050
+F 0 "C31" V 3700 5150 50  0000 L CNN
+F 1 "100nF" V 3600 5050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3750 5050 50  0001 C CNN
+F 3 "~" H 3750 5050 50  0001 C CNN
+	1    3750 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 5050 3450 5050
+Wire Wire Line
+	3950 6250 3950 6500
+$Comp
+L power:GND #PWR046
+U 1 1 5D833856
+P 3950 6500
+F 0 "#PWR046" H 3950 6250 50  0001 C CNN
+F 1 "GND" H 3955 6327 50  0000 C CNN
+F 2 "" H 3950 6500 50  0001 C CNN
+F 3 "" H 3950 6500 50  0001 C CNN
+	1    3950 6500
+	1    0    0    -1  
+$EndComp
+Connection ~ 3950 6250
+Wire Wire Line
+	3300 6250 3950 6250
+Wire Wire Line
+	3300 5700 3650 5700
+Connection ~ 3950 5700
+Wire Wire Line
+	3950 5700 3950 5550
+Wire Wire Line
+	3650 5550 3650 5700
+Connection ~ 3650 5700
+Wire Wire Line
+	3650 5700 3700 5700
+Wire Wire Line
+	3650 5550 3700 5550
+Connection ~ 3950 5550
+Wire Wire Line
+	3950 5550 3950 5050
+Wire Wire Line
+	3650 5550 3650 5450
+Connection ~ 3650 5550
+$Comp
+L power:+3.3V #PWR047
+U 1 1 5D86DF75
+P 3650 5450
+F 0 "#PWR047" H 3650 5300 50  0001 C CNN
+F 1 "+3.3V" H 3665 5623 50  0000 C CNN
+F 2 "" H 3650 5450 50  0001 C CNN
+F 3 "" H 3650 5450 50  0001 C CNN
+	1    3650 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C32
+U 1 1 5D86E3A8
+P 3800 5550
+F 0 "C32" V 3800 5800 50  0000 L CNN
+F 1 "10uF" V 3700 5750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3800 5550 50  0001 C CNN
+F 3 "~" H 3800 5550 50  0001 C CNN
+	1    3800 5550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 5550 3950 5550
+$Comp
+L Device:C_Small C33
+U 1 1 5D86E64A
+P 3800 5700
+F 0 "C33" V 4050 5650 50  0000 L CNN
+F 1 "100nF" V 3950 5600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3800 5700 50  0001 C CNN
+F 3 "~" H 3800 5700 50  0001 C CNN
+	1    3800 5700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 5700 3950 5700
+Text Notes 2800 6950 0    50   ~ 0
+Power supply decoupling capacitors (100 nF ceramic, 10 μF aluminum) 
+$Comp
+L flight-computer:IIS2MDC U1
+U 1 1 5D82B1DE
+P 2850 5600
+F 0 "U1" H 2850 5865 50  0000 C CNN
+F 1 "IIS2MDC" H 2850 5774 50  0000 C CNN
+F 2 "Package_LGA:LGA-12_2x2mm_P0.5mm" H 2850 5600 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/389/iis2mdc-1309412.pdf" H 2850 5600 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/IIS2MDCTR?qs=sGAEpiMZZMve4%2FbfQkoj%252BNsA%2FYLrKsWenI%252BNJIvEAfE%3D" H 2850 5600 50  0001 C CNN "Purchase link"
+F 5 "1.93" H 2850 5600 50  0001 C CNN "Cost"
+	1    2850 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 5800 1800 5800
+Wire Wire Line
+	1800 5800 1800 5650
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5D87344D
+P 1800 5650
+F 0 "#PWR0105" H 1800 5500 50  0001 C CNN
+F 1 "+3.3V" H 1815 5823 50  0000 C CNN
+F 2 "" H 1800 5650 50  0001 C CNN
+F 3 "" H 1800 5650 50  0001 C CNN
+	1    1800 5650
+	1    0    0    -1  
+$EndComp
+Text HLabel 1650 5900 0    50   Output ~ 0
+MAG_RDY
+Wire Wire Line
+	1650 5900 2400 5900
 $EndSCHEMATC
