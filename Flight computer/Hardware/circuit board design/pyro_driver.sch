@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 7
+Sheet 5 7
 Title "Pyro drivers"
 Date "2019-09-02"
 Rev ""
@@ -146,23 +146,6 @@ FIRE_A
 Text Notes 1000 5300 0    50   ~ 0
 Put in a block connector, like the TE connectivity ones\n
 $Comp
-L Connector:Conn_01x06_Female J4
-U 1 1 5D6BBFA3
-P 2100 4100
-F 0 "J4" H 2128 4076 50  0000 L CNN
-F 1 "Conn_01x06_Female" H 2128 3985 50  0000 L CNN
-F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-6_1x06_P2.54mm_Horizontal" H 2100 4100 50  0001 C CNN
-F 3 "~" H 2100 4100 50  0001 C CNN
-	1    2100 4100
-	1    0    0    -1  
-$EndComp
-NoConn ~ 1900 4300
-NoConn ~ 1900 4400
-Text Label 1350 3900 2    50   ~ 0
-FET_A
-Wire Wire Line
-	1350 3900 1900 3900
-$Comp
 L circuit-board-design-rescue:Si7232DN-Driver_FET U?
 U 2 1 5D743B81
 P 5850 2600
@@ -245,36 +228,8 @@ Text HLabel 7450 2850 2    50   Output ~ 0
 SENSE_FET_B
 Text Label 7450 2750 0    50   ~ 0
 FET_B
-Text Label 1350 4100 2    50   ~ 0
-FET_B
-Wire Wire Line
-	1350 4100 1900 4100
 Wire Wire Line
 	5850 3500 5850 3250
-$Comp
-L power:GND #PWR045
-U 1 1 5D70E267
-P 1600 4900
-F 0 "#PWR045" H 1600 4650 50  0001 C CNN
-F 1 "GND" H 1605 4727 50  0000 C CNN
-F 2 "" H 1600 4900 50  0001 C CNN
-F 3 "" H 1600 4900 50  0001 C CNN
-	1    1600 4900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1900 4000 1600 4000
-Wire Wire Line
-	1600 4000 1600 4700
-Wire Wire Line
-	1900 4200 1700 4200
-Wire Wire Line
-	1700 4700 1600 4700
-Wire Wire Line
-	1700 4200 1700 4700
-Connection ~ 1600 4700
-Wire Wire Line
-	1600 4700 1600 4900
 Wire Wire Line
 	4950 1800 5550 1800
 Wire Wire Line

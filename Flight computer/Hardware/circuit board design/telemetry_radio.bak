@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 7
+Sheet 4 7
 Title "Silabs radio chip for telemetry to ground"
 Date "2019-08-31"
 Rev ""

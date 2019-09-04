@@ -464,7 +464,7 @@ U 1 1 5D82B1DE
 P 2850 5600
 F 0 "U1" H 2850 5865 50  0000 C CNN
 F 1 "IIS2MDC" H 2850 5774 50  0000 C CNN
-F 2 "Package_LGA:LGA-12_2x2mm_P0.5mm" H 2850 5600 50  0001 C CNN
+F 2 "Package_LGA:Bosch_LGA-8_2x2.5mm_P0.65mm_ClockwisePinNumbering" H 2850 5600 50  0001 C CNN
 F 3 "https://www.mouser.co.uk/datasheet/2/389/iis2mdc-1309412.pdf" H 2850 5600 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/IIS2MDCTR?qs=sGAEpiMZZMve4%2FbfQkoj%252BNsA%2FYLrKsWenI%252BNJIvEAfE%3D" H 2850 5600 50  0001 C CNN "Purchase link"
 F 5 "1.93" H 2850 5600 50  0001 C CNN "Cost"

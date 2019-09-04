@@ -86,14 +86,6 @@ F 5 "https://store.uputronics.com/index.php?route=product/product&product_id=71&
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4200 4050 5450 4050
-Wire Wire Line
-	4200 4450 5450 4450
-Wire Wire Line
-	4200 3750 5450 3750
-Wire Wire Line
-	5450 4350 4200 4350
-Wire Wire Line
 	6300 4800 6050 4800
 $Comp
 L Device:R R2
@@ -144,22 +136,6 @@ F 3 "" H 6050 4900 50  0001 C CNN
 	1    6050 4900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5450 3650 4200 3650
-Text HLabel 4200 4450 0    50   Input ~ 0
-GPS_NRES
-Text HLabel 4200 4350 0    50   Input ~ 0
-GPS_NSAFEBOOT
-Text HLabel 4200 3950 0    50   BiDi ~ 0
-GPS_SDA
-Text HLabel 4200 4050 0    50   BiDi ~ 0
-GPS_SCL
-Text HLabel 4200 3650 0    50   Input ~ 0
-GPS_RXD
-Text HLabel 4200 3750 0    50   Output ~ 0
-GPS_TXD
-Wire Wire Line
-	5450 3950 4200 3950
 Wire Wire Line
 	6900 4050 6650 4050
 Wire Wire Line
@@ -268,4 +244,28 @@ F 3 "~" H 1800 1700 50  0001 C CNN
 	1    1800 1700
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5450 3950 5150 3950
+Text HLabel 5150 3750 0    50   Output ~ 0
+GPS_TXD
+Text HLabel 5150 3650 0    50   Input ~ 0
+GPS_RXD
+Text HLabel 5150 4050 0    50   BiDi ~ 0
+GPS_SCL
+Text HLabel 5150 3950 0    50   BiDi ~ 0
+GPS_SDA
+Text HLabel 5150 4350 0    50   Input ~ 0
+GPS_NSAFEBOOT
+Text HLabel 5150 4450 0    50   Input ~ 0
+GPS_NRES
+Wire Wire Line
+	5450 3650 5150 3650
+Wire Wire Line
+	5450 4350 5150 4350
+Wire Wire Line
+	5150 3750 5450 3750
+Wire Wire Line
+	5150 4450 5450 4450
+Wire Wire Line
+	5150 4050 5450 4050
 $EndSCHEMATC
