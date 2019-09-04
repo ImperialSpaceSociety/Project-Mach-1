@@ -1018,4 +1018,6 @@ Wire Notes Line
 	11050 4500 9550 4500
 Text Notes 9600 6100 0    50   ~ 0
 Two indicator LEDs
+NoConn ~ 5100 3000
+NoConn ~ 5100 2900
 $EndSCHEMATC
