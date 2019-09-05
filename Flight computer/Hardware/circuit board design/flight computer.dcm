@@ -3,7 +3,7 @@ EESchema-DOCLIB  Version 2.0
 $CMP DFLS130L
 D Schottky diode
 K diode Schottky
-F ~
+F https://www.diodes.com/assets/Datasheets/ds30492.pdf
 $ENDCMP
 #
 $CMP IIS2MDC

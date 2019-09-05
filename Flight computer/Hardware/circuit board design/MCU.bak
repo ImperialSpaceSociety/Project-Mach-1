@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 7
+Sheet 5 7
 Title ""
 Date ""
 Rev ""
@@ -1012,7 +1012,7 @@ L MCU_Microchip_SAML:ATSAML21J18B-AUT U11
 U 1 1 5D748E67
 P 6100 4400
 F 0 "U11" H 6100 2411 50  0000 C CNN
-F 1 "ATSAML21J18B-AUT" H 6100 2320 50  0000 C CNN
+F 1 "ATSAML21J18B-AUT" H 6400 2250 50  0000 C CNN
 F 2 "Package_QFP:TQFP-64_10x10mm_P0.5mm" H 7300 6200 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf" H 6100 4400 50  0001 C CNN
 F 4 "4.15" H 6100 4400 50  0001 C CNN "Cost"
@@ -1020,4 +1020,88 @@ F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-AU
 	1    6100 4400
 	1    0    0    -1  
 $EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5D7F142B
+P 1100 1150
+F 0 "H1" V 1054 1300 50  0000 L CNN
+F 1 "MountingHole_Pad" V 1145 1300 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1100 1150 50  0001 C CNN
+F 3 "~" H 1100 1150 50  0001 C CNN
+	1    1100 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5D7F7FA5
+P 1100 1350
+F 0 "H2" V 1054 1500 50  0000 L CNN
+F 1 "MountingHole_Pad" V 1145 1500 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1100 1350 50  0001 C CNN
+F 3 "~" H 1100 1350 50  0001 C CNN
+	1    1100 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5D7F817E
+P 1100 1550
+F 0 "H3" V 1054 1700 50  0000 L CNN
+F 1 "MountingHole_Pad" V 1145 1700 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1100 1550 50  0001 C CNN
+F 3 "~" H 1100 1550 50  0001 C CNN
+	1    1100 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 5D7F8445
+P 1100 1750
+F 0 "H4" V 1054 1900 50  0000 L CNN
+F 1 "MountingHole_Pad" V 1145 1900 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1100 1750 50  0001 C CNN
+F 3 "~" H 1100 1750 50  0001 C CNN
+	1    1100 1750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1000 1150 900  1150
+Wire Wire Line
+	900  1150 900  1350
+Wire Wire Line
+	1000 1350 900  1350
+Connection ~ 900  1350
+Wire Wire Line
+	900  1350 900  1550
+Wire Wire Line
+	1000 1550 900  1550
+Connection ~ 900  1550
+Wire Wire Line
+	900  1550 900  1750
+Wire Wire Line
+	1000 1750 900  1750
+Connection ~ 900  1750
+Wire Wire Line
+	900  1750 900  2000
+$Comp
+L power:GND #PWR01
+U 1 1 5D815831
+P 900 2000
+F 0 "#PWR01" H 900 1750 50  0001 C CNN
+F 1 "GND" H 905 1827 50  0000 C CNN
+F 2 "" H 900 2000 50  0001 C CNN
+F 3 "" H 900 2000 50  0001 C CNN
+	1    900  2000
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	550  700  550  2400
+Wire Notes Line
+	550  2400 2150 2400
+Wire Notes Line
+	2150 2400 2150 700 
+Wire Notes Line
+	2150 700  550  700 
+Text Notes 1000 2350 0    50   ~ 0
+Mechanical mounting holes
 $EndSCHEMATC

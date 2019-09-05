@@ -141,8 +141,6 @@ Wire Wire Line
 	4650 1800 4450 1800
 Text HLabel 3700 1800 0    50   Output ~ 0
 FIRE_A
-Text Notes 1000 5300 0    50   ~ 0
-Put in a block connector, like the TE connectivity ones\n
 $Comp
 L flight-computer:Si7232DN U?
 U 2 1 5D743B81
@@ -532,12 +530,84 @@ Text HLabel 3700 5700 0    50   Output ~ 0
 FIRE_D
 Wire Wire Line
 	4950 5700 5550 5700
-Text HLabel 7450 1500 2    50   Input ~ 0
+$Comp
+L Connector:Screw_Terminal_01x04 J?
+U 1 1 5D7D6AC3
+P 8950 2300
+AR Path="/5D5B1705/5D7D6AC3" Ref="J?"  Part="1" 
+AR Path="/5D6468D5/5D7D6AC3" Ref="J3"  Part="1" 
+F 0 "J3" H 8868 1875 50  0000 C CNN
+F 1 "Screw_Terminal_01x04" H 8868 1966 50  0000 C CNN
+F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 8950 2300 50  0001 C CNN
+F 3 "~" H 8950 2300 50  0001 C CNN
+	1    8950 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x04 J?
+U 1 1 5D7D6AC9
+P 8950 3350
+AR Path="/5D5B1705/5D7D6AC9" Ref="J?"  Part="1" 
+AR Path="/5D6468D5/5D7D6AC9" Ref="J5"  Part="1" 
+F 0 "J5" H 8868 2925 50  0000 C CNN
+F 1 "Screw_Terminal_01x04" H 8868 3016 50  0000 C CNN
+F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 8950 3350 50  0001 C CNN
+F 3 "~" H 8950 3350 50  0001 C CNN
+	1    8950 3350
+	-1   0    0    1   
+$EndComp
+Text Label 7450 1500 2    50   ~ 0
 FET_A
-Text HLabel 7450 2750 2    50   Input ~ 0
+Text Label 7450 2750 2    50   ~ 0
 FET_B
-Text HLabel 7450 4150 2    50   Input ~ 0
+Text Label 7450 4150 2    50   ~ 0
 FET_C
-Text HLabel 7450 5400 2    50   Input ~ 0
+Text Label 7450 5400 2    50   ~ 0
 FET_D
+Wire Wire Line
+	9150 2200 10250 2200
+Wire Wire Line
+	10250 2200 10250 1050
+Wire Wire Line
+	9150 2400 10250 2400
+Wire Wire Line
+	10250 2400 10250 2200
+Connection ~ 10250 2200
+Connection ~ 10250 2400
+Wire Wire Line
+	9150 3250 10250 3250
+Wire Wire Line
+	10250 2400 10250 3250
+Wire Wire Line
+	9150 3450 10250 3450
+Wire Wire Line
+	10250 3450 10250 3250
+Connection ~ 10250 3250
+$Comp
+L power:Vdrive #PWR0112
+U 1 1 5D7E2F36
+P 10250 1050
+F 0 "#PWR0112" H 10050 900 50  0001 C CNN
+F 1 "Vdrive" H 10267 1223 50  0000 C CNN
+F 2 "" H 10250 1050 50  0001 C CNN
+F 3 "" H 10250 1050 50  0001 C CNN
+	1    10250 1050
+	1    0    0    -1  
+$EndComp
+Text Label 9450 2100 2    50   ~ 0
+FET_A
+Wire Wire Line
+	9450 2100 9150 2100
+Text Label 9450 2300 2    50   ~ 0
+FET_B
+Wire Wire Line
+	9150 2300 9450 2300
+Text Label 9400 3150 2    50   ~ 0
+FET_C
+Wire Wire Line
+	9400 3150 9150 3150
+Text Label 9400 3350 2    50   ~ 0
+FET_D
+Wire Wire Line
+	9400 3350 9150 3350
 $EndSCHEMATC
