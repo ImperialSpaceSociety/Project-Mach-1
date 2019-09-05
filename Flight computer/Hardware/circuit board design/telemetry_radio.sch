@@ -402,6 +402,8 @@ F 0 "U2" H 8200 3525 50  0000 C CNN
 F 1 "AS179-92LF" H 8200 3434 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 8300 3100 50  0001 C CNN
 F 3 "http://www.skyworksinc.com/uploads/documents/AS179_92LF_200176H.pdf" H 8300 3100 50  0001 C CNN
+F 4 "0.946" H 8200 3100 50  0001 C CNN "Cost"
+F 5 "https://www.mouser.co.uk/ProductDetail/Skyworks-Solutions-Inc/AS179-92LF?qs=sGAEpiMZZMsdcLTUVTS%2FgBfPoKwZ3liX" H 8200 3100 50  0001 C CNN "Purchase link"
 	1    8200 3100
 	-1   0    0    -1  
 $EndComp

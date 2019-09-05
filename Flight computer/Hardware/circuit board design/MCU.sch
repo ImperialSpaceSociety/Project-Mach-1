@@ -1015,6 +1015,8 @@ F 0 "U11" H 6100 2411 50  0000 C CNN
 F 1 "ATSAML21J18B-AUT" H 6100 2320 50  0000 C CNN
 F 2 "Package_QFP:TQFP-64_10x10mm_P0.5mm" H 7300 6200 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf" H 6100 4400 50  0001 C CNN
+F 4 "4.15" H 6100 4400 50  0001 C CNN "Cost"
+F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-AUT?qs=RCSZh%2F2c5ne9n8KccuU8Bw%3D%3D" H 6100 4400 50  0001 C CNN "Purchase link"
 	1    6100 4400
 	1    0    0    -1  
 $EndComp

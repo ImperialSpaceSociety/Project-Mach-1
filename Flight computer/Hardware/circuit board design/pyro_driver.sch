@@ -97,8 +97,6 @@ Wire Wire Line
 	6950 1600 7450 1600
 Text HLabel 7450 1600 2    50   Output ~ 0
 SENSE_FET_A
-Text Label 7450 1500 0    50   ~ 0
-FET_A
 Wire Wire Line
 	4450 1800 4450 1950
 Connection ~ 4450 1800
@@ -226,8 +224,6 @@ Wire Wire Line
 	6950 2850 7450 2850
 Text HLabel 7450 2850 2    50   Output ~ 0
 SENSE_FET_B
-Text Label 7450 2750 0    50   ~ 0
-FET_B
 Wire Wire Line
 	5850 3500 5850 3250
 Wire Wire Line
@@ -361,8 +357,6 @@ Wire Wire Line
 	6950 4250 7450 4250
 Text HLabel 7450 4250 2    50   Output ~ 0
 SENSE_FET_C
-Text Label 7450 4150 0    50   ~ 0
-FET_C
 Wire Wire Line
 	4450 4450 4450 4600
 Connection ~ 4450 4450
@@ -488,8 +482,6 @@ Wire Wire Line
 	6950 5500 7450 5500
 Text HLabel 7450 5500 2    50   Output ~ 0
 SENSE_FET_D
-Text Label 7450 5400 0    50   ~ 0
-FET_D
 Wire Wire Line
 	5850 6150 5850 5900
 Wire Wire Line
@@ -540,4 +532,12 @@ Text HLabel 3700 5700 0    50   Output ~ 0
 FIRE_D
 Wire Wire Line
 	4950 5700 5550 5700
+Text HLabel 7450 1500 2    50   Input ~ 0
+FET_A
+Text HLabel 7450 2750 2    50   Input ~ 0
+FET_B
+Text HLabel 7450 4150 2    50   Input ~ 0
+FET_C
+Text HLabel 7450 5400 2    50   Input ~ 0
+FET_D
 $EndSCHEMATC
