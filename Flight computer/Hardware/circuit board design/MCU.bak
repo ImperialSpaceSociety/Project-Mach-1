@@ -825,19 +825,6 @@ Wire Wire Line
 	3300 4400 5100 4400
 Wire Wire Line
 	3900 4300 5100 4300
-$Comp
-L MCU_Microchip_SAML:ATSAML21J18B-MUT U11
-U 1 1 5D729B41
-P 6100 4400
-F 0 "U11" H 6100 2411 50  0000 C CNN
-F 1 "ATSAML21J18B-MUT" H 6700 2400 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm" H 7400 6200 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf" H 6100 4400 50  0001 C CNN
-F 4 "4.07" H 6100 4400 50  0001 C CNN "Cost"
-F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-MUT?qs=RCSZh%2F2c5nc%252BoA8shEl23w==" H 6100 4400 50  0001 C CNN "Purchase link"
-	1    6100 4400
-	1    0    0    -1  
-$EndComp
 NoConn ~ 7100 5400
 NoConn ~ 7100 5300
 NoConn ~ 7100 5000
@@ -1020,4 +1007,15 @@ Text Notes 9600 6100 0    50   ~ 0
 Two indicator LEDs
 NoConn ~ 5100 3000
 NoConn ~ 5100 2900
+$Comp
+L MCU_Microchip_SAML:ATSAML21J18B-AUT U11
+U 1 1 5D748E67
+P 6100 4400
+F 0 "U11" H 6100 2411 50  0000 C CNN
+F 1 "ATSAML21J18B-AUT" H 6100 2320 50  0000 C CNN
+F 2 "Package_QFP:TQFP-64_10x10mm_P0.5mm" H 7300 6200 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf" H 6100 4400 50  0001 C CNN
+	1    6100 4400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

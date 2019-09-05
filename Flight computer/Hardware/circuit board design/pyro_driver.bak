@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L circuit-board-design-rescue:Si7232DN-Driver_FET U6
+L flight-computer:Si7232DN U6
 U 1 1 5D696EFB
 P 5850 1350
 AR Path="/5D696EFB" Ref="U6"  Part="1" 
@@ -146,7 +146,7 @@ FIRE_A
 Text Notes 1000 5300 0    50   ~ 0
 Put in a block connector, like the TE connectivity ones\n
 $Comp
-L circuit-board-design-rescue:Si7232DN-Driver_FET U?
+L flight-computer:Si7232DN U?
 U 2 1 5D743B81
 P 5850 2600
 AR Path="/5D743B81" Ref="U?"  Part="1" 
@@ -279,7 +279,7 @@ FIRE_B
 Wire Wire Line
 	4950 3050 5550 3050
 $Comp
-L circuit-board-design-rescue:Si7232DN-Driver_FET U?
+L flight-computer:Si7232DN U?
 U 1 1 5D7DA597
 P 5850 4000
 AR Path="/5D7DA597" Ref="U?"  Part="1" 
@@ -408,7 +408,7 @@ Wire Wire Line
 Text HLabel 3700 4450 0    50   Output ~ 0
 FIRE_C
 $Comp
-L circuit-board-design-rescue:Si7232DN-Driver_FET U?
+L flight-computer:Si7232DN U?
 U 2 1 5D7DA5FD
 P 5850 5250
 AR Path="/5D7DA5FD" Ref="U?"  Part="1" 
