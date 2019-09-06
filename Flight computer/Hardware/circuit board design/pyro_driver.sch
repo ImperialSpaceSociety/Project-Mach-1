@@ -126,19 +126,6 @@ F 3 "~" H 4450 2100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4450 2250 4450 2350
-$Comp
-L Device:R R4
-U 1 1 5D6B06F6
-P 4800 1800
-F 0 "R4" V 4593 1800 50  0000 C CNN
-F 1 "100" V 4684 1800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 1800 50  0001 C CNN
-F 3 "~" H 4800 1800 50  0001 C CNN
-	1    4800 1800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4650 1800 4450 1800
 Text HLabel 3700 1800 0    50   Output ~ 0
 FIRE_A
 $Comp
@@ -225,8 +212,6 @@ SENSE_FET_B
 Wire Wire Line
 	5850 3500 5850 3250
 Wire Wire Line
-	4950 1800 5550 1800
-Wire Wire Line
 	4450 3050 4450 3200
 Connection ~ 4450 3050
 Wire Wire Line
@@ -255,23 +240,8 @@ F 3 "~" H 4450 3350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4450 3500 4450 3600
-$Comp
-L Device:R R14
-U 1 1 5D743BDF
-P 4800 3050
-F 0 "R14" V 4593 3050 50  0000 C CNN
-F 1 "100" V 4684 3050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 3050 50  0001 C CNN
-F 3 "~" H 4800 3050 50  0001 C CNN
-	1    4800 3050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4650 3050 4450 3050
 Text HLabel 3700 3050 0    50   Output ~ 0
 FIRE_B
-Wire Wire Line
-	4950 3050 5550 3050
 $Comp
 L flight-computer:Si7232DN U?
 U 1 1 5D7DA597
@@ -384,19 +354,6 @@ F 3 "~" H 4450 4750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4450 4900 4450 5000
-$Comp
-L Device:R R19
-U 1 1 5D7DA5F0
-P 4800 4450
-F 0 "R19" V 4593 4450 50  0000 C CNN
-F 1 "100" V 4684 4450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 4450 50  0001 C CNN
-F 3 "~" H 4800 4450 50  0001 C CNN
-	1    4800 4450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4650 4450 4450 4450
 Text HLabel 3700 4450 0    50   Output ~ 0
 FIRE_C
 $Comp
@@ -483,8 +440,6 @@ SENSE_FET_D
 Wire Wire Line
 	5850 6150 5850 5900
 Wire Wire Line
-	4950 4450 5550 4450
-Wire Wire Line
 	4450 5700 4450 5850
 Connection ~ 4450 5700
 Wire Wire Line
@@ -513,23 +468,8 @@ F 3 "~" H 4450 6000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4450 6150 4450 6250
-$Comp
-L Device:R R20
-U 1 1 5D7DA657
-P 4800 5700
-F 0 "R20" V 4593 5700 50  0000 C CNN
-F 1 "100" V 4684 5700 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 5700 50  0001 C CNN
-F 3 "~" H 4800 5700 50  0001 C CNN
-	1    4800 5700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4650 5700 4450 5700
 Text HLabel 3700 5700 0    50   Output ~ 0
 FIRE_D
-Wire Wire Line
-	4950 5700 5550 5700
 $Comp
 L Connector:Screw_Terminal_01x04 J?
 U 1 1 5D7D6AC3
@@ -610,4 +550,12 @@ Text Label 9400 3350 2    50   ~ 0
 FET_D
 Wire Wire Line
 	9400 3350 9150 3350
+Wire Wire Line
+	4450 1800 5550 1800
+Wire Wire Line
+	4450 3050 5550 3050
+Wire Wire Line
+	4450 4450 5550 4450
+Wire Wire Line
+	4450 5700 5550 5700
 $EndSCHEMATC

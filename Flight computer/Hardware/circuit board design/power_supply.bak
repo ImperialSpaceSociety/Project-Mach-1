@@ -203,63 +203,6 @@ F 3 "" H 8000 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1400 4000 2000 4000
-Text HLabel 1400 4000 0    50   Input ~ 0
-PWR_MEASURE
-Connection ~ 2600 4000
-Wire Wire Line
-	2600 4000 2300 4000
-Wire Wire Line
-	3050 4800 3050 4950
-Connection ~ 3050 4800
-Wire Wire Line
-	1400 4800 3050 4800
-Wire Wire Line
-	3050 4750 3050 4800
-$Comp
-L Device:C C9
-U 1 1 5D7595ED
-P 2150 4000
-F 0 "C9" V 2402 4000 50  0000 C CNN
-F 1 "100nF" V 2311 4000 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 2188 3850 50  0001 C CNN
-F 3 "~" H 2150 4000 50  0001 C CNN
-	1    2150 4000
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2750 4000 2600 4000
-Wire Wire Line
-	3050 4200 3050 4450
-Wire Wire Line
-	3050 3800 3050 3300
-Wire Wire Line
-	2600 3900 2600 4000
-$Comp
-L Device:Q_PMOS_DGS Q2
-U 1 1 5D7595FB
-P 2950 4000
-F 0 "Q2" H 3156 3954 50  0000 L CNN
-F 1 "Q_PMOS_DGS" H 3156 4045 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 3150 4100 50  0001 C CNN
-F 3 "~" H 2950 4000 50  0001 C CNN
-	1    2950 4000
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:R R27
-U 1 1 5D759605
-P 2600 3750
-F 0 "R27" H 2670 3796 50  0000 L CNN
-F 1 "10K" H 2670 3705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2530 3750 50  0001 C CNN
-F 3 "~" H 2600 3750 50  0001 C CNN
-	1    2600 3750
-	1    0    0    -1  
-$EndComp
-Text HLabel 1400 4800 0    50   Output ~ 0
-PWR_BVOLTS
-Wire Wire Line
 	3050 5350 3050 5250
 $Comp
 L power:GND #PWR0111
@@ -294,12 +237,6 @@ F 3 "~" H 3050 4600 50  0001 C CNN
 	1    3050 4600
 	1    0    0    -1  
 $EndComp
-Connection ~ 3050 3300
-Wire Wire Line
-	3050 3300 3550 3300
-Wire Wire Line
-	2600 3600 2600 3300
-Connection ~ 2600 3300
 Wire Wire Line
 	3550 3150 3550 3300
 $Comp
@@ -415,11 +352,7 @@ Wire Wire Line
 	5550 3300 5650 3300
 Connection ~ 2200 3300
 Wire Wire Line
-	2200 3300 2600 3300
-Wire Wire Line
 	1750 3300 2200 3300
-Wire Wire Line
-	2600 3300 3050 3300
 Text Notes 7350 3900 0    50   ~ 0
 May have to increase \nthe smoothing caps to 10uF \nfor stronger effect.
 Text Notes 1200 2950 0    50   ~ 0
@@ -428,4 +361,20 @@ Text Notes 5600 2900 0    50   ~ 0
 Ultra low drop out voltage regulator.\n140mV drop at max current of 150mA.
 Text Notes 6250 5000 0    50   ~ 0
 The maximum possible voltage drop(from 3.6V input) due to diode \nand LDO regulator is 173mV, leaving plenty of \nleeway to bring it down to 3.3V CMOS level.
+Wire Wire Line
+	3050 3300 3550 3300
+Connection ~ 3050 3300
+Text HLabel 1400 4800 0    50   Output ~ 0
+PWR_BVOLTS
+Wire Wire Line
+	3050 4750 3050 4800
+Wire Wire Line
+	3050 4800 3050 4950
+Connection ~ 3050 4800
+Wire Wire Line
+	1400 4800 3050 4800
+Wire Wire Line
+	2200 3300 3050 3300
+Wire Wire Line
+	3050 3300 3050 4450
 $EndSCHEMATC
