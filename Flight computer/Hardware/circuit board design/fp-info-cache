@@ -1,4 +1,4 @@
-15949695474814412
+15951263197159405
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -44232,6 +44232,13 @@ PQFN50P450X300X100-16N
 0
 16
 16
+flight-computer
+TM-32.000-AF3-33-S
+Surface Mount TCXO 2.5x2.0mm
+SMD SMT crystal oscillator hand-soldering
+0
+4
+4
 Fuse
 Fuseholder_Blade_ATO_Littelfuse_Pudenz_2_Pin
 Fuseholder ATO Blade littelfuse Pudenz 2 Pin

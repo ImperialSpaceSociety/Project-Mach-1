@@ -174,19 +174,6 @@ Wire Wire Line
 Connection ~ 2000 2200
 Wire Wire Line
 	2000 2200 2000 2550
-$Comp
-L Device:L_Small L21
-U 1 1 5D61FE97
-P 1950 1900
-F 0 "L21" V 1900 1850 50  0000 L CNN
-F 1 "6.8nH" V 2000 1800 50  0000 L CNN
-F 2 "Inductor_SMD:L_0402_1005Metric" H 1950 1900 50  0001 C CNN
-F 3 "~" H 1950 1900 50  0001 C CNN
-	1    1950 1900
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	2050 1900 2100 1900
 Wire Wire Line
 	2100 2050 2000 2050
 Wire Wire Line
@@ -204,8 +191,6 @@ F 4 "https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX2659ELT+T?qs=GxO
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 1900 1800 1900
-Wire Wire Line
 	3150 1900 2900 1900
 Wire Wire Line
 	2900 2050 3250 2050
@@ -213,10 +198,6 @@ Wire Wire Line
 	3300 2200 2900 2200
 Wire Wire Line
 	1800 1500 1700 1500
-Wire Wire Line
-	1800 1600 1800 1500
-Wire Wire Line
-	1800 1900 1800 1800
 $Comp
 L flight-computer:ICSSPicoTracker_Johanson1575 ANT1
 U 1 1 5D521711
@@ -232,17 +213,6 @@ F 4 "0.753" H 1300 1500 50  0001 C CNN "Cost"
 F 5 "https://www.mouser.co.uk/ProductDetail/Johanson-Technology/1575AT43A0040E?qs=qF3SSroohZWOIHwrK8wTew%3D%3D" H 1300 1500 50  0001 C CNN "Purchase link"
 	1    1300 1500
 	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C72
-U 1 1 5D622CC0
-P 1800 1700
-F 0 "C72" H 1892 1746 50  0000 L CNN
-F 1 "1nF" H 1892 1655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 1800 1700 50  0001 C CNN
-F 3 "~" H 1800 1700 50  0001 C CNN
-	1    1800 1700
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5450 3950 5150 3950
@@ -268,4 +238,8 @@ Wire Wire Line
 	5150 4450 5450 4450
 Wire Wire Line
 	5150 4050 5450 4050
+Wire Wire Line
+	1800 1900 1800 1500
+Wire Wire Line
+	1800 1900 2100 1900
 $EndSCHEMATC

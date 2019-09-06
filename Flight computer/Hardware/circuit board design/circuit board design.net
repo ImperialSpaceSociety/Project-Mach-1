@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:\\Users\\Medad\\Documents\\GitHub\\Project-Mach-1\\Flight computer\\Hardware\\circuit board design\\circuit board design.sch")
-    (date "05/09/2019 06:21:04")
+    (date "05/09/2019 23:39:20")
     (tool "Eeschema (5.1.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -415,7 +415,7 @@
       (tstamp 5D8E005E))
     (comp (ref X1)
       (value TM-32.000-AF3-33-S-Oscillator)
-      (footprint Oscillator:Oscillator_SMD_SeikoEpson_SG210-4Pin_2.5x2.0mm_HandSoldering)
+      (footprint Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm)
       (datasheet https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc7d9.pdf)
       (fields
         (field (name Cost) 3.43)

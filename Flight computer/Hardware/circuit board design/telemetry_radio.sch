@@ -816,7 +816,7 @@ U 1 1 5D703E49
 P 1550 3600
 F 0 "X1" H 1500 4800 50  0000 L CNN
 F 1 "TM-32.000-AF3-33-S-Oscillator" H 1000 4700 50  0000 L CNN
-F 2 "Oscillator:Oscillator_SMD_SeikoEpson_SG210-4Pin_2.5x2.0mm_HandSoldering" H 2000 3250 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 2000 3250 50  0001 C CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc7d9.pdf" H 1450 3600 50  0001 C CNN
 F 4 "3.43" H 1550 3600 50  0001 C CNN "Cost"
 F 5 "https://uk.rs-online.com/web/p/tcxo-oscillators/1442366/" H 1550 3600 50  0001 C CNN "Purchase link"
