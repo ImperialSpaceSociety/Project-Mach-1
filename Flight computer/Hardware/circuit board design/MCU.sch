@@ -823,7 +823,6 @@ Wire Wire Line
 	3900 4300 5100 4300
 NoConn ~ 7100 5400
 NoConn ~ 7100 5300
-NoConn ~ 7100 5000
 Wire Notes Line
 	7450 1500 7450 3100
 Wire Notes Line
@@ -997,8 +996,6 @@ Wire Notes Line
 	9550 6150 11050 6150
 Wire Notes Line
 	9550 3100 9550 6150
-Wire Notes Line
-	11050 4500 9550 4500
 Text Notes 9600 6100 0    50   ~ 0
 Two indicator LEDs
 NoConn ~ 5100 3000
@@ -1101,4 +1098,60 @@ Wire Notes Line
 Text Notes 1000 2350 0    50   ~ 0
 Mechanical mounting holes
 NoConn ~ 5100 4200
+Wire Wire Line
+	7100 5000 7650 5000
+Text Label 7650 5000 2    50   ~ 0
+ARM_SWITCH
+Text Label 8700 3750 2    50   ~ 0
+ARM_SWITCH
+Wire Wire Line
+	8700 3750 8800 3750
+Wire Wire Line
+	8800 3750 8800 4100
+Connection ~ 8800 3750
+Wire Wire Line
+	8800 3750 8900 3750
+$Comp
+L power:GND #PWR?
+U 1 1 5D83136F
+P 8800 4100
+F 0 "#PWR?" H 8800 3850 50  0001 C CNN
+F 1 "GND" H 8805 3927 50  0000 C CNN
+F 2 "" H 8800 4100 50  0001 C CNN
+F 3 "" H 8800 4100 50  0001 C CNN
+	1    8800 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 5D832A6E
+P 9100 3750
+F 0 "SW?" H 9100 3985 50  0000 C CNN
+F 1 "SW_SPST" H 9100 3894 50  0000 C CNN
+F 2 "" H 9100 3750 50  0001 C CNN
+F 3 "~" H 9100 3750 50  0001 C CNN
+	1    9100 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5D832E28
+P 9450 3350
+F 0 "#PWR?" H 9450 3200 50  0001 C CNN
+F 1 "+3.3V" H 9400 3500 50  0000 C CNN
+F 2 "" H 9450 3350 50  0001 C CNN
+F 3 "" H 9450 3350 50  0001 C CNN
+	1    9450 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 3750 9450 3350
+Wire Wire Line
+	9300 3750 9450 3750
+Wire Notes Line
+	8200 4500 8200 3100
+Wire Notes Line
+	8200 4500 11050 4500
+Text Notes 8200 4800 0    50   ~ 0
+Switch to arm pyro \nand go into ready to \nfire mode
 $EndSCHEMATC

@@ -232,7 +232,7 @@ U 1 1 5D3DC905
 P 1250 4450
 F 0 "J1" H 1330 4442 50  0000 L CNN
 F 1 "Conn_01x04" H 1330 4351 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x04_P1.00mm_Vertical" H 1250 4450 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 1250 4450 50  0001 C CNN
 F 3 "~" H 1250 4450 50  0001 C CNN
 	1    1250 4450
 	-1   0    0    -1  

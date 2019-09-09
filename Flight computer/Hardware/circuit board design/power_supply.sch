@@ -79,7 +79,7 @@ U 1 1 5D79E562
 P 1550 3300
 F 0 "J4" H 1468 3517 50  0000 C CNN
 F 1 "Conn_01x02" H 1468 3426 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Vertical" H 1550 3300 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1550 3300 50  0001 C CNN
 F 3 "~" H 1550 3300 50  0001 C CNN
 	1    1550 3300
 	-1   0    0    -1  
