@@ -6,11 +6,11 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 7
 Title "Silabs radio chip for telemetry to ground"
-Date "2019-08-31"
-Rev ""
+Date "2019-09-09"
+Rev "1.0"
 Comp "Imperial College Space Society"
-Comment1 "AN629 Figure 16 ideal according to Richard: CLE Switch TX/RX type matching network"
-Comment2 "AN648 for matching network values"
+Comment1 "Arranged according to Silabs AN904."
+Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -465,4 +465,10 @@ Wire Wire Line
 	4450 5050 4200 5050
 NoConn ~ 4200 5250
 NoConn ~ 4200 5150
+Text Notes 8750 2500 0    50   ~ 0
+Not sure if I should put in the Pi circuit
+Text Notes 8800 2700 0    50   ~ 0
+Antenna is wire at 1/4 wavelength. ~17cm
+Text Notes 4550 6100 0    50   ~ 0
+Arranged according to Silabs AN904
 $EndSCHEMATC

@@ -6,9 +6,9 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 7
 Title ""
-Date ""
-Rev ""
-Comp ""
+Date "2019-09-09"
+Rev "1.0"
+Comp "Imperial College Space Society"
 Comment1 ""
 Comment2 ""
 Comment3 ""

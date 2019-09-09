@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
 Title "flight computer for rocket"
-Date "2019-08-19"
-Rev "1.1"
+Date "2019-09-09"
+Rev "1.0"
 Comp "Imperial College Space Society"
 Comment1 "Based on the Picotracker MK II"
 Comment2 ""

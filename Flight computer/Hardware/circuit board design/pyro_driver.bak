@@ -6,9 +6,9 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 7
 Title "Pyro drivers"
-Date "2019-09-02"
-Rev ""
-Comp ""
+Date "2019-09-09"
+Rev "1.0"
+Comp "Imperial College Space Society"
 Comment1 "Pyro drivers based on the Telementrum design"
 Comment2 ""
 Comment3 ""
