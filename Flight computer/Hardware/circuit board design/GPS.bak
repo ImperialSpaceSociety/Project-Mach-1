@@ -93,7 +93,7 @@ U 1 1 5D7B7FB8
 P 7650 3650
 F 0 "L2" H 7703 3696 50  0000 L CNN
 F 1 "27nH" H 7703 3605 50  0000 L CNN
-F 2 "" H 7650 3650 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7650 3650 50  0001 C CNN
 F 3 "~" H 7650 3650 50  0001 C CNN
 	1    7650 3650
 	1    0    0    -1  
@@ -151,7 +151,7 @@ U 1 1 5D7B91DB
 P 6950 3100
 F 0 "R2" V 6743 3100 50  0000 C CNN
 F 1 "10 Ohm" V 6834 3100 50  0000 C CNN
-F 2 "" V 6880 3100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 6880 3100 50  0001 C CNN
 F 3 "~" H 6950 3100 50  0001 C CNN
 	1    6950 3100
 	0    1    1    0   
@@ -182,7 +182,7 @@ U 1 1 5D7BADC4
 P 8400 2750
 F 0 "C8" H 8492 2796 50  0000 L CNN
 F 1 "10nF" H 8492 2705 50  0000 L CNN
-F 2 "" H 8400 2750 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8400 2750 50  0001 C CNN
 F 3 "~" H 8400 2750 50  0001 C CNN
 	1    8400 2750
 	1    0    0    -1  
@@ -190,5 +190,5 @@ $EndComp
 Wire Wire Line
 	8400 2850 8400 3100
 Text Notes 8200 3850 0    50   ~ 0
-Connected to active antenna\n
+Connected to active antenna, likely 2066400001 \nMolex active antenna. UFL connector\n
 $EndSCHEMATC
