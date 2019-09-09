@@ -3,4 +3,5 @@
   (lib (name BMI088)(type Legacy)(uri ${KIPRJMOD}/BMI088.lib)(options "")(descr ""))
   (lib (name flight-computer)(type Legacy)(uri "${KIPRJMOD}/flight computer.lib")(options "")(descr ""))
   (lib (name circuit_board_design-eagle-import)(type Legacy)(uri ${KIPRJMOD}/circuit_board_design-eagle-import.lib)(options "")(descr ""))
+  (lib (name 0433BM41A0019E)(type Legacy)(uri "D:/Long term storage and temp/dead weight program downloads/0433BM41A0019E/0433BM41A0019E.lib")(options "")(descr ""))
 )
