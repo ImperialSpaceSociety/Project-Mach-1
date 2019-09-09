@@ -338,79 +338,22 @@ F 3 "" H 7100 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6950 4200 8150 4200
+	6950 4200 7900 4200
 $Comp
 L Device:C_Small C9
 U 1 1 5D796ABE
-P 8250 4200
-F 0 "C9" V 8342 4246 50  0000 L CNN
-F 1 "270pF" V 8500 4150 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 8250 4200 50  0001 C CNN
-F 3 "~" H 8250 4200 50  0001 C CNN
-	1    8250 4200
+P 8000 4200
+F 0 "C9" V 8092 4246 50  0000 L CNN
+F 1 "270pF" V 8250 4150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8000 4200 50  0001 C CNN
+F 3 "~" H 8000 4200 50  0001 C CNN
+	1    8000 4200
 	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	8350 4200 9550 4200
-Wire Wire Line
-	9550 4200 9550 4500
-Connection ~ 9550 4200
-$Comp
-L Device:Antenna AE1
-U 1 1 5D79EB91
-P 10700 2300
-F 0 "AE1" H 10780 2289 50  0000 L CNN
-F 1 "Antenna" H 10780 2198 50  0000 L CNN
-F 2 "" H 10700 2300 50  0001 C CNN
-F 3 "~" H 10700 2300 50  0001 C CNN
-	1    10700 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10700 2500 10700 3250
-$Comp
-L Connector:Conn_Coaxial J7
-U 1 1 5D7A2CE8
-P 9550 5250
-F 0 "J7" H 9650 5132 50  0000 L CNN
-F 1 "Conn_Coaxial" H 9650 5223 50  0000 L CNN
-F 2 "" H 9550 5250 50  0001 C CNN
-F 3 " ~" H 9550 5250 50  0001 C CNN
-	1    9550 5250
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9750 5250 10050 5250
-Wire Wire Line
-	10050 5250 10050 5850
-$Comp
-L power:GND #PWR028
-U 1 1 5D7A6387
-P 10050 5850
-F 0 "#PWR028" H 10050 5600 50  0001 C CNN
-F 1 "GND" H 10055 5677 50  0000 C CNN
-F 2 "" H 10050 5850 50  0001 C CNN
-F 3 "" H 10050 5850 50  0001 C CNN
-	1    10050 5850
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3700 2150 4700 2150
 Wire Wire Line
 	3700 2550 3700 2800
-$Comp
-L Device:R R7
-U 1 1 5D7AB0E5
-P 9550 4650
-F 0 "R7" H 9620 4696 50  0000 L CNN
-F 1 "NF" H 9620 4605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 9480 4650 50  0001 C CNN
-F 3 "~" H 9550 4650 50  0001 C CNN
-	1    9550 4650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9550 4800 9550 5050
 Text HLabel 4450 4950 2    50   Input ~ 0
 RF_GPIO0
 Wire Wire Line
@@ -421,64 +364,121 @@ Wire Wire Line
 	4450 5050 4200 5050
 NoConn ~ 4200 5250
 NoConn ~ 4200 5150
-Text Notes 9100 2000 0    50   ~ 0
+Text Notes 7950 2000 0    50   ~ 0
 Antenna is wire at 1/4 wavelength. around 17cm
 Text Notes 4550 6100 0    50   ~ 0
 Arranged according to Silabs AN904
-Wire Wire Line
-	10150 3250 10600 3250
-Wire Wire Line
-	9550 3250 9550 4200
-Wire Wire Line
-	10600 3650 10600 3900
-$Comp
-L Device:C_Small C10
-U 1 1 5D7EC7D6
-P 10600 3550
-F 0 "C10" H 10508 3596 50  0000 R CNN
-F 1 "NF" H 10508 3505 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 10600 3550 50  0001 C CNN
-F 3 "~" H 10600 3550 50  0001 C CNN
-	1    10600 3550
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR07
-U 1 1 5D7EC7E0
-P 10600 3900
-F 0 "#PWR07" H 10600 3650 50  0001 C CNN
-F 1 "GND" H 10605 3727 50  0000 C CNN
-F 2 "" H 10600 3900 50  0001 C CNN
-F 3 "" H 10600 3900 50  0001 C CNN
-	1    10600 3900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10600 3250 10600 3450
-Connection ~ 10600 3250
-Wire Wire Line
-	10600 3250 10700 3250
-Text Notes 10000 4300 0    50   ~ 0
-Antenna matching options\n
-Wire Wire Line
-	9550 3250 9850 3250
+Wire Notes Line
+	9950 2850 9950 4150
+Wire Notes Line
+	8600 2850 9950 2850
+Wire Notes Line
+	8600 4150 8600 2850
+Wire Notes Line
+	9950 4150 8600 4150
 $Comp
 L Device:L L3
 U 1 1 5D7F0545
-P 10000 3250
-F 0 "L3" V 9819 3250 50  0000 C CNN
-F 1 "0R" V 9910 3250 50  0000 C CNN
-F 2 "Inductor_SMD:L_0402_1005Metric" H 10000 3250 50  0001 C CNN
-F 3 "~" H 10000 3250 50  0001 C CNN
-	1    10000 3250
+P 8850 3250
+F 0 "L3" V 8669 3250 50  0000 C CNN
+F 1 "0R" V 8760 3250 50  0000 C CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" H 8850 3250 50  0001 C CNN
+F 3 "~" H 8850 3250 50  0001 C CNN
+	1    8850 3250
 	0    1    1    0   
 $EndComp
-Wire Notes Line
-	11100 4150 9750 4150
-Wire Notes Line
-	9750 4150 9750 2850
-Wire Notes Line
-	9750 2850 11100 2850
-Wire Notes Line
-	11100 2850 11100 4150
+Wire Wire Line
+	8400 3250 8700 3250
+Text Notes 8850 4300 0    50   ~ 0
+Antenna matching options\n
+Wire Wire Line
+	9450 3250 9550 3250
+Connection ~ 9450 3250
+Wire Wire Line
+	9450 3250 9450 3450
+$Comp
+L power:GND #PWR07
+U 1 1 5D7EC7E0
+P 9450 3900
+F 0 "#PWR07" H 9450 3650 50  0001 C CNN
+F 1 "GND" H 9455 3727 50  0000 C CNN
+F 2 "" H 9450 3900 50  0001 C CNN
+F 3 "" H 9450 3900 50  0001 C CNN
+	1    9450 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 5D7EC7D6
+P 9450 3550
+F 0 "C10" H 9358 3596 50  0000 R CNN
+F 1 "NF" H 9358 3505 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9450 3550 50  0001 C CNN
+F 3 "~" H 9450 3550 50  0001 C CNN
+	1    9450 3550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 3650 9450 3900
+Wire Wire Line
+	8400 3250 8400 4200
+Wire Wire Line
+	9000 3250 9450 3250
+Wire Wire Line
+	8400 4800 8400 5050
+$Comp
+L Device:R R7
+U 1 1 5D7AB0E5
+P 8400 4650
+F 0 "R7" H 8470 4696 50  0000 L CNN
+F 1 "NF" H 8470 4605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 8330 4650 50  0001 C CNN
+F 3 "~" H 8400 4650 50  0001 C CNN
+	1    8400 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR028
+U 1 1 5D7A6387
+P 8900 5850
+F 0 "#PWR028" H 8900 5600 50  0001 C CNN
+F 1 "GND" H 8905 5677 50  0000 C CNN
+F 2 "" H 8900 5850 50  0001 C CNN
+F 3 "" H 8900 5850 50  0001 C CNN
+	1    8900 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 5250 8900 5850
+Wire Wire Line
+	8600 5250 8900 5250
+$Comp
+L Connector:Conn_Coaxial J7
+U 1 1 5D7A2CE8
+P 8400 5250
+F 0 "J7" H 8500 5132 50  0000 L CNN
+F 1 "Conn_Coaxial" H 8500 5223 50  0000 L CNN
+F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 8400 5250 50  0001 C CNN
+F 3 " ~" H 8400 5250 50  0001 C CNN
+	1    8400 5250
+	-1   0    0    1   
+$EndComp
+Connection ~ 8400 4200
+Wire Wire Line
+	8400 4200 8400 4500
+Wire Wire Line
+	8100 4200 8400 4200
+Wire Wire Line
+	9550 2500 9550 3250
+$Comp
+L Device:Antenna AE1
+U 1 1 5D79EB91
+P 9550 2300
+F 0 "AE1" H 9630 2289 50  0000 L CNN
+F 1 "Antenna" H 9630 2198 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x03_P1.00mm_Vertical" H 9550 2300 50  0001 C CNN
+F 3 "~" H 9550 2300 50  0001 C CNN
+	1    9550 2300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
