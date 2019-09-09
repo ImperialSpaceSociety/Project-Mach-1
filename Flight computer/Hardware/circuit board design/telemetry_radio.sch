@@ -455,4 +455,14 @@ F 3 "~" H 10050 3550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10050 3650 10050 3900
+Text HLabel 4450 4950 2    50   Input ~ 0
+RF_GPIO0
+Wire Wire Line
+	4450 4950 4200 4950
+Text HLabel 4450 5050 2    50   Input ~ 0
+RF_GPIO1
+Wire Wire Line
+	4450 5050 4200 5050
+NoConn ~ 4200 5250
+NoConn ~ 4200 5150
 $EndSCHEMATC

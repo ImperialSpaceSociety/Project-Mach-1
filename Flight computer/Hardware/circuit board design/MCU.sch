@@ -635,8 +635,6 @@ Text Label 7500 2150 0    50   ~ 0
 MCU_NSEL4
 Text Label 9450 2600 2    50   ~ 0
 MCU_MOSI4
-Text HLabel 4550 4200 0    50   BiDi ~ 0
-MCU_PA13
 Text HLabel 7650 3500 2    50   Output ~ 0
 MCU_PB02
 Text HLabel 7650 4100 2    50   Input ~ 0
@@ -817,8 +815,6 @@ $EndComp
 Connection ~ 3300 4400
 Wire Wire Line
 	5100 4100 4550 4100
-Wire Wire Line
-	5100 4200 4550 4200
 Wire Wire Line
 	5100 4500 4550 4500
 Wire Wire Line
@@ -1104,4 +1100,5 @@ Wire Notes Line
 	2150 700  550  700 
 Text Notes 1000 2350 0    50   ~ 0
 Mechanical mounting holes
+NoConn ~ 5100 4200
 $EndSCHEMATC
