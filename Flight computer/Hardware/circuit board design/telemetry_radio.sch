@@ -823,4 +823,15 @@ F 5 "https://uk.rs-online.com/web/p/tcxo-oscillators/1442366/" H 1550 3600 50  0
 	1    1550 3600
 	1    0    0    -1  
 $EndComp
+$Comp
+L 0433BM41A0019E:0433BM41A0019E U?
+U 1 1 5D767292
+P 6550 1350
+F 0 "U?" H 6550 1867 50  0000 C CNN
+F 1 "0433BM41A0019E" H 6550 1776 50  0000 C CNN
+F 2 "Johanson_frontend:BALUN_0433BM41A0019E" H 6050 2000 50  0001 L BNN
+F 3 "https://www.johansontechnology.com/datasheets/0433BM41A0019/0433BM41A0019.pdf" H 6050 2000 50  0001 L BNN
+	1    6550 1350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
