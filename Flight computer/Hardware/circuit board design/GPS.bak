@@ -247,8 +247,8 @@ L Connector:Conn_Coaxial J?
 U 1 1 5D772D40
 P 7900 2200
 AR Path="/5D5B17D8/5D772D40" Ref="J?"  Part="1" 
-AR Path="/5D5B165E/5D772D40" Ref="J?"  Part="1" 
-F 0 "J?" H 8000 2175 50  0000 L CNN
+AR Path="/5D5B165E/5D772D40" Ref="J6"  Part="1" 
+F 0 "J6" H 8000 2175 50  0000 L CNN
 F 1 "Conn_Coaxial" H 8000 2084 50  0000 L CNN
 F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 7900 2200 50  0001 C CNN
 F 3 " ~" H 7900 2200 50  0001 C CNN
