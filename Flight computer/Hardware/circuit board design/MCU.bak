@@ -226,17 +226,6 @@ F 3 "~" H 6650 1250 50  0001 C CNN
 	1    6650 1250
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x04 J1
-U 1 1 5D3DC905
-P 1250 4450
-F 0 "J1" H 1330 4442 50  0000 L CNN
-F 1 "Conn_01x04" H 1330 4351 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 1250 4450 50  0001 C CNN
-F 3 "~" H 1250 4450 50  0001 C CNN
-	1    1250 4450
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	1600 4650 1600 5200
 Connection ~ 1600 5200
@@ -496,17 +485,6 @@ Wire Wire Line
 Wire Wire Line
 	3900 4050 2800 4050
 $Comp
-L Device:R R12
-U 1 1 5D70BAB2
-P 4450 6250
-F 0 "R12" H 4520 6296 50  0000 L CNN
-F 1 "1K" H 4520 6205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 6250 50  0001 C CNN
-F 3 "~" H 4450 6250 50  0001 C CNN
-	1    4450 6250
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:C C89
 U 1 1 5D70C5B6
 P 4450 6850
@@ -535,8 +513,6 @@ Wire Wire Line
 Connection ~ 4450 6550
 Wire Wire Line
 	4450 6550 4450 6400
-Wire Wire Line
-	4450 6100 4450 5950
 Wire Wire Line
 	4450 7000 4450 7100
 Wire Wire Line
@@ -717,17 +693,6 @@ F 3 "" H 3000 1500 50  0001 C CNN
 	1    3000 1500
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3.3V #PWR018
-U 1 1 5D6BAA49
-P 4450 5950
-F 0 "#PWR018" H 4450 5800 50  0001 C CNN
-F 1 "+3.3V" H 4465 6123 50  0000 C CNN
-F 2 "" H 4450 5950 50  0001 C CNN
-F 3 "" H 4450 5950 50  0001 C CNN
-	1    4450 5950
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	550  3200 2550 3200
 Wire Notes Line
@@ -736,7 +701,7 @@ Wire Notes Line
 	2550 5900 550  5900
 Wire Notes Line
 	550  5900 550  3200
-Text Notes 1050 5800 0    50   ~ 0
+Text Notes 700  3300 0    50   ~ 0
 Programming interface\n
 $Comp
 L power:+3.3V #PWR0102
@@ -1167,4 +1132,34 @@ F 3 "~" H 8800 4050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8800 4200 8800 4250
+$Comp
+L Connector_Generic:Conn_01x05 J1
+U 1 1 5D3DC905
+P 1250 4550
+F 0 "J1" H 1330 4542 50  0000 L CNN
+F 1 "Conn_01x05" H 1330 4451 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 1250 4550 50  0001 C CNN
+F 3 "~" H 1250 4550 50  0001 C CNN
+	1    1250 4550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 4750 1500 4750
+Wire Wire Line
+	1500 4750 1500 5800
+Wire Wire Line
+	1500 5800 4450 5800
+$Comp
+L Device:R R12
+U 1 1 5D70BAB2
+P 4450 6250
+F 0 "R12" H 4520 6296 50  0000 L CNN
+F 1 "1K" H 4520 6205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 6250 50  0001 C CNN
+F 3 "~" H 4450 6250 50  0001 C CNN
+	1    4450 6250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 5800 4450 6100
 $EndSCHEMATC

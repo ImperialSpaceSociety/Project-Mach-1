@@ -16,8 +16,6 @@ Comment4 ""
 $EndDescr
 Text HLabel 6800 4350 2    50   Output ~ 0
 GPS_1PPS
-Text Notes 3000 5800 0    50   ~ 0
-Arrangement for Active antenna\n
 Text Notes 3800 6200 0    50   ~ 0
 http://www.explorelabs.com/blog/designing-a-gps-receiver/#ref-ublox-datasheet\n\nImportant info on why we use the components\n
 $Comp
@@ -189,6 +187,8 @@ F 3 "~" H 8400 2750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8400 2850 8400 3100
-Text Notes 8200 3850 0    50   ~ 0
+Text Notes 7500 5350 0    50   ~ 0
 Connected to active antenna, likely 2066400001 \nMolex active antenna. UFL connector\n
+Text Notes 5100 2400 0    50   ~ 0
+Layout according to MAX-8 / MAX-M8, \nHardware Integration Manual,\nSection 2.4.2 Antenna design with active antenna.
 $EndSCHEMATC
