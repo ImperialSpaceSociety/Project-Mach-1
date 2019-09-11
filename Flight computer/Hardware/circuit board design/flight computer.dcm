@@ -11,6 +11,11 @@ D High-accuracy, ultra-low-power, 3-axis digital output magnetometer
 F https://www.mouser.co.uk/datasheet/2/389/iis2mdc-1309412.pdf
 $ENDCMP
 #
+$CMP STF202-22T1G
+D USB Filter with ESDProtection
+F https://www.onsemi.com/pub/Collateral/STF202-22T1-D.PDF
+$ENDCMP
+#
 $CMP Si7232DN
 F https://www.vishay.com/docs/68986/si7232dn.pdf
 $ENDCMP
