@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:\\Users\\Medad\\Documents\\GitHub\\Project-Mach-1\\Flight computer\\Hardware\\circuit board design\\circuit board design.sch")
-    (date "12/09/2019 13:40:38")
+    (date "12/09/2019 14:29:39")
     (tool "Eeschema (5.1.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -533,7 +533,10 @@
     (comp (ref J4)
       (value Conn_01x02)
       (footprint Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical)
-      (datasheet ~)
+      (datasheet https://docs-emea.rs-online.com/webdocs/1347/0900766b81347511.pdf)
+      (fields
+        (field (name Cost) 0.38)
+        (field (name "Purchase link") https://uk.rs-online.com/web/p/pcb-headers/8201422/))
       (libsource (lib Connector_Generic) (part Conn_01x02) (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"))
       (sheetpath (names /power_supply/) (tstamps /5D5B1705/))
       (tstamp 5D79E562))
@@ -717,14 +720,20 @@
     (comp (ref J3)
       (value Screw_Terminal_01x04)
       (footprint TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal)
-      (datasheet ~)
+      (datasheet https://docs-emea.rs-online.com/webdocs/002d/0900766b8002dc8a.pdf)
+      (fields
+        (field (name Cost) 0.71)
+        (field (name "Purchase link") https://uk.rs-online.com/web/p/pcb-terminal-blocks/3617689/))
       (libsource (lib Connector) (part Screw_Terminal_01x04) (description "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"))
       (sheetpath (names /pyro_driver/) (tstamps /5D6468D5/))
       (tstamp 5D7D6AC3))
     (comp (ref J5)
       (value Screw_Terminal_01x04)
       (footprint TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal)
-      (datasheet ~)
+      (datasheet https://docs-emea.rs-online.com/webdocs/002d/0900766b8002dc8a.pdf)
+      (fields
+        (field (name Cost) 0.71)
+        (field (name "Purchase link") https://uk.rs-online.com/web/p/pcb-terminal-blocks/3617689/))
       (libsource (lib Connector) (part Screw_Terminal_01x04) (description "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"))
       (sheetpath (names /pyro_driver/) (tstamps /5D6468D5/))
       (tstamp 5D7D6AC9))

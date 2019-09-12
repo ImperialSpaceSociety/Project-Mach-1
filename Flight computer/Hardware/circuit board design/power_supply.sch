@@ -36,7 +36,9 @@ P 2650 3500
 F 0 "J4" H 2568 3717 50  0000 C CNN
 F 1 "Conn_01x02" H 2568 3626 50  0000 C CNN
 F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 2650 3500 50  0001 C CNN
-F 3 "~" H 2650 3500 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/1347/0900766b81347511.pdf" H 2650 3500 50  0001 C CNN
+F 4 "0.38" H 2650 3500 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/pcb-headers/8201422/" H 2650 3500 50  0001 C CNN "Purchase link"
 	1    2650 3500
 	-1   0    0    -1  
 $EndComp
