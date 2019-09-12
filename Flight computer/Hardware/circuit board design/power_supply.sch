@@ -35,7 +35,7 @@ U 1 1 5D79E562
 P 2650 3500
 F 0 "J4" H 2568 3717 50  0000 C CNN
 F 1 "Conn_01x02" H 2568 3626 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2650 3500 50  0001 C CNN
+F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 2650 3500 50  0001 C CNN
 F 3 "~" H 2650 3500 50  0001 C CNN
 	1    2650 3500
 	-1   0    0    -1  
@@ -156,41 +156,6 @@ F 1 "+3.3V" H 9115 3423 50  0000 C CNN
 F 2 "" H 9100 3250 50  0001 C CNN
 F 3 "" H 9100 3250 50  0001 C CNN
 	1    9100 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4150 5550 4150 5450
-$Comp
-L power:GND #PWR0111
-U 1 1 5D759611
-P 4150 5550
-F 0 "#PWR0111" H 4150 5300 50  0001 C CNN
-F 1 "GND" H 4155 5377 50  0000 C CNN
-F 2 "" H 4150 5550 50  0001 C CNN
-F 3 "" H 4150 5550 50  0001 C CNN
-	1    4150 5550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R29
-U 1 1 5D75961B
-P 4150 5300
-F 0 "R29" H 4220 5346 50  0000 L CNN
-F 1 "100K" H 4220 5255 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4080 5300 50  0001 C CNN
-F 3 "~" H 4150 5300 50  0001 C CNN
-	1    4150 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R28
-U 1 1 5D759625
-P 4150 4800
-F 0 "R28" H 4220 4846 50  0000 L CNN
-F 1 "100K" H 4220 4755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4080 4800 50  0001 C CNN
-F 3 "~" H 4150 4800 50  0001 C CNN
-	1    4150 4800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -318,19 +283,8 @@ The maximum possible voltage drop(from 3.6V input) due to diode \nand LDO regula
 Wire Wire Line
 	4150 3500 4650 3500
 Connection ~ 4150 3500
-Text HLabel 2500 5000 0    50   Output ~ 0
-PWR_BVOLTS
-Wire Wire Line
-	4150 4950 4150 5000
-Wire Wire Line
-	4150 5000 4150 5150
-Connection ~ 4150 5000
-Wire Wire Line
-	2500 5000 4150 5000
 Wire Wire Line
 	3300 3500 4150 3500
-Wire Wire Line
-	4150 3500 4150 4650
 $Comp
 L Connector:USB_B_Micro J?
 U 1 1 5D941F3D
@@ -387,10 +341,6 @@ USB_DM
 Text HLabel 4250 1800 2    50   Input ~ 0
 USB_DP
 Wire Wire Line
-	2200 1900 3000 1900
-Wire Wire Line
-	3000 1800 2200 1800
-Wire Wire Line
 	3000 2100 2900 2100
 Wire Wire Line
 	2900 2100 2900 2450
@@ -409,8 +359,6 @@ F 3 "" H 2900 2450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2200 1600 2550 1600
-Wire Wire Line
-	3900 2100 4850 2100
 Wire Wire Line
 	4850 2100 4850 1700
 Wire Wire Line
@@ -442,4 +390,56 @@ F 3 "" H 2550 1250 50  0001 C CNN
 	1    2550 1250
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4150 3500 4150 4650
+Wire Wire Line
+	2500 5000 4150 5000
+Connection ~ 4150 5000
+Wire Wire Line
+	4150 5000 4150 5150
+Wire Wire Line
+	4150 4950 4150 5000
+Text HLabel 2500 5000 0    50   Output ~ 0
+PWR_BVOLTS
+$Comp
+L Device:R R28
+U 1 1 5D759625
+P 4150 4800
+F 0 "R28" H 4220 4846 50  0000 L CNN
+F 1 "100K" H 4220 4755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4080 4800 50  0001 C CNN
+F 3 "~" H 4150 4800 50  0001 C CNN
+	1    4150 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R29
+U 1 1 5D75961B
+P 4150 5300
+F 0 "R29" H 4220 5346 50  0000 L CNN
+F 1 "100K" H 4220 5255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4080 5300 50  0001 C CNN
+F 3 "~" H 4150 5300 50  0001 C CNN
+	1    4150 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5D759611
+P 4150 5550
+F 0 "#PWR0111" H 4150 5300 50  0001 C CNN
+F 1 "GND" H 4155 5377 50  0000 C CNN
+F 2 "" H 4150 5550 50  0001 C CNN
+F 3 "" H 4150 5550 50  0001 C CNN
+	1    4150 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 5550 4150 5450
+Wire Wire Line
+	3900 2100 4850 2100
+Wire Wire Line
+	2200 1900 3000 1900
+Wire Wire Line
+	3000 1800 2200 1800
 $EndSCHEMATC

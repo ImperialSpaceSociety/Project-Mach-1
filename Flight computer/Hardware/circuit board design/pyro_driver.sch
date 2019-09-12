@@ -473,27 +473,27 @@ FIRE_D
 $Comp
 L Connector:Screw_Terminal_01x04 J?
 U 1 1 5D7D6AC3
-P 8950 2300
+P 8500 3400
 AR Path="/5D5B1705/5D7D6AC3" Ref="J?"  Part="1" 
 AR Path="/5D6468D5/5D7D6AC3" Ref="J3"  Part="1" 
-F 0 "J3" H 8868 1875 50  0000 C CNN
-F 1 "Screw_Terminal_01x04" H 8868 1966 50  0000 C CNN
-F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 8950 2300 50  0001 C CNN
-F 3 "~" H 8950 2300 50  0001 C CNN
-	1    8950 2300
+F 0 "J3" H 8418 2975 50  0000 C CNN
+F 1 "Screw_Terminal_01x04" H 8418 3066 50  0000 C CNN
+F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 8500 3400 50  0001 C CNN
+F 3 "~" H 8500 3400 50  0001 C CNN
+	1    8500 3400
 	-1   0    0    1   
 $EndComp
 $Comp
 L Connector:Screw_Terminal_01x04 J?
 U 1 1 5D7D6AC9
-P 8950 3350
+P 8500 4450
 AR Path="/5D5B1705/5D7D6AC9" Ref="J?"  Part="1" 
 AR Path="/5D6468D5/5D7D6AC9" Ref="J5"  Part="1" 
-F 0 "J5" H 8868 2925 50  0000 C CNN
-F 1 "Screw_Terminal_01x04" H 8868 3016 50  0000 C CNN
-F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 8950 3350 50  0001 C CNN
-F 3 "~" H 8950 3350 50  0001 C CNN
-	1    8950 3350
+F 0 "J5" H 8418 4025 50  0000 C CNN
+F 1 "Screw_Terminal_01x04" H 8418 4116 50  0000 C CNN
+F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 8500 4450 50  0001 C CNN
+F 3 "~" H 8500 4450 50  0001 C CNN
+	1    8500 4450
 	-1   0    0    1   
 $EndComp
 Text Label 7450 1500 2    50   ~ 0
@@ -505,51 +505,38 @@ FET_C
 Text Label 7450 5400 2    50   ~ 0
 FET_D
 Wire Wire Line
-	9150 2200 10250 2200
+	8700 3300 9400 3300
 Wire Wire Line
-	10250 2200 10250 1050
+	8700 3500 9400 3500
 Wire Wire Line
-	9150 2400 10250 2400
+	9400 3500 9400 3300
+Connection ~ 9400 3300
+Connection ~ 9400 3500
 Wire Wire Line
-	10250 2400 10250 2200
-Connection ~ 10250 2200
-Connection ~ 10250 2400
+	8700 4350 9400 4350
 Wire Wire Line
-	9150 3250 10250 3250
+	9400 3500 9400 4350
 Wire Wire Line
-	10250 2400 10250 3250
+	8700 4550 9400 4550
 Wire Wire Line
-	9150 3450 10250 3450
-Wire Wire Line
-	10250 3450 10250 3250
-Connection ~ 10250 3250
-$Comp
-L power:Vdrive #PWR0112
-U 1 1 5D7E2F36
-P 10250 1050
-F 0 "#PWR0112" H 10050 900 50  0001 C CNN
-F 1 "Vdrive" H 10267 1223 50  0000 C CNN
-F 2 "" H 10250 1050 50  0001 C CNN
-F 3 "" H 10250 1050 50  0001 C CNN
-	1    10250 1050
-	1    0    0    -1  
-$EndComp
-Text Label 9450 2100 2    50   ~ 0
+	9400 4550 9400 4350
+Connection ~ 9400 4350
+Text Label 9000 3200 2    50   ~ 0
 FET_A
 Wire Wire Line
-	9450 2100 9150 2100
-Text Label 9450 2300 2    50   ~ 0
+	9000 3200 8700 3200
+Text Label 9000 3400 2    50   ~ 0
 FET_B
 Wire Wire Line
-	9150 2300 9450 2300
-Text Label 9400 3150 2    50   ~ 0
+	8700 3400 9000 3400
+Text Label 8950 4250 2    50   ~ 0
 FET_C
 Wire Wire Line
-	9400 3150 9150 3150
-Text Label 9400 3350 2    50   ~ 0
+	8950 4250 8700 4250
+Text Label 8950 4450 2    50   ~ 0
 FET_D
 Wire Wire Line
-	9400 3350 9150 3350
+	8950 4450 8700 4450
 Wire Wire Line
 	4450 1800 5550 1800
 Wire Wire Line
@@ -558,4 +545,53 @@ Wire Wire Line
 	4450 4450 5550 4450
 Wire Wire Line
 	4450 5700 5550 5700
+$Comp
+L Switch:SW_DPST SW1
+U 1 1 5D8869C7
+P 9800 2400
+F 0 "SW1" H 9800 2725 50  0000 C CNN
+F 1 "SW_DPST" H 9800 2634 50  0000 C CNN
+F 2 "" H 9800 2400 50  0001 C CNN
+F 3 "~" H 9800 2400 50  0001 C CNN
+	1    9800 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Vdrive #PWR0112
+U 1 1 5D7E2F36
+P 10500 1900
+F 0 "#PWR0112" H 10300 1750 50  0001 C CNN
+F 1 "Vdrive" H 10517 2073 50  0000 C CNN
+F 2 "" H 10500 1900 50  0001 C CNN
+F 3 "" H 10500 1900 50  0001 C CNN
+	1    10500 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 2500 9600 2500
+Wire Wire Line
+	10000 2500 10500 2500
+Wire Wire Line
+	10500 2500 10500 1900
+Wire Wire Line
+	9400 2500 9400 3300
+Text HLabel 8800 2300 0    50   Input ~ 0
+ARMED
+Wire Wire Line
+	8800 2300 9600 2300
+Wire Wire Line
+	10000 2300 10250 2300
+Wire Wire Line
+	10250 2300 10250 1900
+$Comp
+L power:+3.3V #PWR0121
+U 1 1 5D89E3F1
+P 10250 1900
+F 0 "#PWR0121" H 10250 1750 50  0001 C CNN
+F 1 "+3.3V" H 10265 2073 50  0000 C CNN
+F 2 "" H 10250 1900 50  0001 C CNN
+F 3 "" H 10250 1900 50  0001 C CNN
+	1    10250 1900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

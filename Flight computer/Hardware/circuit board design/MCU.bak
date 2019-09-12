@@ -940,8 +940,6 @@ F 3 "~" H 10200 4900 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	9550 6150 11050 6150
-Wire Notes Line
-	9550 3100 9550 6150
 Text Notes 9600 6100 0    50   ~ 0
 Two indicator LEDs
 NoConn ~ 5100 3000
@@ -1056,7 +1054,7 @@ Wire Wire Line
 	8800 3750 8800 3900
 Connection ~ 8800 3750
 Wire Wire Line
-	8800 3750 8900 3750
+	8800 3750 9050 3750
 $Comp
 L power:GND #PWR017
 U 1 1 5D83136F
@@ -1068,32 +1066,6 @@ F 3 "" H 8800 4250 50  0001 C CNN
 	1    8800 4250
 	1    0    0    -1  
 $EndComp
-$Comp
-L Switch:SW_SPST SW1
-U 1 1 5D832A6E
-P 9100 3750
-F 0 "SW1" H 9100 3985 50  0000 C CNN
-F 1 "SW_SPST" H 9100 3894 50  0000 C CNN
-F 2 "" H 9100 3750 50  0001 C CNN
-F 3 "~" H 9100 3750 50  0001 C CNN
-	1    9100 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR029
-U 1 1 5D832E28
-P 9450 3350
-F 0 "#PWR029" H 9450 3200 50  0001 C CNN
-F 1 "+3.3V" H 9400 3500 50  0000 C CNN
-F 2 "" H 9450 3350 50  0001 C CNN
-F 3 "" H 9450 3350 50  0001 C CNN
-	1    9450 3350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9450 3750 9450 3350
-Wire Wire Line
-	9300 3750 9450 3750
 Wire Notes Line
 	8200 4500 8200 3100
 Wire Notes Line
@@ -1174,4 +1146,8 @@ Wire Wire Line
 	3900 4300 5100 4300
 Wire Wire Line
 	3900 4300 3900 4050
+Wire Notes Line
+	9550 3100 9550 6150
+Text HLabel 9050 3750 2    50   Input ~ 0
+ARMED
 $EndSCHEMATC
