@@ -56,17 +56,6 @@ F 3 "" H 3800 5550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3800 5450 3800 5550
-$Comp
-L RF:Si4463 U3
-U 1 1 5D5CB5C3
-P 3800 4750
-F 0 "U3" H 3550 5450 50  0000 C CNN
-F 1 "Si4463" H 3550 5550 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm_ThermalVias" H 3800 5950 50  0001 C CNN
-F 3 "https://www.silabs.com/documents/public/data-sheets/Si4464-63-61-60.pdf" H 3500 4650 50  0001 C CNN
-	1    3800 4750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3900 4050 3900 3900
 Wire Wire Line
@@ -101,32 +90,10 @@ F 3 "" H 1550 4100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3400 4450 2300 4450
-$Comp
-L Device:C_Small C20
-U 1 1 5D6C2DE3
-P 2300 3900
-F 0 "C20" H 2550 3900 50  0000 C CNN
-F 1 "10nF" H 2550 3800 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2300 3900 50  0001 C CNN
-F 3 "~" H 2300 3900 50  0001 C CNN
-	1    2300 3900
-	1    0    0    1   
-$EndComp
 Text HLabel 3050 5250 0    50   Input ~ 0
 RF_NIRQ
 Wire Wire Line
 	3400 5250 3050 5250
-$Comp
-L Device:C_Small C21
-U 1 1 5D6BC5E2
-P 800 3500
-F 0 "C21" H 1050 3500 50  0000 C CNN
-F 1 "33nF" H 1050 3400 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 800 3500 50  0001 C CNN
-F 3 "~" H 800 3500 50  0001 C CNN
-	1    800  3500
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	800  3150 800  3400
 Wire Wire Line
@@ -151,28 +118,6 @@ Wire Wire Line
 	2300 3600 2300 3800
 Wire Wire Line
 	2300 4000 2300 4450
-$Comp
-L Device:C_Small C22
-U 1 1 5D7EB85A
-P 4000 3600
-F 0 "C22" H 3908 3646 50  0000 R CNN
-F 1 "1uF" H 3908 3555 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4000 3600 50  0001 C CNN
-F 3 "~" H 4000 3600 50  0001 C CNN
-	1    4000 3600
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C23
-U 1 1 5D7EC4A3
-P 4350 3600
-F 0 "C23" H 4258 3646 50  0000 R CNN
-F 1 "100nF" H 4258 3555 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4350 3600 50  0001 C CNN
-F 3 "~" H 4350 3600 50  0001 C CNN
-	1    4350 3600
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	4700 2150 4700 2350
 Connection ~ 4700 2150
@@ -189,28 +134,6 @@ F 1 "+3.3V" H 4715 2123 50  0000 C CNN
 F 2 "" H 4700 1950 50  0001 C CNN
 F 3 "" H 4700 1950 50  0001 C CNN
 	1    4700 1950
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:L L8
-U 1 1 5D6CE249
-P 4700 2500
-F 0 "L8" H 4656 2454 50  0000 R CNN
-F 1 "220nH" H 4656 2545 50  0000 R CNN
-F 2 "Inductor_SMD:L_0603_1608Metric" H 4700 2500 50  0001 C CNN
-F 3 "~" H 4700 2500 50  0001 C CNN
-	1    4700 2500
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:C_Small C19
-U 1 1 5D6CDD9C
-P 3700 2450
-F 0 "C19" H 3608 2496 50  0000 R CNN
-F 1 "270pf" H 3608 2405 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3700 2450 50  0001 C CNN
-F 3 "~" H 3700 2450 50  0001 C CNN
-	1    3700 2450
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -272,30 +195,6 @@ TX Bias
 NoConn ~ 3400 4650
 Wire Wire Line
 	4200 4250 4700 4250
-$Comp
-L flight-computer:TM-32.000-AF3-33-S-Oscillator X1
-U 1 1 5D703E49
-P 1550 3600
-F 0 "X1" H 1500 4800 50  0000 L CNN
-F 1 "TM-32.000-AF3-33-S-Oscillator" H 1000 4700 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 2000 3250 50  0001 C CNN
-F 3 "https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc7d9.pdf" H 1450 3600 50  0001 C CNN
-F 4 "3.43" H 1550 3600 50  0001 C CNN "Cost"
-F 5 "https://uk.rs-online.com/web/p/tcxo-oscillators/1442366/" H 1550 3600 50  0001 C CNN "Purchase link"
-	1    1550 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 0433BM41A0019E:0433BM41A0019E U2
-U 1 1 5D767292
-P 6350 4450
-F 0 "U2" H 6350 4967 50  0000 C CNN
-F 1 "0433BM41A0019E" H 6350 4876 50  0000 C CNN
-F 2 "Johanson_frontend:BALUN_0433BM41A0019E" H 5850 5100 50  0001 L BNN
-F 3 "https://www.johansontechnology.com/datasheets/0433BM41A0019/0433BM41A0019.pdf" H 5850 5100 50  0001 L BNN
-	1    6350 4450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4700 2650 4700 4250
 Wire Wire Line
@@ -339,17 +238,6 @@ F 3 "" H 6900 5200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6750 4250 7700 4250
-$Comp
-L Device:C_Small C9
-U 1 1 5D796ABE
-P 7800 4250
-F 0 "C9" V 7892 4296 50  0000 L CNN
-F 1 "270pF" V 8050 4200 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 7800 4250 50  0001 C CNN
-F 3 "~" H 7800 4250 50  0001 C CNN
-	1    7800 4250
-	0    1    -1   0   
-$EndComp
 Wire Wire Line
 	3700 2150 4700 2150
 Wire Wire Line
@@ -376,17 +264,6 @@ Wire Notes Line
 	8400 4200 8400 2900
 Wire Notes Line
 	9750 4200 8400 4200
-$Comp
-L Device:L L3
-U 1 1 5D7F0545
-P 8650 3300
-F 0 "L3" V 8469 3300 50  0000 C CNN
-F 1 "0R" V 8560 3300 50  0000 C CNN
-F 2 "Inductor_SMD:L_0402_1005Metric" H 8650 3300 50  0001 C CNN
-F 3 "~" H 8650 3300 50  0001 C CNN
-	1    8650 3300
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8200 3300 8500 3300
 Text Notes 8650 4350 0    50   ~ 0
@@ -407,17 +284,6 @@ F 3 "" H 9250 3950 50  0001 C CNN
 	1    9250 3950
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C_Small C10
-U 1 1 5D7EC7D6
-P 9250 3600
-F 0 "C10" H 9158 3646 50  0000 R CNN
-F 1 "NF" H 9158 3555 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9250 3600 50  0001 C CNN
-F 3 "~" H 9250 3600 50  0001 C CNN
-	1    9250 3600
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	9250 3700 9250 3950
 Wire Wire Line
@@ -426,17 +292,6 @@ Wire Wire Line
 	8800 3300 9250 3300
 Wire Wire Line
 	8200 4850 8200 5100
-$Comp
-L Device:R R7
-U 1 1 5D7AB0E5
-P 8200 4700
-F 0 "R7" H 8270 4746 50  0000 L CNN
-F 1 "NF" H 8270 4655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 8130 4700 50  0001 C CNN
-F 3 "~" H 8200 4700 50  0001 C CNN
-	1    8200 4700
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR028
 U 1 1 5D7A6387
@@ -452,17 +307,6 @@ Wire Wire Line
 	8700 5300 8700 5900
 Wire Wire Line
 	8400 5300 8700 5300
-$Comp
-L Connector:Conn_Coaxial J7
-U 1 1 5D7A2CE8
-P 8200 5300
-F 0 "J7" H 8300 5182 50  0000 L CNN
-F 1 "Conn_Coaxial" H 8300 5273 50  0000 L CNN
-F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 8200 5300 50  0001 C CNN
-F 3 " ~" H 8200 5300 50  0001 C CNN
-	1    8200 5300
-	-1   0    0    1   
-$EndComp
 Connection ~ 8200 4250
 Wire Wire Line
 	8200 4250 8200 4550
@@ -479,6 +323,162 @@ F 1 "Antenna" H 9430 2248 50  0000 L CNN
 F 2 "Connector_PinHeader_1.00mm:PinHeader_1x03_P1.00mm_Vertical" H 9350 2350 50  0001 C CNN
 F 3 "~" H 9350 2350 50  0001 C CNN
 	1    9350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J7
+U 1 1 5D7A2CE8
+P 8200 5300
+F 0 "J7" H 8300 5182 50  0000 L CNN
+F 1 "Conn_Coaxial" H 8300 5273 50  0000 L CNN
+F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 8200 5300 50  0001 C CNN
+F 3 " ~" H 8200 5300 50  0001 C CNN
+	1    8200 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5D7AB0E5
+P 8200 4700
+F 0 "R7" H 8270 4746 50  0000 L CNN
+F 1 "NF" H 8270 4655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 8130 4700 50  0001 C CNN
+F 3 "~" H 8200 4700 50  0001 C CNN
+	1    8200 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 5D7EC7D6
+P 9250 3600
+F 0 "C10" H 9158 3646 50  0000 R CNN
+F 1 "NF" H 9158 3555 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9250 3600 50  0001 C CNN
+F 3 "~" H 9250 3600 50  0001 C CNN
+	1    9250 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:L L3
+U 1 1 5D7F0545
+P 8650 3300
+F 0 "L3" V 8469 3300 50  0000 C CNN
+F 1 "0R" V 8560 3300 50  0000 C CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" H 8650 3300 50  0001 C CNN
+F 3 "~" H 8650 3300 50  0001 C CNN
+	1    8650 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C9
+U 1 1 5D796ABE
+P 7800 4250
+F 0 "C9" V 7892 4296 50  0000 L CNN
+F 1 "270pF" V 8050 4200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7800 4250 50  0001 C CNN
+F 3 "~" H 7800 4250 50  0001 C CNN
+	1    7800 4250
+	0    1    -1   0   
+$EndComp
+$Comp
+L 0433BM41A0019E:0433BM41A0019E U2
+U 1 1 5D767292
+P 6350 4450
+F 0 "U2" H 6350 4967 50  0000 C CNN
+F 1 "0433BM41A0019E" H 6350 4876 50  0000 C CNN
+F 2 "Johanson_frontend:BALUN_0433BM41A0019E" H 5850 5100 50  0001 L BNN
+F 3 "https://www.johansontechnology.com/datasheets/0433BM41A0019/0433BM41A0019.pdf" H 5850 5100 50  0001 L BNN
+	1    6350 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L flight-computer:TM-32.000-AF3-33-S-Oscillator X1
+U 1 1 5D703E49
+P 1550 3600
+F 0 "X1" H 1500 4800 50  0000 L CNN
+F 1 "TM-32.000-AF3-33-S-Oscillator" H 1000 4700 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 2000 3250 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc7d9.pdf" H 1450 3600 50  0001 C CNN
+F 4 "3.43" H 1550 3600 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/tcxo-oscillators/1442366/" H 1550 3600 50  0001 C CNN "Purchase link"
+	1    1550 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C19
+U 1 1 5D6CDD9C
+P 3700 2450
+F 0 "C19" H 3608 2496 50  0000 R CNN
+F 1 "270pf" H 3608 2405 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3700 2450 50  0001 C CNN
+F 3 "~" H 3700 2450 50  0001 C CNN
+	1    3700 2450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:L L8
+U 1 1 5D6CE249
+P 4700 2500
+F 0 "L8" H 4656 2454 50  0000 R CNN
+F 1 "220nH" H 4656 2545 50  0000 R CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 4700 2500 50  0001 C CNN
+F 3 "~" H 4700 2500 50  0001 C CNN
+	1    4700 2500
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C23
+U 1 1 5D7EC4A3
+P 4350 3600
+F 0 "C23" H 4258 3646 50  0000 R CNN
+F 1 "100nF" H 4258 3555 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4350 3600 50  0001 C CNN
+F 3 "~" H 4350 3600 50  0001 C CNN
+	1    4350 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C22
+U 1 1 5D7EB85A
+P 4000 3600
+F 0 "C22" H 3908 3646 50  0000 R CNN
+F 1 "1uF" H 3908 3555 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4000 3600 50  0001 C CNN
+F 3 "~" H 4000 3600 50  0001 C CNN
+	1    4000 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C21
+U 1 1 5D6BC5E2
+P 800 3500
+F 0 "C21" H 1050 3500 50  0000 C CNN
+F 1 "33nF" H 1050 3400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 800 3500 50  0001 C CNN
+F 3 "~" H 800 3500 50  0001 C CNN
+	1    800  3500
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C20
+U 1 1 5D6C2DE3
+P 2300 3900
+F 0 "C20" H 2550 3900 50  0000 C CNN
+F 1 "10nF" H 2550 3800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2300 3900 50  0001 C CNN
+F 3 "~" H 2300 3900 50  0001 C CNN
+	1    2300 3900
+	1    0    0    1   
+$EndComp
+$Comp
+L RF:Si4463 U3
+U 1 1 5D5CB5C3
+P 3800 4750
+F 0 "U3" H 3550 5450 50  0000 C CNN
+F 1 "Si4463" H 3550 5550 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm_ThermalVias" H 3800 5950 50  0001 C CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/Si4464-63-61-60.pdf" H 3500 4650 50  0001 C CNN
+	1    3800 4750
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

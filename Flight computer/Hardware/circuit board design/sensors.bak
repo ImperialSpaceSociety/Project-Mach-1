@@ -51,17 +51,6 @@ Wire Wire Line
 Wire Wire Line
 	4200 5350 4200 4400
 $Comp
-L Device:C_Small C77
-U 1 1 5D88305F
-P 5400 4800
-F 0 "C77" H 5492 4846 50  0000 L CNN
-F 1 "220nF" H 5492 4755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 5400 4800 50  0001 C CNN
-F 3 "~" H 5400 4800 50  0001 C CNN
-	1    5400 4800
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0115
 U 1 1 5D883873
 P 5400 4950
@@ -195,46 +184,12 @@ F 3 "" H 3950 3600 50  0001 C CNN
 	1    3950 3600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C_Small C28
-U 1 1 5D733939
-P 6350 2600
-F 0 "C28" H 6442 2646 50  0000 L CNN
-F 1 "100nF" H 6442 2555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6350 2600 50  0001 C CNN
-F 3 "~" H 6350 2600 50  0001 C CNN
-	1    6350 2600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6350 2700 6350 2900
 Wire Wire Line
 	6800 2350 6800 2500
-$Comp
-L Device:C_Small C29
-U 1 1 5D73469D
-P 6800 2600
-F 0 "C29" H 6892 2646 50  0000 L CNN
-F 1 "100nF" H 6892 2555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6800 2600 50  0001 C CNN
-F 3 "~" H 6800 2600 50  0001 C CNN
-	1    6800 2600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6800 2700 6800 2900
-$Comp
-L Sensor_Pressure:MS5607-02BA U8
-U 1 1 5D36B493
-P 4950 5250
-F 0 "U8" H 5280 5296 50  0000 L CNN
-F 1 "MS5607-02BA" H 5280 5205 50  0000 L CNN
-F 2 "Package_LGA:LGA-8_3x5mm_P1.25mm" H 4950 5250 50  0001 C CNN
-F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5607-02BA03%7FB2%7Fpdf%7FEnglish%7FENG_DS_MS5607-02BA03_B2.pdf%7FCAT-BLPS0035" H 4950 5250 50  0001 C CNN
-F 4 "https://www.mouser.co.uk/ProductDetail/Measurement-Specialties/MS560702BA03-50?qs=sGAEpiMZZMvhQj7WZhFIANHEKf5NWCaHepyHiZrEptc%3D" H 4950 5250 50  0001 C CNN "Purchase link"
-	1    4950 5250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5550 2350 6800 2350
 Wire Wire Line
@@ -265,19 +220,6 @@ Wire Wire Line
 	5550 2950 5800 2950
 Wire Wire Line
 	5550 3150 5800 3150
-$Comp
-L BMI088:BMI088 U10
-U 1 1 5D6DBE05
-P 4850 2950
-F 0 "U10" H 4850 3917 50  0000 C CNN
-F 1 "BMI088" H 4850 3826 50  0000 C CNN
-F 2 "BMI088:PQFN50P450X300X100-16N" H 4850 2950 50  0001 L BNN
-F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMI088-DS001.pdf" H 4850 2950 50  0001 L BNN
-F 4 "5.21" H 4850 2950 50  0001 C CNN "Cost"
-F 5 "https://www.mouser.co.uk/ProductDetail/Bosch-Sensortec/BMI088?qs=f9yNj16SXrIMFspTV6RB6Q%3D%3D" H 4850 2950 50  0001 C CNN "Purchase link"
-	1    4850 2950
-	1    0    0    -1  
-$EndComp
 Connection ~ 3700 4150
 Connection ~ 3550 4400
 Wire Wire Line
@@ -319,17 +261,6 @@ Wire Wire Line
 	1900 6150 1900 6250
 Wire Wire Line
 	2400 6150 1900 6150
-$Comp
-L Device:C_Small C30
-U 1 1 5D8480A6
-P 1900 6350
-F 0 "C30" H 1992 6396 50  0000 L CNN
-F 1 "220nF" H 1992 6305 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 1900 6350 50  0001 C CNN
-F 3 "~" H 1900 6350 50  0001 C CNN
-	1    1900 6350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2250 6250 2250 6600
 Wire Wire Line
@@ -371,17 +302,6 @@ F 2 "" H 3450 4900 50  0001 C CNN
 F 3 "" H 3450 4900 50  0001 C CNN
 	1    3450 4900
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C31
-U 1 1 5D863BFF
-P 3750 5050
-F 0 "C31" V 3700 5150 50  0000 L CNN
-F 1 "100nF" V 3600 5050 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3750 5050 50  0001 C CNN
-F 3 "~" H 3750 5050 50  0001 C CNN
-	1    3750 5050
-	0    1    1    0   
 $EndComp
 Wire Wire Line
 	3650 5050 3450 5050
@@ -430,47 +350,12 @@ F 3 "" H 3650 5450 50  0001 C CNN
 	1    3650 5450
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C_Small C32
-U 1 1 5D86E3A8
-P 3800 5550
-F 0 "C32" V 3800 5800 50  0000 L CNN
-F 1 "10uF" V 3700 5750 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3800 5550 50  0001 C CNN
-F 3 "~" H 3800 5550 50  0001 C CNN
-	1    3800 5550
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	3900 5550 3950 5550
-$Comp
-L Device:C_Small C33
-U 1 1 5D86E64A
-P 3800 5700
-F 0 "C33" V 4050 5650 50  0000 L CNN
-F 1 "100nF" V 3950 5600 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3800 5700 50  0001 C CNN
-F 3 "~" H 3800 5700 50  0001 C CNN
-	1    3800 5700
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	3900 5700 3950 5700
 Text Notes 2800 6950 0    50   ~ 0
 Power supply decoupling capacitors (100 nF ceramic, 10 μF aluminum) 
-$Comp
-L flight-computer:IIS2MDC U1
-U 1 1 5D82B1DE
-P 2850 5600
-F 0 "U1" H 2850 5865 50  0000 C CNN
-F 1 "IIS2MDC" H 2850 5774 50  0000 C CNN
-F 2 "Package_LGA:LGA-12_2x2mm_P0.5mm" H 2850 5600 50  0001 C CNN
-F 3 "https://www.mouser.co.uk/datasheet/2/389/iis2mdc-1309412.pdf" H 2850 5600 50  0001 C CNN
-F 4 "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/IIS2MDCTR?qs=sGAEpiMZZMve4%2FbfQkoj%252BNsA%2FYLrKsWenI%252BNJIvEAfE%3D" H 2850 5600 50  0001 C CNN "Purchase link"
-F 5 "1.93" H 2850 5600 50  0001 C CNN "Cost"
-	1    2850 5600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2400 5800 1800 5800
 Wire Wire Line
@@ -492,4 +377,119 @@ Wire Wire Line
 	1650 5900 2400 5900
 Wire Wire Line
 	3950 3150 4150 3150
+$Comp
+L flight-computer:IIS2MDC U1
+U 1 1 5D82B1DE
+P 2850 5600
+F 0 "U1" H 2850 5865 50  0000 C CNN
+F 1 "IIS2MDC" H 2850 5774 50  0000 C CNN
+F 2 "Package_LGA:LGA-12_2x2mm_P0.5mm" H 2850 5600 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/389/iis2mdc-1309412.pdf" H 2850 5600 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/IIS2MDCTR?qs=sGAEpiMZZMve4%2FbfQkoj%252BNsA%2FYLrKsWenI%252BNJIvEAfE%3D" H 2850 5600 50  0001 C CNN "Purchase link"
+F 5 "1.93" H 2850 5600 50  0001 C CNN "Cost"
+	1    2850 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C33
+U 1 1 5D86E64A
+P 3800 5700
+F 0 "C33" V 4050 5650 50  0000 L CNN
+F 1 "100nF" V 3950 5600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3800 5700 50  0001 C CNN
+F 3 "~" H 3800 5700 50  0001 C CNN
+	1    3800 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C32
+U 1 1 5D86E3A8
+P 3800 5550
+F 0 "C32" V 3800 5800 50  0000 L CNN
+F 1 "10uF" V 3700 5750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3800 5550 50  0001 C CNN
+F 3 "~" H 3800 5550 50  0001 C CNN
+	1    3800 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C31
+U 1 1 5D863BFF
+P 3750 5050
+F 0 "C31" V 3700 5150 50  0000 L CNN
+F 1 "100nF" V 3600 5050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3750 5050 50  0001 C CNN
+F 3 "~" H 3750 5050 50  0001 C CNN
+	1    3750 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C30
+U 1 1 5D8480A6
+P 1900 6350
+F 0 "C30" H 1992 6396 50  0000 L CNN
+F 1 "220nF" H 1992 6305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1900 6350 50  0001 C CNN
+F 3 "~" H 1900 6350 50  0001 C CNN
+	1    1900 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L BMI088:BMI088 U10
+U 1 1 5D6DBE05
+P 4850 2950
+F 0 "U10" H 4850 3917 50  0000 C CNN
+F 1 "BMI088" H 4850 3826 50  0000 C CNN
+F 2 "BMI088:PQFN50P450X300X100-16N" H 4850 2950 50  0001 L BNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMI088-DS001.pdf" H 4850 2950 50  0001 L BNN
+F 4 "5.21" H 4850 2950 50  0001 C CNN "Cost"
+F 5 "https://www.mouser.co.uk/ProductDetail/Bosch-Sensortec/BMI088?qs=f9yNj16SXrIMFspTV6RB6Q%3D%3D" H 4850 2950 50  0001 C CNN "Purchase link"
+	1    4850 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Pressure:MS5607-02BA U8
+U 1 1 5D36B493
+P 4950 5250
+F 0 "U8" H 5280 5296 50  0000 L CNN
+F 1 "MS5607-02BA" H 5280 5205 50  0000 L CNN
+F 2 "Package_LGA:LGA-8_3x5mm_P1.25mm" H 4950 5250 50  0001 C CNN
+F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5607-02BA03%7FB2%7Fpdf%7FEnglish%7FENG_DS_MS5607-02BA03_B2.pdf%7FCAT-BLPS0035" H 4950 5250 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/Measurement-Specialties/MS560702BA03-50?qs=sGAEpiMZZMvhQj7WZhFIANHEKf5NWCaHepyHiZrEptc%3D" H 4950 5250 50  0001 C CNN "Purchase link"
+	1    4950 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C29
+U 1 1 5D73469D
+P 6800 2600
+F 0 "C29" H 6892 2646 50  0000 L CNN
+F 1 "100nF" H 6892 2555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6800 2600 50  0001 C CNN
+F 3 "~" H 6800 2600 50  0001 C CNN
+	1    6800 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C28
+U 1 1 5D733939
+P 6350 2600
+F 0 "C28" H 6442 2646 50  0000 L CNN
+F 1 "100nF" H 6442 2555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6350 2600 50  0001 C CNN
+F 3 "~" H 6350 2600 50  0001 C CNN
+	1    6350 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C77
+U 1 1 5D88305F
+P 5400 4800
+F 0 "C77" H 5492 4846 50  0000 L CNN
+F 1 "220nF" H 5492 4755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5400 4800 50  0001 C CNN
+F 3 "~" H 5400 4800 50  0001 C CNN
+	1    5400 4800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

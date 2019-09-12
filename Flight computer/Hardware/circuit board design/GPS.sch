@@ -19,17 +19,6 @@ GPS_1PPS
 Text Notes 3800 6200 0    50   ~ 0
 http://www.explorelabs.com/blog/designing-a-gps-receiver/#ref-ublox-datasheet\n\nImportant info on why we use the components\n
 $Comp
-L power:+3.3V #PWR010
-U 1 1 5D692740
-P 5850 3150
-F 0 "#PWR010" H 5850 3000 50  0001 C CNN
-F 1 "+3.3V" H 5865 3323 50  0000 C CNN
-F 2 "" H 5850 3150 50  0001 C CNN
-F 3 "" H 5850 3150 50  0001 C CNN
-	1    5850 3150
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR011
 U 1 1 5D67FE0F
 P 6050 4900
@@ -40,10 +29,6 @@ F 3 "" H 6050 4900 50  0001 C CNN
 	1    6050 4900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5850 3150 5850 3250
-Wire Wire Line
-	5950 3250 5850 3250
 Text HLabel 5150 3750 0    50   Output ~ 0
 GPS_TXD
 Text HLabel 5150 3650 0    50   Input ~ 0
@@ -98,47 +83,6 @@ F 3 "~" H 7650 3650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7650 3800 7650 4050
-Connection ~ 5850 3250
-Wire Wire Line
-	5150 4450 5450 4450
-Wire Wire Line
-	5850 3250 5850 3350
-Wire Wire Line
-	5950 3350 5950 3250
-NoConn ~ 6050 3350
-NoConn ~ 5450 4250
-Wire Wire Line
-	6650 4350 6800 4350
-Wire Wire Line
-	5450 3650 5150 3650
-Wire Wire Line
-	5150 3750 5450 3750
-Wire Wire Line
-	5450 4350 5150 4350
-Wire Wire Line
-	5150 4050 5450 4050
-Wire Wire Line
-	5450 3950 5150 3950
-NoConn ~ 6650 3850
-Wire Wire Line
-	6650 4050 7650 4050
-Wire Wire Line
-	6050 4750 6050 4900
-$Comp
-L RF_GPS:MAX-M8C U4
-U 1 1 5D610F77
-P 6050 4050
-F 0 "U4" H 6050 4900 50  0000 C CNN
-F 1 "MAX-M8C" H 6050 5250 50  0000 C CNN
-F 2 "RF_GPS:ublox_MAX" H 6450 3400 50  0001 C CNN
-F 3 "https://www.u-blox.com/sites/default/files/MAX-M8-FW3_DataSheet_%28UBX-15031506%29.pdf" H 6050 4050 50  0001 C CNN
-F 4 "11.99" H 6050 4050 50  0001 C CNN "Cost"
-F 5 "https://store.uputronics.com/index.php?route=product/product&product_id=71&search=ublox" H 6050 4050 50  0001 C CNN "Purchase link"
-	1    6050 4050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6250 3350 6250 3100
 Wire Wire Line
 	6250 3100 6800 3100
 Wire Wire Line
@@ -189,6 +133,119 @@ Wire Wire Line
 	8400 2850 8400 3100
 Text Notes 7500 5350 0    50   ~ 0
 Connected to active antenna, likely 2066400001 \nMolex active antenna. UFL connector\n
-Text Notes 5100 2400 0    50   ~ 0
+Text Notes 7000 1150 0    50   ~ 0
 Layout according to MAX-8 / MAX-M8, \nHardware Integration Manual,\nSection 2.4.2 Antenna design with active antenna.
+NoConn ~ 6050 3350
+NoConn ~ 5450 4250
+Wire Wire Line
+	6650 4350 6800 4350
+Wire Wire Line
+	6250 3350 6250 3100
+NoConn ~ 6650 3850
+Wire Wire Line
+	6650 4050 7650 4050
+Wire Wire Line
+	6050 4750 6050 4900
+Wire Wire Line
+	5950 3350 5950 2650
+Wire Wire Line
+	5850 2650 5850 3350
+Connection ~ 5850 2650
+Wire Wire Line
+	5950 2650 5850 2650
+Wire Wire Line
+	5850 2100 5850 2650
+$Comp
+L power:+3.3V #PWR010
+U 1 1 5D692740
+P 5850 2100
+F 0 "#PWR010" H 5850 1950 50  0001 C CNN
+F 1 "+3.3V" H 5865 2273 50  0000 C CNN
+F 2 "" H 5850 2100 50  0001 C CNN
+F 3 "" H 5850 2100 50  0001 C CNN
+	1    5850 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3050 5300 2950
+Wire Wire Line
+	5650 2950 5650 3050
+Wire Wire Line
+	5650 2650 5300 2650
+Connection ~ 5650 2650
+Wire Wire Line
+	5650 2750 5650 2650
+Wire Wire Line
+	5300 2650 5300 2750
+Wire Wire Line
+	5850 2650 5650 2650
+$Comp
+L Device:C_Small C?
+U 1 1 5D99D571
+P 5300 2850
+AR Path="/5D5B17D8/5D99D571" Ref="C?"  Part="1" 
+AR Path="/5D5B165E/5D99D571" Ref="C11"  Part="1" 
+F 0 "C11" H 5208 2896 50  0000 R CNN
+F 1 "100nF" H 5208 2805 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5300 2850 50  0001 C CNN
+F 3 "~" H 5300 2850 50  0001 C CNN
+	1    5300 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5D99D56B
+P 5650 2850
+AR Path="/5D5B17D8/5D99D56B" Ref="C?"  Part="1" 
+AR Path="/5D5B165E/5D99D56B" Ref="C12"  Part="1" 
+F 0 "C12" H 5558 2896 50  0000 R CNN
+F 1 "2u2F" H 5558 2805 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5650 2850 50  0001 C CNN
+F 3 "~" H 5650 2850 50  0001 C CNN
+	1    5650 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 4450 5450 4450
+Wire Wire Line
+	5450 4350 5150 4350
+Wire Wire Line
+	5150 4050 5450 4050
+Wire Wire Line
+	5450 3950 5150 3950
+Wire Wire Line
+	5150 3750 5450 3750
+Wire Wire Line
+	5450 3650 5150 3650
+$Comp
+L power:GND #PWR?
+U 1 1 5D99D57F
+P 5300 3150
+AR Path="/5D5B17D8/5D99D57F" Ref="#PWR?"  Part="1" 
+AR Path="/5D5B165E/5D99D57F" Ref="#PWR029"  Part="1" 
+F 0 "#PWR029" H 5300 2900 50  0001 C CNN
+F 1 "GND" H 5305 2977 50  0000 C CNN
+F 2 "" H 5300 3150 50  0001 C CNN
+F 3 "" H 5300 3150 50  0001 C CNN
+	1    5300 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3150 5300 3050
+$Comp
+L RF_GPS:MAX-M8C U4
+U 1 1 5D610F77
+P 6050 4050
+F 0 "U4" H 6050 4900 50  0000 C CNN
+F 1 "MAX-M8C" H 6500 3300 50  0000 C CNN
+F 2 "RF_GPS:ublox_MAX" H 6450 3400 50  0001 C CNN
+F 3 "https://www.u-blox.com/sites/default/files/MAX-M8-FW3_DataSheet_%28UBX-15031506%29.pdf" H 6050 4050 50  0001 C CNN
+F 4 "11.99" H 6050 4050 50  0001 C CNN "Cost"
+F 5 "https://store.uputronics.com/index.php?route=product/product&product_id=71&search=ublox" H 6050 4050 50  0001 C CNN "Purchase link"
+	1    6050 4050
+	1    0    0    -1  
+$EndComp
+Connection ~ 5300 3050
+Wire Wire Line
+	5300 3050 5650 3050
 $EndSCHEMATC
