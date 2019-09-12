@@ -312,19 +312,6 @@ Wire Wire Line
 	8200 4250 8200 4550
 Wire Wire Line
 	7900 4250 8200 4250
-Wire Wire Line
-	9350 2550 9350 3300
-$Comp
-L Device:Antenna AE1
-U 1 1 5D79EB91
-P 9350 2350
-F 0 "AE1" H 9430 2339 50  0000 L CNN
-F 1 "Antenna" H 9430 2248 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x03_P1.00mm_Vertical" H 9350 2350 50  0001 C CNN
-F 3 "~" H 9350 2350 50  0001 C CNN
-	1    9350 2350
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector:Conn_Coaxial J7
 U 1 1 5D7A2CE8
@@ -481,4 +468,19 @@ F 3 "https://www.silabs.com/documents/public/data-sheets/Si4464-63-61-60.pdf" H 
 	1    3800 4750
 	1    0    0    -1  
 $EndComp
+$Comp
+L flight-computer:ICSSPicoTracker_Yageo434 ANT?
+U 1 1 5DB119FE
+P 9850 2350
+F 0 "ANT?" H 9800 2615 50  0000 C CNN
+F 1 "ICSSPicoTracker_Yageo434" H 9800 2524 50  0000 C CNN
+F 2 "" H 9850 2350 50  0001 C CNN
+F 3 "" H 9850 2350 50  0001 C CNN
+	1    9850 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 2350 9450 2350
+Wire Wire Line
+	9350 2350 9350 3300
 $EndSCHEMATC

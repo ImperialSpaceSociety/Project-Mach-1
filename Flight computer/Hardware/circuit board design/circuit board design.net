@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:\\Users\\Medad\\Documents\\GitHub\\Project-Mach-1\\Flight computer\\Hardware\\circuit board design\\circuit board design.sch")
-    (date "13/09/2019 02:30:41")
+    (date "13/09/2019 02:33:40")
     (tool "Eeschema (5.1.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -752,6 +752,7 @@
       (tstamp 5D7D6AC9))
     (comp (ref SW1)
       (value SW_DPST)
+      (footprint flight-computer:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal)
       (datasheet ~)
       (libsource (lib Switch) (part SW_DPST) (description "Double Pole Single Throw (DPST) Switch"))
       (sheetpath (names /pyro_driver/) (tstamps /5D6468D5/))
