@@ -1162,5 +1162,16 @@ F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-AU
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3300 4850 3300 4800
+	3300 4600 3300 4700
+Wire Wire Line
+	3300 4200 3300 4150
+Wire Wire Line
+	3300 4150 3450 4150
+Wire Wire Line
+	3450 4700 3300 4700
+Connection ~ 3300 4700
+Wire Wire Line
+	3300 4700 3300 4850
+Wire Wire Line
+	3450 4150 3450 4700
 $EndSCHEMATC

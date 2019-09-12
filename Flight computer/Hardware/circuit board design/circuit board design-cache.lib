@@ -204,20 +204,6 @@ X Shield 6 -100 -400 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Antenna
-#
-DEF Device_Antenna AE 0 40 N N 1 F N
-F0 "AE" -75 75 50 H V R CNN
-F1 "Device_Antenna" -75 0 50 H V R CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 10 0 100 0 -150 N
-P 3 0 1 10 50 100 0 -100 -50 100 N
-X A 1 0 -200 100 U 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
 # Device_Buzzer
 #
 DEF Device_Buzzer BZ 0 1 Y N 1 F N
@@ -656,6 +642,20 @@ P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
 P 6 0 1 8 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
 X K 1 -150 0 100 R 50 50 1 1 P
 X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# flight-computer_ICSSPicoTracker_Yageo434
+#
+DEF flight-computer_ICSSPicoTracker_Yageo434 ANT 0 40 Y Y 1 F N
+F0 "ANT" -200 150 50 H V C CNN
+F1 "flight-computer_ICSSPicoTracker_Yageo434" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -300 100 200 -100 0 1 0 f
+X RF_IN 1 -400 0 100 R 50 50 1 1 I
+X NC 2 300 0 100 L 50 50 1 1 N
 ENDDRAW
 ENDDEF
 #

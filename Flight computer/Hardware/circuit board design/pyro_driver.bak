@@ -478,7 +478,7 @@ AR Path="/5D5B1705/5D7D6AC3" Ref="J?"  Part="1"
 AR Path="/5D6468D5/5D7D6AC3" Ref="J3"  Part="1" 
 F 0 "J3" H 8418 2975 50  0000 C CNN
 F 1 "Screw_Terminal_01x04" H 8418 3066 50  0000 C CNN
-F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 8500 3400 50  0001 C CNN
+F 2 "flight-computer:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 8500 3400 50  0001 C CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/002d/0900766b8002dc8a.pdf" H 8500 3400 50  0001 C CNN
 F 4 "0.71" H 8500 3400 50  0001 C CNN "Cost"
 F 5 "https://uk.rs-online.com/web/p/pcb-terminal-blocks/3617689/" H 8500 3400 50  0001 C CNN "Purchase link"
@@ -493,7 +493,7 @@ AR Path="/5D5B1705/5D7D6AC9" Ref="J?"  Part="1"
 AR Path="/5D6468D5/5D7D6AC9" Ref="J5"  Part="1" 
 F 0 "J5" H 8418 4025 50  0000 C CNN
 F 1 "Screw_Terminal_01x04" H 8418 4116 50  0000 C CNN
-F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 8500 4450 50  0001 C CNN
+F 2 "flight-computer:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 8500 4450 50  0001 C CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/002d/0900766b8002dc8a.pdf" H 8500 4450 50  0001 C CNN
 F 4 "0.71" H 8500 4450 50  0001 C CNN "Cost"
 F 5 "https://uk.rs-online.com/web/p/pcb-terminal-blocks/3617689/" H 8500 4450 50  0001 C CNN "Purchase link"
