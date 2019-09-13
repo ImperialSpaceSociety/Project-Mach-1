@@ -308,14 +308,6 @@ Wire Wire Line
 	5100 4700 4550 4700
 Wire Wire Line
 	5100 4800 4550 4800
-Text HLabel 4550 4500 0    50   Output ~ 0
-MCU_MOSI1
-Text HLabel 4550 4600 0    50   Output ~ 0
-MCU_SCLK1
-Text HLabel 4550 4700 0    50   Input ~ 0
-MCU_NSEL1
-Text HLabel 4550 4800 0    50   Output ~ 0
-MCU_MISO1
 Wire Wire Line
 	5100 5200 4550 5200
 Wire Wire Line
@@ -525,7 +517,6 @@ Wire Wire Line
 Wire Wire Line
 	5100 4500 4550 4500
 NoConn ~ 7100 5400
-NoConn ~ 7100 5300
 Wire Notes Line
 	7450 1500 7450 3100
 Wire Notes Line
@@ -556,8 +547,6 @@ Text Label 9850 3500 0    50   ~ 0
 MCU_PB12
 Wire Wire Line
 	9850 3500 10500 3500
-Text Label 7650 4500 2    50   ~ 0
-MCU_PB12
 Text Notes 9600 4450 0    50   ~ 0
 Buzzer\n
 Wire Wire Line
@@ -1161,17 +1150,31 @@ F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-AU
 	1    6100 4400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3300 4600 3300 4700
+NoConn ~ 7100 5300
+Text Label 7650 4500 2    50   ~ 0
+MCU_PB12
+Text HLabel 4550 4800 0    50   Output ~ 0
+MCU_MISO1
+Text HLabel 4550 4700 0    50   Input ~ 0
+MCU_NSEL1
+Text HLabel 4550 4600 0    50   Output ~ 0
+MCU_SCLK1
+Text HLabel 4550 4500 0    50   Output ~ 0
+MCU_MOSI1
 Wire Wire Line
 	3300 4200 3300 4150
 Wire Wire Line
 	3300 4150 3450 4150
 Wire Wire Line
 	3450 4700 3300 4700
-Connection ~ 3300 4700
+Wire Wire Line
+	3450 4150 3450 4400
+Wire Wire Line
+	3450 4400 3450 4700
+Connection ~ 3450 4400
+Wire Wire Line
+	3300 4600 3300 4700
 Wire Wire Line
 	3300 4700 3300 4850
-Wire Wire Line
-	3450 4150 3450 4700
+Connection ~ 3300 4700
 $EndSCHEMATC

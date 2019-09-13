@@ -469,12 +469,12 @@ F 3 "https://www.silabs.com/documents/public/data-sheets/Si4464-63-61-60.pdf" H 
 	1    0    0    -1  
 $EndComp
 $Comp
-L flight-computer:ICSSPicoTracker_Yageo434 ANT?
+L flight-computer:ICSSPicoTracker_Yageo434 ANT1
 U 1 1 5DB119FE
 P 9850 2350
-F 0 "ANT?" H 9800 2615 50  0000 C CNN
+F 0 "ANT1" H 9800 2615 50  0000 C CNN
 F 1 "ICSSPicoTracker_Yageo434" H 9800 2524 50  0000 C CNN
-F 2 "" H 9850 2350 50  0001 C CNN
+F 2 "pico_tracker:Yageo434" H 9850 2350 50  0001 C CNN
 F 3 "" H 9850 2350 50  0001 C CNN
 	1    9850 2350
 	1    0    0    -1  
