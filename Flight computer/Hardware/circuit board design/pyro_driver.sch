@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 7
+Sheet 6 7
 Title "Pyro drivers"
 Date "2019-09-09"
 Rev "1.0"
@@ -596,6 +596,28 @@ F 1 "+3.3V" H 10265 2073 50  0000 C CNN
 F 2 "" H 10250 1900 50  0001 C CNN
 F 3 "" H 10250 1900 50  0001 C CNN
 	1    10250 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x06 J?
+U 1 1 5D7E8132
+P 10400 3050
+F 0 "J?" H 10480 3042 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 10480 2951 50  0000 L CNN
+F 2 "" H 10400 3050 50  0001 C CNN
+F 3 "~" H 10400 3050 50  0001 C CNN
+	1    10400 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x06 J?
+U 1 1 5D7E88A1
+P 10300 4150
+F 0 "J?" H 10380 4142 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 10380 4051 50  0000 L CNN
+F 2 "" H 10300 4150 50  0001 C CNN
+F 3 "~" H 10300 4150 50  0001 C CNN
+	1    10300 4150
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
