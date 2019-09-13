@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 7 7
 Title ""
 Date "2019-09-09"
 Rev "1.0"
@@ -366,9 +366,9 @@ Wire Wire Line
 	8950 2300 9100 2300
 Wire Wire Line
 	9100 2300 9100 2150
-Text Label 7650 4300 2    50   ~ 0
+Text Label 7650 3500 2    50   ~ 0
 MCU_MOSI4
-Text Label 7650 4400 2    50   ~ 0
+Text Label 7650 3600 2    50   ~ 0
 MCU_SCLK4
 Text Label 9450 2450 2    50   ~ 0
 MCU_SCLK4
@@ -386,12 +386,8 @@ Text Label 7500 2150 0    50   ~ 0
 MCU_NSEL4
 Text Label 9450 2600 2    50   ~ 0
 MCU_MOSI4
-Text HLabel 7650 3500 2    50   Output ~ 0
-MCU_PB02
 Text HLabel 7650 4100 2    50   Input ~ 0
 MCU_PB08
-Text Label 4550 4100 0    50   ~ 0
-MCU_MISO4
 $Comp
 L power:GND #PWR021
 U 1 1 5D659D89
@@ -516,7 +512,6 @@ Wire Wire Line
 	5100 4100 4550 4100
 Wire Wire Line
 	5100 4500 4550 4500
-NoConn ~ 7100 5400
 Wire Notes Line
 	7450 1500 7450 3100
 Wire Notes Line
@@ -525,11 +520,9 @@ Wire Notes Line
 	11050 1500 7450 1500
 Text Notes 7500 3050 0    50   ~ 0
 SPI flash chip
-Text HLabel 7650 3600 2    50   Output ~ 0
-MCU_PB03
 Wire Wire Line
 	7100 3600 7650 3600
-Text Label 7650 4200 2    50   ~ 0
+Text Label 7650 3400 2    50   ~ 0
 MCU_NSEL4
 Wire Wire Line
 	7100 4100 7650 4100
@@ -544,7 +537,7 @@ Wire Wire Line
 Wire Wire Line
 	7650 4500 7100 4500
 Text Label 9850 3500 0    50   ~ 0
-MCU_PB12
+BUZZER
 Wire Wire Line
 	9850 3500 10500 3500
 Text Notes 9600 4450 0    50   ~ 0
@@ -561,9 +554,9 @@ Wire Wire Line
 	7100 4600 7650 4600
 Wire Wire Line
 	7100 4700 7650 4700
-Text HLabel 7650 4600 2    50   Output ~ 0
+Text HLabel 7850 5100 2    50   Output ~ 0
 MCU_PB13
-Text HLabel 7650 4700 2    50   Output ~ 0
+Text HLabel 7600 5450 2    50   Output ~ 0
 MCU_PB14
 Wire Wire Line
 	7100 3900 7650 3900
@@ -577,7 +570,7 @@ Wire Wire Line
 	7100 4800 7650 4800
 Wire Wire Line
 	7100 4900 7650 4900
-Text HLabel 7650 4800 2    50   Output ~ 0
+Text HLabel 8150 5300 2    50   Output ~ 0
 MCU_PB15
 Text HLabel 7650 4900 2    50   Output ~ 0
 MCU_PB16
@@ -609,8 +602,6 @@ F 3 "" H 10900 5600 50  0001 C CNN
 	1    10900 5600
 	1    0    0    -1  
 $EndComp
-NoConn ~ 7100 3400
-NoConn ~ 7100 3300
 Text HLabel 4550 5400 0    50   Input ~ 0
 USB_DP
 Text HLabel 4550 5300 0    50   Input ~ 0
@@ -645,7 +636,6 @@ Wire Notes Line
 Text Notes 9600 6100 0    50   ~ 0
 Two indicator LEDs
 NoConn ~ 5100 3000
-NoConn ~ 5100 2900
 Wire Wire Line
 	1000 1150 900  1150
 Wire Wire Line
@@ -1151,15 +1141,13 @@ F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-AU
 	1    0    0    -1  
 $EndComp
 NoConn ~ 7100 5300
-Text Label 7650 4500 2    50   ~ 0
-MCU_PB12
-Text HLabel 4550 4800 0    50   Output ~ 0
+Text HLabel 7650 4700 2    50   Output ~ 0
 MCU_MISO1
-Text HLabel 4550 4700 0    50   Input ~ 0
+Text HLabel 7650 4800 2    50   Input ~ 0
 MCU_NSEL1
-Text HLabel 4550 4600 0    50   Output ~ 0
+Text HLabel 7650 4600 2    50   Output ~ 0
 MCU_SCLK1
-Text HLabel 4550 4500 0    50   Output ~ 0
+Text HLabel 7650 4500 2    50   Output ~ 0
 MCU_MOSI1
 Wire Wire Line
 	3300 4200 3300 4150
@@ -1177,4 +1165,15 @@ Wire Wire Line
 Wire Wire Line
 	3300 4700 3300 4850
 Connection ~ 3300 4700
+Text Label 7650 3300 2    50   ~ 0
+MCU_MISO4
+NoConn ~ 7100 5400
+Text Label 4550 2900 0    50   ~ 0
+BUZZER
+Wire Wire Line
+	7100 3300 7650 3300
+Wire Wire Line
+	7100 3400 7650 3400
+Wire Wire Line
+	4550 2900 5100 2900
 $EndSCHEMATC
