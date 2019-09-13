@@ -277,8 +277,6 @@ F 3 "" H 2800 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3150 4400 2800 4400
-Wire Wire Line
 	2800 4400 2800 4500
 Wire Wire Line
 	2800 4850 2800 4800
@@ -303,12 +301,6 @@ Wire Wire Line
 Wire Wire Line
 	2250 5700 2250 4450
 Wire Wire Line
-	5100 4600 4550 4600
-Wire Wire Line
-	5100 4700 4550 4700
-Wire Wire Line
-	5100 4800 4550 4800
-Wire Wire Line
 	5100 5200 4550 5200
 Wire Wire Line
 	5100 5100 4550 5100
@@ -322,10 +314,10 @@ Wire Wire Line
 	5100 3900 4550 3900
 Wire Wire Line
 	5100 4000 4550 4000
-Text HLabel 4550 4000 0    50   Output ~ 0
-MCU_TXD0
-Text HLabel 4550 3900 0    50   Input ~ 0
-MCU_RXD0
+Text HLabel 4550 4500 0    50   Output ~ 0
+GPS_TXD0
+Text HLabel 4550 4600 0    50   Input ~ 0
+GPS_RXD0
 Text HLabel 4550 3100 0    50   Input ~ 0
 MCU_PA02
 Wire Wire Line
@@ -336,21 +328,15 @@ Wire Wire Line
 Wire Wire Line
 	8100 2600 8100 2750
 Wire Wire Line
-	5100 3400 4550 3400
-Wire Wire Line
 	5100 3500 4550 3500
 Wire Wire Line
 	5100 3600 4550 3600
-Text HLabel 4550 3400 0    50   BiDi ~ 0
-MCU_PA05
 Text HLabel 4550 3500 0    50   BiDi ~ 0
 MCU_PA06
 Text HLabel 4550 3600 0    50   BiDi ~ 0
 MCU_PA07
 Wire Wire Line
 	5100 3800 4550 3800
-Text HLabel 4550 3800 0    50   Output ~ 0
-MCU_PA09
 Wire Wire Line
 	7100 3500 7650 3500
 Wire Wire Line
@@ -386,8 +372,6 @@ Text Label 7500 2150 0    50   ~ 0
 MCU_NSEL4
 Text Label 9450 2600 2    50   ~ 0
 MCU_MOSI4
-Text HLabel 7650 4100 2    50   Input ~ 0
-MCU_PB08
 $Comp
 L power:GND #PWR021
 U 1 1 5D659D89
@@ -506,12 +490,6 @@ Text HLabel 4550 5000 0    50   Input ~ 0
 MCU_PA21
 Wire Wire Line
 	4550 5000 5100 5000
-Wire Wire Line
-	4550 5500 5100 5500
-Wire Wire Line
-	5100 4100 4550 4100
-Wire Wire Line
-	5100 4500 4550 4500
 Wire Notes Line
 	7450 1500 7450 3100
 Wire Notes Line
@@ -525,15 +503,7 @@ Wire Wire Line
 Text Label 7650 3400 2    50   ~ 0
 MCU_NSEL4
 Wire Wire Line
-	7100 4100 7650 4100
-Wire Wire Line
-	7100 4200 7650 4200
-Wire Wire Line
-	7100 4300 7650 4300
-Wire Wire Line
 	8950 2450 9450 2450
-Wire Wire Line
-	7650 4400 7100 4400
 Wire Wire Line
 	7650 4500 7100 4500
 Text Label 9850 3500 0    50   ~ 0
@@ -543,44 +513,13 @@ Wire Wire Line
 Text Notes 9600 4450 0    50   ~ 0
 Buzzer\n
 Wire Wire Line
-	7100 3700 7650 3700
-Wire Wire Line
-	7100 3800 7650 3800
-Text HLabel 7650 3700 2    50   Input ~ 0
-MCU_PB04
-Text HLabel 7650 3800 2    50   Input ~ 0
-MCU_PB05
-Wire Wire Line
 	7100 4600 7650 4600
 Wire Wire Line
 	7100 4700 7650 4700
-Text HLabel 7850 5100 2    50   Output ~ 0
-MCU_PB13
-Text HLabel 7600 5450 2    50   Output ~ 0
-MCU_PB14
-Wire Wire Line
-	7100 3900 7650 3900
-Wire Wire Line
-	7100 4000 7650 4000
-Text HLabel 7650 3900 2    50   Input ~ 0
-MCU_PB06
-Text HLabel 7650 4000 2    50   Input ~ 0
-MCU_PB07
 Wire Wire Line
 	7100 4800 7650 4800
-Wire Wire Line
-	7100 4900 7650 4900
-Text HLabel 8150 5300 2    50   Output ~ 0
-MCU_PB15
-Text HLabel 7650 4900 2    50   Output ~ 0
-MCU_PB16
-Text HLabel 4550 5500 0    50   Input ~ 0
-MCU_PA27
 Text Label 4250 5600 2    50   ~ 0
 SWCLK
-NoConn ~ 5100 3700
-NoConn ~ 5100 3300
-NoConn ~ 5100 3200
 Wire Notes Line
 	11050 1500 11050 6150
 Text Label 7650 5100 2    50   ~ 0
@@ -635,7 +574,6 @@ Wire Notes Line
 	9550 6150 11050 6150
 Text Notes 9600 6100 0    50   ~ 0
 Two indicator LEDs
-NoConn ~ 5100 3000
 Wire Wire Line
 	1000 1150 900  1150
 Wire Wire Line
@@ -676,10 +614,9 @@ Wire Notes Line
 	2150 700  550  700 
 Text Notes 1000 2350 0    50   ~ 0
 Mechanical mounting holes
-NoConn ~ 5100 4200
 Wire Wire Line
-	7100 5000 7650 5000
-Text Label 7650 5000 2    50   ~ 0
+	5100 4700 4550 4700
+Text Label 4550 4700 0    50   ~ 0
 ARM_SWITCH
 Text Label 8700 3750 2    50   ~ 0
 ARM_SWITCH
@@ -770,8 +707,6 @@ Wire Wire Line
 Connection ~ 3750 4400
 Wire Wire Line
 	3750 4500 3750 4400
-Wire Wire Line
-	3450 4400 3750 4400
 $Comp
 L power:GND #PWR018
 U 1 1 5D9449AE
@@ -1117,17 +1052,6 @@ F 3 "~" H 4400 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Crystal_GND24 Y3
-U 1 1 5D6EF892
-P 3300 4400
-F 0 "Y3" H 3300 4850 50  0000 C CNN
-F 1 "16MHz" H 3300 4950 50  0000 C CNN
-F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 3300 4400 50  0001 C CNN
-F 3 "https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc75d.pdf" H 3300 4400 50  0001 C CNN
-	1    3300 4400
-	1    0    0    -1  
-$EndComp
-$Comp
 L MCU_Microchip_SAML:ATSAML21J18B-AUT U11
 U 1 1 5D748E67
 P 6100 4400
@@ -1140,7 +1064,6 @@ F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-AU
 	1    6100 4400
 	1    0    0    -1  
 $EndComp
-NoConn ~ 7100 5300
 Text HLabel 7650 4700 2    50   Output ~ 0
 MCU_MISO1
 Text HLabel 7650 4800 2    50   Input ~ 0
@@ -1150,24 +1073,10 @@ MCU_SCLK1
 Text HLabel 7650 4500 2    50   Output ~ 0
 MCU_MOSI1
 Wire Wire Line
-	3300 4200 3300 4150
-Wire Wire Line
-	3300 4150 3450 4150
-Wire Wire Line
-	3450 4700 3300 4700
-Wire Wire Line
-	3450 4150 3450 4400
-Wire Wire Line
-	3450 4400 3450 4700
-Connection ~ 3450 4400
-Wire Wire Line
-	3300 4600 3300 4700
-Wire Wire Line
 	3300 4700 3300 4850
 Connection ~ 3300 4700
 Text Label 7650 3300 2    50   ~ 0
 MCU_MISO4
-NoConn ~ 7100 5400
 Text Label 4550 2900 0    50   ~ 0
 BUZZER
 Wire Wire Line
@@ -1176,4 +1085,93 @@ Wire Wire Line
 	7100 3400 7650 3400
 Wire Wire Line
 	4550 2900 5100 2900
+Wire Wire Line
+	5100 3700 4550 3700
+Text HLabel 4550 3700 0    50   BiDi ~ 0
+MCU_PA08
+Text HLabel 4550 3800 0    50   BiDi ~ 0
+MCU_PA09
+Text HLabel 4550 3900 0    50   BiDi ~ 0
+MCU_PA10
+Text HLabel 4550 4000 0    50   BiDi ~ 0
+MCU_PA11
+NoConn ~ 7100 4900
+NoConn ~ 7100 4200
+NoConn ~ 5100 4800
+Wire Wire Line
+	4550 4500 5100 4500
+Wire Wire Line
+	4550 4600 5100 4600
+Wire Wire Line
+	3300 4600 3300 4700
+Wire Wire Line
+	3450 4400 3750 4400
+Wire Wire Line
+	3300 4200 3300 4150
+Wire Wire Line
+	3150 4400 2800 4400
+$Comp
+L Device:Crystal_GND24 Y3
+U 1 1 5D6EF892
+P 3300 4400
+F 0 "Y3" H 3300 4850 50  0000 C CNN
+F 1 "16MHz" H 3300 4950 50  0000 C CNN
+F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 3300 4400 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc75d.pdf" H 3300 4400 50  0001 C CNN
+	1    3300 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 4150 3550 4700
+Wire Wire Line
+	3300 4700 3550 4700
+Wire Wire Line
+	3300 4150 3550 4150
+Wire Wire Line
+	7100 4100 7650 4100
+Text HLabel 7650 4100 2    50   Input ~ 0
+MCU_PB08
+Text HLabel 4550 3400 0    50   BiDi ~ 0
+MCU_PA05
+Wire Wire Line
+	5100 3400 4550 3400
+Wire Wire Line
+	5100 3300 4550 3300
+Text HLabel 4550 3300 0    50   BiDi ~ 0
+MCU_PA04
+Wire Wire Line
+	5100 4100 4550 4100
+Wire Wire Line
+	5100 4200 4550 4200
+Text HLabel 4550 4100 0    50   BiDi ~ 0
+MCU_PA12
+Text HLabel 4550 4200 0    50   BiDi ~ 0
+MCU_PA13
+Wire Wire Line
+	7100 4400 7650 4400
+Text HLabel 7650 4400 2    50   Input ~ 0
+MCU_PB11
+Wire Wire Line
+	7100 5000 7650 5000
+Text HLabel 7650 5000 2    50   Input ~ 0
+MCU_PB17
+Wire Wire Line
+	5100 3000 4550 3000
+Text HLabel 4550 3000 0    50   Input ~ 0
+MCU_PA01
+Wire Wire Line
+	5100 3200 4550 3200
+Text HLabel 4550 3200 0    50   Input ~ 0
+MCU_PA03
+NoConn ~ 7100 4000
+NoConn ~ 7100 3900
+NoConn ~ 7100 3800
+NoConn ~ 7100 3700
+NoConn ~ 7100 5400
+NoConn ~ 7100 5300
+Wire Wire Line
+	7100 4300 7650 4300
+Text HLabel 7650 4300 2    50   Input ~ 0
+MCU_PB10
+NoConn ~ 5100 5500
 $EndSCHEMATC
