@@ -15,20 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L flight-computer:Si7232DN U6
-U 1 1 5D696EFB
-P 5850 1350
-AR Path="/5D696EFB" Ref="U6"  Part="1" 
-AR Path="/5D6468D5/5D696EFB" Ref="U6"  Part="1" 
-F 0 "U6" H 5956 896 50  0000 L CNN
-F 1 "Si7232DN" H 5956 805 50  0000 L CNN
-F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 1600 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 1350 50  0001 C CNN
-F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5850 1350 50  0001 C CNN "Purchase link"
-	1    5850 1350
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR024
 U 1 1 5D69AE81
 P 5850 2250
@@ -41,28 +27,6 @@ F 3 "" H 5850 2250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5850 2250 5850 2000
-$Comp
-L Device:R R5
-U 1 1 5D6A50BE
-P 6500 1600
-F 0 "R5" V 6700 1600 50  0000 C CNN
-F 1 "100K" V 6600 1600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6430 1600 50  0001 C CNN
-F 3 "~" H 6500 1600 50  0001 C CNN
-	1    6500 1600
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R6
-U 1 1 5D6A6316
-P 6950 2050
-F 0 "R6" H 7020 2096 50  0000 L CNN
-F 1 "27K" H 7020 2005 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 2050 50  0001 C CNN
-F 3 "~" H 6950 2050 50  0001 C CNN
-	1    6950 2050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6650 1600 6950 1600
 Wire Wire Line
@@ -113,35 +77,10 @@ F 3 "" H 4450 2350 50  0001 C CNN
 	1    4450 2350
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R3
-U 1 1 5D6AFE1F
-P 4450 2100
-F 0 "R3" H 4520 2146 50  0000 L CNN
-F 1 "3.3K" H 4520 2055 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 2100 50  0001 C CNN
-F 3 "~" H 4450 2100 50  0001 C CNN
-	1    4450 2100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4450 2250 4450 2350
 Text HLabel 3700 1800 0    50   Output ~ 0
 FIRE_A
-$Comp
-L flight-computer:Si7232DN U?
-U 2 1 5D743B81
-P 5850 2600
-AR Path="/5D743B81" Ref="U?"  Part="1" 
-AR Path="/5D6468D5/5D743B81" Ref="U6"  Part="2" 
-F 0 "U6" H 5956 2146 50  0000 L CNN
-F 1 "Si7232DN" H 5956 2055 50  0000 L CNN
-F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 2850 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 2600 50  0001 C CNN
-F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5850 2600 50  0001 C CNN "Purchase link"
-	2    5850 2600
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR043
 U 1 1 5D743B8B
@@ -151,28 +90,6 @@ F 1 "GND" H 5855 3327 50  0000 C CNN
 F 2 "" H 5850 3500 50  0001 C CNN
 F 3 "" H 5850 3500 50  0001 C CNN
 	1    5850 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R15
-U 1 1 5D743B96
-P 6500 2850
-F 0 "R15" V 6700 2850 50  0000 C CNN
-F 1 "100K" V 6600 2850 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6430 2850 50  0001 C CNN
-F 3 "~" H 6500 2850 50  0001 C CNN
-	1    6500 2850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R16
-U 1 1 5D743BA0
-P 6950 3300
-F 0 "R16" H 7020 3346 50  0000 L CNN
-F 1 "27K" H 7020 3255 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 3300 50  0001 C CNN
-F 3 "~" H 6950 3300 50  0001 C CNN
-	1    6950 3300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -227,35 +144,10 @@ F 3 "" H 4450 3600 50  0001 C CNN
 	1    4450 3600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R13
-U 1 1 5D743BD4
-P 4450 3350
-F 0 "R13" H 4520 3396 50  0000 L CNN
-F 1 "3.3K" H 4520 3305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 3350 50  0001 C CNN
-F 3 "~" H 4450 3350 50  0001 C CNN
-	1    4450 3350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4450 3500 4450 3600
 Text HLabel 3700 3050 0    50   Output ~ 0
 FIRE_B
-$Comp
-L flight-computer:Si7232DN U?
-U 1 1 5D7DA597
-P 5850 4000
-AR Path="/5D7DA597" Ref="U?"  Part="1" 
-AR Path="/5D6468D5/5D7DA597" Ref="U5"  Part="1" 
-F 0 "U5" H 5956 3546 50  0000 L CNN
-F 1 "Si7232DN" H 5956 3455 50  0000 L CNN
-F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 4250 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 4000 50  0001 C CNN
-F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5850 4000 50  0001 C CNN "Purchase link"
-	1    5850 4000
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR051
 U 1 1 5D7DA5A1
@@ -269,28 +161,6 @@ F 3 "" H 5850 4900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5850 4900 5850 4650
-$Comp
-L Device:R R21
-U 1 1 5D7DA5AC
-P 6500 4250
-F 0 "R21" V 6700 4250 50  0000 C CNN
-F 1 "100K" V 6600 4250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6430 4250 50  0001 C CNN
-F 3 "~" H 6500 4250 50  0001 C CNN
-	1    6500 4250
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R23
-U 1 1 5D7DA5B6
-P 6950 4700
-F 0 "R23" H 7020 4746 50  0000 L CNN
-F 1 "27K" H 7020 4655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 4700 50  0001 C CNN
-F 3 "~" H 6950 4700 50  0001 C CNN
-	1    6950 4700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6650 4250 6950 4250
 Wire Wire Line
@@ -341,35 +211,10 @@ F 3 "" H 4450 5000 50  0001 C CNN
 	1    4450 5000
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R17
-U 1 1 5D7DA5E5
-P 4450 4750
-F 0 "R17" H 4520 4796 50  0000 L CNN
-F 1 "3.3K" H 4520 4705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 4750 50  0001 C CNN
-F 3 "~" H 4450 4750 50  0001 C CNN
-	1    4450 4750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4450 4900 4450 5000
 Text HLabel 3700 4450 0    50   Output ~ 0
 FIRE_C
-$Comp
-L flight-computer:Si7232DN U?
-U 2 1 5D7DA5FD
-P 5850 5250
-AR Path="/5D7DA5FD" Ref="U?"  Part="1" 
-AR Path="/5D6468D5/5D7DA5FD" Ref="U5"  Part="2" 
-F 0 "U5" H 5956 4796 50  0000 L CNN
-F 1 "Si7232DN" H 5956 4705 50  0000 L CNN
-F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 5500 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 5250 50  0001 C CNN
-F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5850 5250 50  0001 C CNN "Purchase link"
-	2    5850 5250
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR054
 U 1 1 5D7DA607
@@ -379,28 +224,6 @@ F 1 "GND" H 5855 5977 50  0000 C CNN
 F 2 "" H 5850 6150 50  0001 C CNN
 F 3 "" H 5850 6150 50  0001 C CNN
 	1    5850 6150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R22
-U 1 1 5D7DA611
-P 6500 5500
-F 0 "R22" V 6700 5500 50  0000 C CNN
-F 1 "100K" V 6600 5500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6430 5500 50  0001 C CNN
-F 3 "~" H 6500 5500 50  0001 C CNN
-	1    6500 5500
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R24
-U 1 1 5D7DA61B
-P 6950 5950
-F 0 "R24" H 7020 5996 50  0000 L CNN
-F 1 "27K" H 7020 5905 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 5950 50  0001 C CNN
-F 3 "~" H 6950 5950 50  0001 C CNN
-	1    6950 5950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -455,6 +278,26 @@ F 3 "" H 4450 6250 50  0001 C CNN
 	1    4450 6250
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4450 6150 4450 6250
+Text HLabel 3700 5700 0    50   Output ~ 0
+FIRE_D
+Text Label 7450 1500 2    50   ~ 0
+FET_A
+Text Label 7450 2750 2    50   ~ 0
+FET_B
+Text Label 7450 4150 2    50   ~ 0
+FET_C
+Text Label 7450 5400 2    50   ~ 0
+FET_D
+Wire Wire Line
+	4450 1800 5550 1800
+Wire Wire Line
+	4450 3050 5550 3050
+Wire Wire Line
+	4450 4450 5550 4450
+Wire Wire Line
+	4450 5700 5550 5700
 $Comp
 L Device:R R18
 U 1 1 5D7DA64C
@@ -466,136 +309,276 @@ F 3 "~" H 4450 6000 50  0001 C CNN
 	1    4450 6000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4450 6150 4450 6250
-Text HLabel 3700 5700 0    50   Output ~ 0
-FIRE_D
 $Comp
-L Connector:Screw_Terminal_01x04 J?
-U 1 1 5D7D6AC3
-P 8500 3400
-AR Path="/5D5B1705/5D7D6AC3" Ref="J?"  Part="1" 
-AR Path="/5D6468D5/5D7D6AC3" Ref="J3"  Part="1" 
-F 0 "J3" H 8418 2975 50  0000 C CNN
-F 1 "Screw_Terminal_01x04" H 8418 3066 50  0000 C CNN
-F 2 "flight-computer:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 8500 3400 50  0001 C CNN
-F 3 "https://docs-emea.rs-online.com/webdocs/002d/0900766b8002dc8a.pdf" H 8500 3400 50  0001 C CNN
-F 4 "0.71" H 8500 3400 50  0001 C CNN "Cost"
-F 5 "https://uk.rs-online.com/web/p/pcb-terminal-blocks/3617689/" H 8500 3400 50  0001 C CNN "Purchase link"
-	1    8500 3400
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x04 J?
-U 1 1 5D7D6AC9
-P 8500 4450
-AR Path="/5D5B1705/5D7D6AC9" Ref="J?"  Part="1" 
-AR Path="/5D6468D5/5D7D6AC9" Ref="J5"  Part="1" 
-F 0 "J5" H 8418 4025 50  0000 C CNN
-F 1 "Screw_Terminal_01x04" H 8418 4116 50  0000 C CNN
-F 2 "flight-computer:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 8500 4450 50  0001 C CNN
-F 3 "https://docs-emea.rs-online.com/webdocs/002d/0900766b8002dc8a.pdf" H 8500 4450 50  0001 C CNN
-F 4 "0.71" H 8500 4450 50  0001 C CNN "Cost"
-F 5 "https://uk.rs-online.com/web/p/pcb-terminal-blocks/3617689/" H 8500 4450 50  0001 C CNN "Purchase link"
-	1    8500 4450
-	-1   0    0    1   
-$EndComp
-Text Label 7450 1500 2    50   ~ 0
-FET_A
-Text Label 7450 2750 2    50   ~ 0
-FET_B
-Text Label 7450 4150 2    50   ~ 0
-FET_C
-Text Label 7450 5400 2    50   ~ 0
-FET_D
-Wire Wire Line
-	8700 3300 9400 3300
-Wire Wire Line
-	8700 3500 9400 3500
-Wire Wire Line
-	9400 3500 9400 3300
-Connection ~ 9400 3300
-Connection ~ 9400 3500
-Wire Wire Line
-	8700 4350 9400 4350
-Wire Wire Line
-	9400 3500 9400 4350
-Wire Wire Line
-	8700 4550 9400 4550
-Wire Wire Line
-	9400 4550 9400 4350
-Connection ~ 9400 4350
-Text Label 9000 3200 2    50   ~ 0
-FET_A
-Wire Wire Line
-	9000 3200 8700 3200
-Text Label 9000 3400 2    50   ~ 0
-FET_B
-Wire Wire Line
-	8700 3400 9000 3400
-Text Label 8950 4250 2    50   ~ 0
-FET_C
-Wire Wire Line
-	8950 4250 8700 4250
-Text Label 8950 4450 2    50   ~ 0
-FET_D
-Wire Wire Line
-	8950 4450 8700 4450
-Wire Wire Line
-	4450 1800 5550 1800
-Wire Wire Line
-	4450 3050 5550 3050
-Wire Wire Line
-	4450 4450 5550 4450
-Wire Wire Line
-	4450 5700 5550 5700
-$Comp
-L Switch:SW_DPST SW1
-U 1 1 5D8869C7
-P 9800 2400
-F 0 "SW1" H 9800 2725 50  0000 C CNN
-F 1 "SW_DPST" H 9800 2634 50  0000 C CNN
-F 2 "flight-computer:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 9800 2400 50  0001 C CNN
-F 3 "~" H 9800 2400 50  0001 C CNN
-	1    9800 2400
+L Device:R R24
+U 1 1 5D7DA61B
+P 6950 5950
+F 0 "R24" H 7020 5996 50  0000 L CNN
+F 1 "27K" H 7020 5905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 5950 50  0001 C CNN
+F 3 "~" H 6950 5950 50  0001 C CNN
+	1    6950 5950
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:Vdrive #PWR0112
-U 1 1 5D7E2F36
-P 10500 1900
-F 0 "#PWR0112" H 10300 1750 50  0001 C CNN
-F 1 "Vdrive" H 10517 2073 50  0000 C CNN
-F 2 "" H 10500 1900 50  0001 C CNN
-F 3 "" H 10500 1900 50  0001 C CNN
-	1    10500 1900
+L Device:R R22
+U 1 1 5D7DA611
+P 6500 5500
+F 0 "R22" V 6700 5500 50  0000 C CNN
+F 1 "100K" V 6600 5500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6430 5500 50  0001 C CNN
+F 3 "~" H 6500 5500 50  0001 C CNN
+	1    6500 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L flight-computer:Si7232DN U?
+U 2 1 5D7DA5FD
+P 5850 5250
+AR Path="/5D7DA5FD" Ref="U?"  Part="1" 
+AR Path="/5D6468D5/5D7DA5FD" Ref="U5"  Part="2" 
+F 0 "U5" H 5956 4796 50  0000 L CNN
+F 1 "Si7232DN" H 5956 4705 50  0000 L CNN
+F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 5500 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 5250 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5850 5250 50  0001 C CNN "Purchase link"
+	2    5850 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 5D7DA5E5
+P 4450 4750
+F 0 "R17" H 4520 4796 50  0000 L CNN
+F 1 "3.3K" H 4520 4705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 4750 50  0001 C CNN
+F 3 "~" H 4450 4750 50  0001 C CNN
+	1    4450 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R23
+U 1 1 5D7DA5B6
+P 6950 4700
+F 0 "R23" H 7020 4746 50  0000 L CNN
+F 1 "27K" H 7020 4655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 4700 50  0001 C CNN
+F 3 "~" H 6950 4700 50  0001 C CNN
+	1    6950 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R21
+U 1 1 5D7DA5AC
+P 6500 4250
+F 0 "R21" V 6700 4250 50  0000 C CNN
+F 1 "100K" V 6600 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6430 4250 50  0001 C CNN
+F 3 "~" H 6500 4250 50  0001 C CNN
+	1    6500 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L flight-computer:Si7232DN U?
+U 1 1 5D7DA597
+P 5850 4000
+AR Path="/5D7DA597" Ref="U?"  Part="1" 
+AR Path="/5D6468D5/5D7DA597" Ref="U5"  Part="1" 
+F 0 "U5" H 5956 3546 50  0000 L CNN
+F 1 "Si7232DN" H 5956 3455 50  0000 L CNN
+F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 4250 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 4000 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5850 4000 50  0001 C CNN "Purchase link"
+	1    5850 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5D743BD4
+P 4450 3350
+F 0 "R13" H 4520 3396 50  0000 L CNN
+F 1 "3.3K" H 4520 3305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 3350 50  0001 C CNN
+F 3 "~" H 4450 3350 50  0001 C CNN
+	1    4450 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 5D743BA0
+P 6950 3300
+F 0 "R16" H 7020 3346 50  0000 L CNN
+F 1 "27K" H 7020 3255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 3300 50  0001 C CNN
+F 3 "~" H 6950 3300 50  0001 C CNN
+	1    6950 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 5D743B96
+P 6500 2850
+F 0 "R15" V 6700 2850 50  0000 C CNN
+F 1 "100K" V 6600 2850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6430 2850 50  0001 C CNN
+F 3 "~" H 6500 2850 50  0001 C CNN
+	1    6500 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L flight-computer:Si7232DN U?
+U 2 1 5D743B81
+P 5850 2600
+AR Path="/5D743B81" Ref="U?"  Part="1" 
+AR Path="/5D6468D5/5D743B81" Ref="U6"  Part="2" 
+F 0 "U6" H 5956 2146 50  0000 L CNN
+F 1 "Si7232DN" H 5956 2055 50  0000 L CNN
+F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 2850 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 2600 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5850 2600 50  0001 C CNN "Purchase link"
+	2    5850 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5D6AFE1F
+P 4450 2100
+F 0 "R3" H 4520 2146 50  0000 L CNN
+F 1 "3.3K" H 4520 2055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 2100 50  0001 C CNN
+F 3 "~" H 4450 2100 50  0001 C CNN
+	1    4450 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5D6A6316
+P 6950 2050
+F 0 "R6" H 7020 2096 50  0000 L CNN
+F 1 "27K" H 7020 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 2050 50  0001 C CNN
+F 3 "~" H 6950 2050 50  0001 C CNN
+	1    6950 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5D6A50BE
+P 6500 1600
+F 0 "R5" V 6700 1600 50  0000 C CNN
+F 1 "100K" V 6600 1600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6430 1600 50  0001 C CNN
+F 3 "~" H 6500 1600 50  0001 C CNN
+	1    6500 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L flight-computer:Si7232DN U6
+U 1 1 5D696EFB
+P 5850 1350
+AR Path="/5D696EFB" Ref="U6"  Part="1" 
+AR Path="/5D6468D5/5D696EFB" Ref="U6"  Part="1" 
+F 0 "U6" H 5956 896 50  0000 L CNN
+F 1 "Si7232DN" H 5956 805 50  0000 L CNN
+F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 1600 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 1350 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5850 1350 50  0001 C CNN "Purchase link"
+	1    5850 1350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9400 2500 9600 2500
+	10000 4500 9750 4500
+Text Label 10000 4500 2    50   ~ 0
+FET_D
 Wire Wire Line
-	10000 2500 10500 2500
+	10000 4300 9750 4300
+Text Label 10000 4300 2    50   ~ 0
+FET_C
 Wire Wire Line
-	10500 2500 10500 1900
+	10050 4200 9750 4200
+Text Label 10050 3050 2    50   ~ 0
+FET_A
 Wire Wire Line
-	9400 2500 9400 3300
-Text HLabel 8800 2300 0    50   Input ~ 0
-ARMED
+	10050 3250 9750 3250
+$Comp
+L Connector:Screw_Terminal_01x06 J5
+U 1 1 5D7E88A1
+P 9550 4400
+F 0 "J5" H 9468 3875 50  0000 C CNN
+F 1 "Screw_Terminal_01x06" H 9468 3966 50  0000 C CNN
+F 2 "flight-computer:TerminalBlock_TE_282834-6_1x06_P2.54mm_Horizontal" H 9550 4400 50  0001 C CNN
+F 3 "~" H 9550 4400 50  0001 C CNN
+	1    9550 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x06 J3
+U 1 1 5D7E8132
+P 9550 3350
+F 0 "J3" H 9468 2825 50  0000 C CNN
+F 1 "Screw_Terminal_01x06" H 9468 2916 50  0000 C CNN
+F 2 "flight-computer:TerminalBlock_TE_282834-6_1x06_P2.54mm_Horizontal" H 9550 3350 50  0001 C CNN
+F 3 "~" H 9550 3350 50  0001 C CNN
+	1    9550 3350
+	-1   0    0    1   
+$EndComp
+Text Notes 8850 2350 0    50   ~ 0
+Goes to a Double Pole Single Throw switch\n
 Wire Wire Line
-	8800 2300 9600 2300
-Wire Wire Line
-	10000 2300 10250 2300
-Wire Wire Line
-	10250 2300 10250 1900
+	10200 4100 10200 3950
 $Comp
 L power:+3.3V #PWR0121
 U 1 1 5D89E3F1
-P 10250 1900
-F 0 "#PWR0121" H 10250 1750 50  0001 C CNN
-F 1 "+3.3V" H 10265 2073 50  0000 C CNN
-F 2 "" H 10250 1900 50  0001 C CNN
-F 3 "" H 10250 1900 50  0001 C CNN
-	1    10250 1900
+P 10200 3950
+F 0 "#PWR0121" H 10200 3800 50  0001 C CNN
+F 1 "+3.3V" H 10215 4123 50  0000 C CNN
+F 2 "" H 10200 3950 50  0001 C CNN
+F 3 "" H 10200 3950 50  0001 C CNN
+	1    10200 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 3150 10450 3150
+Text Label 10050 3250 2    50   ~ 0
+FET_B
+Wire Wire Line
+	9750 3050 10050 3050
+Wire Wire Line
+	9750 4100 10200 4100
+Wire Wire Line
+	10450 3550 10450 4400
+Connection ~ 10450 4400
+Wire Wire Line
+	10450 3350 10450 3550
+Wire Wire Line
+	9750 3550 10450 3550
+Connection ~ 10450 3550
+Wire Wire Line
+	10450 4600 10450 4400
+Wire Wire Line
+	9750 4400 10450 4400
+Text HLabel 10050 4200 2    50   Input ~ 0
+ARMED
+Wire Wire Line
+	9750 4600 10450 4600
+Wire Wire Line
+	10450 3350 10450 3150
+Connection ~ 10450 3350
+Wire Wire Line
+	9750 3350 10450 3350
+Wire Wire Line
+	10750 3450 10750 3300
+Wire Wire Line
+	9750 3450 10750 3450
+$Comp
+L power:Vdrive #PWR0112
+U 1 1 5D7E2F36
+P 10750 3300
+F 0 "#PWR0112" H 10550 3150 50  0001 C CNN
+F 1 "Vdrive" H 10767 3473 50  0000 C CNN
+F 2 "" H 10750 3300 50  0001 C CNN
+F 3 "" H 10750 3300 50  0001 C CNN
+	1    10750 3300
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
