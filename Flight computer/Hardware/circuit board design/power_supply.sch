@@ -295,8 +295,9 @@ AR Path="/5D5B15F7/5D941F3D" Ref="J?"  Part="1"
 AR Path="/5D5B1705/5D941F3D" Ref="J2"  Part="1" 
 F 0 "J2" H 1957 2267 50  0000 C CNN
 F 1 "USB_B_Micro" H 1957 2176 50  0000 C CNN
-F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 2050 1750 50  0001 C CNN
-F 3 "~" H 2050 1750 50  0001 C CNN
+F 2 "flight-computer:USB_Micro-B_Molex-105017-0001" H 2050 1750 50  0001 C CNN
+F 3 "https://www.molex.com/webdocs/datasheets/pdf/en-us/1050170001_IO_CONNECTORS.pdf" H 2050 1750 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/Molex/105017-0001?qs=sGAEpiMZZMulM8LPOQ%252BykxkHE97o%2FWJn1YkS%2FQp33f4%3D" H 1900 1800 50  0001 C CNN "Purchase link"
 	1    1900 1800
 	1    0    0    -1  
 $EndComp
