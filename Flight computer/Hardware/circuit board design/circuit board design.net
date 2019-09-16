@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:\\Users\\Medad\\Documents\\GitHub\\Project-Mach-1\\Flight computer\\Hardware\\circuit board design\\circuit board design.sch")
-    (date "16/09/2019 05:26:14")
+    (date "16/09/2019 19:49:16")
     (tool "Eeschema (5.1.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -313,10 +313,10 @@
       (sheetpath (names /telemetry_radio/) (tstamps /5D5B17D8/))
       (tstamp 5D5CB5C3))
     (comp (ref ANT1)
-      (value ICSSPicoTracker_Yageo434)
-      (footprint pico_tracker:Yageo434)
+      (value Yageo434)
+      (footprint flight-computer:Yageo434)
       (datasheet http://www.farnell.com/datasheets/2217143.pdf)
-      (libsource (lib flight-computer) (part ICSSPicoTracker_Yageo434) (description ""))
+      (libsource (lib flight-computer) (part Yageo434_ANT1204F002R0433A) (description ""))
       (sheetpath (names /telemetry_radio/) (tstamps /5D5B17D8/))
       (tstamp 5DB119FE))
     (comp (ref J4)
@@ -1192,13 +1192,6 @@
       (pins
         (pin (num 1) (name K) (type passive))
         (pin (num 2) (name A) (type passive))))
-    (libpart (lib flight-computer) (part ICSSPicoTracker_Yageo434)
-      (fields
-        (field (name Reference) ANT)
-        (field (name Value) ICSSPicoTracker_Yageo434))
-      (pins
-        (pin (num 1) (name RF_IN) (type input))
-        (pin (num 2) (name NC) (type NotConnected))))
     (libpart (lib flight-computer) (part IIS2MDC)
       (description "High-accuracy, ultra-low-power, 3-axis digital output magnetometer")
       (docs https://www.mouser.co.uk/datasheet/2/389/iis2mdc-1309412.pdf)
@@ -1276,7 +1269,16 @@
         (pin (num 5) (name IO_0) (type BiDi))
         (pin (num 6) (name CLK) (type input))
         (pin (num 7) (name IO_3) (type BiDi))
-        (pin (num 8) (name VCC) (type power_in)))))
+        (pin (num 8) (name VCC) (type power_in))))
+    (libpart (lib flight-computer) (part Yageo434_ANT1204F002R0433A)
+      (docs https://www.mouser.co.uk/datasheet/2/447/An_SMD_UHF_433_1204_0-595178.pdf)
+      (fields
+        (field (name Reference) ANT)
+        (field (name Value) Yageo434_ANT1204F002R0433A)
+        (field (name Footprint) pico_tracker:Yageo434))
+      (pins
+        (pin (num 1) (name RF_IN) (type input))
+        (pin (num 2) (name NC) (type NotConnected)))))
   (libraries
     (library (logical 0433BM41A0019E)
       (uri "C:\\Users\\Medad\\Documents\\GitHub\\Project-Mach-1\\Flight computer\\Hardware\\circuit board design/0433BM41A0019E.lib"))

@@ -10,6 +10,13 @@
   )
 
   (page A4)
+  (title_block
+    (title "PCB for Project Mach 1 flight computer")
+    (date 2019-09-16)
+    (company "Imperial College Space Society")
+    (comment 1 "Richard Ibbotson, Medad Newman")
+  )
+
   (layers
     (0 F.Cu signal)
     (1 GND.Cu power)

@@ -1,4 +1,4 @@
-15955974907695858
+15957543542004612
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -44253,6 +44253,13 @@ SMD SMT crystal oscillator hand-soldering
 0
 4
 4
+flight-computer
+Yageo434
+Johanson 1575 GPS Antenna 15757AT43A40
+Antenna
+0
+2
+2
 Fuse
 Fuseholder_Blade_ATO_Littelfuse_Pudenz_2_Pin
 Fuseholder ATO Blade littelfuse Pudenz 2 Pin
