@@ -1006,19 +1006,6 @@ F 3 "~" H 4400 2250 50  0001 C CNN
 	1    4400 2250
 	1    0    0    -1  
 $EndComp
-$Comp
-L MCU_Microchip_SAML:ATSAML21J18B-AUT U11
-U 1 1 5D748E67
-P 6100 4400
-F 0 "U11" H 6100 2411 50  0000 C CNN
-F 1 "ATSAML21J18B-AUT" H 6400 2250 50  0000 C CNN
-F 2 "Package_QFP:TQFP-64_10x10mm_P0.5mm" H 7300 6200 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf" H 6100 4400 50  0001 C CNN
-F 4 "4.15" H 6100 4400 50  0001 C CNN "Cost"
-F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-AUT?qs=RCSZh%2F2c5ne9n8KccuU8Bw%3D%3D" H 6100 4400 50  0001 C CNN "Purchase link"
-	1    6100 4400
-	1    0    0    -1  
-$EndComp
 Text HLabel 7650 4700 2    50   Output ~ 0
 MCU_MISO1
 Text HLabel 7650 4800 2    50   Input ~ 0
@@ -1110,10 +1097,6 @@ Wire Wire Line
 	5100 3200 4550 3200
 Text HLabel 4550 3200 0    50   Input ~ 0
 MCU_PA03
-NoConn ~ 7100 4000
-NoConn ~ 7100 3900
-NoConn ~ 7100 3800
-NoConn ~ 7100 3700
 NoConn ~ 7100 5400
 NoConn ~ 7100 5300
 Wire Wire Line
@@ -1130,4 +1113,36 @@ MCU_MOSI1
 Text HLabel 7650 4600 2    50   Output ~ 0
 MCU_SCLK1
 NoConn ~ 5100 4700
+$Comp
+L Connector_Generic:Conn_01x04 J8
+U 1 1 5DB0330A
+P 8650 3800
+F 0 "J8" H 8730 3792 50  0000 L CNN
+F 1 "Conn_01x04" H 8730 3701 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 8650 3800 50  0001 C CNN
+F 3 "~" H 8650 3800 50  0001 C CNN
+	1    8650 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Microchip_SAML:ATSAML21J18B-AUT U11
+U 1 1 5D748E67
+P 6100 4400
+F 0 "U11" H 6100 2411 50  0000 C CNN
+F 1 "ATSAML21J18B-AUT" H 6400 2250 50  0000 C CNN
+F 2 "Package_QFP:TQFP-64_10x10mm_P0.5mm" H 7300 6200 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf" H 6100 4400 50  0001 C CNN
+F 4 "4.15" H 6100 4400 50  0001 C CNN "Cost"
+F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-AUT?qs=RCSZh%2F2c5ne9n8KccuU8Bw%3D%3D" H 6100 4400 50  0001 C CNN "Purchase link"
+	1    6100 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 3700 8450 3700
+Wire Wire Line
+	8450 3800 7100 3800
+Wire Wire Line
+	7100 3900 8450 3900
+Wire Wire Line
+	7100 4000 8450 4000
 $EndSCHEMATC
