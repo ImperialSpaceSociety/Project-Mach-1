@@ -252,8 +252,6 @@ Wire Wire Line
 	4450 5050 4200 5050
 NoConn ~ 4200 5250
 NoConn ~ 4200 5150
-Text Notes 7750 2050 0    50   ~ 0
-Antenna is wire at 1/4 wavelength. around 17cm
 Text Notes 4550 6100 0    50   ~ 0
 Arranged according to Silabs AN904
 Wire Notes Line
@@ -278,7 +276,7 @@ L power:GND #PWR07
 U 1 1 5D7EC7E0
 P 9250 3950
 F 0 "#PWR07" H 9250 3700 50  0001 C CNN
-F 1 "GND" H 6250 3300 50  0000 C CNN
+F 1 "GND" H 9250 3800 50  0000 C CNN
 F 2 "" H 9250 3950 50  0001 C CNN
 F 3 "" H 9250 3950 50  0001 C CNN
 	1    9250 3950
@@ -469,13 +467,14 @@ F 3 "https://www.silabs.com/documents/public/data-sheets/Si4464-63-61-60.pdf" H 
 	1    0    0    -1  
 $EndComp
 $Comp
-L flight-computer:ICSSPicoTracker_Yageo434 ANT1
+L flight-computer:Yageo434_ANT1204F002R0433A ANT1
 U 1 1 5DB119FE
 P 9850 2350
 F 0 "ANT1" H 9800 2615 50  0000 C CNN
-F 1 "ICSSPicoTracker_Yageo434" H 9800 2524 50  0000 C CNN
-F 2 "pico_tracker:Yageo434" H 9850 2350 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/2217143.pdf" H 9850 2350 50  0001 C CNN
+F 1 "Yageo434" H 9800 2524 50  0000 C CNN
+F 2 "flight-computer:Yageo434" H 9850 2350 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/447/An_SMD_UHF_433_1204_0-595178.pdf" H 9850 2350 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/Yageo/ANT1204F002R0433A?qs=sGAEpiMZZMuBTKBKvsBmlG1EAbO3Nxju0D3kDx%252BrI0k%3D" H 9850 2350 50  0001 C CNN "Purchase link"
 	1    9850 2350
 	1    0    0    -1  
 $EndComp

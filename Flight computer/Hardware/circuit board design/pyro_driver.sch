@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 7
+Sheet 7 7
 Title "Pyro drivers"
 Date "2019-09-09"
 Rev "1.0"
@@ -486,71 +486,23 @@ Wire Wire Line
 	10000 4300 9750 4300
 Text Label 10000 4300 2    50   ~ 0
 FET_C
-Wire Wire Line
-	10050 4200 9750 4200
 Text Label 10050 3050 2    50   ~ 0
 FET_A
 Wire Wire Line
 	10050 3250 9750 3250
-$Comp
-L Connector:Screw_Terminal_01x06 J5
-U 1 1 5D7E88A1
-P 9550 4400
-F 0 "J5" H 9468 3875 50  0000 C CNN
-F 1 "Screw_Terminal_01x06" H 9468 3966 50  0000 C CNN
-F 2 "flight-computer:TerminalBlock_TE_282834-6_1x06_P2.54mm_Horizontal" H 9550 4400 50  0001 C CNN
-F 3 "~" H 9550 4400 50  0001 C CNN
-	1    9550 4400
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x06 J3
-U 1 1 5D7E8132
-P 9550 3350
-F 0 "J3" H 9468 2825 50  0000 C CNN
-F 1 "Screw_Terminal_01x06" H 9468 2916 50  0000 C CNN
-F 2 "flight-computer:TerminalBlock_TE_282834-6_1x06_P2.54mm_Horizontal" H 9550 3350 50  0001 C CNN
-F 3 "~" H 9550 3350 50  0001 C CNN
-	1    9550 3350
-	-1   0    0    1   
-$EndComp
 Text Notes 8850 2350 0    50   ~ 0
 Goes to a Double Pole Single Throw switch\n
-Wire Wire Line
-	10200 4100 10200 3950
-$Comp
-L power:+3.3V #PWR0121
-U 1 1 5D89E3F1
-P 10200 3950
-F 0 "#PWR0121" H 10200 3800 50  0001 C CNN
-F 1 "+3.3V" H 10215 4123 50  0000 C CNN
-F 2 "" H 10200 3950 50  0001 C CNN
-F 3 "" H 10200 3950 50  0001 C CNN
-	1    10200 3950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9750 3150 10450 3150
 Text Label 10050 3250 2    50   ~ 0
 FET_B
 Wire Wire Line
 	9750 3050 10050 3050
-Wire Wire Line
-	9750 4100 10200 4100
-Wire Wire Line
-	10450 3550 10450 4400
 Connection ~ 10450 4400
-Wire Wire Line
-	10450 3350 10450 3550
-Wire Wire Line
-	9750 3550 10450 3550
-Connection ~ 10450 3550
 Wire Wire Line
 	10450 4600 10450 4400
 Wire Wire Line
 	9750 4400 10450 4400
-Text HLabel 10050 4200 2    50   Input ~ 0
-ARMED
 Wire Wire Line
 	9750 4600 10450 4600
 Wire Wire Line
@@ -559,18 +511,16 @@ Connection ~ 10450 3350
 Wire Wire Line
 	9750 3350 10450 3350
 Wire Wire Line
-	10750 3450 10750 3300
-Wire Wire Line
-	9750 3450 10750 3450
+	10450 3150 10450 3000
 $Comp
 L power:Vdrive #PWR0112
 U 1 1 5D7E2F36
-P 10750 3300
-F 0 "#PWR0112" H 10550 3150 50  0001 C CNN
-F 1 "Vdrive" H 10767 3473 50  0000 C CNN
-F 2 "" H 10750 3300 50  0001 C CNN
-F 3 "" H 10750 3300 50  0001 C CNN
-	1    10750 3300
+P 10450 3000
+F 0 "#PWR0112" H 10250 2850 50  0001 C CNN
+F 1 "Vdrive" H 10467 3173 50  0000 C CNN
+F 2 "" H 10450 3000 50  0001 C CNN
+F 3 "" H 10450 3000 50  0001 C CNN
+	1    10450 3000
 	1    0    0    -1  
 $EndComp
 Text HLabel 3700 5700 0    50   Output ~ 0
@@ -581,4 +531,31 @@ Text HLabel 3700 3050 0    50   Output ~ 0
 FIRE_B
 Text HLabel 3700 1800 0    50   Output ~ 0
 FIRE_A
+Wire Wire Line
+	10450 3350 10450 4400
+Connection ~ 10450 3150
+$Comp
+L Connector:Screw_Terminal_01x04 J3
+U 1 1 5D9DD6B6
+P 9550 3250
+F 0 "J3" H 9468 2825 50  0000 C CNN
+F 1 "Screw_Terminal_01x04" H 9468 2916 50  0000 C CNN
+F 2 "flight-computer:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 9550 3250 50  0001 C CNN
+F 3 "~" H 9550 3250 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/282834-4?qs=A%252Bip%252BNCYi6Pqom9P%2FaHyRQ==" H 9550 3250 50  0001 C CNN "Purchase link"
+	1    9550 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x04 J5
+U 1 1 5D9DEEE7
+P 9550 4500
+F 0 "J5" H 9468 4075 50  0000 C CNN
+F 1 "Screw_Terminal_01x04" H 9468 4166 50  0000 C CNN
+F 2 "flight-computer:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 9550 4500 50  0001 C CNN
+F 3 "~" H 9550 4500 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/282834-4?qs=A%252Bip%252BNCYi6Pqom9P%2FaHyRQ==" H 9550 4500 50  0001 C CNN "Purchase link"
+	1    9550 4500
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

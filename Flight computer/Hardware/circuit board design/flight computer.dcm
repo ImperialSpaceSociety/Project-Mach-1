@@ -6,6 +6,12 @@ K diode Schottky
 F https://www.diodes.com/assets/Datasheets/ds30492.pdf
 $ENDCMP
 #
+$CMP ICSS_logo
+D Open Hardware logo, large
+K Logo
+F ~
+$ENDCMP
+#
 $CMP IIS2MDC
 D High-accuracy, ultra-low-power, 3-axis digital output magnetometer
 F https://www.mouser.co.uk/datasheet/2/389/iis2mdc-1309412.pdf
@@ -27,6 +33,10 @@ $ENDCMP
 #
 $CMP W74M64FV
 F https://docs-emea.rs-online.com/webdocs/1623/0900766b81623058.pdf
+$ENDCMP
+#
+$CMP Yageo434_ANT1204F002R0433A
+F https://www.mouser.co.uk/datasheet/2/447/An_SMD_UHF_433_1204_0-595178.pdf
 $ENDCMP
 #
 #End Doc Library

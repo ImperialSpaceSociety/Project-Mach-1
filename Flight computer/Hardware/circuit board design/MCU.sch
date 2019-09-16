@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 7
+Sheet 6 7
 Title ""
 Date "2019-09-09"
 Rev "1.0"
@@ -615,38 +615,6 @@ Wire Notes Line
 Text Notes 1000 2350 0    50   ~ 0
 Mechanical mounting holes
 Wire Wire Line
-	5100 4700 4550 4700
-Text Label 4550 4700 0    50   ~ 0
-ARM_SWITCH
-Text Label 8700 3750 2    50   ~ 0
-ARM_SWITCH
-Wire Wire Line
-	8700 3750 8800 3750
-Wire Wire Line
-	8800 3750 8800 3900
-Connection ~ 8800 3750
-Wire Wire Line
-	8800 3750 9050 3750
-$Comp
-L power:GND #PWR017
-U 1 1 5D83136F
-P 8800 4250
-F 0 "#PWR017" H 8800 4000 50  0001 C CNN
-F 1 "GND" H 8805 4077 50  0000 C CNN
-F 2 "" H 8800 4250 50  0001 C CNN
-F 3 "" H 8800 4250 50  0001 C CNN
-	1    8800 4250
-	1    0    0    -1  
-$EndComp
-Wire Notes Line
-	8200 4500 8200 3100
-Wire Notes Line
-	8200 4500 11050 4500
-Text Notes 8300 3400 0    50   ~ 0
-Switch to arm pyro \nand go into ready to \nfire mode
-Wire Wire Line
-	8800 4200 8800 4250
-Wire Wire Line
 	1350 4750 1450 4750
 Wire Wire Line
 	4450 6350 4450 6450
@@ -687,8 +655,6 @@ Wire Wire Line
 	3900 4300 3900 4050
 Wire Notes Line
 	9550 3100 9550 6150
-Text HLabel 9050 3750 2    50   Input ~ 0
-ARMED
 $Comp
 L power:GND #PWR085
 U 1 1 5D6EF8BA
@@ -760,17 +726,6 @@ F 1 "Conn_01x05" H 1230 4451 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 1150 4550 50  0001 C CNN
 F 3 "~" H 1150 4550 50  0001 C CNN
 	1    1150 4550
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5D854BB0
-P 8800 4050
-F 0 "R4" H 8870 4096 50  0000 L CNN
-F 1 "1K" H 8870 4005 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8730 4050 50  0001 C CNN
-F 3 "~" H 8800 4050 50  0001 C CNN
-	1    8800 4050
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -1051,27 +1006,10 @@ F 3 "~" H 4400 2250 50  0001 C CNN
 	1    4400 2250
 	1    0    0    -1  
 $EndComp
-$Comp
-L MCU_Microchip_SAML:ATSAML21J18B-AUT U11
-U 1 1 5D748E67
-P 6100 4400
-F 0 "U11" H 6100 2411 50  0000 C CNN
-F 1 "ATSAML21J18B-AUT" H 6400 2250 50  0000 C CNN
-F 2 "Package_QFP:TQFP-64_10x10mm_P0.5mm" H 7300 6200 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf" H 6100 4400 50  0001 C CNN
-F 4 "4.15" H 6100 4400 50  0001 C CNN "Cost"
-F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-AUT?qs=RCSZh%2F2c5ne9n8KccuU8Bw%3D%3D" H 6100 4400 50  0001 C CNN "Purchase link"
-	1    6100 4400
-	1    0    0    -1  
-$EndComp
 Text HLabel 7650 4700 2    50   Output ~ 0
 MCU_MISO1
 Text HLabel 7650 4800 2    50   Input ~ 0
 MCU_NSEL1
-Text HLabel 7650 4600 2    50   Output ~ 0
-MCU_SCLK1
-Text HLabel 7650 4500 2    50   Output ~ 0
-MCU_MOSI1
 Wire Wire Line
 	3300 4700 3300 4850
 Connection ~ 3300 4700
@@ -1129,8 +1067,6 @@ Wire Wire Line
 	3300 4150 3550 4150
 Wire Wire Line
 	7100 4100 7650 4100
-Text HLabel 7650 4100 2    50   Input ~ 0
-MCU_PB08
 Text HLabel 4550 3400 0    50   BiDi ~ 0
 MCU_PA05
 Wire Wire Line
@@ -1149,8 +1085,6 @@ Text HLabel 4550 4200 0    50   BiDi ~ 0
 MCU_PA13
 Wire Wire Line
 	7100 4400 7650 4400
-Text HLabel 7650 4400 2    50   Input ~ 0
-MCU_PB11
 Wire Wire Line
 	7100 5000 7650 5000
 Text HLabel 7650 5000 2    50   Input ~ 0
@@ -1163,15 +1097,37 @@ Wire Wire Line
 	5100 3200 4550 3200
 Text HLabel 4550 3200 0    50   Input ~ 0
 MCU_PA03
-NoConn ~ 7100 4000
-NoConn ~ 7100 3900
-NoConn ~ 7100 3800
-NoConn ~ 7100 3700
 NoConn ~ 7100 5400
 NoConn ~ 7100 5300
 Wire Wire Line
 	7100 4300 7650 4300
+NoConn ~ 5100 5500
 Text HLabel 7650 4300 2    50   Input ~ 0
 MCU_PB10
-NoConn ~ 5100 5500
+Text HLabel 7650 4400 2    50   Input ~ 0
+MCU_PB11
+Text HLabel 7650 4100 2    50   Input ~ 0
+MCU_PB08
+Text HLabel 7650 4500 2    50   Output ~ 0
+MCU_MOSI1
+Text HLabel 7650 4600 2    50   Output ~ 0
+MCU_SCLK1
+NoConn ~ 5100 4700
+$Comp
+L MCU_Microchip_SAML:ATSAML21J18B-AUT U11
+U 1 1 5D748E67
+P 6100 4400
+F 0 "U11" H 6100 2411 50  0000 C CNN
+F 1 "ATSAML21J18B-AUT" H 6400 2250 50  0000 C CNN
+F 2 "Package_QFP:TQFP-64_10x10mm_P0.5mm" H 7300 6200 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf" H 6100 4400 50  0001 C CNN
+F 4 "4.15" H 6100 4400 50  0001 C CNN "Cost"
+F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-AUT?qs=RCSZh%2F2c5ne9n8KccuU8Bw%3D%3D" H 6100 4400 50  0001 C CNN "Purchase link"
+	1    6100 4400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7100 3800
+NoConn ~ 7100 3700
+NoConn ~ 7100 4000
+NoConn ~ 7100 3900
 $EndSCHEMATC
