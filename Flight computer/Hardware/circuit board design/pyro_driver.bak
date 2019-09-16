@@ -542,6 +542,7 @@ F 0 "J3" H 9468 2825 50  0000 C CNN
 F 1 "Screw_Terminal_01x04" H 9468 2916 50  0000 C CNN
 F 2 "flight-computer:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 9550 3250 50  0001 C CNN
 F 3 "~" H 9550 3250 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/282834-4?qs=A%252Bip%252BNCYi6Pqom9P%2FaHyRQ==" H 9550 3250 50  0001 C CNN "Purchase link"
 	1    9550 3250
 	-1   0    0    1   
 $EndComp
@@ -553,6 +554,7 @@ F 0 "J5" H 9468 4075 50  0000 C CNN
 F 1 "Screw_Terminal_01x04" H 9468 4166 50  0000 C CNN
 F 2 "flight-computer:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 9550 4500 50  0001 C CNN
 F 3 "~" H 9550 4500 50  0001 C CNN
+F 4 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/282834-4?qs=A%252Bip%252BNCYi6Pqom9P%2FaHyRQ==" H 9550 4500 50  0001 C CNN "Purchase link"
 	1    9550 4500
 	-1   0    0    1   
 $EndComp

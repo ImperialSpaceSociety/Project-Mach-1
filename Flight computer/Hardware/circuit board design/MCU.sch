@@ -1114,17 +1114,6 @@ Text HLabel 7650 4600 2    50   Output ~ 0
 MCU_SCLK1
 NoConn ~ 5100 4700
 $Comp
-L Connector_Generic:Conn_01x02 J8
-U 1 1 5DB0330A
-P 8650 3900
-F 0 "J8" H 8730 3892 50  0000 L CNN
-F 1 "Conn_01x04" H 8730 3801 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8650 3900 50  0001 C CNN
-F 3 "~" H 8650 3900 50  0001 C CNN
-	1    8650 3900
-	1    0    0    -1  
-$EndComp
-$Comp
 L MCU_Microchip_SAML:ATSAML21J18B-AUT U11
 U 1 1 5D748E67
 P 6100 4400
@@ -1139,66 +1128,6 @@ F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-AU
 $EndComp
 NoConn ~ 7100 3800
 NoConn ~ 7100 3700
-$Comp
-L power:+3.3V #PWR034
-U 1 1 5DB6F8DB
-P 8250 3400
-F 0 "#PWR034" H 8250 3250 50  0001 C CNN
-F 1 "+3.3V" H 8265 3573 50  0000 C CNN
-F 2 "" H 8250 3400 50  0001 C CNN
-F 3 "" H 8250 3400 50  0001 C CNN
-	1    8250 3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR017
-U 1 1 5DB96344
-P 8000 3400
-F 0 "#PWR017" H 8000 3250 50  0001 C CNN
-F 1 "+3.3V" H 8015 3573 50  0000 C CNN
-F 2 "" H 8000 3400 50  0001 C CNN
-F 3 "" H 8000 3400 50  0001 C CNN
-	1    8000 3400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8250 4000 8450 4000
-Connection ~ 8250 4000
-Wire Wire Line
-	7100 4000 8250 4000
-$Comp
-L Device:R R8
-U 1 1 5DB65E3A
-P 8250 3650
-F 0 "R8" H 8320 3696 50  0000 L CNN
-F 1 "1K" H 8320 3605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8180 3650 50  0001 C CNN
-F 3 "~" H 8250 3650 50  0001 C CNN
-	1    8250 3650
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8250 3500 8250 3400
-Wire Wire Line
-	8250 4000 8250 3800
-Wire Wire Line
-	8000 3900 8450 3900
-Connection ~ 8000 3900
-Wire Wire Line
-	7100 3900 8000 3900
-$Comp
-L Device:R R4
-U 1 1 5DB6561B
-P 8000 3650
-F 0 "R4" H 8070 3696 50  0000 L CNN
-F 1 "1K" H 8070 3605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7930 3650 50  0001 C CNN
-F 3 "~" H 8000 3650 50  0001 C CNN
-	1    8000 3650
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8000 3900 8000 3800
-Wire Wire Line
-	8000 3500 8000 3400
+NoConn ~ 7100 4000
+NoConn ~ 7100 3900
 $EndSCHEMATC
