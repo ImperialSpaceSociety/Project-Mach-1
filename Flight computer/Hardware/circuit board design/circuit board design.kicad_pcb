@@ -18,16 +18,16 @@
   )
 
   (layers
-    (0 F.Cu signal)
+    (0 F.Cu signal hide)
     (1 GND.Cu power hide)
     (2 VCC.Cu power hide)
-    (31 B.Cu signal hide)
+    (31 B.Cu signal)
     (32 B.Adhes user hide)
     (33 F.Adhes user hide)
     (34 B.Paste user)
     (35 F.Paste user hide)
     (36 B.SilkS user)
-    (37 F.SilkS user)
+    (37 F.SilkS user hide)
     (38 B.Mask user)
     (39 F.Mask user hide)
     (40 Dwgs.User user)
@@ -95,11 +95,11 @@
       (plotinvisibletext false)
       (padsonsilk false)
       (subtractmaskfromsilk false)
-      (outputformat 1)
+      (outputformat 4)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory "D:/Long term storage and temp/dead weight program downloads/gerber test/"))
   )
 
   (net 0 "")
@@ -315,9 +315,9 @@
       (net 24 /gps/GPS_SCL))
   )
 
-  (module flight-computer:ICSS_Logo (layer B.Cu) (tedit 0) (tstamp 5D8551E0)
-    (at 108.077 125.603 180)
-    (fp_text reference G*** (at 0 0) (layer B.SilkS) hide
+  (module flight-computer:ICSS_Logo (layer B.Cu) (tedit 0) (tstamp 5D8570BC)
+    (at 107.188 71.882 180)
+    (fp_text reference G*** (at -0.127 5.08) (layer B.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3)) (justify mirror))
     )
     (fp_text value LOGO (at 11.557 5.08) (layer B.SilkS) hide
@@ -631,7 +631,7 @@
   )
 
   (module MountingHole:MountingHole_3.2mm_M3_Pad (layer F.Cu) (tedit 56D1B4CB) (tstamp 5D81B50C)
-    (at 119.126 61.468 270)
+    (at 118.999 61.595 270)
     (descr "Mounting Hole 3.2mm, M3")
     (tags "mounting hole 3.2mm m3")
     (path /5D5B15F7/5D7F7FA5)
@@ -2484,7 +2484,7 @@
   )
 
   (module MountingHole:MountingHole_3.2mm_M3_Pad (layer F.Cu) (tedit 56D1B4CB) (tstamp 5D7C88C9)
-    (at 96.012 61.595 270)
+    (at 96.139 61.595 270)
     (descr "Mounting Hole 3.2mm, M3")
     (tags "mounting hole 3.2mm m3")
     (path /5D5B15F7/5D7F142B)
@@ -4288,7 +4288,7 @@
     )
   )
 
-  (gr_text "Rocket Flight Computer v1.0\nMedad Newman, Richard Ibbotson 2019" (at 107.569 131.318) (layer B.SilkS)
+  (gr_text "Rocket Flight Computer v1.0\nImperial College Space Society\nMedad Newman, Richard Ibbotson\nSept 2019" (at 107.569 127.635) (layer B.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
   (gr_line (start 92.329 140.335) (end 92.329 114.681) (layer Edge.Cuts) (width 0.05) (tstamp 5D7CA06D))
@@ -5415,7 +5415,7 @@
   (segment (start 112.025 61.722) (end 112.074 61.673) (width 0.2933) (layer F.Cu) (net 70) (status 30))
   (segment (start 110.594 61.722) (end 112.025 61.722) (width 0.2933) (layer F.Cu) (net 70) (status 30))
 
-  (zone (net 1) (net_name GND) (layer GND.Cu) (tstamp 5D836E4C) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer GND.Cu) (tstamp 5D857F0E) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -6095,7 +6095,7 @@
       )
     )
   )
-  (zone (net 47) (net_name Vdrive) (layer VCC.Cu) (tstamp 5D836E49) (hatch edge 0.508)
+  (zone (net 47) (net_name Vdrive) (layer VCC.Cu) (tstamp 5D857F0B) (hatch edge 0.508)
     (connect_pads yes (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
