@@ -1130,19 +1130,4 @@ NoConn ~ 7100 3800
 NoConn ~ 7100 3700
 NoConn ~ 7100 4000
 NoConn ~ 7100 3900
-$Comp
-L flight-computer:ICSS_logo #LOGO1
-U 1 1 5DC82AC1
-P 8300 5850
-F 0 "#LOGO1" H 8300 6350 50  0001 C CNN
-F 1 "ICSS_logo" H 8300 5450 50  0001 C CNN
-F 2 "flight-computer:ICSS_Logo" H 8300 5850 50  0001 C CNN
-F 3 "~" H 8300 5850 50  0001 C CNN
-	1    8300 5850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8450 5850 9100 5850
-Wire Wire Line
-	9100 5850 9100 5400
 $EndSCHEMATC
