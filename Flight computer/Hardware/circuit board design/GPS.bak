@@ -135,7 +135,6 @@ Text Notes 7500 5350 0    50   ~ 0
 Connected to active antenna, likely 2066400001 \nMolex active antenna. UFL connector\n
 Text Notes 7000 1150 0    50   ~ 0
 Layout according to MAX-8 / MAX-M8, \nHardware Integration Manual,\nSection 2.4.2 Antenna design with active antenna.
-NoConn ~ 6050 3350
 NoConn ~ 5450 4250
 Wire Wire Line
 	6650 4350 6800 4350
@@ -147,7 +146,7 @@ Wire Wire Line
 Wire Wire Line
 	6050 4750 6050 4900
 Wire Wire Line
-	5950 3350 5950 2650
+	5950 3350 5950 3300
 Wire Wire Line
 	5850 2650 5850 3350
 Connection ~ 5850 2650
@@ -232,6 +231,9 @@ F 3 "" H 5300 3150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5300 3150 5300 3050
+Connection ~ 5300 3050
+Wire Wire Line
+	5300 3050 5650 3050
 $Comp
 L RF_GPS:MAX-M8C U4
 U 1 1 5D610F77
@@ -245,7 +247,11 @@ F 5 "https://store.uputronics.com/index.php?route=product/product&product_id=71&
 	1    6050 4050
 	1    0    0    -1  
 $EndComp
-Connection ~ 5300 3050
 Wire Wire Line
-	5300 3050 5650 3050
+	6050 3350 6050 3300
+Wire Wire Line
+	6050 3300 5950 3300
+Connection ~ 5950 3300
+Wire Wire Line
+	5950 3300 5950 2650
 $EndSCHEMATC
