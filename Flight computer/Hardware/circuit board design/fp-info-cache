@@ -1,4 +1,4 @@
-15960680876385949
+15962249640651350
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -44217,6 +44217,13 @@ https://www.murata.com/en-us/products/productdata/8796778004510/QNFH9101.pdf?149
 EMI Filter
 0
 19
+4
+flight-computer
+Crystal_SMD_2520-4Pin_2.5x2.0mm
+SMD Crystal SERIES SMD2520/4 http://www.newxtal.com/UploadFiles/Images/2012-11-12-09-29-09-776.pdf, 2.5x2.0mm^2 package
+SMD SMT crystal
+0
+4
 4
 flight-computer
 ICSS_Logo
