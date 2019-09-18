@@ -1,5 +1,6 @@
 (fp_lib_table
-  (lib (name "flight-computer")(type "KiCad")(uri "${KIPRJMOD}/flight computer.pretty")(options "")(descr ""))
-  (lib (name "pico_tracker")(type "KiCad")(uri "${KIPRJMOD}/pico_tracker.pretty")(options "")(descr ""))
-  (lib (name "Johanson_frontend")(type "Legacy")(uri "${KIPRJMOD}/0433BM41A0019E.mod")(options "")(descr ""))
+  (lib (name flight-computer)(type KiCad)(uri "${KIPRJMOD}/flight computer.pretty")(options "")(descr ""))
+  (lib (name pico_tracker)(type KiCad)(uri ${KIPRJMOD}/pico_tracker.pretty)(options "")(descr ""))
+  (lib (name Johanson_frontend)(type Legacy)(uri ${KIPRJMOD}/0433BM41A0019E.mod)(options "")(descr ""))
+  (lib (name "circuit board design")(type KiCad)(uri "${KIPRJMOD}/circuit board design.pretty")(options "")(descr ""))
 )
