@@ -31,6 +31,11 @@ D 32 Mhz RS Pro TCXO
 F https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc7d9.pdf
 $ENDCMP
 #
+$CMP W25Q64JVSSIM
+D SPI flash 64Mbit memory
+F https://docs-emea.rs-online.com/webdocs/1703/0900766b81703f87.pdf
+$ENDCMP
+#
 $CMP W74M64FV
 F https://docs-emea.rs-online.com/webdocs/1623/0900766b81623058.pdf
 $ENDCMP

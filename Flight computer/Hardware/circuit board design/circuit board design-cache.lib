@@ -741,11 +741,11 @@ X Vcc 4 0 300 100 D 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# flight-computer_W74M64FV
+# flight-computer_W25Q64JVSSIM
 #
-DEF flight-computer_W74M64FV U 0 40 Y Y 1 F N
+DEF flight-computer_W25Q64JVSSIM U 0 40 Y Y 1 F N
 F0 "U" 150 600 50 H V C CNN
-F1 "flight-computer_W74M64FV" 250 -50 50 H V C CNN
+F1 "flight-computer_W25Q64JVSSIM" 250 -50 50 H V C CNN
 F2 "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
