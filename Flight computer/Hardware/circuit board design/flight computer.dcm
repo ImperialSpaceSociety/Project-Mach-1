@@ -1,5 +1,23 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP ATSAMD21J18A-AU
+D SAM D21 Microchip SMART ARM-based Flash MCU, 48Mhz, 64K Flash, 8K SRAM, TQFP64
+K 32-bit ARM Cortex-M0+ MCU Microcontroller
+F http://ww1.microchip.com/downloads/en/devicedoc/40001884a.pdf
+$ENDCMP
+#
+$CMP ATSAML21J17B-AUT
+D SAM L21 Microchip SMART ARM-based Flash MCU, 48Mhz, 128K Flash, 16K SRAM, TQFP64
+K 32-bit ARM Cortex-M0+ MCU Microcontroller
+F http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf
+$ENDCMP
+#
+$CMP ATSAML21J18B-AUT
+D SAM L21 Microchip SMART ARM-based Flash MCU, 48Mhz, 256K Flash, 32K SRAM, TQFP64
+K 32-bit ARM Cortex-M0+ MCU Microcontroller
+F http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf
+$ENDCMP
+#
 $CMP DFLS130L
 D Schottky diode
 K diode Schottky

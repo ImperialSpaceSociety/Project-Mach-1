@@ -1103,19 +1103,6 @@ MCU_MOSI1
 Text HLabel 7650 4600 2    50   Output ~ 0
 MCU_SCLK1
 NoConn ~ 5100 4700
-$Comp
-L MCU_Microchip_SAML:ATSAML21J18B-AUT U11
-U 1 1 5D748E67
-P 6100 4400
-F 0 "U11" H 6100 2411 50  0000 C CNN
-F 1 "ATSAML21J18B-AUT" H 6400 2250 50  0000 C CNN
-F 2 "Package_QFP:TQFP-64_10x10mm_P0.5mm" H 7300 6200 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/60001477A.pdf" H 6100 4400 50  0001 C CNN
-F 4 "4.15" H 6100 4400 50  0001 C CNN "Cost"
-F 5 "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAML21J18B-AUT?qs=RCSZh%2F2c5ne9n8KccuU8Bw%3D%3D" H 6100 4400 50  0001 C CNN "Purchase link"
-	1    6100 4400
-	1    0    0    -1  
-$EndComp
 NoConn ~ 7100 3800
 NoConn ~ 7100 3700
 NoConn ~ 7100 4000
@@ -1133,6 +1120,17 @@ F 3 "https://docs-emea.rs-online.com/webdocs/1703/0900766b81703f87.pdf" H 8300 2
 F 4 "https://uk.rs-online.com/web/p/flash-memory/1882666/" H 8300 2650 50  0001 C CNN "Purchase link"
 F 5 "0.718" H 8300 2650 50  0001 C CNN "Cost"
 	1    8300 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L flight-computer:ATSAMD21J18A-AU U?
+U 1 1 5D8A9F24
+P 6100 4400
+F 0 "U?" H 6100 2411 50  0000 C CNN
+F 1 "ATSAMD21J18A-AU" H 6400 2250 50  0000 C CNN
+F 2 "Package_QFP:TQFP-64_10x10mm_P0.5mm" H 7300 6200 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/devicedoc/40001884a.pdf" H 6100 4400 50  0001 C CNN
+	1    6100 4400
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
