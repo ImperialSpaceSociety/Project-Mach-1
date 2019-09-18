@@ -456,6 +456,7 @@ F 1 "MS5607-02BA" H 5280 5205 50  0000 L CNN
 F 2 "Package_LGA:LGA-8_3x5mm_P1.25mm" H 4950 5250 50  0001 C CNN
 F 3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7FMS5607-02BA03%7FB2%7Fpdf%7FEnglish%7FENG_DS_MS5607-02BA03_B2.pdf%7FCAT-BLPS0035" H 4950 5250 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/Measurement-Specialties/MS560702BA03-50?qs=sGAEpiMZZMvhQj7WZhFIANHEKf5NWCaHepyHiZrEptc%3D" H 4950 5250 50  0001 C CNN "Purchase link"
+F 5 "2.42" H 4950 5250 50  0001 C CNN "Cost"
 	1    4950 5250
 	1    0    0    -1  
 $EndComp

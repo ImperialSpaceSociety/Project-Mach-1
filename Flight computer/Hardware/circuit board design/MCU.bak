@@ -1044,6 +1044,8 @@ F 0 "Y3" H 3300 4850 50  0000 C CNN
 F 1 "16MHz" H 3300 4950 50  0000 C CNN
 F 2 "flight-computer:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 3300 4400 50  0001 C CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc75d.pdf" H 3300 4400 50  0001 C CNN
+F 4 "0.651" H 3300 4400 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/crystal-units/1442292/" H 3300 4400 50  0001 C CNN "Purchase link"
 	1    3300 4400
 	1    0    0    -1  
 $EndComp
@@ -1128,6 +1130,8 @@ F 0 "U?" H 8575 3375 50  0000 C CNN
 F 1 "W25Q64JVSSIM" H 8575 3284 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm" H 8300 2650 50  0001 C CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/1703/0900766b81703f87.pdf" H 8300 2650 50  0001 C CNN
+F 4 "https://uk.rs-online.com/web/p/flash-memory/1882666/" H 8300 2650 50  0001 C CNN "Purchase link"
+F 5 "0.718" H 8300 2650 50  0001 C CNN "Cost"
 	1    8300 2650
 	1    0    0    -1  
 $EndComp

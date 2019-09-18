@@ -334,6 +334,7 @@ F 1 "Si7232DN" H 5956 4705 50  0000 L CNN
 F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 5500 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 5250 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5850 5250 50  0001 C CNN "Purchase link"
+F 5 "0.729" H 5850 5250 50  0001 C CNN "Cost"
 	2    5850 5250
 	1    0    0    -1  
 $EndComp
@@ -381,6 +382,7 @@ F 1 "Si7232DN" H 5956 3455 50  0000 L CNN
 F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 4250 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 4000 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5850 4000 50  0001 C CNN "Purchase link"
+F 5 "0.729" H 5850 4000 50  0001 C CNN "Cost"
 	1    5850 4000
 	1    0    0    -1  
 $EndComp
@@ -428,6 +430,7 @@ F 1 "Si7232DN" H 5956 2055 50  0000 L CNN
 F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 2850 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 2600 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5850 2600 50  0001 C CNN "Purchase link"
+F 5 "0.729" H 5850 2600 50  0001 C CNN "Cost"
 	2    5850 2600
 	1    0    0    -1  
 $EndComp
@@ -475,6 +478,7 @@ F 1 "Si7232DN" H 5956 805 50  0000 L CNN
 F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 1600 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 1350 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/Vishay-Siliconix/SI7232DN-T1-GE3?qs=%252BPu8jn5UVnH5FJ8Jo4EbFw%3D%3D" H 5850 1350 50  0001 C CNN "Purchase link"
+F 5 "0.729" H 5850 1350 50  0001 C CNN "Cost"
 	1    5850 1350
 	1    0    0    -1  
 $EndComp

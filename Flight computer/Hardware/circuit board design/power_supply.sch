@@ -70,6 +70,8 @@ F 0 "D3" H 5450 1484 50  0000 C CNN
 F 1 "DFLS130L" H 5450 1575 50  0000 C CNN
 F 2 "Diode_SMD:D_PowerDI-123" H 5450 1700 50  0001 C CNN
 F 3 "https://www.diodes.com/assets/Datasheets/ds30492.pdf" H 5450 1700 50  0001 C CNN
+F 4 "0.45" H 5450 1700 50  0001 C CNN "Cost"
+F 5 "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/DFLS130LQ-7?qs=sGAEpiMZZMtQ8nqTKtFS%2FIFUHrzpCXQh4E4plfym6vgtJOgQUsE5bw%3D%3D" H 5450 1700 50  0001 C CNN "Purchase link"
 	1    5450 1700
 	-1   0    0    1   
 $EndComp
@@ -171,6 +173,7 @@ F 1 "MAX40200AUK" H 5450 3876 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5450 4100 50  0001 C CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/MAX40200.pdf" H 5450 4100 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX40200AUK%2bT?qs=sGAEpiMZZMunEhqKs81nFLgDZkWRRV9j6ylHf7Op%252Bls%3D" H 5450 3600 50  0001 C CNN "Purchase link"
+F 5 "0.729" H 5450 3600 50  0001 C CNN "Cost"
 	1    5450 3600
 	1    0    0    -1  
 $EndComp
@@ -298,6 +301,7 @@ F 1 "USB_B_Micro" H 1957 2176 50  0000 C CNN
 F 2 "flight-computer:USB_Micro-B_Molex-105017-0001" H 2050 1750 50  0001 C CNN
 F 3 "https://www.molex.com/webdocs/datasheets/pdf/en-us/1050170001_IO_CONNECTORS.pdf" H 2050 1750 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/Molex/105017-0001?qs=sGAEpiMZZMulM8LPOQ%252BykxkHE97o%2FWJn1YkS%2FQp33f4%3D" H 1900 1800 50  0001 C CNN "Purchase link"
+F 5 "0.639" H 1900 1800 50  0001 C CNN "Cost"
 	1    1900 1800
 	1    0    0    -1  
 $EndComp
@@ -332,6 +336,8 @@ F 0 "U9" H 3450 1485 50  0000 C CNN
 F 1 "STF202-22T1G" H 3450 1576 50  0000 C CNN
 F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 3400 2500 50  0001 C CNN
 F 3 "https://www.onsemi.com/pub/Collateral/STF202-22T1-D.PDF" H 3350 2050 50  0001 C CNN
+F 4 "0.467" H 3450 2050 50  0001 C CNN "Cost"
+F 5 "https://www.mouser.co.uk/ProductDetail/ON-Semiconductor/STF202-22T1G?qs=%2Fha2pyFadujRFaXPnV9RsTetlaFPPaXSz4EERle60zyiot5T0fRtTg%3D%3D" H 3450 2050 50  0001 C CNN "Purchase link"
 	1    3450 2050
 	-1   0    0    1   
 $EndComp

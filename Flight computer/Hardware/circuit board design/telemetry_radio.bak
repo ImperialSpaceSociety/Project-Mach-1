@@ -317,7 +317,9 @@ P 8200 5300
 F 0 "J7" H 8300 5182 50  0000 L CNN
 F 1 "Conn_Coaxial" H 8300 5273 50  0000 L CNN
 F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 8200 5300 50  0001 C CNN
-F 3 " ~" H 8200 5300 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/185/U.FL_catalog-939761.pdf" H 8200 5300 50  0001 C CNN
+F 4 "1.05" H 8200 5300 50  0001 C CNN "Cost"
+F 5 "https://www.mouser.co.uk/ProductDetail/Hirose-Connector/UFL-R-SMT01?qs=Ux3WWAnHpjDV3tCCbDi65g==" H 8200 5300 50  0001 C CNN "Purchase link"
 	1    8200 5300
 	0    -1   1    0   
 $EndComp
@@ -373,6 +375,8 @@ F 0 "U2" H 6350 4967 50  0000 C CNN
 F 1 "0433BM41A0019E" H 6350 4876 50  0000 C CNN
 F 2 "Johanson_frontend:BALUN_0433BM41A0019E" H 5850 5100 50  0001 L BNN
 F 3 "https://www.johansontechnology.com/datasheets/0433BM41A0019/0433BM41A0019.pdf" H 5850 5100 50  0001 L BNN
+F 4 "0.745" H 6350 4450 50  0001 C CNN "Cost"
+F 5 "https://www.mouser.co.uk/ProductDetail/Johanson-Technology/0433BM41A0019E?qs=cgWa3jCOTNkHeQmiwnsqmQ==" H 6350 4450 50  0001 C CNN "Purchase link"
 	1    6350 4450
 	1    0    0    -1  
 $EndComp
@@ -463,6 +467,8 @@ F 0 "U3" H 3550 5450 50  0000 C CNN
 F 1 "Si4463" H 3550 5550 50  0000 C CNN
 F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm_ThermalVias" H 3800 5950 50  0001 C CNN
 F 3 "https://www.silabs.com/documents/public/data-sheets/Si4464-63-61-60.pdf" H 3500 4650 50  0001 C CNN
+F 4 "2.28" H 3800 4750 50  0001 C CNN "Cost"
+F 5 "https://www.mouser.co.uk/ProductDetail/Silicon-Labs/SI4463-C2A-GM?qs=sGAEpiMZZMsB9HsreUc%252BicIxdXx%252BfMXVbG%2F5b1tFbyo%3D" H 3800 4750 50  0001 C CNN "Purchase link"
 	1    3800 4750
 	1    0    0    -1  
 $EndComp
@@ -475,6 +481,7 @@ F 1 "Yageo434" H 9800 2524 50  0000 C CNN
 F 2 "flight-computer:Yageo434" H 9850 2350 50  0001 C CNN
 F 3 "https://www.mouser.co.uk/datasheet/2/447/An_SMD_UHF_433_1204_0-595178.pdf" H 9850 2350 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/Yageo/ANT1204F002R0433A?qs=sGAEpiMZZMuBTKBKvsBmlG1EAbO3Nxju0D3kDx%252BrI0k%3D" H 9850 2350 50  0001 C CNN "Purchase link"
+F 5 "1.33" H 9850 2350 50  0001 C CNN "Cost"
 	1    9850 2350
 	1    0    0    -1  
 $EndComp

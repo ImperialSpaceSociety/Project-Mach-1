@@ -50,7 +50,9 @@ AR Path="/5D5B165E/5D772D40" Ref="J6"  Part="1"
 F 0 "J6" H 8550 4025 50  0000 L CNN
 F 1 "Conn_Coaxial" H 8550 3934 50  0000 L CNN
 F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 8450 4050 50  0001 C CNN
-F 3 " ~" H 8450 4050 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/185/U.FL_catalog-939761.pdf" H 8450 4050 50  0001 C CNN
+F 4 "1.05" H 8450 4050 50  0001 C CNN "Cost"
+F 5 "https://www.mouser.co.uk/ProductDetail/Hirose-Connector/UFL-R-SMT01?qs=Ux3WWAnHpjDV3tCCbDi65g==" H 8450 4050 50  0001 C CNN "Purchase link"
 	1    8450 4050
 	1    0    0    -1  
 $EndComp
