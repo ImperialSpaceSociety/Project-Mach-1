@@ -1060,7 +1060,7 @@ U 1 1 5D6EF892
 P 3300 4400
 F 0 "Y3" H 3300 4850 50  0000 C CNN
 F 1 "16MHz" H 3300 4950 50  0000 C CNN
-F 2 "flight-computer:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 3300 4400 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 3300 4400 50  0001 C CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc75d.pdf" H 3300 4400 50  0001 C CNN
 F 4 "0.651" H 3300 4400 50  0001 C CNN "Cost"
 F 5 "https://uk.rs-online.com/web/p/crystal-units/1442292/" H 3300 4400 50  0001 C CNN "Purchase link"
