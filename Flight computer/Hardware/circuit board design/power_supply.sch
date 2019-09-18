@@ -178,6 +178,7 @@ F 1 "MAX40200AUK" H 5450 3876 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5450 4100 50  0001 C CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/MAX40200.pdf" H 5450 4100 50  0001 C CNN
 F 4 "https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX40200AUK%2bT?qs=sGAEpiMZZMunEhqKs81nFLgDZkWRRV9j6ylHf7Op%252Bls%3D" H 5450 3600 50  0001 C CNN "Purchase link"
+F 5 "0.729" H 5450 3600 50  0001 C CNN "Cost"
 	1    5450 3600
 	1    0    0    -1  
 $EndComp
