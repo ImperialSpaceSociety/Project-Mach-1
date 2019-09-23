@@ -73,6 +73,7 @@ F 2 "Diode_SMD:D_PowerDI-123" H 5450 1700 50  0001 C CNN
 F 3 "https://www.diodes.com/assets/Datasheets/ds30492.pdf" H 5450 1700 50  0001 C CNN
 F 4 "0.36" H 5450 1700 50  0001 C CNN "Cost"
 F 5 "https://uk.farnell.com/diodes-inc/dfls130l-7/diode-schottky-30v-1a-powerdi123/dp/1843673?st=DFLS130L" H 5450 1700 50  0001 C CNN "Purchase link"
+F 6 "5" H 5450 1700 50  0001 C CNN "min_quantity"
 	1    5450 1700
 	-1   0    0    1   
 $EndComp
@@ -86,6 +87,7 @@ F 2 "Package_TO_SOT_SMD:TSOT-23-5" H 7250 3925 50  0001 C CIN
 F 3 "https://docs-emea.rs-online.com/webdocs/13e4/0900766b813e471a.pdf" H 7250 3650 50  0001 C CNN
 F 4 "0.472" H 7250 3600 50  0001 C CNN "Cost"
 F 5 "https://uk.rs-online.com/web/p/low-dropout-voltage-regulators/6868802/" H 7250 3600 50  0001 C CNN "Purchase link"
+F 6 "5" H 7250 3600 50  0001 C CNN "min_quantity"
 	1    7250 3600
 	1    0    0    -1  
 $EndComp
@@ -175,6 +177,7 @@ F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5450 4100 50  0001 C CNN
 F 3 "https://datasheets.maximintegrated.com/en/ds/MAX40200.pdf" H 5450 4100 50  0001 C CNN
 F 4 "https://uk.rs-online.com/web/p/node_under_construction/1697573/" H 5450 3600 50  0001 C CNN "Purchase link"
 F 5 "0.729" H 5450 3600 50  0001 C CNN "Cost"
+F 6 "10" H 5450 3600 50  0001 C CNN "min_quantity"
 	1    5450 3600
 	1    0    0    -1  
 $EndComp
@@ -303,6 +306,7 @@ F 2 "flight-computer:USB_Micro-B_Molex-105017-0001" H 2050 1750 50  0001 C CNN
 F 3 "https://www.molex.com/webdocs/datasheets/pdf/en-us/1050170001_IO_CONNECTORS.pdf" H 2050 1750 50  0001 C CNN
 F 4 "https://uk.rs-online.com/web/p/micro-usb-connectors/8486764/?relevancy-data=636F3D3126696E3D4931384E53656172636847656E65726963266C753D656E266D6D3D6D61746368616C6C7061727469616C26706D3D5E5B5C707B4C7D5C707B4E647D2D2C2F255C2E5D2B2426706F3D31333326736E3D592673723D2673743D4B4559574F52445F53494E474C455F414C5048415F4E554D455249432673633D592677633D4E4F4E45267573743D3130353031372D30303031267374613D3130353031372D3030303126&searchHistory=%7B%22enabled%22%3Atrue%7D" H 1900 1800 50  0001 C CNN "Purchase link"
 F 5 "0.694" H 1900 1800 50  0001 C CNN "Cost"
+F 6 "5" H 1900 1800 50  0001 C CNN "min_quantity"
 	1    1900 1800
 	1    0    0    -1  
 $EndComp
@@ -337,8 +341,9 @@ F 0 "U9" H 3450 1485 50  0000 C CNN
 F 1 "STF202-22T1G" H 3450 1576 50  0000 C CNN
 F 2 "Package_SO:TSOP-6_1.65x3.05mm_P0.95mm" H 3400 2500 50  0001 C CNN
 F 3 "https://www.onsemi.com/pub/Collateral/STF202-22T1-D.PDF" H 3350 2050 50  0001 C CNN
-F 4 "0.467" H 3450 2050 50  0001 C CNN "Cost"
-F 5 "https://uk.rs-online.com/web/p/bus-terminators/1869924/" H 3450 2050 50  0001 C CNN "Purchase link"
+F 4 "0.5" H 3450 2050 50  0001 C CNN "Cost"
+F 5 "https://uk.farnell.com/on-semiconductor/stf202-22t1g/active-analog-filter/dp/1651958?st=STF202-22T1G" H 3450 2050 50  0001 C CNN "Purchase link"
+F 6 "1" H 3450 2050 50  0001 C CNN "min_quantity"
 	1    3450 2050
 	-1   0    0    1   
 $EndComp

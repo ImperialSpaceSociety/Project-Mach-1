@@ -318,8 +318,8 @@ F 0 "J7" H 8300 5182 50  0000 L CNN
 F 1 "Conn_Coaxial" H 8300 5273 50  0000 L CNN
 F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 8200 5300 50  0001 C CNN
 F 3 "https://www.mouser.co.uk/datasheet/2/185/U.FL_catalog-939761.pdf" H 8200 5300 50  0001 C CNN
-F 4 "0.746" H 8200 5300 50  0001 C CNN "Cost"
-F 5 "https://uk.farnell.com/hirose-hrs/u-fl-r-smt-1-10/rf-coaxial-u-fl-straight-jack/dp/1688077?st=ufl" H 8200 5300 50  0001 C CNN "Purchase link"
+F 4 "0.617" H 8200 5300 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/coaxial-plugs-sockets/7025425/" H 8200 5300 50  0001 C CNN "Purchase link"
 F 6 "10" H 8200 5300 50  0001 C CNN "min_quantity"
 	1    8200 5300
 	0    -1   1    0   
@@ -369,15 +369,18 @@ F 3 "~" H 7800 4250 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L 0433BM41A0019E:0433BM41A0019E U2
+L circuit-board-design-rescue:0433BM41A0019E-0433BM41A0019E U2
 U 1 1 5D767292
 P 6350 4450
+AR Path="/5D767292" Ref="U2"  Part="1" 
+AR Path="/5D5B17D8/5D767292" Ref="U2"  Part="1" 
 F 0 "U2" H 6350 4967 50  0000 C CNN
 F 1 "0433BM41A0019E" H 6350 4876 50  0000 C CNN
 F 2 "Johanson_frontend:BALUN_0433BM41A0019E" H 5850 5100 50  0001 L BNN
 F 3 "https://www.johansontechnology.com/datasheets/0433BM41A0019/0433BM41A0019.pdf" H 5850 5100 50  0001 L BNN
 F 4 "0.745" H 6350 4450 50  0001 C CNN "Cost"
 F 5 "https://www.mouser.co.uk/ProductDetail/Johanson-Technology/0433BM41A0019E?qs=cgWa3jCOTNkHeQmiwnsqmQ==" H 6350 4450 50  0001 C CNN "Purchase link"
+F 6 "1" H 6350 4450 50  0001 C CNN "min_quantity"
 	1    6350 4450
 	1    0    0    -1  
 $EndComp
@@ -391,6 +394,7 @@ F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 2000 3250 50  0001 C CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc7d9.pdf" H 1450 3600 50  0001 C CNN
 F 4 "3.43" H 1550 3600 50  0001 C CNN "Cost"
 F 5 "https://uk.rs-online.com/web/p/tcxo-oscillators/1442366/" H 1550 3600 50  0001 C CNN "Purchase link"
+F 6 "2" H 1550 3600 50  0001 C CNN "min_quantity"
 	1    1550 3600
 	1    0    0    -1  
 $EndComp

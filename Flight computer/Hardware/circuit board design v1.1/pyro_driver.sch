@@ -197,6 +197,7 @@ F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 2850 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 2600 50  0001 C CNN
 F 4 "https://uk.rs-online.com/web/p/mosfets/8181396/" H 5850 2600 50  0001 C CNN "Purchase link"
 F 5 "0.729" H 5850 2600 50  0001 C CNN "Cost"
+F 6 "20" H 5850 2600 50  0001 C CNN "min_quantity"
 	2    5850 2600
 	1    0    0    -1  
 $EndComp
@@ -245,6 +246,7 @@ F 2 "Package_SO:Vishay_PowerPAK_1212-8_Dual" H 5700 1600 50  0001 C CNN
 F 3 "https://www.vishay.com/docs/68986/si7232dn.pdf" H 5850 1350 50  0001 C CNN
 F 4 "https://uk.rs-online.com/web/p/mosfets/8181396/" H 5850 1350 50  0001 C CNN "Purchase link"
 F 5 "0.729" H 5850 1350 50  0001 C CNN "Cost"
+F 6 "20" H 5850 1350 50  0001 C CNN "min_quantity"
 	1    5850 1350
 	1    0    0    -1  
 $EndComp

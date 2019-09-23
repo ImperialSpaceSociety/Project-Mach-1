@@ -51,8 +51,8 @@ F 0 "J6" H 8550 4025 50  0000 L CNN
 F 1 "Conn_Coaxial" H 8550 3934 50  0000 L CNN
 F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 8450 4050 50  0001 C CNN
 F 3 "https://www.mouser.co.uk/datasheet/2/185/U.FL_catalog-939761.pdf" H 8450 4050 50  0001 C CNN
-F 4 "0.746" H 8450 4050 50  0001 C CNN "Cost"
-F 5 "https://uk.farnell.com/hirose-hrs/u-fl-r-smt-1-10/rf-coaxial-u-fl-straight-jack/dp/1688077?st=ufl" H 8450 4050 50  0001 C CNN "Purchase link"
+F 4 "0.617" H 8450 4050 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/coaxial-plugs-sockets/7025425/" H 8450 4050 50  0001 C CNN "Purchase link"
 F 6 "10" H 8450 4050 50  0001 C CNN "min_quantity"
 	1    8450 4050
 	1    0    0    -1  
@@ -247,6 +247,7 @@ F 2 "RF_GPS:ublox_MAX" H 6450 3400 50  0001 C CNN
 F 3 "https://www.u-blox.com/sites/default/files/MAX-M8-FW3_DataSheet_%28UBX-15031506%29.pdf" H 6050 4050 50  0001 C CNN
 F 4 "11.99" H 6050 4050 50  0001 C CNN "Cost"
 F 5 "https://store.uputronics.com/index.php?route=product/product&product_id=71&search=ublox" H 6050 4050 50  0001 C CNN "Purchase link"
+F 6 "1" H 6050 4050 50  0001 C CNN "min_quantity"
 	1    6050 4050
 	1    0    0    -1  
 $EndComp

@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 7
+Sheet 7 7
 Title ""
 Date "2019-09-09"
 Rev "1.0"
@@ -327,16 +327,6 @@ Wire Wire Line
 	8200 2600 8100 2600
 Wire Wire Line
 	8100 2600 8100 2750
-Wire Wire Line
-	5100 3500 4550 3500
-Wire Wire Line
-	5100 3600 4550 3600
-Text HLabel 4550 3500 0    50   BiDi ~ 0
-MCU_PA06
-Text HLabel 4550 3600 0    50   BiDi ~ 0
-MCU_PA07
-Wire Wire Line
-	5100 3800 4550 3800
 Wire Wire Line
 	7100 3500 7650 3500
 Wire Wire Line
@@ -837,6 +827,7 @@ F 2 "Buzzer_Beeper:Buzzer_12x9.5RM7.6" V 10575 3700 50  0001 C CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/1581/0900766b815810c5.pdf" V 10575 3700 50  0001 C CNN
 F 4 "1.05" H 10600 3600 50  0001 C CNN "Cost"
 F 5 "https://uk.rs-online.com/web/p/magnetic-buzzer-components/6173081/?searchTerm=6173081&relevancy-data=636F3D3126696E3D4931384E525353746F636B4E756D6265724D504E266C753D656E266D6D3D6D61746368616C6C26706D3D5E5C647B367D247C5E5C647B377D247C5E5C647B31307D2426706F3D313426736E3D592673743D52535F53544F434B5F4E554D4245522677633D4E4F4E45267573743D3631373330383126" H 10600 3600 50  0001 C CNN "Purchase link"
+F 6 "1" H 10600 3600 50  0001 C CNN "min_quantity"
 	1    10600 3600
 	1    0    0    -1  
 $EndComp
@@ -1011,12 +1002,6 @@ Wire Wire Line
 	7100 3400 7650 3400
 Wire Wire Line
 	4550 2900 5100 2900
-Wire Wire Line
-	5100 3700 4550 3700
-Text HLabel 4550 3700 0    50   BiDi ~ 0
-MCU_PA08
-Text HLabel 4550 3800 0    50   BiDi ~ 0
-MCU_PA09
 Text HLabel 4550 3900 0    50   BiDi ~ 0
 MCU_PA10
 Text HLabel 4550 4000 0    50   BiDi ~ 0
@@ -1046,6 +1031,7 @@ F 2 "flight-computer:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 3300 4400 50  0001 C CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc75d.pdf" H 3300 4400 50  0001 C CNN
 F 4 "0.651" H 3300 4400 50  0001 C CNN "Cost"
 F 5 "https://uk.rs-online.com/web/p/crystal-units/1442292/" H 3300 4400 50  0001 C CNN "Purchase link"
+F 6 "10" H 3300 4400 50  0001 C CNN "min_quantity"
 	1    3300 4400
 	1    0    0    -1  
 $EndComp
@@ -1119,6 +1105,7 @@ F 2 "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm" H 8300 2650 50  0001 C CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/1703/0900766b81703f87.pdf" H 8300 2650 50  0001 C CNN
 F 4 "https://uk.rs-online.com/web/p/flash-memory/1882666/" H 8300 2650 50  0001 C CNN "Purchase link"
 F 5 "0.718" H 8300 2650 50  0001 C CNN "Cost"
+F 6 "10" H 8300 2650 50  0001 C CNN "min_quantity"
 	1    8300 2650
 	1    0    0    -1  
 $EndComp
@@ -1136,4 +1123,8 @@ F 6 "2.54" H 6100 4400 50  0001 C CNN "Cost"
 	1    6100 4400
 	1    0    0    -1  
 $EndComp
+NoConn ~ 5100 3800
+NoConn ~ 5100 3700
+NoConn ~ 5100 3600
+NoConn ~ 5100 3500
 $EndSCHEMATC
