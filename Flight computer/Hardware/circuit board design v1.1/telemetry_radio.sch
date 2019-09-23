@@ -390,7 +390,7 @@ U 1 1 5D703E49
 P 1550 3600
 F 0 "X1" H 1500 4800 50  0000 L CNN
 F 1 "TM-32.000-AF3-33-S-Oscillator" H 1000 4700 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 2000 3250 50  0001 C CNN
+F 2 "flight-computer:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 2000 3250 50  0001 C CNN
 F 3 "https://docs-emea.rs-online.com/webdocs/15dc/0900766b815dc7d9.pdf" H 1450 3600 50  0001 C CNN
 F 4 "3.43" H 1550 3600 50  0001 C CNN "Cost"
 F 5 "https://uk.rs-online.com/web/p/tcxo-oscillators/1442366/" H 1550 3600 50  0001 C CNN "Purchase link"
@@ -448,7 +448,7 @@ U 1 1 5D6BC5E2
 P 800 3500
 F 0 "C21" H 1050 3500 50  0000 C CNN
 F 1 "33nF" H 1050 3400 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 800 3500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 800 3500 50  0001 C CNN
 F 3 "~" H 800 3500 50  0001 C CNN
 	1    800  3500
 	1    0    0    1   
@@ -459,7 +459,7 @@ U 1 1 5D6C2DE3
 P 2300 3900
 F 0 "C20" H 2550 3900 50  0000 C CNN
 F 1 "10nF" H 2550 3800 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2300 3900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2300 3900 50  0001 C CNN
 F 3 "~" H 2300 3900 50  0001 C CNN
 	1    2300 3900
 	1    0    0    1   

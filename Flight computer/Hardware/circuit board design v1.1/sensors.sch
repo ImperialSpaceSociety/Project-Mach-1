@@ -564,7 +564,7 @@ U 1 1 5D9FB40D
 P 4150 5750
 F 0 "U5" H 4150 6315 50  0000 C CNN
 F 1 "H3LIS100DL" H 4150 6224 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-16-1EP_3x3mm_P0.5mm_EP1.45x1.45mm" H 3550 6550 50  0001 L BNN
+F 2 "flight-computer:TFLGA-16_3x3mm" H 3550 6550 50  0001 L BNN
 F 3 "https://docs-emea.rs-online.com/webdocs/14da/0900766b814da09a.pdf" H 3550 6550 50  0001 L BNN
 F 4 "2.47" H 4150 5750 50  0001 C CNN "Cost"
 F 5 "https://uk.rs-online.com/web/p/accelerometer-sensors/1116448/" H 4150 5750 50  0001 C CNN "Purchase link"
