@@ -214,53 +214,53 @@ $EndComp
 $Comp
 L power:GND #PWR017
 U 1 1 5D94C24A
-P 5700 6300
-F 0 "#PWR017" H 5700 6050 50  0001 C CNN
-F 1 "GND" H 5705 6127 50  0000 C CNN
-F 2 "" H 5700 6300 50  0001 C CNN
-F 3 "" H 5700 6300 50  0001 C CNN
-	1    5700 6300
+P 5900 6300
+F 0 "#PWR017" H 5900 6050 50  0001 C CNN
+F 1 "GND" H 5905 6127 50  0000 C CNN
+F 2 "" H 5900 6300 50  0001 C CNN
+F 3 "" H 5900 6300 50  0001 C CNN
+	1    5900 6300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C13
 U 1 1 5D94EBA2
-P 5450 5200
-F 0 "C13" V 5300 5300 50  0000 L CNN
-F 1 "10uF" V 5300 5050 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5450 5200 50  0001 C CNN
-F 3 "~" H 5450 5200 50  0001 C CNN
-	1    5450 5200
+P 5550 5200
+F 0 "C13" V 5400 5300 50  0000 L CNN
+F 1 "10uF" V 5400 5050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5550 5200 50  0001 C CNN
+F 3 "~" H 5550 5200 50  0001 C CNN
+	1    5550 5200
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5200 5200 5350 5200
+	5200 5200 5450 5200
 Connection ~ 5200 5200
 Wire Wire Line
-	5550 5200 5700 5200
+	5650 5200 5900 5200
 Wire Wire Line
-	5700 5200 5700 5450
+	5900 5200 5900 5450
 $Comp
 L Device:C_Small C14
 U 1 1 5D951B11
-P 5450 5450
-F 0 "C14" V 5300 5550 50  0000 L CNN
-F 1 "100nF" V 5300 5300 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5450 5450 50  0001 C CNN
-F 3 "~" H 5450 5450 50  0001 C CNN
-	1    5450 5450
+P 5550 5450
+F 0 "C14" V 5400 5550 50  0000 L CNN
+F 1 "100nF" V 5400 5300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5550 5450 50  0001 C CNN
+F 3 "~" H 5550 5450 50  0001 C CNN
+	1    5550 5450
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5200 5450 5350 5450
+	5200 5450 5450 5450
 Connection ~ 5200 5450
 Wire Wire Line
 	5200 5450 5200 5200
 Wire Wire Line
-	5550 5450 5700 5450
-Connection ~ 5700 5450
+	5650 5450 5900 5450
+Connection ~ 5900 5450
 Wire Wire Line
-	5700 5450 5700 6300
+	5900 5450 5900 6300
 Text Notes 5500 4900 0    50   ~ 0
 Power supply decoupling capacitors \n(100 nF ceramic, 10 μF aluminum) should be \nplaced as near as possible to pin 14 of the \ndevice (common design practice).
 Wire Wire Line
@@ -288,11 +288,11 @@ The slave address(SAD) is dress 0011001b.\nSA0 is connected to voltage supply.
 Wire Wire Line
 	4850 5450 4950 5450
 Text HLabel 5200 5750 2    50   Input ~ 0
-ACCL_INT1
+H_ACCL_INT1
 Wire Wire Line
 	4850 5750 5200 5750
 Text HLabel 5200 5850 2    50   Input ~ 0
-ACCL_INT2
+H_ACCL_INT2
 Wire Wire Line
 	5200 5850 4850 5850
 Wire Wire Line
@@ -559,10 +559,10 @@ Capacitor C1 (100 nF) should be a \ncapacitor with low ESR value and should \nbe
 Text Notes 2200 4100 0    50   ~ 0
 C24(10nF) must guarantee \n1 nF value under 11 V bias \ncondition
 $Comp
-L flight-computer:H3LIS100DL U?
+L flight-computer:H3LIS100DL U5
 U 1 1 5D9FB40D
 P 4150 5750
-F 0 "U?" H 4150 6315 50  0000 C CNN
+F 0 "U5" H 4150 6315 50  0000 C CNN
 F 1 "H3LIS100DL" H 4150 6224 50  0000 C CNN
 F 2 "Package_DFN_QFN:QFN-16-1EP_3x3mm_P0.5mm_EP1.45x1.45mm" H 3550 6550 50  0001 L BNN
 F 3 "https://docs-emea.rs-online.com/webdocs/14da/0900766b814da09a.pdf" H 3550 6550 50  0001 L BNN
@@ -595,10 +595,10 @@ Wire Wire Line
 Wire Wire Line
 	3350 2350 3350 2300
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR046
 U 1 1 5DA31C3E
 P 3350 2300
-F 0 "#PWR?" H 3350 2150 50  0001 C CNN
+F 0 "#PWR046" H 3350 2150 50  0001 C CNN
 F 1 "+3.3V" H 3365 2473 50  0000 C CNN
 F 2 "" H 3350 2300 50  0001 C CNN
 F 3 "" H 3350 2300 50  0001 C CNN
@@ -626,10 +626,10 @@ Wire Wire Line
 Wire Wire Line
 	5400 2050 5400 1900
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR047
 U 1 1 5DA4DC9B
 P 5400 1900
-F 0 "#PWR?" H 5400 1750 50  0001 C CNN
+F 0 "#PWR047" H 5400 1750 50  0001 C CNN
 F 1 "+3.3V" H 5415 2073 50  0000 C CNN
 F 2 "" H 5400 1900 50  0001 C CNN
 F 3 "" H 5400 1900 50  0001 C CNN
@@ -650,4 +650,18 @@ Text Notes 2100 2000 0    50   ~ 0
 The slave address for accl/gyro is \n11010111b(D7h) for Read and \n11010110b (D6h) for Write.
 Text Notes 5600 2050 0    50   ~ 0
 The slave address for mag is \n00111101b (3Dh) for Read and \n00111100b (3Ch) for Write.
+NoConn ~ 3800 2750
+Text HLabel 3350 2550 0    50   Input ~ 0
+ACCL_RDY
+Wire Wire Line
+	3800 2550 3350 2550
+Text HLabel 3350 2650 0    50   Input ~ 0
+GYRO_RDY
+Wire Wire Line
+	3800 2650 3350 2650
+Text HLabel 5650 2250 2    50   Input ~ 0
+MAG_RDY
+Wire Wire Line
+	5200 2250 5650 2250
+NoConn ~ 5200 2350
 $EndSCHEMATC
