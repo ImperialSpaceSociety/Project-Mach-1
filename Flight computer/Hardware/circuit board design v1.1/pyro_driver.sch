@@ -160,6 +160,9 @@ F 0 "R13" H 4520 3396 50  0000 L CNN
 F 1 "3.3K" H 4520 3305 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 3350 50  0001 C CNN
 F 3 "~" H 4450 3350 50  0001 C CNN
+F 4 "0.002" H 4450 3350 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/8306410/" H 4450 3350 50  0001 C CNN "Purchase link"
+F 6 "10" H 4450 3350 50  0001 C CNN "min_quantity"
 	1    4450 3350
 	1    0    0    -1  
 $EndComp
@@ -212,6 +215,9 @@ F 0 "R3" H 4520 2146 50  0000 L CNN
 F 1 "3.3K" H 4520 2055 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 2100 50  0001 C CNN
 F 3 "~" H 4450 2100 50  0001 C CNN
+F 4 "0.002" H 4450 2100 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/8306410/" H 4450 2100 50  0001 C CNN "Purchase link"
+F 6 "10" H 4450 2100 50  0001 C CNN "min_quantity"
 	1    4450 2100
 	1    0    0    -1  
 $EndComp

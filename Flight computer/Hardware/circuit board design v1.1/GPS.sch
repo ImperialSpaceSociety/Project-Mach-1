@@ -81,6 +81,9 @@ F 0 "L2" H 7703 3696 50  0000 L CNN
 F 1 "27nH" H 7703 3605 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 7650 3650 50  0001 C CNN
 F 3 "~" H 7650 3650 50  0001 C CNN
+F 4 "0.08" H 7650 3650 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/wire-wound-surface-mount-inductors/7254923/" H 7650 3650 50  0001 C CNN "Purchase link"
+F 6 "10" H 7650 3650 50  0001 C CNN "min_quantity"
 	1    7650 3650
 	1    0    0    -1  
 $EndComp
@@ -100,6 +103,7 @@ F 2 "Resistor_SMD:R_0402_1005Metric" V 6880 3100 50  0001 C CNN
 F 3 "~" H 6950 3100 50  0001 C CNN
 F 4 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6788703/" H 6950 3100 50  0001 C CNN "Purchase link"
 F 5 "50" H 6950 3100 50  0001 C CNN "min_quantity"
+F 6 "0.002" H 6950 3100 50  0001 C CNN "Cost"
 	1    6950 3100
 	0    1    1    0   
 $EndComp
@@ -248,12 +252,19 @@ Wire Wire Line
 Connection ~ 5300 3050
 Wire Wire Line
 	5300 3050 5650 3050
+Wire Wire Line
+	6050 3350 6050 3300
+Wire Wire Line
+	6050 3300 5950 3300
+Connection ~ 5950 3300
+Wire Wire Line
+	5950 3300 5950 2650
 $Comp
-L RF_GPS:MAX-M8C U4
-U 1 1 5D610F77
+L RF_GPS:MAX-M8Q U?
+U 1 1 5D91C1E4
 P 6050 4050
-F 0 "U4" H 6050 4900 50  0000 C CNN
-F 1 "MAX-M8C" H 6500 3300 50  0000 C CNN
+F 0 "U?" H 6050 3261 50  0000 C CNN
+F 1 "MAX-M8Q" H 5600 3200 50  0000 C CNN
 F 2 "RF_GPS:ublox_MAX" H 6450 3400 50  0001 C CNN
 F 3 "https://www.u-blox.com/sites/default/files/MAX-M8-FW3_DataSheet_%28UBX-15031506%29.pdf" H 6050 4050 50  0001 C CNN
 F 4 "11.99" H 6050 4050 50  0001 C CNN "Cost"
@@ -262,11 +273,4 @@ F 6 "1" H 6050 4050 50  0001 C CNN "min_quantity"
 	1    6050 4050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6050 3350 6050 3300
-Wire Wire Line
-	6050 3300 5950 3300
-Connection ~ 5950 3300
-Wire Wire Line
-	5950 3300 5950 2650
 $EndSCHEMATC
