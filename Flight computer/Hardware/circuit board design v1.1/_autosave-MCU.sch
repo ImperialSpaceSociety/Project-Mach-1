@@ -693,6 +693,9 @@ F 0 "C88" H 3865 4696 50  0000 L CNN
 F 1 "15pF" H 3865 4605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3788 4500 50  0001 C CNN
 F 3 "~" H 3750 4650 50  0001 C CNN
+F 4 "0.043" H 3750 4650 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/3936659/" H 3750 4650 50  0001 C CNN "Purchase link"
+F 6 "25" H 3750 4650 50  0001 C CNN "min_quantity"
 	1    3750 4650
 	1    0    0    -1  
 $EndComp
@@ -701,9 +704,12 @@ L Device:R R12
 U 1 1 5D70BAB2
 P 4450 6600
 F 0 "R12" H 4520 6646 50  0000 L CNN
-F 1 "1K" H 4520 6555 50  0000 L CNN
+F 1 "1.6K" H 4520 6555 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 6600 50  0001 C CNN
 F 3 "~" H 4450 6600 50  0001 C CNN
+F 4 "0.002" H 4450 6600 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6789917/" H 4450 6600 50  0001 C CNN "Purchase link"
+F 6 "50" H 4450 6600 50  0001 C CNN "min_quantity"
 	1    4450 6600
 	-1   0    0    -1  
 $EndComp
@@ -726,6 +732,7 @@ F 0 "H4" V 1054 1900 50  0000 L CNN
 F 1 "MountingHole_Pad" V 1145 1900 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1100 1750 50  0001 C CNN
 F 3 "~" H 1100 1750 50  0001 C CNN
+F 4 "0.0" H 1100 1750 50  0001 C CNN "Cost"
 	1    1100 1750
 	0    1    1    0   
 $EndComp
@@ -737,6 +744,7 @@ F 0 "H3" V 1054 1700 50  0000 L CNN
 F 1 "MountingHole_Pad" V 1145 1700 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1100 1550 50  0001 C CNN
 F 3 "~" H 1100 1550 50  0001 C CNN
+F 4 "0.0" H 1100 1550 50  0001 C CNN "Cost"
 	1    1100 1550
 	0    1    1    0   
 $EndComp
@@ -748,6 +756,7 @@ F 0 "H2" V 1054 1500 50  0000 L CNN
 F 1 "MountingHole_Pad" V 1145 1500 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1100 1350 50  0001 C CNN
 F 3 "~" H 1100 1350 50  0001 C CNN
+F 4 "0.0" H 1100 1350 50  0001 C CNN "Cost"
 	1    1100 1350
 	0    1    1    0   
 $EndComp
@@ -759,6 +768,7 @@ F 0 "H1" V 1054 1300 50  0000 L CNN
 F 1 "MountingHole_Pad" V 1145 1300 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1100 1150 50  0001 C CNN
 F 3 "~" H 1100 1150 50  0001 C CNN
+F 4 "0.0" H 1100 1150 50  0001 C CNN "Cost"
 	1    1100 1150
 	0    1    1    0   
 $EndComp
@@ -767,9 +777,12 @@ L Device:R R25
 U 1 1 5D84A9D3
 P 10200 4900
 F 0 "R25" V 10100 5000 50  0000 C CNN
-F 1 "1K" V 10100 4850 50  0000 C CNN
+F 1 "1.6K" V 10100 4850 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 10130 4900 50  0001 C CNN
 F 3 "~" H 10200 4900 50  0001 C CNN
+F 4 "0.002" H 10200 4900 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6789917/" H 10200 4900 50  0001 C CNN "Purchase link"
+F 6 "50" H 10200 4900 50  0001 C CNN "min_quantity"
 	1    10200 4900
 	0    1    1    0   
 $EndComp
@@ -789,9 +802,12 @@ L Device:R R26
 U 1 1 5D8A257E
 P 10200 5300
 F 0 "R26" V 10100 5400 50  0000 C CNN
-F 1 "1K" V 10100 5250 50  0000 C CNN
+F 1 "1.6K" V 10100 5250 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 10130 5300 50  0001 C CNN
 F 3 "~" H 10200 5300 50  0001 C CNN
+F 4 "0.002" H 10200 5300 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6789917/" H 10200 5300 50  0001 C CNN "Purchase link"
+F 6 "50" H 10200 5300 50  0001 C CNN "min_quantity"
 	1    10200 5300
 	0    1    1    0   
 $EndComp
@@ -813,7 +829,10 @@ P 3300 1900
 F 0 "L1" V 3525 1900 50  0000 C CNN
 F 1 "L_Core_Ferrite" V 3450 1900 50  0000 C CNN
 F 2 "Inductor_SMD:L_0603_1608Metric" H 3300 1900 50  0001 C CNN
-F 3 "~" H 3300 1900 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/07a1/0900766b807a1caf.pdf" H 3300 1900 50  0001 C CNN
+F 4 "0.05" H 3300 1900 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/ferrite-beads/7926299/" H 3300 1900 50  0001 C CNN "Purchase link"
+F 6 "25" H 3300 1900 50  0001 C CNN "min_quantity"
 	1    3300 1900
 	0    -1   -1   0   
 $EndComp
@@ -838,7 +857,10 @@ P 4450 7200
 F 0 "C89" H 4565 7246 50  0000 L CNN
 F 1 "100nF" H 4565 7155 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 4488 7050 50  0001 C CNN
-F 3 "~" H 4450 7200 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/0dc2/0900766b80dc2409.pdf" H 4450 7200 50  0001 C CNN
+F 4 "0.01" H 4450 7200 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/6983251/" H 4450 7200 50  0001 C CNN "Purchase link"
+F 6 "50" H 4450 7200 50  0001 C CNN "min_quantity"
 	1    4450 7200
 	1    0    0    -1  
 $EndComp
@@ -850,6 +872,9 @@ F 0 "C86" H 2915 4696 50  0000 L CNN
 F 1 "15pF" H 2915 4605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 2838 4500 50  0001 C CNN
 F 3 "~" H 2800 4650 50  0001 C CNN
+F 4 "0.043" H 2800 4650 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/3936659/" H 2800 4650 50  0001 C CNN "Purchase link"
+F 6 "25" H 2800 4650 50  0001 C CNN "min_quantity"
 	1    2800 4650
 	1    0    0    -1  
 $EndComp
@@ -861,6 +886,9 @@ F 0 "C90" H 5515 1296 50  0000 L CNN
 F 1 "1uF" H 5515 1205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5438 1100 50  0001 C CNN
 F 3 "~" H 5400 1250 50  0001 C CNN
+F 4 "0.01" H 5400 1250 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/1358359/" H 5400 1250 50  0001 C CNN "Purchase link"
+F 6 "250" H 5400 1250 50  0001 C CNN "min_quantity"
 	1    5400 1250
 	1    0    0    -1  
 $EndComp
@@ -871,7 +899,10 @@ P 5950 1250
 F 0 "C91" H 6065 1296 50  0000 L CNN
 F 1 "100nF" H 6065 1205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5988 1100 50  0001 C CNN
-F 3 "~" H 5950 1250 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/0dc2/0900766b80dc2409.pdf" H 5950 1250 50  0001 C CNN
+F 4 "0.01" H 5950 1250 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/6983251/" H 5950 1250 50  0001 C CNN "Purchase link"
+F 6 "50" H 5950 1250 50  0001 C CNN "min_quantity"
 	1    5950 1250
 	1    0    0    -1  
 $EndComp
@@ -882,7 +913,10 @@ P 9850 2450
 F 0 "C92" H 9965 2496 50  0000 L CNN
 F 1 "10uF" H 9965 2405 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 9888 2300 50  0001 C CNN
-F 3 "~" H 9850 2450 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/13b3/0900766b813b3e64.pdf" H 9850 2450 50  0001 C CNN
+F 4 "0.07" H 9850 2450 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/8467293/" H 9850 2450 50  0001 C CNN "Purchase link"
+F 6 "100" H 9850 2450 50  0001 C CNN "min_quantity"
 	1    9850 2450
 	1    0    0    -1  
 $EndComp
@@ -893,7 +927,10 @@ P 10250 2450
 F 0 "C93" H 10365 2496 50  0000 L CNN
 F 1 "100nF" H 10365 2405 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 10288 2300 50  0001 C CNN
-F 3 "~" H 10250 2450 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/0dc2/0900766b80dc2409.pdf" H 10250 2450 50  0001 C CNN
+F 4 "0.01" H 10250 2450 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/6983251/" H 10250 2450 50  0001 C CNN "Purchase link"
+F 6 "50" H 10250 2450 50  0001 C CNN "min_quantity"
 	1    10250 2450
 	1    0    0    -1  
 $EndComp
@@ -904,7 +941,10 @@ P 6650 1250
 F 0 "C5" H 6765 1296 50  0000 L CNN
 F 1 "10uF" H 6765 1205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6688 1100 50  0001 C CNN
-F 3 "~" H 6650 1250 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/13b3/0900766b813b3e64.pdf" H 6650 1250 50  0001 C CNN
+F 4 "0.07" H 6650 1250 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/8467293/" H 6650 1250 50  0001 C CNN "Purchase link"
+F 6 "100" H 6650 1250 50  0001 C CNN "min_quantity"
 	1    6650 1250
 	1    0    0    -1  
 $EndComp
@@ -915,7 +955,10 @@ P 7050 1250
 F 0 "C6" H 7165 1296 50  0000 L CNN
 F 1 "100nF" H 7165 1205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 7088 1100 50  0001 C CNN
-F 3 "~" H 7050 1250 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/0dc2/0900766b80dc2409.pdf" H 7050 1250 50  0001 C CNN
+F 4 "0.01" H 7050 1250 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/6983251/" H 7050 1250 50  0001 C CNN "Purchase link"
+F 6 "50" H 7050 1250 50  0001 C CNN "min_quantity"
 	1    7050 1250
 	1    0    0    -1  
 $EndComp
@@ -926,7 +969,10 @@ P 1950 4950
 F 0 "C7" H 2065 4996 50  0000 L CNN
 F 1 "100nF" H 2065 4905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 1988 4800 50  0001 C CNN
-F 3 "~" H 1950 4950 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/0dc2/0900766b80dc2409.pdf" H 1950 4950 50  0001 C CNN
+F 4 "0.01" H 1950 4950 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/6983251/" H 1950 4950 50  0001 C CNN "Purchase link"
+F 6 "50" H 1950 4950 50  0001 C CNN "min_quantity"
 	1    1950 4950
 	-1   0    0    -1  
 $EndComp
@@ -935,9 +981,12 @@ L Device:R R1
 U 1 1 5D2BB0F2
 P 2000 4050
 F 0 "R1" H 2070 4096 50  0000 L CNN
-F 1 "1K" H 2070 4005 50  0000 L CNN
+F 1 "1.6K" H 2070 4005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 1930 4050 50  0001 C CNN
 F 3 "~" H 2000 4050 50  0001 C CNN
+F 4 "0.002" H 2000 4050 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6789917/" H 2000 4050 50  0001 C CNN "Purchase link"
+F 6 "50" H 2000 4050 50  0001 C CNN "min_quantity"
 	1    2000 4050
 	-1   0    0    -1  
 $EndComp
@@ -948,7 +997,10 @@ P 4000 1250
 F 0 "C1" H 4115 1296 50  0000 L CNN
 F 1 "10uF" H 4115 1205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 4038 1100 50  0001 C CNN
-F 3 "~" H 4000 1250 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/13b3/0900766b813b3e64.pdf" H 4000 1250 50  0001 C CNN
+F 4 "0.07" H 4000 1250 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/8467293/" H 4000 1250 50  0001 C CNN "Purchase link"
+F 6 "100" H 4000 1250 50  0001 C CNN "min_quantity"
 	1    4000 1250
 	1    0    0    -1  
 $EndComp
@@ -959,7 +1011,10 @@ P 4550 1250
 F 0 "C3" H 4665 1296 50  0000 L CNN
 F 1 "100nF" H 4665 1205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 4588 1100 50  0001 C CNN
-F 3 "~" H 4550 1250 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/0dc2/0900766b80dc2409.pdf" H 4550 1250 50  0001 C CNN
+F 4 "0.01" H 4550 1250 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/6983251/" H 4550 1250 50  0001 C CNN "Purchase link"
+F 6 "50" H 4550 1250 50  0001 C CNN "min_quantity"
 	1    4550 1250
 	1    0    0    -1  
 $EndComp
@@ -970,7 +1025,10 @@ P 3850 2250
 F 0 "C2" H 3965 2296 50  0000 L CNN
 F 1 "10uF" H 3965 2205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3888 2100 50  0001 C CNN
-F 3 "~" H 3850 2250 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/13b3/0900766b813b3e64.pdf" H 3850 2250 50  0001 C CNN
+F 4 "0.07" H 3850 2250 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/8467293/" H 3850 2250 50  0001 C CNN "Purchase link"
+F 6 "100" H 3850 2250 50  0001 C CNN "min_quantity"
 	1    3850 2250
 	1    0    0    -1  
 $EndComp
@@ -981,7 +1039,10 @@ P 4400 2250
 F 0 "C4" H 4515 2296 50  0000 L CNN
 F 1 "100nF" H 4515 2205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 4438 2100 50  0001 C CNN
-F 3 "~" H 4400 2250 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/0dc2/0900766b80dc2409.pdf" H 4400 2250 50  0001 C CNN
+F 4 "0.01" H 4400 2250 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/6983251/" H 4400 2250 50  0001 C CNN "Purchase link"
+F 6 "50" H 4400 2250 50  0001 C CNN "min_quantity"
 	1    4400 2250
 	1    0    0    -1  
 $EndComp

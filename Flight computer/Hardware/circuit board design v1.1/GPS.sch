@@ -98,6 +98,8 @@ F 0 "R2" V 6743 3100 50  0000 C CNN
 F 1 "10 Ohm" V 6834 3100 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 6880 3100 50  0001 C CNN
 F 3 "~" H 6950 3100 50  0001 C CNN
+F 4 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6788703/" H 6950 3100 50  0001 C CNN "Purchase link"
+F 5 "50" H 6950 3100 50  0001 C CNN "min_quantity"
 	1    6950 3100
 	0    1    1    0   
 $EndComp
@@ -129,6 +131,9 @@ F 0 "C8" H 8492 2796 50  0000 L CNN
 F 1 "10nF" H 8492 2705 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 8400 2750 50  0001 C CNN
 F 3 "~" H 8400 2750 50  0001 C CNN
+F 4 "0.031" H 8400 2750 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/8391727/" H 8400 2750 50  0001 C CNN "Purchase link"
+F 6 "100" H 8400 2750 50  0001 C CNN "min_quantity"
 	1    8400 2750
 	1    0    0    -1  
 $EndComp
@@ -190,7 +195,10 @@ AR Path="/5D5B165E/5D99D571" Ref="C11"  Part="1"
 F 0 "C11" H 5208 2896 50  0000 R CNN
 F 1 "100nF" H 5208 2805 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5300 2850 50  0001 C CNN
-F 3 "~" H 5300 2850 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/0dc2/0900766b80dc2409.pdf" H 5300 2850 50  0001 C CNN
+F 4 "0.01" H 5300 2850 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/6983251/" H 5300 2850 50  0001 C CNN "Purchase link"
+F 6 "50" H 5300 2850 50  0001 C CNN "min_quantity"
 	1    5300 2850
 	1    0    0    -1  
 $EndComp
@@ -203,7 +211,10 @@ AR Path="/5D5B165E/5D99D56B" Ref="C12"  Part="1"
 F 0 "C12" H 5558 2896 50  0000 R CNN
 F 1 "10uF" H 5558 2805 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5650 2850 50  0001 C CNN
-F 3 "~" H 5650 2850 50  0001 C CNN
+F 3 "https://docs-emea.rs-online.com/webdocs/13b3/0900766b813b3e64.pdf" H 5650 2850 50  0001 C CNN
+F 4 "0.07" H 5650 2850 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/8467293/" H 5650 2850 50  0001 C CNN "Purchase link"
+F 6 "100" H 5650 2850 50  0001 C CNN "min_quantity"
 	1    5650 2850
 	1    0    0    -1  
 $EndComp

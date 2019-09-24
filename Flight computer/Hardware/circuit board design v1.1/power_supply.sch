@@ -125,6 +125,9 @@ F 0 "C34" H 7815 4046 50  0000 L CNN
 F 1 "10nF" H 7815 3955 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 7738 3850 50  0001 C CNN
 F 3 "~" H 7700 4000 50  0001 C CNN
+F 4 "0.031" H 7700 4000 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/8391727/" H 7700 4000 50  0001 C CNN "Purchase link"
+F 6 "100" H 7700 4000 50  0001 C CNN "min_quantity"
 	1    7700 4000
 	1    0    0    -1  
 $EndComp
@@ -246,6 +249,9 @@ F 0 "C36" H 8215 4046 50  0000 L CNN
 F 1 "1uF" H 8215 3955 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8138 3850 50  0001 C CNN
 F 3 "~" H 8100 4000 50  0001 C CNN
+F 4 "0.01" H 8100 4000 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/1358359/" H 8100 4000 50  0001 C CNN "Purchase link"
+F 6 "250" H 8100 4000 50  0001 C CNN "min_quantity"
 	1    8100 4000
 	1    0    0    -1  
 $EndComp
@@ -272,6 +278,9 @@ F 0 "C35" H 6765 4046 50  0000 L CNN
 F 1 "1uF" H 6765 3955 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6688 3850 50  0001 C CNN
 F 3 "~" H 6650 4000 50  0001 C CNN
+F 4 "0.01" H 6650 4000 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/1358359/" H 6650 4000 50  0001 C CNN "Purchase link"
+F 6 "250" H 6650 4000 50  0001 C CNN "min_quantity"
 	1    6650 4000
 	1    0    0    -1  
 $EndComp
@@ -421,9 +430,12 @@ L Device:R R28
 U 1 1 5D759625
 P 4150 4800
 F 0 "R28" H 4220 4846 50  0000 L CNN
-F 1 "100K" H 4220 4755 50  0000 L CNN
+F 1 "120K" H 4220 4755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4080 4800 50  0001 C CNN
 F 3 "~" H 4150 4800 50  0001 C CNN
+F 4 "0.035" H 4150 4800 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6789715/" H 4150 4800 50  0001 C CNN "Purchase link"
+F 6 "50" H 4150 4800 50  0001 C CNN "min_quantity"
 	1    4150 4800
 	1    0    0    -1  
 $EndComp
@@ -432,9 +444,12 @@ L Device:R R29
 U 1 1 5D75961B
 P 4150 5300
 F 0 "R29" H 4220 5346 50  0000 L CNN
-F 1 "100K" H 4220 5255 50  0000 L CNN
+F 1 "120K" H 4220 5255 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4080 5300 50  0001 C CNN
 F 3 "~" H 4150 5300 50  0001 C CNN
+F 4 "0.035" H 4150 5300 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6789715/" H 4150 5300 50  0001 C CNN "Purchase link"
+F 6 "50" H 4150 5300 50  0001 C CNN "min_quantity"
 	1    4150 5300
 	1    0    0    -1  
 $EndComp
