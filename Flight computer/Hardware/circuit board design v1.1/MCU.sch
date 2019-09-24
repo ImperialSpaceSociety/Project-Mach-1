@@ -633,10 +633,6 @@ Wire Wire Line
 Wire Wire Line
 	1450 4750 1450 5900
 Connection ~ 4850 5900
-Wire Notes Line
-	2550 6100 2550 3200
-Wire Notes Line
-	550  3200 550  6100
 Wire Wire Line
 	3900 4050 2800 4050
 Wire Wire Line
@@ -1168,6 +1164,27 @@ F 6 "10" H 8300 2650 50  0001 C CNN "min_quantity"
 	1    8300 2650
 	1    0    0    -1  
 $EndComp
+NoConn ~ 5100 3600
+NoConn ~ 5100 3500
+Text HLabel 4550 4700 0    50   Input ~ 0
+MCU_PA18
+Wire Wire Line
+	4550 4700 5100 4700
+Text HLabel 4550 4800 0    50   Input ~ 0
+MCU_PA19
+Wire Wire Line
+	4550 4800 5100 4800
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 5D96BBFC
+P 950 6800
+F 0 "J?" H 868 7117 50  0000 C CNN
+F 1 "Conn_01x04" H 868 7026 50  0000 C CNN
+F 2 "Connector:NS-Tech_Grove_1x04_P2mm_Vertical" H 950 6800 50  0001 C CNN
+F 3 "~" H 950 6800 50  0001 C CNN
+	1    950  6800
+	-1   0    0    -1  
+$EndComp
 $Comp
 L flight-computer:ATSAMD21J18A-AU U7
 U 1 1 5D8A9F24
@@ -1182,16 +1199,56 @@ F 6 "2.54" H 6100 4400 50  0001 C CNN "Cost"
 	1    6100 4400
 	1    0    0    -1  
 $EndComp
-NoConn ~ 5100 3800
-NoConn ~ 5100 3700
-NoConn ~ 5100 3600
-NoConn ~ 5100 3500
-Text HLabel 4550 4700 0    50   Input ~ 0
-MCU_PA18
 Wire Wire Line
-	4550 4700 5100 4700
-Text HLabel 4550 4800 0    50   Input ~ 0
-MCU_PA19
+	1150 6800 1750 6800
+Wire Notes Line
+	550  7450 2550 7450
+Wire Notes Line
+	2550 3200 2550 7450
+Wire Notes Line
+	550  3200 550  7450
+Text Label 4550 3700 0    50   ~ 0
+SDA_PA08
+Text Label 4550 3800 0    50   ~ 0
+SCL_PA09
 Wire Wire Line
-	4550 4800 5100 4800
+	4550 3700 5100 3700
+Wire Wire Line
+	4550 3800 5100 3800
+Text Label 1750 6800 2    50   ~ 0
+SDA_PA08
+Text Label 1750 6700 2    50   ~ 0
+SCL_PA09
+Wire Wire Line
+	1150 6700 1750 6700
+Wire Wire Line
+	2100 6900 2100 6550
+Wire Wire Line
+	1150 6900 2100 6900
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5DA417EA
+P 2100 6550
+F 0 "#PWR?" H 2100 6400 50  0001 C CNN
+F 1 "+3.3V" H 2115 6723 50  0000 C CNN
+F 2 "" H 2100 6550 50  0001 C CNN
+F 3 "" H 2100 6550 50  0001 C CNN
+	1    2100 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 7000 2100 7000
+Wire Wire Line
+	2100 7000 2100 7150
+$Comp
+L power:GND #PWR?
+U 1 1 5DA4D92B
+P 2100 7150
+F 0 "#PWR?" H 2100 6900 50  0001 C CNN
+F 1 "GND" H 2105 6977 50  0000 C CNN
+F 2 "" H 2100 7150 50  0001 C CNN
+F 3 "" H 2100 7150 50  0001 C CNN
+	1    2100 7150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

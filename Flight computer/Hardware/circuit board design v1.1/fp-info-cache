@@ -1,4 +1,4 @@
-15963819031329811
+15965388371874117
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -44239,6 +44239,13 @@ lga land grid array
 0
 12
 12
+flight-computer
+NS-Tech_Grove_1x04_P2mm_Vertical
+https://statics3.seeedstudio.com/images/opl/datasheet/3470130P1.pdf
+Grove-1x04
+0
+4
+4
 flight-computer
 PQFN50P450X300X100-16N
 
