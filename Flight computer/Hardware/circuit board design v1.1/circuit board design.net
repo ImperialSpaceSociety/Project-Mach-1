@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:\\Users\\Medad\\Documents\\GitHub\\Project-Mach-1\\Flight computer\\Hardware\\circuit board design v1.1\\circuit board design.sch")
-    (date "24/09/2019 23:59:23")
+    (date "25/09/2019 14:24:04")
     (tool "Eeschema (5.1.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
