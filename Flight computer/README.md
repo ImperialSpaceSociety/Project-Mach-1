@@ -21,3 +21,13 @@
 * 14 parameters to record: *4 characters*:{accl_x, accl_y, accl_z, gyro_x, gyro_y, gyro_z, compass_x, compass_y, compass_z} + *6 characters:*{pressure}+ *3 characters:*{temperature}+ *7 characters*{Longitude, latitude}+*4 characters:*{altitude}
 Assuming ascii encoding, 504 bits per string for raw data. Including commas and carriage return, each reading is ~600 bits.
 * Total data storage required: 600bits * 60s * 100hz * 3min = 10.8 Mbits = 10800000 bits
+
+## Major components of V1.1 flight computer
+* 100g 3 axis accelerometer: ST Microelectronics H3LIS100DL
+* 9 degree of freedom Accelerometer, Gyroscope and Magnetometer in 3 axis, single package: ST Microelectronics LSM9DS1
+* Temperature and pressure sensor: MS5607 by TE Connectivity
+* 433 Mhz ISM band Telemetry radio transceiver: Sillicon Labs SI4463
+* Ublox MAX M8Q GPS module with 
+* Atmel SAMD21 microcontroller, 64 pin TQFP package
+* Si7232DN Vishay Dual N-Channel 20 V (D-S) MOSFET for 2 channel pyros
+* GNSS Active Patch Antenna with Low-Noise Amplifier (LNA): Molex 2066400001
