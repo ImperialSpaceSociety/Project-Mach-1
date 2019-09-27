@@ -23,11 +23,11 @@ Assuming ascii encoding, 504 bits per string for raw data. Including commas and 
 * Total data storage required: 600bits * 60s * 100hz * 3min = 10.8 Mbits = 10800000 bits
 
 ## Major components of V1.1 flight computer
-* 100g 3 axis accelerometer: ST Microelectronics H3LIS100DL
-* 9 degree of freedom Accelerometer, Gyroscope and Magnetometer in 3 axis, single package: ST Microelectronics LSM9DS1
-* Temperature and pressure sensor: MS5607 by TE Connectivity
-* 433 Mhz ISM band Telemetry radio transceiver: Sillicon Labs SI4463
-* Ublox MAX M8Q GPS module with 
-* Atmel SAMD21 microcontroller, 64 pin TQFP package
-* Si7232DN Vishay Dual N-Channel 20 V (D-S) MOSFET for 2 channel pyros
-* GNSS Active Patch Antenna with Low-Noise Amplifier (LNA): Molex 2066400001
+* ST Microelectronics H3LIS100DL: 100g 3-axis accelerometer
+* ST Microelectronics LSM9DS1: 9 degree-of-freedom Accelerometer, Gyroscope and Magnetometer in 3 axis
+* TE Connectivity MS5607: Temperature and pressure sensor
+* Sillicon Labs SI4463: 433 Mhz ISM band Telemetry radio transceiver
+* Ublox MAX M8Q: GPS module
+* Atmel SAMD21J18: Microcontroller 64 pin TQFP package
+* Vishay Si7232DN: Dual N-Channel 20 V (D-S) MOSFET for 2 channel pyros
+* Molex 2066400001: GNSS Active Patch Antenna with Low-Noise Amplifier
