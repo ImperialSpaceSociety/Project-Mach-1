@@ -38,6 +38,19 @@ The repository describes the four electronic Modules:
   * To trigger the deployment of the main parachute to aid recovery
 
 
+## Current progress
+* 25/9/19: The circuit board design files have been sent for manufacturing. Renders are as shown below.
+![alt text](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/Flight%20computer/Hardware/circuit%20board%20design%20v1.1/Capture%20ft1.PNG)
+![alt text](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/Flight%20computer/Hardware/circuit%20board%20design%20v1.1/Capture%20ft2.PNG)
+
+## TODO
+* build a base station
+* build the rocket
+* write all driver code for rocket flight computer(consider using FreeRTOS)
+* assemble all flight computer PCBs by soldering
+* Test all functions
+* Launch!
+
 
 ## License
 
