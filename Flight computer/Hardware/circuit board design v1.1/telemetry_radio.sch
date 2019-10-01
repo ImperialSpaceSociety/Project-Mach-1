@@ -459,6 +459,9 @@ F 0 "C21" H 1050 3500 50  0000 C CNN
 F 1 "33nF" H 1050 3400 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 800 3500 50  0001 C CNN
 F 3 "~" H 800 3500 50  0001 C CNN
+F 4 "0.008" H 800 3500 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/8392805/" H 800 3500 50  0001 C CNN "Purchase link"
+F 6 "100" H 800 3500 50  0001 C CNN "min_quantity"
 	1    800  3500
 	1    0    0    1   
 $EndComp
