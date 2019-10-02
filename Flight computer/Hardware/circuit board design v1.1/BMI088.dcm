@@ -1,8 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP BMI088
-D High-performance 6-axis inertial sensor accelerometer + gyroscope
-F https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMI088-DS001.pdf
-$ENDCMP
-#
-#End Doc Library
