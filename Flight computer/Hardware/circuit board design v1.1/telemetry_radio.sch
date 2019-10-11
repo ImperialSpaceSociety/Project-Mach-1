@@ -365,6 +365,9 @@ F 0 "C9" V 7892 4296 50  0000 L CNN
 F 1 "270pF" V 8050 4200 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 7800 4250 50  0001 C CNN
 F 3 "~" H 7800 4250 50  0001 C CNN
+F 4 "0.01" H 7800 4250 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/9155553/" H 7800 4250 50  0001 C CNN "Purchase link"
+F 6 "200" H 7800 4250 50  0001 C CNN "min_quantity"
 	1    7800 4250
 	0    1    -1   0   
 $EndComp
@@ -406,6 +409,9 @@ F 0 "C19" H 3608 2496 50  0000 R CNN
 F 1 "270pF" H 3608 2405 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 3700 2450 50  0001 C CNN
 F 3 "~" H 3700 2450 50  0001 C CNN
+F 4 "0.01" H 3700 2450 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/mlccs-multilayer-ceramic-capacitors/9155553/" H 3700 2450 50  0001 C CNN "Purchase link"
+F 6 "200" H 3700 2450 50  0001 C CNN "min_quantity"
 	1    3700 2450
 	-1   0    0    -1  
 $EndComp

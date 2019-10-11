@@ -700,11 +700,11 @@ L Device:R R12
 U 1 1 5D70BAB2
 P 4450 6600
 F 0 "R12" H 4520 6646 50  0000 L CNN
-F 1 "1.6K" H 4520 6555 50  0000 L CNN
+F 1 "1K" H 4520 6555 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 6600 50  0001 C CNN
 F 3 "~" H 4450 6600 50  0001 C CNN
-F 4 "0.002" H 4450 6600 50  0001 C CNN "Cost"
-F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6789917/" H 4450 6600 50  0001 C CNN "Purchase link"
+F 4 "0.035" H 4450 6600 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/2132266/" H 4450 6600 50  0001 C CNN "Purchase link"
 F 6 "50" H 4450 6600 50  0001 C CNN "min_quantity"
 	1    4450 6600
 	-1   0    0    -1  
@@ -773,11 +773,11 @@ L Device:R R25
 U 1 1 5D84A9D3
 P 10200 4900
 F 0 "R25" V 10100 5000 50  0000 C CNN
-F 1 "1.6K" V 10100 4850 50  0000 C CNN
+F 1 "1K" V 10100 4850 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 10130 4900 50  0001 C CNN
 F 3 "~" H 10200 4900 50  0001 C CNN
-F 4 "0.002" H 10200 4900 50  0001 C CNN "Cost"
-F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6789917/" H 10200 4900 50  0001 C CNN "Purchase link"
+F 4 "0.035" H 10200 4900 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/2132266/" H 10200 4900 50  0001 C CNN "Purchase link"
 F 6 "50" H 10200 4900 50  0001 C CNN "min_quantity"
 	1    10200 4900
 	0    1    1    0   
@@ -790,6 +790,9 @@ F 0 "D1" H 10593 4645 50  0000 C CNN
 F 1 "RED_LED" H 10593 4736 50  0000 C CNN
 F 2 "LED_SMD:LED_0603_1608Metric" H 10600 4900 50  0001 C CNN
 F 3 "~" H 10600 4900 50  0001 C CNN
+F 4 "0.038" H 10600 4900 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/leds/0450711/" H 10600 4900 50  0001 C CNN "Purchase link"
+F 6 "50" H 10600 4900 50  0001 C CNN "min_quantity"
 	1    10600 4900
 	-1   0    0    1   
 $EndComp
@@ -798,11 +801,11 @@ L Device:R R26
 U 1 1 5D8A257E
 P 10200 5300
 F 0 "R26" V 10100 5400 50  0000 C CNN
-F 1 "1.6K" V 10100 5250 50  0000 C CNN
+F 1 "1K" V 10100 5250 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 10130 5300 50  0001 C CNN
 F 3 "~" H 10200 5300 50  0001 C CNN
-F 4 "0.002" H 10200 5300 50  0001 C CNN "Cost"
-F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6789917/" H 10200 5300 50  0001 C CNN "Purchase link"
+F 4 "0.035" H 10200 5300 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/2132266/" H 10200 5300 50  0001 C CNN "Purchase link"
 F 6 "50" H 10200 5300 50  0001 C CNN "min_quantity"
 	1    10200 5300
 	0    1    1    0   
@@ -977,11 +980,11 @@ L Device:R R1
 U 1 1 5D2BB0F2
 P 2000 4050
 F 0 "R1" H 2070 4096 50  0000 L CNN
-F 1 "1.6K" H 2070 4005 50  0000 L CNN
+F 1 "1K" H 2070 4005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 1930 4050 50  0001 C CNN
 F 3 "~" H 2000 4050 50  0001 C CNN
-F 4 "0.002" H 2000 4050 50  0001 C CNN "Cost"
-F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/6789917/" H 2000 4050 50  0001 C CNN "Purchase link"
+F 4 "0.035" H 2000 4050 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/2132266/" H 2000 4050 50  0001 C CNN "Purchase link"
 F 6 "50" H 2000 4050 50  0001 C CNN "min_quantity"
 	1    2000 4050
 	-1   0    0    -1  

@@ -171,9 +171,12 @@ L Device:R R16
 U 1 1 5D743BA0
 P 6950 3300
 F 0 "R16" H 7020 3346 50  0000 L CNN
-F 1 "27K" H 7020 3255 50  0000 L CNN
+F 1 "22K" H 7020 3255 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 3300 50  0001 C CNN
 F 3 "~" H 6950 3300 50  0001 C CNN
+F 4 "0.028" H 6950 3300 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/7408855/" H 6950 3300 50  0001 C CNN "Purchase link"
+F 6 "50" H 6950 3300 50  0001 C CNN "min_quantity"
 	1    6950 3300
 	1    0    0    -1  
 $EndComp
@@ -226,9 +229,12 @@ L Device:R R6
 U 1 1 5D6A6316
 P 6950 2050
 F 0 "R6" H 7020 2096 50  0000 L CNN
-F 1 "27K" H 7020 2005 50  0000 L CNN
+F 1 "22K" H 7020 2005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 2050 50  0001 C CNN
 F 3 "~" H 6950 2050 50  0001 C CNN
+F 4 "0.028" H 6950 2050 50  0001 C CNN "Cost"
+F 5 "https://uk.rs-online.com/web/p/surface-mount-fixed-resistors/7408855/" H 6950 2050 50  0001 C CNN "Purchase link"
+F 6 "50" H 6950 2050 50  0001 C CNN "min_quantity"
 	1    6950 2050
 	1    0    0    -1  
 $EndComp
