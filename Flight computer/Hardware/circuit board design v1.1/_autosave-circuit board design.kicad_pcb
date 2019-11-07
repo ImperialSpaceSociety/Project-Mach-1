@@ -18,7 +18,7 @@
   )
 
   (layers
-    (0 F.Cu signal hide)
+    (0 F.Cu signal)
     (1 GND.Cu power hide)
     (2 VCC.Cu power hide)
     (31 B.Cu signal hide)
