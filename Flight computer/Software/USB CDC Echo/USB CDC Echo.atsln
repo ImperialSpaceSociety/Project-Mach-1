@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Atmel Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "USB CDC Echo", "USB CDC Echo\USB CDC Echo.cproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "USB CDC Echo external xtal", "..\USB CDC Echo external xtal\USB CDC Echo external xtal.cproj", "{D540FAB0-D19C-47BD-B5AC-6D811A4EE185}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Release|ARM = Release|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|ARM.Build.0 = Debug|ARM
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|ARM.ActiveCfg = Release|ARM
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|ARM.Build.0 = Release|ARM
+		{D540FAB0-D19C-47BD-B5AC-6D811A4EE185}.Debug|ARM.ActiveCfg = Debug|ARM
+		{D540FAB0-D19C-47BD-B5AC-6D811A4EE185}.Debug|ARM.Build.0 = Debug|ARM
+		{D540FAB0-D19C-47BD-B5AC-6D811A4EE185}.Release|ARM.ActiveCfg = Release|ARM
+		{D540FAB0-D19C-47BD-B5AC-6D811A4EE185}.Release|ARM.Build.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
