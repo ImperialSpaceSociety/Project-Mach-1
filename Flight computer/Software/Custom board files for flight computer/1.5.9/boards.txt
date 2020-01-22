@@ -1320,3 +1320,43 @@ adafruit_hallowing_m4.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
 adafruit_hallowing_m4.menu.debug.off=Off
 adafruit_hallowing_m4.menu.debug.on=On
 adafruit_hallowing_m4.menu.debug.on.build.flags.debug=-g
+
+
+
+# Rocket Flight Computer (SAMD21)
+# ------------------------------
+rocket_flight_computer.name=Rocket Flight Computer
+rocket_flight_computer.vid.0=0x239A
+rocket_flight_computer.pid.0=0x800F
+rocket_flight_computer.vid.1=0x239A
+rocket_flight_computer.pid.1=0x000F
+rocket_flight_computer.vid.2=0x239A
+rocket_flight_computer.pid.2=0x8012
+rocket_flight_computer.upload.tool=bossac
+rocket_flight_computer.upload.protocol=sam-ba
+rocket_flight_computer.upload.maximum_size=262144
+rocket_flight_computer.upload.offset=0x2000
+rocket_flight_computer.upload.use_1200bps_touch=true
+rocket_flight_computer.upload.wait_for_upload_port=true
+rocket_flight_computer.upload.native_usb=true
+rocket_flight_computer.build.mcu=cortex-m0plus
+rocket_flight_computer.build.f_cpu=48000000L
+rocket_flight_computer.build.usb_product="Rocket Flight Computer"
+rocket_flight_computer.build.usb_manufacturer="Imperial College Space Society"
+rocket_flight_computer.build.board=Rocket Flight Computer
+rocket_flight_computer.build.core=arduino
+rocket_flight_computer.build.extra_flags=-DCRYSTALLESS -DADAFRUIT_ITSYBITSY_M0 -D__SAMD21G18A__ -DARM_MATH_CM0PLUS {build.usb_flags}
+rocket_flight_computer.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+rocket_flight_computer.build.openocdscript=openocd_scripts/itsybitsy_m0.cfg
+rocket_flight_computer.build.variant=rocket_flight_computer
+rocket_flight_computer.build.variant_system_lib=
+rocket_flight_computer.build.vid=0x239A
+rocket_flight_computer.build.pid=0x800F
+rocket_flight_computer.bootloader.tool=openocd
+rocket_flight_computer.bootloader.file=itsybitsyM0/bootloader-itsybitsy_m0-v2.0.0-adafruit.5.bin
+rocket_flight_computer.menu.usbstack.arduino=Arduino
+rocket_flight_computer.menu.usbstack.tinyusb=TinyUSB
+rocket_flight_computer.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+rocket_flight_computer.menu.debug.off=Off
+rocket_flight_computer.menu.debug.on=On
+rocket_flight_computer.menu.debug.on.build.flags.debug=-g

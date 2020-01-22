@@ -53,9 +53,9 @@ extern "C"
  *----------------------------------------------------------------------------*/
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT           (26u)
-#define NUM_DIGITAL_PINS     (20u)
-#define NUM_ANALOG_INPUTS    (12u)
+#define PINS_COUNT           (49u)
+#define NUM_DIGITAL_PINS     (16u)
+#define NUM_ANALOG_INPUTS    (15u)
 #define NUM_ANALOG_OUTPUTS   (1u)
 #define analogInputToDigitalPin(p)  ((p < 12u) ? (p) + PIN_A0 : -1)
 
@@ -77,14 +77,14 @@ extern "C"
 // #define digitalPinToTimer(P)
 
 // LEDs
-#define PIN_LED_13           (13u)
-#define PIN_LED              PIN_LED_13
-#define LED_BUILTIN          PIN_LED_13
+#define PIN_LED_37           (37u)
+#define PIN_LED              PIN_LED_37
+#define LED_BUILTIN          PIN_LED_37
 
 /*
  * Analog pins
  */
-#define PIN_A0               (14ul)
+#define PIN_A0               (19ul)
 #define PIN_A1               (PIN_A0 + 1)
 #define PIN_A2               (PIN_A0 + 2)
 #define PIN_A3               (PIN_A0 + 3)
@@ -96,21 +96,26 @@ extern "C"
 #define PIN_A9               (PIN_A0 + 9)
 #define PIN_A10              (PIN_A0 + 10)
 #define PIN_A11              (PIN_A0 + 11)
-#define PIN_DAC0             (14ul)
+#define PIN_A12              (PIN_A0 + 12)
+#define PIN_A13              (PIN_A0 + 13)
+//#define PIN_DAC0             (14ul)
 
-static const uint8_t A0  = PIN_A0;
-static const uint8_t A1  = PIN_A1;
-static const uint8_t A2  = PIN_A2;
-static const uint8_t A3  = PIN_A3;
-static const uint8_t A4  = PIN_A4;
-static const uint8_t A5  = PIN_A5;
+static const uint8_t A0  = PIN_A0 ;
+static const uint8_t A1  = PIN_A1 ;
+static const uint8_t A2  = PIN_A2 ;
+static const uint8_t A3  = PIN_A3 ;
+static const uint8_t A4  = PIN_A4 ;
+static const uint8_t A5  = PIN_A5 ;
 static const uint8_t A6  = PIN_A6 ;
 static const uint8_t A7  = PIN_A7 ;
 static const uint8_t A8  = PIN_A8 ;
 static const uint8_t A9  = PIN_A9 ;
 static const uint8_t A10 = PIN_A10 ;
 static const uint8_t A11 = PIN_A11 ;
-static const uint8_t DAC0 = PIN_DAC0;
+static const uint8_t A12 = PIN_A12 ;
+static const uint8_t A13 = PIN_A13 ;
+
+//static const uint8_t DAC0 = PIN_DAC0;
 
 #define ADC_RESOLUTION		12
 
@@ -121,12 +126,12 @@ static const uint8_t ATN = PIN_ATN;
 /*
  * Serial interfaces
  */
-
+// for gps uart?
 // Serial1
-#define PIN_SERIAL1_RX       (0ul)
-#define PIN_SERIAL1_TX       (1ul)
-#define PAD_SERIAL1_TX       (UART_TX_PAD_2)
-#define PAD_SERIAL1_RX       (SERCOM_RX_PAD_3)
+#define PIN_SERIAL1_RX       (35ul)
+#define PIN_SERIAL1_TX       (36ul)
+#define PAD_SERIAL1_TX       (UART_TX_PAD_1)
+#define PAD_SERIAL1_RX       (SERCOM_RX_PAD_0)
 
 /*
  * SPI Interfaces
@@ -163,8 +168,8 @@ static const uint8_t SCK1  = PIN_SPI_SCK ;
  */
 #define WIRE_INTERFACES_COUNT 1
 
-#define PIN_WIRE_SDA         (26u)
-#define PIN_WIRE_SCL         (27u)
+#define PIN_WIRE_SDA         (43u)
+#define PIN_WIRE_SCL         (44u)
 #define PERIPH_WIRE          sercom3
 #define WIRE_IT_HANDLER      SERCOM3_Handler
 
