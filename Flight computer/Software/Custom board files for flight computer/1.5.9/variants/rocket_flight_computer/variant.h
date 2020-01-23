@@ -129,9 +129,11 @@ static const uint8_t ATN = PIN_ATN;
 // for gps uart?
 // Serial1
 #define PIN_SERIAL1_RX       (35ul)
+#define PAD_SERIAL1_RX       (SERCOM_RX_PAD_0)
+
 #define PIN_SERIAL1_TX       (36ul)
 #define PAD_SERIAL1_TX       (UART_TX_PAD_2)
-#define PAD_SERIAL1_RX       (SERCOM_RX_PAD_0)
+
 
 /*
  * SPI Interfaces

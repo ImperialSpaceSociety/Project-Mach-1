@@ -16,6 +16,10 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+/* This code is modified from the itsybitsy m0 code which was originally for a SAMD21G variant. 
+ * The rocket flight computer uses the SAMD21J variant so it is slightly different
+ */
+
 #include "variant.h"
 
 /*
@@ -26,8 +30,8 @@ const PinDescription g_APinDescription[]=
   // 0..13 - Digital pins
   // ----------------------
   // 0/1 - SERCOM/UART (Serial1)
-  { PORTA, 16, PIO_SERCOM, (PIN_ATTR_DIGITAL), No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_11 }, // RX: SERCOM1/PAD[0]
-  { PORTA, 17, PIO_SERCOM, (PIN_ATTR_DIGITAL), No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_10 }, // TX: SERCOM1/PAD[1]
+  { PORTA, 16, PIO_SERCOM, (PIN_ATTR_DIGITAL), No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_0 }, // RX: SERCOM1/PAD[0]
+  { PORTA, 17, PIO_SERCOM, (PIN_ATTR_DIGITAL), No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_1}, // TX: SERCOM1/PAD[1]
 
   // 2..12
   // Digital Low
@@ -117,9 +121,9 @@ SERCOM sercom3( SERCOM3 ) ;
 SERCOM sercom4( SERCOM4 ) ;
 SERCOM sercom5( SERCOM5 ) ;
 
-Uart Serial1( &sercom0, PIN_SERIAL1_RX, PIN_SERIAL1_TX, PAD_SERIAL1_RX, PAD_SERIAL1_TX ) ;
+Uart Serial1( &sercom1, PIN_SERIAL1_RX, PIN_SERIAL1_TX, PAD_SERIAL1_RX, PAD_SERIAL1_TX ) ;
 
-void SERCOM0_Handler()
+void SERCOM1_Handler()
 {
   Serial1.IrqHandler();
 }
