@@ -98,7 +98,7 @@ extern "C"
 #define PIN_A11              (PIN_A0 + 11)
 #define PIN_A12              (PIN_A0 + 12)
 #define PIN_A13              (PIN_A0 + 13)
-//#define PIN_DAC0             (14ul)
+#define PIN_DAC0             (14ul)
 
 static const uint8_t A0  = PIN_A0 ;
 static const uint8_t A1  = PIN_A1 ;
@@ -115,7 +115,7 @@ static const uint8_t A11 = PIN_A11 ;
 static const uint8_t A12 = PIN_A12 ;
 static const uint8_t A13 = PIN_A13 ;
 
-//static const uint8_t DAC0 = PIN_DAC0;
+static const uint8_t DAC0 = PIN_DAC0;
 
 #define ADC_RESOLUTION		12
 
@@ -130,7 +130,7 @@ static const uint8_t ATN = PIN_ATN;
 // Serial1
 #define PIN_SERIAL1_RX       (35ul)
 #define PIN_SERIAL1_TX       (36ul)
-#define PAD_SERIAL1_TX       (UART_TX_PAD_1)
+#define PAD_SERIAL1_TX       (UART_TX_PAD_2)
 #define PAD_SERIAL1_RX       (SERCOM_RX_PAD_0)
 
 /*

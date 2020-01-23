@@ -1325,7 +1325,7 @@ adafruit_hallowing_m4.menu.debug.on.build.flags.debug=-g
 
 # Rocket Flight Computer (SAMD21)
 # ------------------------------
-rocket_flight_computer.name=Rocket Flight Computer
+rocket_flight_computer.name=rocket_flight_computer
 rocket_flight_computer.vid.0=0x239A
 rocket_flight_computer.pid.0=0x800F
 rocket_flight_computer.vid.1=0x239A
@@ -1341,9 +1341,9 @@ rocket_flight_computer.upload.wait_for_upload_port=true
 rocket_flight_computer.upload.native_usb=true
 rocket_flight_computer.build.mcu=cortex-m0plus
 rocket_flight_computer.build.f_cpu=48000000L
-rocket_flight_computer.build.usb_product="Rocket Flight Computer"
+rocket_flight_computer.build.usb_product="rocket_flight_computer"
 rocket_flight_computer.build.usb_manufacturer="Imperial College Space Society"
-rocket_flight_computer.build.board=Rocket Flight Computer
+rocket_flight_computer.build.board=rocket_flight_computer
 rocket_flight_computer.build.core=arduino
 rocket_flight_computer.build.extra_flags=-DCRYSTALLESS -DADAFRUIT_ITSYBITSY_M0 -D__SAMD21G18A__ -DARM_MATH_CM0PLUS {build.usb_flags}
 rocket_flight_computer.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
