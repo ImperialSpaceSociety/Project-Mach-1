@@ -29,16 +29,16 @@
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <EraseKey />
     <AsfFrameworkConfig>
-      <framework-data xmlns="">
-        <options />
-        <configurations />
-        <files />
-        <documentation help="" />
-        <offline-documentation help="" />
-        <dependencies>
-          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.47.0" />
-        </dependencies>
-      </framework-data>
+      <framework-data>
+  <options />
+  <configurations />
+  <files />
+  <documentation help="" />
+  <offline-documentation help="" />
+  <dependencies>
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.26.0" />
+  </dependencies>
+</framework-data>
     </AsfFrameworkConfig>
     <atStartFilePath>.atmelstart\atmel_start_config.atstart</atStartFilePath>
     <GpdscFilePath>.atmelstart\AtmelStart.gpdsc</GpdscFilePath>

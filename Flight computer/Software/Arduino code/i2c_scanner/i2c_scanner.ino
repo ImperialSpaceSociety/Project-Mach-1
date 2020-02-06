@@ -27,6 +27,7 @@
 //
 
 #include <Wire.h>
+byte val = 0;
 
 
 void setup()
@@ -52,6 +53,9 @@ void loop()
     // the Write.endTransmisstion to see if
     // a device did acknowledge to the address.
     Wire.beginTransmission(address);
+    
+    Wire.write(val);  ///////////////////////////////////// sketch works ok when this line added
+
     error = Wire.endTransmission();
 
     if (error == 0)
