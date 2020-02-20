@@ -19,7 +19,7 @@
 
 */
 
-#include "MS5xxx.h"
+#include "MS5607.h"
 
 MS5xxx::MS5xxx(TwoWire *aWire) : i2caddr(I2C_MS5607) {
 	_Wire=aWire;
@@ -197,4 +197,3 @@ unsigned char MS5xxx::CRCcodeTest(){
 	ReadProm();
 	return crc;
 }
-

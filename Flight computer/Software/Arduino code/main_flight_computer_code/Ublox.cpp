@@ -38,7 +38,7 @@
 	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#include "SparkFun_Ublox_Arduino_Library.h"
+#include "Ublox.h"
 
 SFE_UBLOX_GPS::SFE_UBLOX_GPS(void)
 {

@@ -11,7 +11,7 @@
 
 
 #include "H3LIS100DL.h"
-#include "MS5607.h.h"
+#include "MS5607.h"
 #include "Ublox.h"
 
 #include <Wire.h>

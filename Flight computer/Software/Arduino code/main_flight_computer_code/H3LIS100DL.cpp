@@ -29,7 +29,7 @@
  * THE SOFTWARE.
  */
  
-#include "H3LIS331DL.h"
+#include "H3LIS100DL.h"
 #include <Wire.h>
 
 void H3LIS331DL::init(H3LIS331DL_ODR_t  odr,H3LIS331DL_Mode_t mode,H3LIS331DL_Fullscale_t fullScale){
