@@ -309,8 +309,8 @@ extern Uart Serial3;
 //#define WIRE_IT_HANDLER      SERCOM2_Handler
 
 #define PERIPH_SPI           sercom5
-#define PAD_SPI_TX           SPI_PAD_0_SCK_1
-#define PAD_SPI_RX           SERCOM_RX_PAD_2
+#define PAD_SPI_TX           SPI_PAD_2_SCK_3
+#define PAD_SPI_RX           SERCOM_RX_PAD_0
 
 #ifdef ENABLE_SPI1
 #define PERIPH_SPI1          sercom4
