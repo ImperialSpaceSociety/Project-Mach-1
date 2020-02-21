@@ -181,10 +181,10 @@ static const uint8_t RI_AS = (18u);
 #endif
 
 // SPI
-#define PIN_SPI_MISO         (61u)
-#define PIN_SPI_SS           (62u)
-#define PIN_SPI_MOSI         (63u)
-#define PIN_SPI_SCK          (64u)
+#define PIN_SPI_MISO         (61u) // pad 2
+#define PIN_SPI_SS           (62u) // pad 3
+#define PIN_SPI_MOSI         (63u) // pad 0
+#define PIN_SPI_SCK          (64u) // pad 1
 
 static const uint8_t MISO = PIN_SPI_MISO;
 static const uint8_t SS   = PIN_SPI_SS ;
@@ -309,8 +309,8 @@ extern Uart Serial3;
 //#define WIRE_IT_HANDLER      SERCOM2_Handler
 
 #define PERIPH_SPI           sercom5
-#define PAD_SPI_TX           SPI_PAD_2_SCK_3
-#define PAD_SPI_RX           SERCOM_RX_PAD_0
+#define PAD_SPI_TX           SPI_PAD_0_SCK_1
+#define PAD_SPI_RX           SERCOM_RX_PAD_2
 
 #ifdef ENABLE_SPI1
 #define PERIPH_SPI1          sercom4
