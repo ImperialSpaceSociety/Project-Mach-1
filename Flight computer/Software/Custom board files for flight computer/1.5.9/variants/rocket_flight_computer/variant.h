@@ -133,6 +133,11 @@ static const uint8_t A2  = PIN_A2 ;
 #define PIN_SPI_SCK          (33u) // pad 1
 
 #define PERIPH_SPI           sercom4
+#define PAD_SPI_TX           SPI_PAD_0_SCK_1
+#define PAD_SPI_RX           SERCOM_RX_PAD_2
+
+
+
 
 
 static const uint8_t MISO = PIN_SPI_MISO;
@@ -148,6 +153,8 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 #define PIN_SPI1_SCK         (24u)
 
 #define PERIPH_SPI1           sercom5
+#define PAD_SPI1_TX          SPI_PAD_0_SCK_1
+#define PAD_SPI1_RX          SERCOM_RX_PAD_2
 
 static const uint8_t MISO1 = PIN_SPI1_MISO;
 static const uint8_t SS1   = PIN_SPI1_SS;
@@ -242,15 +249,6 @@ extern Uart Serial1;
 #define SERIAL_PORT_HARDWARE        Serial
 #define SERIAL_PORT_HARDWARE_OPEN   Serial
 
-
-#define PERIPH_SPI           sercom5
-#define PAD_SPI_TX           SPI_PAD_0_SCK_1
-#define PAD_SPI_RX           SERCOM_RX_PAD_2
-
-
-#define PERIPH_SPI1          sercom4
-#define PAD_SPI1_TX          SPI_PAD_2_SCK_3
-#define PAD_SPI1_RX          SERCOM_RX_PAD_0
 
 
 #endif /* _VARIANT_ROCKET_FLIGHT_COMPUTER */
