@@ -57,6 +57,7 @@ Ideally, once the Arduino bootloader is uploaded, the Segger debugger will not b
 7. Now you will have to replace these board files with our own custom board files. Go to the directory found in the previous step and navigate to`ArduinoData\packages\adafruit\hardware\samd` where you will find a folder like `1.5.9`. Now you need to delete this folder, and replace it with our custom folder of board files that can be found in this repo: `Project-Mach-1\Flight computer\Software\Custom board files for flight computer\1.5.9`.
 8. Now restart Arduino IDE so that it can update the board file location.
 9. Now select the rocket flight computer as the board to use, like so in the picture: ![image](https://user-images.githubusercontent.com/26815217/97038067-26640700-1562-11eb-93f9-622826eb055e.png)
+10. Now select the upload and serial port by going to Tools > Port:![image](https://user-images.githubusercontent.com/26815217/97050867-076f7000-1576-11eb-9110-b95f3bc894ae.png)
 10. Now run the i2c scanner program in `Project-Mach-1\Flight computer\Software\Arduino code\i2c_scanner` on the arduino editor. You will see data on the serial port like this: ![image](https://user-images.githubusercontent.com/26815217/97045258-5a90f500-156d-11eb-95d6-a1918af80ee6.png)
 
 ## How to run the main program.
