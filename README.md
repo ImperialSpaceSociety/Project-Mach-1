@@ -59,7 +59,10 @@ Ideally, once the Arduino bootloader is uploaded, the Segger debugger will not b
 9. Now select the rocket flight computer as the board to use, like so in the picture: ![image](https://user-images.githubusercontent.com/26815217/97038067-26640700-1562-11eb-93f9-622826eb055e.png)
 10. Now run the i2c scanner program in `Project-Mach-1\Flight computer\Software\Arduino code\i2c_scanner` on the arduino editor. You will see data on the serial port like this: ![image](https://user-images.githubusercontent.com/26815217/97045258-5a90f500-156d-11eb-95d6-a1918af80ee6.png)
 
- 
+## How to run the main program.
+Assuming you have completed the previous steps, navigate to `Project-Mach-1\Flight computer\Software\Arduino code\main_flight_computer_code` and run `main_flight_computer_code.ino` on the Arduino editor. This is where we will be doing further updates to the main project. Note how we directly add the library files into this project. These can be seen in the tabs at the top of the editor: ![image](https://user-images.githubusercontent.com/26815217/97050319-10137680-1575-11eb-93a8-b61fe4b973d9.png)
+
+The reason why we do this is the stock libraries downloaded directly from Arduino often have minor bugs which we have to fix. Therefore, we make a copy of the library files and load them directly into this project.
 
 
 ## Current progress
