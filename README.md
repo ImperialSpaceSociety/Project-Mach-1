@@ -37,6 +37,12 @@ The repository describes the four electronic Modules:
   * To trigger the deployment of the main parachute when 300m above ground to ensure the rocket does not drift too far
   * To trigger the deployment of the main parachute to aid recovery
 
+## How to setup
+1. burn boot loader into samd21 with atmel studio. ensure that the samd21 is selected chip instead of saml21
+2. follow https://learn.adafruit.com/introducing-itsy-bitsy-m0/setup to install the boards files for the itsybitsym0 which our flight computer is based off
+3. Find out where your board file are found by going here to the file > preferences: ![image](https://user-images.githubusercontent.com/26815217/97037529-4e069f80-1561-11eb-9e55-63b4ba6fe1d4.png)
+4. Now go to this directory with the ArduinoData is stored. Then go down to `ArduinoData\packages\adafruit\hardware\samd` where you will find a folder like `1.5.9`. Now you need to delete this file, and replace it with our custom folder of board files that can be found in this repo: `Project-Mach-1\Flight computer\Software\Custom board files for flight computer`.
+
 
 ## Current progress
 * 25/9/19: The circuit board design files have been sent for manufacturing. Renders are as shown below.
