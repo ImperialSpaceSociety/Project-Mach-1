@@ -42,6 +42,8 @@ The repository describes the four electronic Modules:
 2. follow https://learn.adafruit.com/introducing-itsy-bitsy-m0/setup to install the boards files for the itsybitsym0 which our flight computer is based off
 3. Find out where your board file are found by going here to the file > preferences: ![image](https://user-images.githubusercontent.com/26815217/97037529-4e069f80-1561-11eb-9e55-63b4ba6fe1d4.png)
 4. Now go to this directory with the ArduinoData is stored. Then go down to `ArduinoData\packages\adafruit\hardware\samd` where you will find a folder like `1.5.9`. Now you need to delete this file, and replace it with our custom folder of board files that can be found in this repo: `Project-Mach-1\Flight computer\Software\Custom board files for flight computer`.
+5. Now select the rocket flight computer as the board to use, like so in the picture: ![image](https://user-images.githubusercontent.com/26815217/97038067-26640700-1562-11eb-93f9-622826eb055e.png)
+ 
 
 
 ## Current progress
