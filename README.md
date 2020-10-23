@@ -38,7 +38,17 @@ The repository describes the four electronic Modules:
   * To trigger the deployment of the main parachute to aid recovery
 
 ## How to setup
-1. Burn the custom Arduino boot loader into SAMD21 on the flight computer with Atmel Studio. The bootloader is found in `Project-Mach-1\Flight computer\Software\bootloader for samd21j` and the filename is `bootloader-itsybitsy_m0-v2.0.0-adafruit.5.elf`. This can only be done with a Segger Debugger. Ideally, once the Arduino bootloader is uploaded, the Segger debugger will not be necessary anymore; All future programming can be done with the Arduino IDE.
+# Burning the bootloader
+1. Install Atmel studio. It can be downloaded from the [atmel site](https://www.microchip.com/mplab/avr-support/atmel-studio-7). Ensure that you download the SMART ARM MCU option like so: ![image](https://user-images.githubusercontent.com/26815217/97048803-8e224e00-1572-11eb-8974-1dc5bd169e97.png)
+2. Connect up the flight computer to the J-Link EDU like so. Note the positions and colours of wires. Getting them the wrong way around could cause reverse polarity issues. The usb connector on the flight computer must be connected to the Computer.![image](https://user-images.githubusercontent.com/26815217/97048803-8e224e00-1572-11eb-8974-1dc5bd169e97.png)
+3. Open up Atmel Studio and navigate to Tools > Device Programming like so: ![image](https://user-images.githubusercontent.com/26815217/97049151-1bfe3900-1573-11eb-92dd-a2e1868a808a.png)
+4. Ensure that the device selected is the SAMD21J18A. The default name may be a very similar looking name so make sure you don't mix it up. Click apply.: ![image](https://user-images.githubusercontent.com/26815217/97049270-5b2c8a00-1573-11eb-8d83-f50c7edb5846.png)
+5. Now navigate to the `Memories` tab. You will now burn the custom Arduino boot loader into SAMD21 on the flight computer with Atmel Studio. The bootloader is found in `Project-Mach-1\Flight computer\Software\bootloader for samd21j` and the filename is `bootloader-itsybitsy_m0-v2.0.0-adafruit.5.elf`. Click the `Program` button once selected the right bootloader: ![image](https://user-images.githubusercontent.com/26815217/97049436-a3e44300-1573-11eb-92fe-02f36d6b8130.png)
+
+Ideally, once the Arduino bootloader is uploaded, the Segger debugger will not be necessary anymore; All future programming can be done with the Arduino IDE.
+
+# Using Arduino to program
+1. Install the Arduino IDE
 2. Install Arduino support for the SAMD series of microcontrollers. To do so, go to file > preferences and add `https://adafruit.github.io/arduino-board-index/package_adafruit_index.json` to Additional Board Manager Urls like so: ![image](https://user-images.githubusercontent.com/26815217/97046336-228ab180-156f-11eb-9b23-e58ebe139e13.png)
 3. Then go to Tools > Boards > Boards Manager like so:![image](https://user-images.githubusercontent.com/26815217/97046437-4cdc6f00-156f-11eb-8568-0db63647302c.png)
 4. Then install the SAMD core by searching for Arduino SAMD Boards (32-bits Arm Cortex-M0+) like so: ![image](https://user-images.githubusercontent.com/26815217/97046683-a47ada80-156f-11eb-993c-f97d2ba23dc1.png)
