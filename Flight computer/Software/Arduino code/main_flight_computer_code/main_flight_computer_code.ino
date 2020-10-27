@@ -30,6 +30,10 @@ void setup() {
   Serial.begin(9600);
   h3lis.init();
   h3lis.importPara(VAL_X_AXIS,VAL_Y_AXIS,VAL_Z_AXIS);
+  Serial.print("=========================================");
+  Serial.print("This is the Rocket Flight Computer, v1.0");
+  Serial.print("=========================================");
+
 }
 
 void loop() {
