@@ -31,3 +31,4 @@ Assuming ascii encoding, 504 bits per string for raw data. Including commas and 
 * Atmel SAMD21J18: Microcontroller 64 pin TQFP package
 * Vishay Si7232DN: Dual N-Channel 20 V (D-S) MOSFET for 2 channel pyros
 * Molex 2066400001: GNSS Active Patch Antenna with Low-Noise Amplifier
+* Winbond w25q64JV: Flash chip 64 Mbytes
