@@ -1,6 +1,6 @@
 // Test code forGPS Using Hardware Serial
 
-
+// Bidirectional for use with uBlox UCenter
 
 // what's the name of the hardware serial port?
 #define GPSSerial Serial1

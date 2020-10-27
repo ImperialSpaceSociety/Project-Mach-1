@@ -17,41 +17,20 @@
 
 #include<SPIMemory.h>
 
-#if defined(ARDUINO_SAMD_ZERO) && defined(SERIAL_PORT_USBVIRTUAL)
-// Required for Serial on Zero based boards
-#define Serial SERIAL_PORT_USBVIRTUAL
-#endif
 
-#if defined (SIMBLEE)
-#define BAUD_RATE 250000
-#define RANDPIN 1
-#else
-#define BAUD_RATE 115200
-#if defined(ARCH_STM32)
-#define RANDPIN PA0
-#else
-#define RANDPIN A0
-#endif
-#endif
+
 
 #define TRUE 1
 #define FALSE 0
 
-int8_t SPIPins[4] = {-1, -1, -1, 33};
 
-//SPIFlash flash;
-//SPIFlash flash(SPIPins);
-SPIFlash flash(62);
-//SPIFlash flash(SS1, &SPI1);       //Use this constructor if using an SPI bus other than the default SPI. Only works with chips with more than one hardware SPI bus
+SPIFlash flash(SS_FLASH, &SPI1);       //Use this constructor if using an SPI bus other than the default SPI. Only works with chips with more than one hardware SPI bus
 
 void setup() {
 
-  Serial.begin(BAUD_RATE);
-#if defined (ARDUINO_ARCH_SAMD) || defined (__AVR_ATmega32U4__) || defined (ARCH_STM32) || defined (NRF5) || defined (ARDUINO_ARCH_ESP32)
+  Serial.begin(115200);
   while (!Serial) ; // Wait for Serial monitor to open
-#endif
 
-  delay(50); //Time to terminal get connected
   Serial.print(F("Initialising"));
   for (uint8_t i = 0; i < 10; ++i)
   {
