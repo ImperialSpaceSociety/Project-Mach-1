@@ -37,6 +37,27 @@ The repository describes the four electronic Modules:
   * To trigger the deployment of the main parachute when 300m above ground to ensure the rocket does not drift too far
   * To trigger the deployment of the main parachute to aid recovery
 
+## Software architecture
+We use the Arduino development environment to program the rocket flight computer. We use the arduino board files based off the Adafruit ItsyBitsy M0 Express, which uses the G variant of the SAMD21. The flight computer uses the J variant. 
+
+The main buses are as follows:
+
+`wire` is the main I2C bus for the sensors including the:
+* ST Microelectronics H3LIS100DL: 100g 3-axis accelerometer
+* ST Microelectronics LSM9DS1: 9 degree-of-freedom Accelerometer, Gyroscope and Magnetometer in 3 axis
+* TE Connectivity MS5607: Temperature and pressure sensor
+* Ublox MAX M8Q: GPS module
+
+`wire1` is connected to a grove connector on the PCB, but not currently connected to anything.
+
+`Serial1` is used for a secondary connection to the Ublox MAX M8Q: GPS module
+
+`SPI1` is used to connect the Winbond w25q64JV: Flash chip 64 Mbytes
+
+`SPI` is used to connect to the Sillicon Labs SI4463: 433 Mhz ISM band Telemetry radio transceiver
+
+
+
 ## How to setup
 # Burning the bootloader
 1. Install Atmel studio. It can be downloaded from the [atmel site](https://www.microchip.com/mplab/avr-support/atmel-studio-7). Ensure that you download the SMART ARM MCU option like so: ![image](https://user-images.githubusercontent.com/26815217/97048803-8e224e00-1572-11eb-8974-1dc5bd169e97.png)
