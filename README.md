@@ -50,6 +50,8 @@ The main buses are as follows:
 
 `wire1` is connected to a grove connector on the PCB, but not currently connected to anything.
 
+`Serial` is used for printing out debug info via USB to a serial monitor(running on a computer)
+
 `Serial1` is used for a secondary connection to the Ublox MAX M8Q: GPS module
 
 `SPI1` is used to connect the Winbond w25q64JV: Flash chip 64 Mbytes
