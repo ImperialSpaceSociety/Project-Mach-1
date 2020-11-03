@@ -23,8 +23,7 @@
 #define VAL_Z_AXIS  141
 
 H3LIS331DL h3lis;
-
-
+MS5xxx ms5(&Wire);
 
 void setup() {
   Serial.begin(9600);
@@ -56,7 +55,15 @@ void loop() {
   Serial.print("g");
   Serial.print("\t");
   Serial.print(xyz[2]);
-  Serial.println("g");  
+  Serial.println("g");
+
+  ms5.ReadProm();
+  ms5.Readout();
+
+  Serial.print("Temperature: ");
+  Serial.println(ms5.GetTemp());
+  Serial.print("Pressure: ");
+  Serial.println(ms5.GetPres());
   
-  delay(1);
+  delay(100);
 }
