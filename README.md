@@ -88,6 +88,9 @@ Assuming you have completed the previous steps, navigate to `Project-Mach-1\Flig
 
 The reason why we do this is the stock libraries downloaded directly from Arduino often have minor bugs which we have to fix. Therefore, we make a copy of the library files and load them directly into this project.
 
+## libraries directory
+All our libraries are kept here: `Project-Mach-1/tree/master/Flight%20computer/Software/Arduino%20code/libraries`
+
 
 ## Current progress
 * 25/9/19: The circuit board design files have been sent for manufacturing. Renders are as shown below.
