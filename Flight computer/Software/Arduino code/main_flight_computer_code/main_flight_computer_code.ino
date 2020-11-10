@@ -17,7 +17,6 @@
 #include "SparkFunLSM9DS1.h"
 
 #include <Wire.h>
-#include <SPI.h>
 
 //please get these value by running H3LIS331DL_AdjVal Sketch.
 #define VAL_X_AXIS  203
