@@ -47,6 +47,7 @@ void readGps(long *latitude, long *longitude, long *altitude) {
   *latitude = ubloxGps.getLatitude();
   *longitude = ubloxGps.getLongitude();
   *altitude = ubloxGps.getAltitude();
+}
 
 void loop() {
   int16_t x,y,z;
