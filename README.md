@@ -37,6 +37,29 @@ The repository describes the four electronic Modules:
   * To trigger the deployment of the main parachute when 300m above ground to ensure the rocket does not drift too far
   * To trigger the deployment of the main parachute to aid recovery
 
+## Software architecture
+We use the Arduino development environment to program the rocket flight computer. We use the arduino board files based off the Adafruit ItsyBitsy M0 Express, which uses the G variant of the SAMD21. The flight computer uses the J variant. 
+
+The main buses are as follows:
+
+`wire` is the main I2C bus for the sensors including the:
+* ST Microelectronics H3LIS100DL: 100g 3-axis accelerometer
+* ST Microelectronics LSM9DS1: 9 degree-of-freedom Accelerometer, Gyroscope and Magnetometer in 3 axis
+* TE Connectivity MS5607: Temperature and pressure sensor
+* Ublox MAX M8Q: GPS module
+
+`wire1` is connected to a grove connector on the PCB, but not currently connected to anything.
+
+`Serial` is used for printing out debug info via USB to a serial monitor(running on a computer)
+
+`Serial1` is used for a secondary connection to the Ublox MAX M8Q: GPS module
+
+`SPI1` is used to connect the Winbond w25q64JV: Flash chip 64 Mbytes
+
+`SPI` is used to connect to the Sillicon Labs SI4463: 433 Mhz ISM band Telemetry radio transceiver
+
+
+
 ## How to setup
 # Burning the bootloader
 1. Install Atmel studio. It can be downloaded from the [atmel site](https://www.microchip.com/mplab/avr-support/atmel-studio-7). Ensure that you download the SMART ARM MCU option like so: ![image](https://user-images.githubusercontent.com/26815217/97048803-8e224e00-1572-11eb-8974-1dc5bd169e97.png)
@@ -64,6 +87,9 @@ Ideally, once the Arduino bootloader is uploaded, the Segger debugger will not b
 Assuming you have completed the previous steps, navigate to `Project-Mach-1\Flight computer\Software\Arduino code\main_flight_computer_code` and run `main_flight_computer_code.ino` on the Arduino editor. This is where we will be doing further updates to the main project. Note how we directly add the library files into this project. These can be seen in the tabs at the top of the editor: ![image](https://user-images.githubusercontent.com/26815217/97050319-10137680-1575-11eb-93a8-b61fe4b973d9.png)
 
 The reason why we do this is the stock libraries downloaded directly from Arduino often have minor bugs which we have to fix. Therefore, we make a copy of the library files and load them directly into this project.
+
+## libraries directory
+All our libraries are kept here: `Project-Mach-1/tree/master/Flight%20computer/Software/Arduino%20code/libraries`
 
 
 ## Current progress

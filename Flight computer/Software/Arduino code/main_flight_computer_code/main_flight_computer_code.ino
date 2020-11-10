@@ -24,7 +24,7 @@
 
 H3LIS331DL h3lis;
 SFE_UBLOX_GPS ubloxGps;
-
+MS5xxx ms5(&Wire);
 
 void setup() {
   Wire.begin();
@@ -37,13 +37,16 @@ void setup() {
     while (1);
   }
   ubloxGps.setI2COutput(COM_TYPE_UBX);
+  h3lis.importPara(VAL_X_AXIS,VAL_Y_AXIS,VAL_Z_AXIS);
+  Serial.print("=========================================");
+  Serial.print("This is the Rocket Flight Computer, v1.0");
+  Serial.print("=========================================");
 }
 
 void readGps(long *latitude, long *longitude, long *altitude) {
   *latitude = ubloxGps.getLatitude();
   *longitude = ubloxGps.getLongitude();
   *altitude = ubloxGps.getAltitude();
-}
 
 void loop() {
   int16_t x,y,z;
@@ -67,7 +70,15 @@ void loop() {
   Serial.print("g");
   Serial.print("\t");
   Serial.print(xyz[2]);
-  Serial.println("g");  
+  Serial.println("g");
+
+  ms5.ReadProm();
+  ms5.Readout();
+
+  Serial.print("Temperature: ");
+  Serial.println(ms5.GetTemp());
+  Serial.print("Pressure: ");
+  Serial.println(ms5.GetPres());
   
-  delay(1);
+  delay(100);
 }

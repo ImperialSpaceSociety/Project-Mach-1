@@ -677,7 +677,7 @@ private:
 	uint8_t _gpsI2Caddress = 0x42; //Default 7-bit unshifted address of the ublox 6/7/8/M8/F9 series
 	//This can be changed using the ublox configuration software
 
-	boolean _printDebug = false; //Flag to print the serial commands we are sending to the Serial port for debug
+	boolean _printDebug = true; //Flag to print the serial commands we are sending to the Serial port for debug
 
 	//These are pointed at from within the ubxPacket
 	uint8_t payloadAck[2];
