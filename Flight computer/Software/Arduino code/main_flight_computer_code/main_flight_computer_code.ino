@@ -31,7 +31,7 @@ void setup() {
   Serial.begin(9600);
   h3lis.init();
   h3lis.importPara(VAL_X_AXIS, VAL_Y_AXIS, VAL_Z_AXIS);
-  if (ubloxGps.begin() == false)
+  if (!ubloxGps.begin())
   {
     Serial.println(F("Ublox GPS not detected at default I2C address."));
     while (1);
