@@ -23,17 +23,32 @@
 #define VAL_Z_AXIS  141
 
 H3LIS331DL h3lis;
-
+SFE_UBLOX_GPS ubloxGps;
 
 
 void setup() {
+  Wire.begin();
   Serial.begin(9600);
   h3lis.init();
-  h3lis.importPara(VAL_X_AXIS,VAL_Y_AXIS,VAL_Z_AXIS);
+  h3lis.importPara(VAL_X_AXIS, VAL_Y_AXIS, VAL_Z_AXIS);
+  if (ubloxGps.begin() == false)
+  {
+    Serial.println(F("Ublox GPS not detected at default I2C address."));
+    while (1);
+  }
+  ubloxGps.setI2COutput(COM_TYPE_UBX);
+}
+
+void readGps(long *latitude, long *longitude, long *altitude) {
+  *latitude = ubloxGps.getLatitude();
+  *longitude = ubloxGps.getLongitude();
+  *altitude = ubloxGps.getAltitude();
 }
 
 void loop() {
   int16_t x,y,z;
+  long latitude, longitude, altitude;
+  readGps(&latitude, &longitude, &altitude);
   h3lis.readXYZ(&x,&y,&z);
   Serial.print("x, y, z = ");
   Serial.print(x);
