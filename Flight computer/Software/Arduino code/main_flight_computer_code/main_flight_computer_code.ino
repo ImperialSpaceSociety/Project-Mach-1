@@ -14,6 +14,7 @@
 #include "H3LIS100DL.h"
 #include "MS5607.h"
 #include "Ublox.h"
+#include "SparkFunLSM9DS1.h"
 
 #include <Wire.h>
 
@@ -24,11 +25,14 @@
 
 H3LIS331DL h3lis;
 MS5xxx ms5(&Wire);
+LSM9DS1 imu;
 
 void setup() {
   Serial.begin(9600);
   h3lis.init();
-  h3lis.importPara(VAL_X_AXIS,VAL_Y_AXIS,VAL_Z_AXIS);
+  h3lis.importPara(VAL_X_AXIS,VAL_Y_AXIS,VAL_Z_AXIS); //3deg Accelerometer
+  imu.begin();
+  //imu.settings.device.commInterface = IMU_MODE_I2C;
   Serial.print("=========================================");
   Serial.print("This is the Rocket Flight Computer, v1.0");
   Serial.print("=========================================");
@@ -57,6 +61,31 @@ void loop() {
   Serial.print(xyz[2]);
   Serial.println("g");
 
+  imu.readGyro();
+  imu.readAccel();
+  imu.readMag();
+  imu.readTemp();
+  Serial.print(imu.calcGyro(imu.gx), 2);
+  Serial.print(", ");
+  Serial.print(imu.calcGyro(imu.gy), 2);
+  Serial.print(", ");
+  Serial.print(imu.calcGyro(imu.gz), 2);
+  Serial.println(" deg/s");
+  Serial.print(imu.calcAccel(imu.ax), 2);
+  Serial.print(", ");
+  Serial.print(imu.calcAccel(imu.ay), 2);
+  Serial.print(", ");
+  Serial.print(imu.calcAccel(imu.az), 2);
+  Serial.println(" g");
+  Serial.print(imu.calcMag(imu.mx), 2);
+  Serial.print(", ");
+  Serial.print(imu.calcMag(imu.my), 2);
+  Serial.print(", ");
+  Serial.print(imu.calcMag(imu.mz), 2);
+  Serial.println(" gauss");
+  Serial.print("9degTemperature: ");
+  Serial.println(imu.temperature);
+  
   ms5.ReadProm();
   ms5.Readout();
 
