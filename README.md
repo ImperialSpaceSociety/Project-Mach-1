@@ -42,13 +42,13 @@ We use the Arduino development environment to program the rocket flight computer
 
 The main buses are as follows:
 
-`wire` is the main I2C bus for the sensors including the:
+`Wire` is the main I2C bus for the sensors including the:
 * ST Microelectronics H3LIS100DL: 100g 3-axis accelerometer
 * ST Microelectronics LSM9DS1: 9 degree-of-freedom Accelerometer, Gyroscope and Magnetometer in 3 axis
 * TE Connectivity MS5607: Temperature and pressure sensor
 * Ublox MAX M8Q: GPS module
 
-`wire1` is connected to a grove connector on the PCB, but not currently connected to anything.
+`Wire1` is connected to a grove connector on the PCB, but not currently connected to anything.
 
 `Serial` is used for printing out debug info via USB to a serial monitor(running on a computer)
 
