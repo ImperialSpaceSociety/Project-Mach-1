@@ -44,6 +44,10 @@ void setup() {
   Serial.print("=========================================");
   Serial.print("This is the Rocket Flight Computer, v1.0");
   Serial.print("=========================================");
+
+  pinMode(PIN_LED_RED, OUTPUT);
+  pinMode(PIN_LED_BLUE, OUTPUT);
+
 }
 
 void readGps(long *latitude, long *longitude, long *altitude) {
@@ -109,5 +113,14 @@ void loop() {
   Serial.print("Pressure: ");
   Serial.println(ms5.GetPres());
   
+  if (xyz[2] <= 1 && z <= 200) {
+    digitalWrite(PIN_LED_RED, HIGH); // turn the LED on (HIGH is the voltage level)
+    digitalWrite(PIN_LED_BLUE, LOW); // turn the LED off by making the voltage LOW
+    delay(200); // wait for a second
+    digitalWrite(PIN_LED_RED, LOW); // turn the LED off by making the voltage LOW
+    digitalWrite(PIN_LED_BLUE, HIGH); // turn the LED on (HIGH is the voltage level)
+  }
+  
   delay(100);
+    
 }
