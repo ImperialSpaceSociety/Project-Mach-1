@@ -147,6 +147,8 @@ void byteTest() {
     pass(TRUE);
   }
   else {
+    Serial.print(_data);
+    Serial.print(_d);
     pass(FALSE);
   }
   printTime(wTime, rTime);
@@ -176,6 +178,8 @@ void charTest() {
     pass(TRUE);
   }
   else {
+    Serial.print(_data);
+    Serial.print(_d);
     pass(FALSE);
   }
   printTime(wTime, rTime);
@@ -205,6 +209,8 @@ void wordTest() {
     pass(TRUE);
   }
   else {
+    Serial.print(_data);
+    Serial.print(_d);
     pass(FALSE);
   }
   printTime(wTime, rTime);
@@ -234,6 +240,8 @@ void shortTest() {
     pass(TRUE);
   }
   else {
+    Serial.print(_data);
+    Serial.print(_d);
     pass(FALSE);
   }
   printTime(wTime, rTime);
@@ -263,6 +271,8 @@ void uLongTest() {
     pass(TRUE);
   }
   else {
+    Serial.print(_data);
+    Serial.print(_d);
     pass(FALSE);
   }
   printTime(wTime, rTime);
@@ -292,6 +302,8 @@ void longTest() {
     pass(TRUE);
   }
   else {
+    Serial.print(_data);
+    Serial.print(_d);
     pass(FALSE);
   }
   printTime(wTime, rTime);
@@ -310,7 +322,6 @@ void floatTest() {
     wTime = flash.functionRunTime();
   }
 
-
   _data = flash.readFloat(addr);
   rTime = flash.functionRunTime();
 
@@ -321,6 +332,8 @@ void floatTest() {
     pass(TRUE);
   }
   else {
+    Serial.print(_data);
+    Serial.print(_d);
     pass(FALSE);
   }
   printTime(wTime, rTime);
@@ -350,6 +363,8 @@ void stringTest() {
     pass(TRUE);
   }
   else {
+    Serial.print(_data);
+    Serial.print(_d);
     pass(FALSE);
   }
   printTime(wTime, rTime);
