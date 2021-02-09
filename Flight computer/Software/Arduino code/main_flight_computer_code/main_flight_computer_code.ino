@@ -40,6 +40,10 @@ struct dataPacket{
 };
 
 dataPacket dp;
+uint32_t run_start;
+uint32_t _addr;
+
+#define PACKET_SIZE sizeof(dp)
 
 void setup() {
   Serial.begin(9600);
@@ -47,27 +51,27 @@ void setup() {
   h3lis.importPara(VAL_X_AXIS,VAL_Y_AXIS,VAL_Z_AXIS);
   
   flash.begin();
+  //erase chip before run
+  flash.eraseChip();
+  //find suitable starting place for writing (should be 0)
+  run_start = flash.getAddress(PACKET_SIZE);
+  _addr = run_start;
   Serial.print("=========================================");
   Serial.print("This is the Rocket Flight Computer, v1.0");
   Serial.print("=========================================");
-
+  
 }
 
 void loop() {
-  //I think 10 ms is too little, there is something that stalls the process
   if(millis() - lasttime > 10){
     lasttime = millis(); //Update the timer
-
-    long t1 = millis();
     read_info(&dp);
-    long t2 = millis();
-    Serial.print(t2-t1);
-    print_info(&dp);
-
-    //write_info(&dp);
-    
+    //print_info(&dp);
+    Serial.println(flash.getCapacity());
+    write_info(dp);
+    read_from_flash();
+    Serial.println(_addr);
   }
-
 }
 
 
@@ -82,6 +86,12 @@ void read_info(dataPacket *dp){
 
   dp->temp = ms5.GetTemp();
   dp->pressure = ms5.GetPres();
+}
+
+void read_from_flash(){
+  dataPacket out;
+  flash.readAnything(_addr - PACKET_SIZE, out);
+  print_info(&out);
 }
 
 //print to serial port
@@ -109,9 +119,47 @@ void print_info(dataPacket *dp) {
     Serial.println(dp->pressure);
 }
 
-//TODO: figure out what to do if the write fails.
-//bool write_info(dataPacket *dp){
-//  if (flash.writeShort(addr, _d)) {
-//    wTime = flash.functionRunTime();
-//  }
-//}
+bool write_info(dataPacket dp){
+  if (flash.writeAnything(_addr, dp)){
+    //increment address pointer
+    _addr += PACKET_SIZE;
+
+    return true;
+  }
+  else{
+    Serial.print("Problem writing to flash.");
+    return false;
+  }
+}
+
+void dumpFlash(){
+  Serial.println("Reading all pages");
+  uint8_t data_buffer[256];
+
+  uint32_t maxAddr = flash.getCapacity();
+  for (int a = 0; a < maxAddr; a++) {
+    flash.readByteArray(a, &data_buffer[0], 256);
+    _printPageBytes(data_buffer, 1);
+    delay(100);
+  }  
+}
+
+void _printPageBytes(uint8_t *data_buffer, uint8_t outputType) {
+  char buffer[10];
+  for (int a = 0; a < 16; ++a) {
+    for (int b = 0; b < 16; ++b) {
+      if (outputType == 1) {
+        sprintf(buffer, "%02x", data_buffer[a * 16 + b]);
+        Serial.print(buffer);
+      }
+      else if (outputType == 2) {
+        uint8_t x = data_buffer[a * 16 + b];
+        if (x < 10) Serial.print("0");
+        if (x < 100) Serial.print("0");
+        Serial.print(x);
+        Serial.print(',');
+      }
+    }
+    Serial.println();
+  }
+}
