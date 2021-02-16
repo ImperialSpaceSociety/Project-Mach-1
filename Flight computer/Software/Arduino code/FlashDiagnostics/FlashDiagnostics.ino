@@ -37,7 +37,7 @@ void setup() {
     Serial.print(F("."));
   }
   Serial.println();
-  randomSeed(analogRead(RANDPIN));
+  randomSeed(analogRead(2));
   
   if (flash.error()) {
     Serial.println(flash.error(VERBOSE));
