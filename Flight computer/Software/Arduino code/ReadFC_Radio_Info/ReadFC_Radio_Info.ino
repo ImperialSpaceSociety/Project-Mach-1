@@ -19,7 +19,7 @@
  *
  */
 
-#include "Si446x.h"
+#include <Si446x.h>
 
 
 si446x_info_t info;
