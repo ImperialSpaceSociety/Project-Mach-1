@@ -296,8 +296,6 @@ void loop() {
 void manage_radio()
 {
 
-
-  enum Commands {FIRE=0,CLEAR=1,PARACHUTE=3};
   char commands []= {'0','1','3'};
 
   if(Serial.available()){
