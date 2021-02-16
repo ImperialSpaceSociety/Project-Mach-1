@@ -281,7 +281,7 @@ void loop() {
     //convert to string (not sure if neccessary but dont know how to do it differently)
     String data = String(latitude) + "," + String(longitude) + "," + String(altitude); 
     Serial.print(data);
-    // Send the data (not sure if this works, maybe can do in one pulse?) 
+    // Send the data
     // TODO: send the only every second, not every 10 milliseconds.
     Si446x_TX(&data, sizeof(data), CHANNEL, SI446X_STATE_RX);
   }
