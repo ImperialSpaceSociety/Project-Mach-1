@@ -158,7 +158,7 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 
 static const uint8_t MISO1 = PIN_SPI1_MISO;
 static const uint8_t SS1   = PIN_SPI1_SS;
-static const uint8_t SS_FLASH  = PIN_SPI_SS ;
+static const uint8_t SS_FLASH  = PIN_SPI1_SS;
 static const uint8_t MOSI1 = PIN_SPI1_MOSI;
 static const uint8_t SCK1  = PIN_SPI1_SCK;
 
