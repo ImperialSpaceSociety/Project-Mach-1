@@ -38,15 +38,18 @@ SFE_UBLOX_GPS ubloxGps;
 MS5xxx ms5(&Wire);
 LSM9DS1 imu;
 
-typedef struct{
+struct pingInfo_t{
   uint8_t ready;
   uint32_t timestamp;
   int16_t rssi;
   uint8_t length;
   uint8_t buffer[MAX_PACKET_SIZE];
-} pingInfo_t;
+}; 
 
 static volatile pingInfo_t pingInfo;
+
+static uint8_t tx_str_buffer[MAX_PACKET_SIZE];
+void fill_tx_buffer_with_location(uint16_t start_point, uint8_t * buffer, uint16_t latitude, uint16_t longitude, uint16_t altitude );
 
 void SI446X_CB_RXCOMPLETE(uint8_t length, int16_t rssi)
 {
@@ -89,6 +92,8 @@ void setup() {
   Serial.print("=========================================");
 }
 
+
+
 void readGps(long *latitude, long *longitude, long *altitude) {
   *latitude = ubloxGps.getLatitude();
   *longitude = ubloxGps.getLongitude();
@@ -99,18 +104,37 @@ void loop() {
   int16_t x,y,z;
   long latitude, longitude, altitude;
   readGps(&latitude, &longitude, &altitude);
-  
+
   //convert to string (not sure if neccessary but dont know how to do it differently)
-  char dataLat[MAX_PACKET_SIZE] = {0};
-  char dataLon[MAX_PACKET_SIZE] = {0};
-  char dataAlt[MAX_PACKET_SIZE] = {0};
-  sprintf_P(dataLat, "%ld", latitude);
-  sprintf_P(dataLon, "%ld", latitude);
-  sprintf_P(dataAlt, "%ld", latitude);
+  String data;
+  String lat = String(latitude);
+  String lon = String(longitude);
+  String alt = String(altitude);
+  data = lat + "," + lon + "," + alt; 
+  Serial.print(data);
   // Send the data (not sure if this works, maybe can do in one pulse?)
-  Si446x_TX(dataLat, sizeof(dataLat), CHANNEL, SI446X_STATE_RX);
-  Si446x_TX(dataLon, sizeof(dataLon), CHANNEL, SI446X_STATE_RX);
-  Si446x_TX(dataAlt, sizeof(dataAlt), CHANNEL, SI446X_STATE_RX);
+  Si446x_TX(&data, sizeof(data), CHANNEL, SI446X_STATE_RX);
+
+enum Commands {FIRE=0,CLEAR=1,PARACHUTE=3};
+char commands []= {'0','1','3'};
+
+  if(Serial.available()){
+    String command;
+    command = Serial.readStringUntil('\n');
+    if(command.equals("Fire")){
+      Si446x_TX(&commands[0], sizeof(char), CHANNEL, SI446X_STATE_RX);
+    }
+    else if(command.equals("Clear")){
+      Si446x_TX(&commands[1], sizeof(char), CHANNEL, SI446X_STATE_RX);
+    }
+    else if(command.equals("Parachute")){
+      Si446x_TX(&commands[2], sizeof(char), CHANNEL, SI446X_STATE_RX);
+    }
+    else{
+      Serial.println("Invalid command");
+    }
+  }
+  
   
   h3lis.readXYZ(&x,&y,&z);
   Serial.print("x, y, z = ");
