@@ -289,6 +289,11 @@ void loop() {
   if (Serial.available() > 0){
     command = Serial.parseInt();      
   }
+
+  
+  #if DEVICE_PURPOSE == GND_STATION
+  manage_radio();
+  #endif
 }
 
 
