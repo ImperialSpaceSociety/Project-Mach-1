@@ -277,6 +277,13 @@ void loop() {
 
     dp.temp = ms5.GetTemp();
     dp.pressure = ms5.GetPres();    
+
+    //convert to string (not sure if neccessary but dont know how to do it differently)
+    String data = String(latitude) + "," + String(longitude) + "," + String(altitude); 
+    Serial.print(data);
+    // Send the data (not sure if this works, maybe can do in one pulse?) 
+    // TODO: send the only every second, not every 10 milliseconds.
+    Si446x_TX(&data, sizeof(data), CHANNEL, SI446X_STATE_RX);
   }
 
   if (Serial.available() > 0){
@@ -289,15 +296,6 @@ void loop() {
 void manage_radio()
 {
 
-  //convert to string (not sure if neccessary but dont know how to do it differently)
-  String data;
-  String lat = String(latitude);
-  String lon = String(longitude);
-  String alt = String(altitude);
-  data = lat + "," + lon + "," + alt; 
-  Serial.print(data);
-  // Send the data (not sure if this works, maybe can do in one pulse?)
-  Si446x_TX(&data, sizeof(data), CHANNEL, SI446X_STATE_RX);
 
   enum Commands {FIRE=0,CLEAR=1,PARACHUTE=3};
   char commands []= {'0','1','3'};
