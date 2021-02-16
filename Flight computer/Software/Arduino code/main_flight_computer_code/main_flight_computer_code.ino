@@ -303,8 +303,7 @@ void manage_radio()
   char commands []= {'0','1','3'};
 
   if(Serial.available()){
-    String command;
-    command = Serial.readStringUntil('\n');
+    String command = Serial.readStringUntil('\n');
     if(command.equals("Fire")){
       Si446x_TX(&commands[0], sizeof(char), CHANNEL, SI446X_STATE_RX);
     }
