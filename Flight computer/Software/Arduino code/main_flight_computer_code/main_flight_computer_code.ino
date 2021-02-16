@@ -275,8 +275,8 @@ void loop() {
     ms5.ReadProm();
     ms5.Readout();
 
-    dp->temp = ms5.GetTemp();
-    dp->pressure = ms5.GetPres();    
+    dp.temp = ms5.GetTemp();
+    dp.pressure = ms5.GetPres();    
   }
 
   if (Serial.available() > 0){
