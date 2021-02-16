@@ -14,6 +14,8 @@
 #include "H3LIS100DL.h"
 #include "MS5607.h"
 #include "Ublox.h"
+#include "SparkFunLSM9DS1.h"
+
 #include <Wire.h>
 #include <SPIMemory.h>
 
@@ -23,7 +25,9 @@
 #define VAL_Z_AXIS  141
 
 H3LIS331DL h3lis;
+SFE_UBLOX_GPS ubloxGps;
 MS5xxx ms5(&Wire);
+
 SPIFlash flash(SS_FLASH, &SPI1);
 
 long starttime;
@@ -50,8 +54,10 @@ uint32_t _addr;
 
 bool limit = false;
 int n;
+LSM9DS1 imu;
 
 void setup() {
+  Wire.begin();
   Serial.begin(9600);
   h3lis.init();
   h3lis.importPara(VAL_X_AXIS,VAL_Y_AXIS,VAL_Z_AXIS);
@@ -60,6 +66,17 @@ void setup() {
     Serial.println(flash.error(VERBOSE));
   }
   flash.begin();
+  
+  if (!ubloxGps.begin())
+  {
+    Serial.println(F("Ublox GPS not detected at default I2C address."));
+    while (1);
+  }
+  
+  ubloxGps.setI2COutput(COM_TYPE_UBX);
+  h3lis.importPara(VAL_X_AXIS,VAL_Y_AXIS,VAL_Z_AXIS); //3deg Accelerometer
+  imu.begin();
+  //imu.settings.device.commInterface = IMU_MODE_I2C;
 
   //test all functionalities on the flash chip, pauses for confirmation
   delay(3000);
@@ -126,16 +143,12 @@ void setup() {
   Serial.println("Press 1 and enter at any time to dump results from flash and exit the main loop.");
   Serial.println("=========================================");
   starttime = millis();
-  
 }
 uint8_t command = 0;
 
 void loop() {
   if(millis() - lasttime > 10){
     if(limit && lasttime > (starttime + n * 1000)){
-      Serial.println(lasttime);
-      Serial.println(starttime);
-      Serial.println(n * 1000);
       dumpFlash();
       exit(0);
     }
@@ -151,6 +164,61 @@ void loop() {
       exit(0);
       command = 0;
     }
+    
+    //TODO: fix this into the read_data function
+    int16_t x,y,z;
+    long latitude, longitude, altitude;
+    readGps(&latitude, &longitude, &altitude);
+    h3lis.readXYZ(&x,&y,&z);
+    Serial.print("x, y, z = ");
+    Serial.print(x);
+    Serial.print("\t");
+    Serial.print(y);
+    Serial.print("\t");
+    Serial.println(z);
+
+    double xyz[3];
+    h3lis.getAcceleration(xyz);
+    Serial.print("accelerate of x, y, z = ");
+    Serial.print(xyz[0]);
+    Serial.print("g");
+    Serial.print("\t");
+    Serial.print(xyz[1]);
+    Serial.print("g");
+    Serial.print("\t");
+    Serial.print(xyz[2]);
+    Serial.println("g");
+    
+    imu.readGyro();
+    imu.readAccel();
+    imu.readMag();
+    imu.readTemp();
+    Serial.print(imu.calcGyro(imu.gx), 2);
+    Serial.print(", ");
+    Serial.print(imu.calcGyro(imu.gy), 2);
+    Serial.print(", ");
+    Serial.print(imu.calcGyro(imu.gz), 2);
+    Serial.println(" deg/s");
+    Serial.print(imu.calcAccel(imu.ax), 2);
+    Serial.print(", ");
+    Serial.print(imu.calcAccel(imu.ay), 2);
+    Serial.print(", ");
+    Serial.print(imu.calcAccel(imu.az), 2);
+    Serial.println(" g");
+    Serial.print(imu.calcMag(imu.mx), 2);
+    Serial.print(", ");
+    Serial.print(imu.calcMag(imu.my), 2);
+    Serial.print(", ");
+    Serial.print(imu.calcMag(imu.mz), 2);
+    Serial.println(" gauss");
+    Serial.print("9degTemperature: ");
+    Serial.println(imu.temperature);
+
+    ms5.ReadProm();
+    ms5.Readout();
+
+    dp->temp = ms5.GetTemp();
+    dp->pressure = ms5.GetPres();    
   }
 
   if (Serial.available() > 0){
@@ -164,12 +232,6 @@ void read_info(dataPacket *dp){
   //TODO: Add try-catch around the data collections, return a dummy value if failed.
   h3lis.readXYZ(&(dp->location[0]),&(dp->location[1]),&(dp->location[2]));
   h3lis.getAcceleration(dp->acc);
-
-  ms5.ReadProm();
-  ms5.Readout();
-
-  dp->temp = ms5.GetTemp();
-  dp->pressure = ms5.GetPres();
 }
 
 void read_from_flash(uint32_t addr){
