@@ -19,6 +19,8 @@
  *
  */
 
+/* Follow installations instructions on https://github.com/zkemble/Si446x#installing */
+/* Will be able to include the radio library files */
 #include <Si446x.h>
 
 
