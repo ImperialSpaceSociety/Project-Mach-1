@@ -3,11 +3,16 @@
  * version : 1.0
  * Date: 18/02/2020
  * Currently the code only polls the H2LIS100 acclerometer and prints out the values.
- * TODO: 
- * 1. get all the other sensors to work and print out values
- * 2. get the SPI flash chip to record down the values
- * 3. Get the radio to transmit its position.
+ * 
+ * Rocket Flight computer modes
+ * - Preflight mode - empty loop, constant running checks, listen to arming command, sent n seconds before launch
+ * - Armed mode - Test ignition continueity. wait for launch command.
+ * - Flight mode - Recording data, transmitting position every second
+ * - Recovery mode - No longer records data, Transmits position, LEDs and Buzzer light up for easy recovery
+ * - Groundstation mode - Continueously logging data from a flight computer in the field, Must send commands
  */
+
+ 
 
 /* Set whether the device is mounted on the rocket or on the ground */
 #define GND_STATION 1
