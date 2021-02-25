@@ -206,9 +206,9 @@ const PinDescription g_APinDescription[]=
 
  
   // 42..44 A0..A2
-  { PORTA,  8,  PIO_ANALOG,     PIN_ATTR_ANALOG,                                      ADC_Channel0,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE  }, // SENSE_A, D42, A0
-  { PORTA,  9,  PIO_ANALOG,     PIN_ATTR_ANALOG,                                      ADC_Channel6,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE  }, // SENSE_B, D43, A1
-  { PORTB,  8,  PIO_ANALOG,     PIN_ATTR_ANALOG,                                      ADC_Channel5,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE  }, // SENSE_C, D44, A2
+  { PORTA,  4,  PIO_ANALOG,     PIN_ATTR_ANALOG,                                      ADC_Channel4,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE  }, // SENSE_A, D42, A0
+  { PORTA,  5,  PIO_ANALOG,     PIN_ATTR_ANALOG,                                      ADC_Channel5,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE  }, // SENSE_B, D43, A1
+  { PORTB,  8,  PIO_ANALOG,     PIN_ATTR_ANALOG,                                      ADC_Channel2,   NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE  }, // SENSE_C, D44, A2
 };
 
 
