@@ -66,7 +66,11 @@ The main buses are as follows:
 2. Connect up the flight computer to the J-Link EDU like so. Note the positions and colours of wires. Getting them the wrong way around could cause reverse polarity issues. The usb connector on the flight computer must be connected to the Computer.![smaller](https://user-images.githubusercontent.com/26815217/97049723-181ee680-1574-11eb-8998-49b052f84ce9.jpg)
 3. Open up Atmel Studio and navigate to Tools > Device Programming like so: ![image](https://user-images.githubusercontent.com/26815217/97049151-1bfe3900-1573-11eb-92dd-a2e1868a808a.png)
 4. Ensure that the device selected is the ATSAMD21J18A. The default name may be a very similar looking name so make sure you don't mix it up. Click apply.: ![image](https://user-images.githubusercontent.com/26815217/97049270-5b2c8a00-1573-11eb-8d83-f50c7edb5846.png)
-5. Now navigate to the `Memories` tab. You will now burn the custom Arduino boot loader into SAMD21 on the flight computer with Atmel Studio. The bootloader is found in `Project-Mach-1\Flight computer\Software\bootloader for samd21j` and the filename is `bootloader-itsybitsy_m0-v2.0.0-adafruit.5.elf`. Click the `Program` button once selected the right bootloader: ![image](https://user-images.githubusercontent.com/26815217/97049436-a3e44300-1573-11eb-92fe-02f36d6b8130.png)
+5. Now navigate to the `Memories` tab. You will now burn the custom Arduino boot loader into SAMD21 on the flight computer with Atmel Studio. The bootloader is found in the latest releases by adafruit: https://github.com/adafruit/uf2-samdx1/releases/. Look for the bootloader for the `itsybitsy_m0`. We can use the same bootloader as the Itsybitsy M0 from adafruit. Download the bootloader to your computer and select that file.
+
+![image](https://user-images.githubusercontent.com/26815217/122453656-7a64a580-cfa2-11eb-8464-177831368607.png)
+
+ Click the `Program` button once selected the right bootloader: ![image](https://user-images.githubusercontent.com/26815217/97049436-a3e44300-1573-11eb-92fe-02f36d6b8130.png)
 
 Ideally, once the Arduino bootloader is uploaded, the Segger debugger will not be necessary anymore; All future programming can be done with the Arduino IDE.
 
