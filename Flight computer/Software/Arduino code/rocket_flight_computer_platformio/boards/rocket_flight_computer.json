@@ -20,7 +20,7 @@
     "mcu": "samd21j18a",
     "system": "samd",
     "usb_product": "ItsyBitsy M0 Express",
-    "variant": "itsybitsy_m0"
+    "variant": "rocket_flight_computer"
   },
   "debug": {
     "jlink_device": "ATSAMD21J18",
