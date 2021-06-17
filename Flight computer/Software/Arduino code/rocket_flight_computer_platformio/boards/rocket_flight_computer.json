@@ -5,7 +5,7 @@
     },
     "core": "adafruit",
     "cpu": "cortex-m0plus",
-    "extra_flags": "-DARDUINO_ITSYBITSY_M0 -DADAFRUIT_ITSYBITSY_M0 -DCRYSTALLESS -DARM_MATH_CM0PLUS -D__SAMD21G18A__",
+    "extra_flags": "-DARDUINO_ITSYBITSY_M0 -DADAFRUIT_ITSYBITSY_M0 -DCRYSTALLESS -DARM_MATH_CM0PLUS -D__SAMD21J18A__",
     "f_cpu": "48000000L",
     "hwids": [
       [
@@ -17,16 +17,16 @@
         "0x000F"
       ]
     ],
-    "mcu": "samd21g18a",
+    "mcu": "samd21j18a",
     "system": "samd",
     "usb_product": "ItsyBitsy M0 Express",
     "variant": "itsybitsy_m0"
   },
   "debug": {
-    "jlink_device": "ATSAMD21G18",
-    "openocd_chipname": "at91samd21g18",
+    "jlink_device": "ATSAMD21J18",
+    "openocd_chipname": "at91samd21j18",
     "openocd_target": "at91samdXX",
-    "svd_path": "ATSAMD21G18A.svd"
+    "svd_path": "ATSAMD21J18A.svd"
   },
   "frameworks": [
     "arduino"
