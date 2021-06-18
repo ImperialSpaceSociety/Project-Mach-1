@@ -1,3 +1,6 @@
+#ifndef __DATAPACKET_H__
+#define __DATAPACKET_H__
+
 #include <stdint.h>
 
 typedef struct
@@ -21,9 +24,6 @@ typedef struct
     double mag[3];
 } dataPacket_t;
 
-
-
 #define PACKET_SIZE sizeof(dataPacket_t)
 
-//the one datapacket reference we iterate on every run
-dataPacket_t dp;
+#endif // __DATAPACKET_H__

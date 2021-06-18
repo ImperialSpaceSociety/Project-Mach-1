@@ -1,6 +1,7 @@
 #include "Arduino.h"
 #include "datapacket.hpp"
 #include <SPIMemory.h>
+#include "main.hpp"
 
 //starting address and cursor pointer
 uint32_t run_start;
@@ -17,7 +18,7 @@ void flash_init()
 
 void read_from_flash(uint32_t addr)
 {
-  dataPacket out;
+  dataPacket_t out;
   flash.readAnything(addr - PACKET_SIZE, out);
   print_info(&out);
 }

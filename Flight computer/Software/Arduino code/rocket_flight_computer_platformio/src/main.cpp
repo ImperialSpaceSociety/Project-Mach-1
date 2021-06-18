@@ -59,6 +59,10 @@ int n;
 
 void fill_tx_buffer_with_location(uint16_t start_point, uint8_t *buffer, uint16_t latitude, uint16_t longitude, uint16_t altitude);
 
+
+//the one datapacket reference we iterate on every run
+dataPacket_t dp;
+
 void setup()
 {
   Wire.begin();
