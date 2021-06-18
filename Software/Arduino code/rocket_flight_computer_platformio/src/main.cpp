@@ -23,12 +23,12 @@
 
 #include "main.hpp"
 #include "H3LIS331DL.h"
+#include <Wire.h>
 #include <MS5xxx.h>
 #include "SparkFunLSM9DS1.h"
 #include "Si446x.h"
 #include <SPIMemory.h>
 
-#include <Wire.h>
 #include "datapacket.hpp"
 #include "radio_functions.hpp"
 #include "flash_functions.hpp"
@@ -46,7 +46,7 @@
 H3LIS331DL h3lis;
 SFE_UBLOX_GNSS ubloxGps;
 LSM9DS1 imu;
-MS5xxx ms5(&Wire);
+MS5xxx sensor(&Wire);
 
 //time-sensitive util variables
 long starttime;
@@ -163,7 +163,6 @@ void sensor_init()
   flash.begin();
 
   /* GPS init */
-
   if (!ubloxGps.begin())
   {
     Serial.println(F("Ublox GPS not detected at default I2C address."));
@@ -172,13 +171,12 @@ void sensor_init()
   ubloxGps.setI2COutput(COM_TYPE_UBX);
 
   /* MS5607 Init */
-
-  if (ms5.connect() > 0)
+  if (sensor.connect() > 0)
   {
     Serial.println("Error connecting to MS5607...");
   }
 
-  ms5.ReadProm();
+  sensor.ReadProm();
 
   /* init 9 Axis accelerometer/gyro/mag */
   imu.begin();
@@ -187,6 +185,17 @@ void sensor_init()
   Serial.println("Running tests on flash....");
   run_all_tests();
   Serial.println("Tests on Flash chip complete.");
+}
+
+void test_crc()
+{
+  sensor.ReadProm();
+  sensor.Readout();
+  Serial.print("CRC=0x");
+  Serial.print(sensor.Calc_CRC4(), HEX);
+  Serial.print(" (should be 0x");
+  Serial.print(sensor.Read_CRC4(), HEX);
+  Serial.print(")\n");
 }
 
 //read info into a datapacket
@@ -198,9 +207,9 @@ void read_info(dataPacket_t *dp)
 
   readGps(&(dp->latitude), &(dp->longitude), &(dp->altitude));
 
-  ms5.Readout();
-  dp->temp = ms5.GetTemp();
-  dp->pressure = ms5.GetPres();
+  sensor.Readout();
+  dp->temp = sensor.GetTemp();
+  dp->pressure = sensor.GetPres();
 
   imu.readGyro();
   imu.readAccel();
