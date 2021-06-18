@@ -130,10 +130,7 @@ void setup() {
   //imu.settings.device.commInterface = IMU_MODE_I2C;
 
   //test all functionalities on the flash chip, pauses for confirmation
-  delay(3000);
-  Serial.println("Running tests on flash....");
-  run_all_tests();
-  Serial.println("Tests complete. If all looks good, enter y to continue");
+  Serial.println("Do you want to run tests? enter y to continue");
 
   while(true) // remain here until told to break
   {
@@ -141,6 +138,10 @@ void setup() {
       if(Serial.read() == 'y')
         break;
   }
+
+  Serial.println("Running tests on flash....");
+  run_all_tests();
+  Serial.println("Tests on flash done....");
 
   Serial.println("Erase chip before run? enter y/n");
   bool erase = false;
