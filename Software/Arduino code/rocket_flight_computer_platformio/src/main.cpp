@@ -40,6 +40,8 @@
 #define VAL_Y_AXIS 165
 #define VAL_Z_AXIS 141
 
+#define READ_INTERVAL 10 /* Milliseconds */
+
 //sensor objects
 H3LIS331DL h3lis;
 SFE_UBLOX_GNSS ubloxGps;
@@ -66,12 +68,24 @@ dataPacket_t dp;
 
 void print_info(dataPacket_t *dp);
 void sensor_init();
+void get_user_decision_flash();
 
 void setup()
 {
   Wire.begin();
   Serial.begin(115200);
+  sensor_init();
 
+  flash_init();
+  Serial.println("=========================================");
+  Serial.println("This is the Rocket Flight Computer, v1.0");
+  Serial.println("Press 1 and enter at any time to dump results from flash and exit the main loop.");
+  Serial.println("=========================================");
+  starttime = millis();
+}
+
+void get_user_decision_flash()
+{
   while (true) // remain here until told to break
   {
     if (Serial.available() > 0)
@@ -88,7 +102,7 @@ void setup()
       char res = Serial.read();
       if (res == 'y' || res == 'n')
       {
-        erase = res == 'y';
+        erase = (res == 'y');
         break;
       }
     }
@@ -108,7 +122,7 @@ void setup()
       char res = Serial.read();
       if (res == 'y' || res == 'n')
       {
-        limit = res == 'y';
+        limit = (res == 'y');
         break;
       }
     }
@@ -129,13 +143,6 @@ void setup()
       }
     }
   }
-
-  flash_init();
-  Serial.println("=========================================");
-  Serial.println("This is the Rocket Flight Computer, v1.0");
-  Serial.println("Press 1 and enter at any time to dump results from flash and exit the main loop.");
-  Serial.println("=========================================");
-  starttime = millis();
 }
 
 void sensor_init()
@@ -209,15 +216,12 @@ void read_info(dataPacket_t *dp)
 void loop()
 {
 
-  if (millis() - lasttime > 10)
+  if (millis() - lasttime > READ_INTERVAL)
   {
-    if (limit && lasttime > (starttime + n * 1000))
-    {
-      dumpFlash();
-      exit(0);
-    }
-
     lasttime = millis(); //Update the timer
+
+    // dumpFlash();
+
     read_info(&dp);
     print_info(&dp);
     write_info(dp);
