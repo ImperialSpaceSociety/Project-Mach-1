@@ -1,9 +1,19 @@
 #include "Arduino.h"
 #include "datapacket.hpp"
+#include <SPIMemory.h>
 
 //starting address and cursor pointer
 uint32_t run_start;
 uint32_t _addr;
+
+SPIFlash flash(SS_FLASH, &SPI1);
+
+void flash_init()
+{
+  //find suitable starting place for writing (should be 0)
+  run_start = flash.getAddress(PACKET_SIZE);
+  _addr = run_start;
+}
 
 void read_from_flash(uint32_t addr)
 {
@@ -12,7 +22,7 @@ void read_from_flash(uint32_t addr)
   print_info(&out);
 }
 
-bool write_info(dataPacket dp)
+bool write_info(dataPacket_t dp)
 {
   if (flash.writeAnything(_addr, dp))
   {

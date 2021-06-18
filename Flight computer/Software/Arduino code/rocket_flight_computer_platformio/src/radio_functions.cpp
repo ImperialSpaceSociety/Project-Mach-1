@@ -1,13 +1,25 @@
 #include "Si446x.h"
+#include "stdint.h"
+#include "datapacket.hpp"
 
 ///radio stuff
 #define CHANNEL 1
-#define MAX_PACKET_SIZE 500
-#define TIMEOUT 1000
+#define MAX_PACKET_SIZE 500U
+#define TIMEOUT 1000U
 
 #define PACKET_NONE 0
 #define PACKET_OK 1
 #define PACKET_INVALID 2
+
+typedef struct
+{
+  uint8_t ready;
+  int16_t rssi;
+  uint8_t length;
+  uint8_t buffer[MAX_PACKET_SIZE];
+} pingInfo_t;
+
+static volatile pingInfo_t pingInfo;
 
 void SI446X_CB_RXCOMPLETE(uint8_t length, int16_t rssi)
 {
@@ -15,7 +27,6 @@ void SI446X_CB_RXCOMPLETE(uint8_t length, int16_t rssi)
     length = MAX_PACKET_SIZE;
 
   pingInfo.ready = PACKET_OK;
-  pingInfo.timestamp = millis();
   pingInfo.rssi = rssi;
   pingInfo.length = length;
 
@@ -57,7 +68,7 @@ void manage_radio()
   }
 }
 
-void radio_send_data(dataPacket *dp)
+void radio_send_data(dataPacket_t *dp)
 {
   //convert to string (not sure if neccessary but dont know how to do it differently)
   String data = String(dp->latitude) + "," + String(dp->longitude) + "," + String(dp->altitude);

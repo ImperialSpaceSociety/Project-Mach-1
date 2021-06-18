@@ -41,23 +41,6 @@ void printTab(uint8_t _times)
   }
 }
 
-void printTime(uint32_t _wTime, uint32_t _rTime)
-{
-  printTab(2);
-  if (_rTime != 0)
-  {
-    printTimer(_wTime);
-    printTab(3);
-    printTimer(_rTime);
-  }
-  else
-  {
-    printTab(1);
-    Serial.print("      ");
-    printTimer(_wTime);
-  }
-}
-
 void printTimer(uint32_t _us)
 {
 
@@ -79,6 +62,23 @@ void printTimer(uint32_t _us)
     Serial.print(F(" us"));
   }
   delay(20);
+}
+
+void printTime(uint32_t _wTime, uint32_t _rTime)
+{
+  printTab(2);
+  if (_rTime != 0)
+  {
+    printTimer(_wTime);
+    printTab(3);
+    printTimer(_rTime);
+  }
+  else
+  {
+    printTab(1);
+    Serial.print("      ");
+    printTimer(_wTime);
+  }
 }
 
 void pass(bool _status)

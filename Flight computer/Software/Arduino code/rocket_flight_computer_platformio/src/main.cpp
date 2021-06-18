@@ -1,4 +1,3 @@
-#include <Arduino.h>
 
 /* Code for the Rocket Flight computer
  * Imperial College Space Society
@@ -20,6 +19,8 @@
 
 #define DEVICE_PURPOSE ROCKET // Either ROCKET or GND_STATION
 
+#include <Arduino.h>
+
 #include "H3LIS331DL.h"
 #include <MS5xxx.h>
 #include "SparkFun_Ublox_Arduino_Library.h" //http://librarymanager/All#SparkFun_u-blox_GNSS
@@ -28,15 +29,10 @@
 
 #include <Wire.h>
 #include <SPIMemory.h>
-
-///radio stuff
-#define CHANNEL 1
-#define MAX_PACKET_SIZE 500
-#define TIMEOUT 1000
-
-#define PACKET_NONE 0
-#define PACKET_OK 1
-#define PACKET_INVALID 2
+#include "datapacket.hpp"
+#include "radio_functions.hpp"
+#include "flash_functions.hpp"
+#include "flash_test_functions.hpp"
 
 //please get these value by running H3LIS331DL_AdjVal Sketch.
 #define VAL_X_AXIS 203
@@ -56,54 +52,11 @@ SPIFlash flash(SS_FLASH, &SPI1);
 long starttime;
 long lasttime;
 
-struct dataPacket
-{
-  //h3lis, location and accuracy
-  int16_t location[3];
-  double acc[3];
-
-  //m5 temp + pressure
-  double temp;
-  double pressure;
-
-  //GPS latitude, longitude, altitude
-  long latitude;
-  long longitude;
-  long altitude;
-
-  //imu gyro, mag, alt, temp
-  double gyro[3];
-  double accel[3];
-  double mag[3];
-};
-
-#define PACKET_SIZE sizeof(dataPacket)
-
-//the one datapacket reference we iterate on every run
-dataPacket dp;
-
-//starting address and cursor pointer
-uint32_t run_start;
-uint32_t _addr;
-
 //utility variables
 bool limit = false;
 uint8_t command = 0;
 int n;
 
-struct pingInfo_t
-{
-  uint8_t ready;
-  uint32_t timestamp;
-  int16_t rssi;
-  uint8_t length;
-  uint8_t buffer[MAX_PACKET_SIZE];
-};
-
-static volatile pingInfo_t pingInfo;
-
-//Why do we need these???
-static uint8_t tx_str_buffer[MAX_PACKET_SIZE];
 void fill_tx_buffer_with_location(uint16_t start_point, uint8_t *buffer, uint16_t latitude, uint16_t longitude, uint16_t altitude);
 
 void setup()
@@ -195,9 +148,7 @@ void setup()
     }
   }
 
-  //find suitable starting place for writing (should be 0)
-  run_start = flash.getAddress(PACKET_SIZE);
-  _addr = run_start;
+  flash_init();
   Serial.println("=========================================");
   Serial.println("This is the Rocket Flight Computer, v1.0");
   Serial.println("Press 1 and enter at any time to dump results from flash and exit the main loop.");
@@ -205,45 +156,8 @@ void setup()
   starttime = millis();
 }
 
-void loop()
-{
-
-  if (millis() - lasttime > 10)
-  {
-    if (limit && lasttime > (starttime + n * 1000))
-    {
-      dumpFlash();
-      exit(0);
-    }
-
-    lasttime = millis(); //Update the timer
-    read_info(&dp);
-    //print_info(&dp);
-    write_info(dp);
-    Serial.println(_addr);
-
-    if (command == 1)
-    {
-      dumpFlash();
-      exit(0);
-      command = 0;
-    }
-
-    radio_send_data(&dp);
-  }
-
-  if (Serial.available() > 0)
-  {
-    command = Serial.parseInt();
-  }
-
-#if DEVICE_PURPOSE == GND_STATION
-  manage_radio();
-#endif
-}
-
 //read info into a datapacket
-void read_info(dataPacket *dp)
+void read_info(dataPacket_t *dp)
 {
   //TODO: Add try-catch around the data collections, return a dummy value if failed.
   h3lis.readXYZ(&(dp->location[0]), &(dp->location[1]), &(dp->location[2]));
@@ -275,8 +189,45 @@ void read_info(dataPacket *dp)
   dp->mag[2] = imu.calcGyro(imu.mz);
 }
 
+void loop()
+{
+
+  if (millis() - lasttime > 10)
+  {
+    if (limit && lasttime > (starttime + n * 1000))
+    {
+      dumpFlash();
+      exit(0);
+    }
+
+    lasttime = millis(); //Update the timer
+    read_info(&dp);
+    //print_info(&dp);
+    write_info(dp);
+    //Serial.println(_addr);
+
+    if (command == 1)
+    {
+      dumpFlash();
+      exit(0);
+      command = 0;
+    }
+
+    radio_send_data(&dp);
+  }
+
+  if (Serial.available() > 0)
+  {
+    command = Serial.parseInt();
+  }
+
+#if DEVICE_PURPOSE == GND_STATION
+  manage_radio();
+#endif
+}
+
 //print to serial port
-void print_info(dataPacket *dp)
+void print_info(dataPacket_t *dp)
 {
   Serial.print("x, y, z = ");
   Serial.print(dp->location[0]);
