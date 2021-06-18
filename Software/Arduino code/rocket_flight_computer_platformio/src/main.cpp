@@ -65,37 +65,12 @@ dataPacket_t dp;
  */
 
 void print_info(dataPacket_t *dp);
+void sensor_init();
 
 void setup()
 {
   Wire.begin();
   Serial.begin(115200);
-  Si446x_init();
-  Si446x_setTxPower(SI446X_MAX_TX_POWER);
-  h3lis.init();
-  h3lis.importPara(VAL_X_AXIS, VAL_Y_AXIS, VAL_Z_AXIS);
-
-  if (flash.error())
-  {
-    Serial.println(flash.error(VERBOSE));
-  }
-  flash.begin();
-
-  if (!ubloxGps.begin())
-  {
-    Serial.println(F("Ublox GPS not detected at default I2C address."));
-  }
-
-  ubloxGps.setI2COutput(COM_TYPE_UBX);
-
-  imu.begin();
-  //imu.settings.device.commInterface = IMU_MODE_I2C;
-
-  //test all functionalities on the flash chip, pauses for confirmation
-  delay(3000);
-  Serial.println("Running tests on flash....");
-  run_all_tests();
-  Serial.println("Tests complete. If all looks good, enter y to continue");
 
   while (true) // remain here until told to break
   {
@@ -163,6 +138,43 @@ void setup()
   starttime = millis();
 }
 
+void sensor_init()
+{
+  Si446x_init();
+  Si446x_setTxPower(SI446X_MAX_TX_POWER);
+  h3lis.init();
+  h3lis.importPara(VAL_X_AXIS, VAL_Y_AXIS, VAL_Z_AXIS);
+
+  if (flash.error())
+  {
+    Serial.println(flash.error(VERBOSE));
+  }
+  flash.begin();
+
+  if (!ubloxGps.begin())
+  {
+    Serial.println(F("Ublox GPS not detected at default I2C address."));
+  }
+
+  ubloxGps.setI2COutput(COM_TYPE_UBX);
+
+  if (ms5.connect() > 0)
+  {
+    Serial.println("Error connecting to MS5607...");
+  }
+
+  ms5.ReadProm();
+
+  imu.begin();
+  //imu.settings.device.commInterface = IMU_MODE_I2C;
+
+  //test all functionalities on the flash chip, pauses for confirmation
+  delay(100);
+  Serial.println("Running tests on flash....");
+  run_all_tests();
+  Serial.println("Tests complete. If all looks good, enter y to continue");
+}
+
 //read info into a datapacket
 void read_info(dataPacket_t *dp)
 {
@@ -172,9 +184,7 @@ void read_info(dataPacket_t *dp)
 
   readGps(&(dp->latitude), &(dp->longitude), &(dp->altitude));
 
-  ms5.ReadProm();
   ms5.Readout();
-
   dp->temp = ms5.GetTemp();
   dp->pressure = ms5.GetPres();
 
@@ -253,9 +263,9 @@ void print_info(dataPacket_t *dp)
   Serial.print(dp->acc[2]);
   Serial.println("g");
 
-  Serial.print("Temperature: ");
-  Serial.println(dp->temp);
-  Serial.print("Pressure: ");
+  Serial.print("Temperature [0.01 C]: ");
+  Serial.print(dp->temp);
+  Serial.print("Pressure [Pa]: ");
   Serial.println(dp->pressure);
 
   Serial.print("Gyro: ");
