@@ -34,7 +34,7 @@ bool write_info(dataPacket_t dp)
   }
   else
   {
-    Serial.print("Problem writing to flash.");
+    Serial.println("Problem writing to flash.");
     return false;
   }
 }
