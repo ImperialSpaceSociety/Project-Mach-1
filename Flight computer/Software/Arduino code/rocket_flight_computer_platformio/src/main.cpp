@@ -21,18 +21,19 @@
 
 #include <Arduino.h>
 
+#include "main.hpp"
 #include "H3LIS331DL.h"
 #include <MS5xxx.h>
-#include "SparkFun_Ublox_Arduino_Library.h" //http://librarymanager/All#SparkFun_u-blox_GNSS
 #include "SparkFunLSM9DS1.h"
 #include "Si446x.h"
+#include <SPIMemory.h>
 
 #include <Wire.h>
-#include <SPIMemory.h>
 #include "datapacket.hpp"
 #include "radio_functions.hpp"
 #include "flash_functions.hpp"
 #include "flash_test_functions.hpp"
+#include "util.hpp"
 
 //please get these value by running H3LIS331DL_AdjVal Sketch.
 #define VAL_X_AXIS 203
@@ -41,7 +42,7 @@
 
 //sensor objects
 H3LIS331DL h3lis;
-//SFE_UBLOX_GPS ubloxGps;
+SFE_UBLOX_GPS ubloxGps;
 LSM9DS1 imu;
 MS5xxx ms5(&Wire);
 
@@ -59,6 +60,12 @@ void fill_tx_buffer_with_location(uint16_t start_point, uint8_t *buffer, uint16_
 //the one datapacket reference we iterate on every run
 dataPacket_t dp;
 
+/**
+ * Function prototypes
+ */
+
+void print_info(dataPacket_t *dp);
+
 void setup()
 {
   Wire.begin();
@@ -67,7 +74,7 @@ void setup()
   Si446x_setTxPower(SI446X_MAX_TX_POWER);
   h3lis.init();
   h3lis.importPara(VAL_X_AXIS, VAL_Y_AXIS, VAL_Z_AXIS);
-  //  ubloxGps.setI2COutput(COM_TYPE_UBX);
+  ubloxGps.setI2COutput(COM_TYPE_UBX);
 
   if (flash.error())
   {
@@ -75,11 +82,10 @@ void setup()
   }
   flash.begin();
 
-  //  if (!ubloxGps.begin())
-  //  {
-  //    Serial.println(F("Ublox GPS not detected at default I2C address."));
-  //    while (1);
-  //  }
+  if (!ubloxGps.begin())
+  {
+    Serial.println(F("Ublox GPS not detected at default I2C address."));
+  }
 
   imu.begin();
   //imu.settings.device.commInterface = IMU_MODE_I2C;
@@ -163,7 +169,7 @@ void read_info(dataPacket_t *dp)
   h3lis.readXYZ(&(dp->location[0]), &(dp->location[1]), &(dp->location[2]));
   h3lis.getAcceleration(dp->acc);
 
-  //  readGps(&(dp->latitude), &(dp->longitude), &(dp->altitude));
+  readGps(&(dp->latitude), &(dp->longitude), &(dp->altitude));
 
   ms5.ReadProm();
   ms5.Readout();
@@ -202,7 +208,7 @@ void loop()
 
     lasttime = millis(); //Update the timer
     read_info(&dp);
-    //print_info(&dp);
+    print_info(&dp);
     write_info(dp);
     //Serial.println(_addr);
 
