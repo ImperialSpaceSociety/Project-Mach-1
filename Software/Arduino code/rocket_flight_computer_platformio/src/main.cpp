@@ -74,7 +74,6 @@ void setup()
   Si446x_setTxPower(SI446X_MAX_TX_POWER);
   h3lis.init();
   h3lis.importPara(VAL_X_AXIS, VAL_Y_AXIS, VAL_Z_AXIS);
-  ubloxGps.setI2COutput(COM_TYPE_UBX);
 
   if (flash.error())
   {
@@ -86,6 +85,8 @@ void setup()
   {
     Serial.println(F("Ublox GPS not detected at default I2C address."));
   }
+
+  ubloxGps.setI2COutput(COM_TYPE_UBX);
 
   imu.begin();
   //imu.settings.device.commInterface = IMU_MODE_I2C;
