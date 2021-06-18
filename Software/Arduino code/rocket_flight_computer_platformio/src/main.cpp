@@ -52,10 +52,7 @@ MS5xxx sensor(&Wire);
 long starttime;
 long lasttime;
 
-//utility variables
-bool limit = false;
-uint8_t command = 0;
-int n;
+
 
 void fill_tx_buffer_with_location(uint16_t start_point, uint8_t *buffer, uint16_t latitude, uint16_t longitude, uint16_t altitude);
 
@@ -76,6 +73,8 @@ void setup()
   Serial.begin(115200);
   sensor_init();
 
+  get_user_decision_flash();
+
   flash_init();
   Serial.println("=========================================");
   Serial.println("This is the Rocket Flight Computer, v1.0");
@@ -84,66 +83,6 @@ void setup()
   starttime = millis();
 }
 
-void get_user_decision_flash()
-{
-  while (true) // remain here until told to break
-  {
-    if (Serial.available() > 0)
-      if (Serial.read() == 'y')
-        break;
-  }
-
-  Serial.println("Erase chip before run? enter y/n");
-  bool erase = false;
-  while (true) // remain here until told to break
-  {
-    if (Serial.available() > 0)
-    {
-      char res = Serial.read();
-      if (res == 'y' || res == 'n')
-      {
-        erase = (res == 'y');
-        break;
-      }
-    }
-  }
-  if (erase)
-  {
-    //erase chip before run
-    Serial.println("Erasing chip in preparation for run...");
-    flash.eraseChip();
-  }
-
-  Serial.println("Run for n seconds? y/n");
-  while (true) // remain here until told to break
-  {
-    if (Serial.available() > 0)
-    {
-      char res = Serial.read();
-      if (res == 'y' || res == 'n')
-      {
-        limit = (res == 'y');
-        break;
-      }
-    }
-  }
-  if (limit)
-  {
-    Serial.println("How many seconds to record for. Insert number:");
-    while (true) // remain here until told to break
-    {
-      if (Serial.available() > 0)
-      {
-        String st = Serial.readString();
-        if (st.toInt() > 0)
-        {
-          n = st.toInt();
-          break;
-        }
-      }
-    }
-  }
-}
 
 void sensor_init()
 {
@@ -243,11 +182,11 @@ void loop()
     write_info(dp);
     //Serial.println(_addr);
 
-    if (command == 1)
+    if (user_cmds.command == 1)
     {
       dumpFlash();
       exit(0);
-      command = 0;
+      user_cmds.command = 0;
     }
 
     radio_send_data(&dp);
@@ -255,7 +194,7 @@ void loop()
 
   if (Serial.available() > 0)
   {
-    command = Serial.parseInt();
+    user_cmds.command = Serial.parseInt();
   }
 
 #if DEVICE_PURPOSE == GND_STATION
