@@ -3,6 +3,8 @@
 
 #include "datapacket.hpp"
 
+extern SPIFlash flash;
+
 void dumpFlash();
 bool write_info(dataPacket_t dp);
 void flash_init();

@@ -17,11 +17,11 @@
 
 #include <Arduino.h>
 #include <SPIMemory.h>
+#include "flash_functions.hpp"
 
 #define TRUE 1
 #define FALSE 0
 
-SPIFlash flash(SS_FLASH, &SPI1);
 
 void printLine()
 {

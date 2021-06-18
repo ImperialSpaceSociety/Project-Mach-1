@@ -45,9 +45,6 @@ H3LIS331DL h3lis;
 LSM9DS1 imu;
 MS5xxx ms5(&Wire);
 
-//flash
-SPIFlash flash(SS_FLASH, &SPI1);
-
 //time-sensitive util variables
 long starttime;
 long lasttime;
@@ -58,7 +55,6 @@ uint8_t command = 0;
 int n;
 
 void fill_tx_buffer_with_location(uint16_t start_point, uint8_t *buffer, uint16_t latitude, uint16_t longitude, uint16_t altitude);
-
 
 //the one datapacket reference we iterate on every run
 dataPacket_t dp;
