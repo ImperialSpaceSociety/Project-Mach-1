@@ -47,7 +47,7 @@
 
 //sensor objects
 H3LIS331DL h3lis;
-SFE_UBLOX_GPS ubloxGps;
+//SFE_UBLOX_GPS ubloxGps;
 LSM9DS1 imu;
 MS5xxx ms5(&Wire);
 
@@ -108,23 +108,23 @@ void fill_tx_buffer_with_location(uint16_t start_point, uint8_t * buffer, uint16
 
 void setup() {
   Wire.begin();
-  Serial.begin(9600);
+  Serial.begin(115200);
   Si446x_init();
   Si446x_setTxPower(SI446X_MAX_TX_POWER);
   h3lis.init();
   h3lis.importPara(VAL_X_AXIS,VAL_Y_AXIS,VAL_Z_AXIS);
-  ubloxGps.setI2COutput(COM_TYPE_UBX);
+//  ubloxGps.setI2COutput(COM_TYPE_UBX);
   
   if (flash.error()) {
     Serial.println(flash.error(VERBOSE));
   }
   flash.begin();
   
-  if (!ubloxGps.begin())
-  {
-    Serial.println(F("Ublox GPS not detected at default I2C address."));
-    while (1);
-  }
+//  if (!ubloxGps.begin())
+//  {
+//    Serial.println(F("Ublox GPS not detected at default I2C address."));
+//    while (1);
+//  }
   
   imu.begin();
   //imu.settings.device.commInterface = IMU_MODE_I2C;
@@ -236,7 +236,7 @@ void read_info(dataPacket *dp){
   h3lis.readXYZ(&(dp->location[0]),&(dp->location[1]),&(dp->location[2]));
   h3lis.getAcceleration(dp->acc);
 
-  readGps(&(dp->latitude), &(dp->longitude), &(dp->altitude));
+//  readGps(&(dp->latitude), &(dp->longitude), &(dp->altitude));
 
   ms5.ReadProm();
   ms5.Readout();
