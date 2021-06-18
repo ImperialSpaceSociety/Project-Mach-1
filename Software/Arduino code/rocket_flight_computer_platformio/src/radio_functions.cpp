@@ -72,7 +72,7 @@ void radio_send_data(dataPacket_t *dp)
 {
   //convert to string (not sure if neccessary but dont know how to do it differently)
   String data = String(dp->latitude) + "," + String(dp->longitude) + "," + String(dp->altitude);
-  Serial.print(data);
+  //Serial.print(data);
   // Send the data
   // TODO: send the only every second, not every 10 milliseconds.
   Si446x_TX(&data, sizeof(data), CHANNEL, SI446X_STATE_RX);
