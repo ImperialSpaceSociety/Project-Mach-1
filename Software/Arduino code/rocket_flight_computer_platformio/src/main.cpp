@@ -42,7 +42,7 @@
 
 //sensor objects
 H3LIS331DL h3lis;
-SFE_UBLOX_GPS ubloxGps;
+SFE_UBLOX_GNSS ubloxGps;
 LSM9DS1 imu;
 MS5xxx ms5(&Wire);
 
