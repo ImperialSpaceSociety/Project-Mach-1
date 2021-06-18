@@ -147,16 +147,22 @@ void get_user_decision_flash()
 
 void sensor_init()
 {
+  /* Radio init */
   Si446x_init();
   Si446x_setTxPower(SI446X_MAX_TX_POWER);
+
+  /* 3 axis accelerometer init */
   h3lis.init();
   h3lis.importPara(VAL_X_AXIS, VAL_Y_AXIS, VAL_Z_AXIS);
 
+  /* Flash init */
   if (flash.error())
   {
     Serial.println(flash.error(VERBOSE));
   }
   flash.begin();
+
+  /* GPS init */
 
   if (!ubloxGps.begin())
   {
@@ -165,6 +171,8 @@ void sensor_init()
 
   ubloxGps.setI2COutput(COM_TYPE_UBX);
 
+  /* MS5607 Init */
+
   if (ms5.connect() > 0)
   {
     Serial.println("Error connecting to MS5607...");
@@ -172,14 +180,13 @@ void sensor_init()
 
   ms5.ReadProm();
 
+  /* init 9 Axis accelerometer/gyro/mag */
   imu.begin();
-  //imu.settings.device.commInterface = IMU_MODE_I2C;
 
-  //test all functionalities on the flash chip, pauses for confirmation
-  delay(100);
+  /* test all functionalities on the flash chip, pauses for confirmation */
   Serial.println("Running tests on flash....");
   run_all_tests();
-  Serial.println("Tests complete. If all looks good, enter y to continue");
+  Serial.println("Tests on Flash chip complete.");
 }
 
 //read info into a datapacket
