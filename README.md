@@ -95,6 +95,26 @@ The reason why we do this is the stock libraries downloaded directly from Arduin
 ## libraries directory
 All our libraries are kept here: `Project-Mach-1/tree/master/Flight%20computer/Software/Arduino%20code/libraries`
 
+## IC information
+
+## Diagnositics from the SI4463 chip we use
+```
+Get Device Info:
+
+Revision: 11
+Part: Si4463
+Part Build: 0
+Id: F
+Customer: 0
+ROM_ID: 3  (3 = revB1B, 6 = revC2A)
+Rev External: 3
+Rev Branch: 0
+Rev Internal: F
+Patch: 0
+Func: 1
+Radio Temperature: 27.88 deg C
+Radio Voltage: 3.29 Volts
+```
 
 ## Current progress
 * 25/9/19: The circuit board design files have been sent for manufacturing. Renders are as shown below.
