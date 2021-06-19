@@ -62,7 +62,7 @@ void setup()
 
 	// Start up
 	Si446x_init();
-	Si446x_setTxPower(SI446X_MAX_TX_POWER);
+	Si446x_setTxPower(22); // 10 dbm/ 10 mW
 }
 
 void loop()
