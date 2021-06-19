@@ -89,7 +89,7 @@ void setup()
   myGNSS.setI2COutput(COM_TYPE_UBX); //Set the I2C port to output UBX only (turn off NMEA noise)
   myGNSS.saveConfigSelective(VAL_CFG_SUBSEC_IOPORT); //Save (only) the communications port settings to flash and BBR
 
-  myGNSS.setNavigationFrequency(10); //Produce two solutions per second
+  myGNSS.setNavigationFrequency(10); //Produce 10 solutions per second
 
   myGNSS.setAutoPVTcallback(&printPVTdata); // Enable automatic NAV PVT messages with callback to printPVTdata
 }
