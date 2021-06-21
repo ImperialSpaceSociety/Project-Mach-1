@@ -178,3 +178,4 @@ pip-log.txt
 
 */.atmel-start-backup/*
 Flight computer/Software/Ricky_Tests/I2C_Scanner/GPS_Passthrough/jlink.log
+Software/Arduino code/FlashDiagnostics/.vscode/c_cpp_properties.json
