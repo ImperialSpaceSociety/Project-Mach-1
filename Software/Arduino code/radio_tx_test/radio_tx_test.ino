@@ -85,72 +85,81 @@ void loop()
 #define small_f START_BYTE,LOW_BYTE,HIGH_BYTE,HIGH_BYTE,LOW_BYTE,LOW_BYTE,HIGH_BYTE,HIGH_BYTE,LOW_BYTE,STOP_BYTE,
 #define big_B   START_BYTE,LOW_BYTE,HIGH_BYTE,LOW_BYTE,HIGH_BYTE,HIGH_BYTE,LOW_BYTE,HIGH_BYTE,LOW_BYTE,STOP_BYTE,
 
-  char data[MAX_PACKET_SIZE] = {
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
-    big_B
 
+#define highspeed_small_f     0b10110011, 0b00101100, 0b11001011, 0b00110010, 0b11001100,
+
+  char data[MAX_PACKET_SIZE] = {
+    0b10110011,
+    0b00101100,
+    0b11001011,
+    0b00110010,
+    0b11001100,
+
+    0b10110011,
+    0b00101100,
+    0b11001011,
+    0b00110010,
+    0b11001100,
+
+    0b10110011,
+    0b00101100,
+    0b11001011,
+    0b00110010,
+    0b11001100,
+
+    0b10110011,
+    0b00101100,
+    0b11001011,
+    0b00110010,
+    0b11001100,
+
+    0b10110011,
+    0b00101100,
+    0b11001011,
+    0b00110010,
+    0b11001100,
+
+    0b10110011,
+    0b00101100,
+    0b11001011,
+    0b00110010,
+    0b11001100,
+
+    0b10110011,
+    0b00101100,
+    0b11001011,
+    0b00110010,
+    0b11001100,
+
+    0b10110011,
+    0b00101100,
+    0b11001011,
+    0b00110010,
+    0b11001100,
+
+    0b10110011,
+    0b00101100,
+    0b11001011,
+    0b00110010,
+    0b11001100,
+
+    0b10110011,
+    0b00101100,
+    0b11001011,
+    0b00110010,
+    0b11001100,
+
+    0b10110011,
+    0b00101100,
+    0b11001011,
+    0b00110010,
+    0b11001100,
+
+    0b10110011,
+    0b00101100,
+    0b11001011,
+    0b00110010,
+    0b11001100,
   };
   //sprintf_P(data, PSTR("A"), counter);
 
