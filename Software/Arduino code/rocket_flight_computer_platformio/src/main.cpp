@@ -88,8 +88,9 @@ void sensor_init()
 {
   /* Radio init */
   Si446x_init();
-  Si446x_setTxPower(SI446X_MAX_TX_POWER);
+  Si446x_setTxPower(22); // 10 dbm/ 10 mW
 
+  
   /* 3 axis accelerometer init */
   h3lis.init();
   h3lis.importPara(VAL_X_AXIS, VAL_Y_AXIS, VAL_Z_AXIS);
