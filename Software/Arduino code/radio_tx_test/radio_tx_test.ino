@@ -86,80 +86,22 @@ void loop()
 #define big_B   START_BYTE,LOW_BYTE,HIGH_BYTE,LOW_BYTE,HIGH_BYTE,HIGH_BYTE,LOW_BYTE,HIGH_BYTE,LOW_BYTE,STOP_BYTE,
 
 
-#define highspeed_small_f     0b10110011, 0b00101100, 0b11001011, 0b00110010, 0b11001100,
+#define highspeed_small_f     0b10110011, 0b00101100, 0b11001011, 0b00110010, 0b11001100
 
   char data[MAX_PACKET_SIZE] = {
-    0b10110011,
-    0b00101100,
-    0b11001011,
-    0b00110010,
-    0b11001100,
+    highspeed_small_f,
+    highspeed_small_f,
+    highspeed_small_f,
+    highspeed_small_f,
+    highspeed_small_f,
+    highspeed_small_f,
+    highspeed_small_f,
+    highspeed_small_f,
+    highspeed_small_f,
+    highspeed_small_f,
+    highspeed_small_f,
+    highspeed_small_f,
 
-    0b10110011,
-    0b00101100,
-    0b11001011,
-    0b00110010,
-    0b11001100,
-
-    0b10110011,
-    0b00101100,
-    0b11001011,
-    0b00110010,
-    0b11001100,
-
-    0b10110011,
-    0b00101100,
-    0b11001011,
-    0b00110010,
-    0b11001100,
-
-    0b10110011,
-    0b00101100,
-    0b11001011,
-    0b00110010,
-    0b11001100,
-
-    0b10110011,
-    0b00101100,
-    0b11001011,
-    0b00110010,
-    0b11001100,
-
-    0b10110011,
-    0b00101100,
-    0b11001011,
-    0b00110010,
-    0b11001100,
-
-    0b10110011,
-    0b00101100,
-    0b11001011,
-    0b00110010,
-    0b11001100,
-
-    0b10110011,
-    0b00101100,
-    0b11001011,
-    0b00110010,
-    0b11001100,
-
-    0b10110011,
-    0b00101100,
-    0b11001011,
-    0b00110010,
-    0b11001100,
-
-    0b10110011,
-    0b00101100,
-    0b11001011,
-    0b00110010,
-    0b11001100,
-
-    0b10110011,
-    0b00101100,
-    0b11001011,
-    0b00110010,
-    0b11001100,
   };
   //sprintf_P(data, PSTR("A"), counter);
 
