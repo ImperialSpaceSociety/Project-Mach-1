@@ -34,6 +34,7 @@
 #include "flash_functions.hpp"
 #include "flash_test_functions.hpp"
 #include "util.hpp"
+#include "gps.hpp"
 
 //please get these value by running H3LIS331DL_AdjVal Sketch.
 #define VAL_X_AXIS 203
@@ -44,15 +45,12 @@
 
 //sensor objects
 H3LIS331DL h3lis;
-SFE_UBLOX_GNSS ubloxGps;
 LSM9DS1 imu;
 MS5xxx sensor(&Wire);
 
 //time-sensitive util variables
 long starttime;
 long lasttime;
-
-
 
 void fill_tx_buffer_with_location(uint16_t start_point, uint8_t *buffer, uint16_t latitude, uint16_t longitude, uint16_t altitude);
 
@@ -83,14 +81,12 @@ void setup()
   starttime = millis();
 }
 
-
 void sensor_init()
 {
   /* Radio init */
   Si446x_init();
   Si446x_setTxPower(22); // 10 dbm/ 10 mW
 
-  
   /* 3 axis accelerometer init */
   h3lis.init();
   h3lis.importPara(VAL_X_AXIS, VAL_Y_AXIS, VAL_Z_AXIS);
@@ -103,12 +99,7 @@ void sensor_init()
   flash.begin();
 
   /* GPS init */
-  if (!ubloxGps.begin())
-  {
-    Serial.println(F("Ublox GPS not detected at default I2C address."));
-  }
-
-  ubloxGps.setI2COutput(COM_TYPE_UBX);
+  gps_init();
 
   /* MS5607 Init */
   if (sensor.connect() > 0)
@@ -145,7 +136,8 @@ void read_info(dataPacket_t *dp)
   h3lis.readXYZ(&(dp->location[0]), &(dp->location[1]), &(dp->location[2]));
   h3lis.getAcceleration(dp->acc);
 
-  readGps(&(dp->latitude), &(dp->longitude), &(dp->altitude));
+  //readGps(&(dp->latitude), &(dp->longitude), &(dp->altitude));
+  gps_check();
 
   sensor.Readout();
   dp->temp = sensor.GetTemp();
