@@ -102,6 +102,7 @@ void sensor_init()
   gps_init();
 
   /* MS5607 Init */
+  sensor.setI2Caddr(0x77); // Set i2c address specific to our board
   if (sensor.connect() > 0)
   {
     Serial.println("Error connecting to MS5607...");
