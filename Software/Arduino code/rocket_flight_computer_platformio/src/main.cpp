@@ -35,6 +35,7 @@
 #include "flash_test_functions.hpp"
 #include "util.hpp"
 #include "gps.hpp"
+#include "rtos.hpp"
 
 //please get these value by running H3LIS331DL_AdjVal Sketch.
 #define VAL_X_AXIS 203
@@ -87,6 +88,8 @@ void setup()
   Serial.println("Press 1 and enter at any time to dump results from flash and exit the main loop.");
   Serial.println("=========================================");
   starttime = millis();
+
+  setup_rtos();
 }
 
 void sensor_init()
