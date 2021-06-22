@@ -43,6 +43,14 @@
 
 #define READ_INTERVAL 10 /* Milliseconds */
 
+// Arduino pin assignments
+#undef SI446X_CSN
+#undef SI446X_SDN
+#undef SI446X_IRQ
+#define SI446X_CSN 35
+#define SI446X_SDN 31
+#define SI446X_IRQ 30 // This needs to be an interrupt pin
+
 //sensor objects
 H3LIS331DL h3lis;
 LSM9DS1 imu;
@@ -102,6 +110,7 @@ void sensor_init()
   gps_init();
 
   /* MS5607 Init */
+  sensor.setI2Caddr(0x77); // Set i2c address specific to our board
   if (sensor.connect() > 0)
   {
     Serial.println("Error connecting to MS5607...");
