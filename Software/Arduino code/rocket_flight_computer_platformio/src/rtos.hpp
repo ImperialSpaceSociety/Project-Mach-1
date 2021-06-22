@@ -9,4 +9,13 @@
  * 
  */
 
-void setup_rtos();
+#ifndef RTOS_HPP
+#define RTOS_HPP
+
+#include <FreeRTOS_SAMD21.h>
+
+void myDelayUs(int us);
+void myDelayMs(int ms);
+void myDelayMsUntil(TickType_t *previousWakeTime, int ms);
+
+#endif // RTOS_HPP

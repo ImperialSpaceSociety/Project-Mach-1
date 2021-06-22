@@ -22,12 +22,15 @@
 #include <Arduino.h>
 
 #include "main.hpp"
+#include "config.h"
+
 #include "H3LIS331DL.h"
 #include <Wire.h>
 #include <MS5xxx.h>
 #include "SparkFunLSM9DS1.h"
 #include "Si446x.h"
 #include <SPIMemory.h>
+#include <FreeRTOS_SAMD21.h>
 
 #include "datapacket.hpp"
 #include "radio_functions.hpp"
@@ -37,50 +40,52 @@
 #include "gps.hpp"
 #include "rtos.hpp"
 
-//please get these value by running H3LIS331DL_AdjVal Sketch.
-#define VAL_X_AXIS 203
-#define VAL_Y_AXIS 165
-#define VAL_Z_AXIS 141
+//**************************************************************************
+// Type Defines and Constants
+//**************************************************************************
 
-#define READ_INTERVAL 10 /* Milliseconds */
+// Select the serial port the project should use and communicate over
+// Some boards use SerialUSB, some use Serial
+//#define SERIAL SerialUSB //Sparkfun Samd21 Boards
+#define SERIAL Serial //Adafruit, other Samd21 Boards
 
-// Arduino pin assignments
-#undef SI446X_CSN
-#undef SI446X_SDN
-#undef SI446X_IRQ
-#define SI446X_CSN 35
-#define SI446X_SDN 31
-#define SI446X_IRQ 30 // This needs to be an interrupt pin
-
+//**************************************************************************
+// global variables
+//**************************************************************************
 //sensor objects
 H3LIS331DL h3lis;
 LSM9DS1 imu;
 MS5xxx sensor(&Wire);
 
+TaskHandle_t Handle_TaskBlink;
+TaskHandle_t Handle_SensorRead;
+TaskHandle_t Handle_monitorTask;
+
 //time-sensitive util variables
 long starttime;
 long lasttime;
 
-void fill_tx_buffer_with_location(uint16_t start_point, uint8_t *buffer, uint16_t latitude, uint16_t longitude, uint16_t altitude);
-
 //the one datapacket reference we iterate on every run
 dataPacket_t dp;
 
-/**
- * Function prototypes
- */
+//**************************************************************************
+// Function Prototypes
+//**************************************************************************
 
 void print_info(dataPacket_t *dp);
 void sensor_init();
-void get_user_decision_flash();
+void setup_rtos();
+void fill_tx_buffer_with_location(uint16_t start_point, uint8_t *buffer, uint16_t latitude, uint16_t longitude, uint16_t altitude);
+
+//**************************************************************************
+// Function definitions
+//**************************************************************************
 
 void setup()
 {
   Wire.begin();
   Serial.begin(115200);
   sensor_init();
-
-  get_user_decision_flash();
 
   flash_init();
   Serial.println("=========================================");
@@ -130,17 +135,6 @@ void sensor_init()
   Serial.println("Tests on Flash chip complete.");
 }
 
-void test_crc()
-{
-  sensor.ReadProm();
-  sensor.Readout();
-  Serial.print("CRC=0x");
-  Serial.print(sensor.Calc_CRC4(), HEX);
-  Serial.print(" (should be 0x");
-  Serial.print(sensor.Read_CRC4(), HEX);
-  Serial.print(")\n");
-}
-
 //read info into a datapacket
 void read_info(dataPacket_t *dp)
 {
@@ -148,7 +142,7 @@ void read_info(dataPacket_t *dp)
   h3lis.readXYZ(&(dp->location[0]), &(dp->location[1]), &(dp->location[2]));
   h3lis.getAcceleration(dp->acc);
 
-  //readGps(&(dp->latitude), &(dp->longitude), &(dp->altitude));
+  // readGps(&(dp->latitude), &(dp->longitude), &(dp->altitude));
   gps_check();
 
   sensor.Readout();
@@ -171,40 +165,6 @@ void read_info(dataPacket_t *dp)
   dp->mag[0] = imu.calcGyro(imu.mx);
   dp->mag[1] = imu.calcGyro(imu.my);
   dp->mag[2] = imu.calcGyro(imu.mz);
-}
-
-void loop()
-{
-
-  if (millis() - lasttime > READ_INTERVAL)
-  {
-    lasttime = millis(); //Update the timer
-
-    // dumpFlash();
-
-    read_info(&dp);
-    print_info(&dp);
-    write_info(dp);
-    //Serial.println(_addr);
-
-    if (user_cmds.command == 1)
-    {
-      dumpFlash();
-      exit(0);
-      user_cmds.command = 0;
-    }
-
-    radio_send_data(&dp);
-  }
-
-  if (Serial.available() > 0)
-  {
-    user_cmds.command = Serial.parseInt();
-  }
-
-#if DEVICE_PURPOSE == GND_STATION
-  manage_radio();
-#endif
 }
 
 //print to serial port
@@ -261,4 +221,173 @@ void print_info(dataPacket_t *dp)
   Serial.print(", ");
   Serial.print(dp->altitude);
   Serial.println();
+}
+
+/*
+  Blink
+  Turns on an LED on for BLINK_INTERVAL, then off for BLINK_INTERVAL, repeatedly.
+*/
+void TaskBlink(void *pvParameters) // This is a task.
+{
+  (void)pvParameters;
+  TickType_t xLastWakeTime;
+  const TickType_t xFrequency = BLINK_INTERVAL;
+
+  bool led_state = false; // false is OFF, true is ON
+
+  // initialize digital LED_BUILTIN on pin 13 as an output.
+  pinMode(PIN_LED_BLUE, OUTPUT);
+  digitalWrite(PIN_LED_BLUE, led_state ? HIGH : LOW);
+
+  // Initialise the xLastWakeTime variable with the current time.
+  xLastWakeTime = xTaskGetTickCount();
+  for (;;)
+  {
+    // Wait for the next cycle.
+    vTaskDelayUntil(&xLastWakeTime, xFrequency);
+    led_state = !led_state;
+    digitalWrite(PIN_LED_BLUE, led_state ? HIGH : LOW);
+  }
+}
+
+/**
+ * @brief Read the sensors and save to flash
+ * 
+ * @param pvParameters 
+ */
+static void threadSensorRead(void *pvParameters)
+{
+  (void)pvParameters;
+
+  TickType_t xLastWakeTime;
+  const TickType_t xFrequency = INA226_SAMPLE_INTERVAL;
+
+  // Initialise the xLastWakeTime variable with the current time.
+  xLastWakeTime = xTaskGetTickCount();
+  for (;;)
+  {
+    // Wait for the next cycle.
+    vTaskDelayUntil(&xLastWakeTime, xFrequency);
+
+    // run task here.
+    read_info(&dp);
+    print_info(&dp);
+    write_info(dp);
+    radio_send_data(&dp);
+  }
+}
+
+//*****************************************************************
+// Task will periodically print out useful information about the tasks running
+// Is a useful tool to help figure out stack sizes being used
+// Run time stats are generated from all task timing collected since startup
+// No easy way yet to clear the run time stats yet
+//*****************************************************************
+static char ptrTaskList[400]; //temporary string buffer for task stats
+
+void taskMonitor(void *pvParameters)
+{
+  int x;
+  int measurement;
+
+  SERIAL.println("Task Monitor: Started");
+
+  // run this task afew times before exiting forever
+  while (1)
+  {
+    myDelayMs(10000); // print every 10 seconds
+
+    SERIAL.flush();
+    SERIAL.println("");
+    SERIAL.println("****************************************************");
+    SERIAL.print("Free Heap: ");
+    SERIAL.print(xPortGetFreeHeapSize());
+    SERIAL.println(" bytes");
+
+    SERIAL.print("Min Heap: ");
+    SERIAL.print(xPortGetMinimumEverFreeHeapSize());
+    SERIAL.println(" bytes");
+    SERIAL.flush();
+
+    SERIAL.println("****************************************************");
+    SERIAL.println("Task            ABS             %Util");
+    SERIAL.println("****************************************************");
+
+    vTaskGetRunTimeStats(ptrTaskList); //save stats to char array
+    SERIAL.println(ptrTaskList);       //prints out already formatted stats
+    SERIAL.flush();
+
+    SERIAL.println("****************************************************");
+    SERIAL.println("Task            State   Prio    Stack   Num     Core");
+    SERIAL.println("****************************************************");
+
+    vTaskList(ptrTaskList);      //save stats to char array
+    SERIAL.println(ptrTaskList); //prints out already formatted stats
+    SERIAL.flush();
+
+    SERIAL.println("****************************************************");
+    SERIAL.println("[Stacks Free Bytes Remaining] ");
+
+    measurement = uxTaskGetStackHighWaterMark(Handle_TaskBlink);
+    SERIAL.print("Thread A: ");
+    SERIAL.println(measurement);
+
+    measurement = uxTaskGetStackHighWaterMark(Handle_SensorRead);
+    SERIAL.print("Thread B: ");
+    SERIAL.println(measurement);
+
+    measurement = uxTaskGetStackHighWaterMark(Handle_monitorTask);
+    SERIAL.print("Monitor Stack: ");
+    SERIAL.println(measurement);
+
+    SERIAL.println("****************************************************");
+    SERIAL.flush();
+  }
+
+  // delete ourselves.
+  // Have to call this or the system crashes when you reach the end bracket and then get scheduled.
+  SERIAL.println("Task Monitor: Deleting");
+  vTaskDelete(NULL);
+}
+
+//*****************************************************************
+
+void setup_rtos()
+{
+  // Set the led the rtos will blink when we have a fatal rtos error
+  // RTOS also Needs to know if high/low is the state that turns on the led.
+  // Error Blink Codes:
+  //    3 blinks - Fatal Rtos Error, something bad happened. Think really hard about what you just changed.
+  //    2 blinks - Malloc Failed, Happens when you couldn't create a rtos object.
+  //               Probably ran out of heap.
+  //    1 blink  - Stack overflow, Task needs more bytes defined for its stack!
+  //               Use the taskMonitor thread to help gauge how much more you need
+  vSetErrorLed(ERROR_LED_PIN, ERROR_LED_LIGHTUP_STATE);
+
+  // sets the serial port to print errors to when the rtos crashes
+  // if this is not set, serial information is not printed by default
+  vSetErrorSerial(&SERIAL);
+
+  // Create the threads that will be managed by the rtos
+  // Sets the stack size and priority of each task
+  // Also initializes a handler pointer to each task, which are important to communicate with and retrieve info from tasks
+  xTaskCreate(TaskBlink, "TaskBlink", 256, NULL, tskIDLE_PRIORITY + 3, &Handle_TaskBlink);
+  xTaskCreate(threadSensorRead, "threadSensorRead", 256, NULL, tskIDLE_PRIORITY + 2, &Handle_SensorRead);
+  xTaskCreate(taskMonitor, "Task Monitor", 256, NULL, tskIDLE_PRIORITY + 1, &Handle_monitorTask);
+
+  // Start the RTOS, this function will never return and will schedule the tasks.
+  vTaskStartScheduler();
+
+  // error scheduler failed to start
+  // should never get here
+  while (1)
+  {
+    SERIAL.println("Scheduler Failed! \n");
+    SERIAL.flush();
+    delay(1000);
+  }
+}
+
+void loop()
+{
 }
