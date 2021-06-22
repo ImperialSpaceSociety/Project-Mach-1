@@ -43,6 +43,14 @@
 
 #define READ_INTERVAL 10 /* Milliseconds */
 
+// Arduino pin assignments
+#undef SI446X_CSN
+#undef SI446X_SDN
+#undef SI446X_IRQ
+#define SI446X_CSN 35
+#define SI446X_SDN 31
+#define SI446X_IRQ 30 // This needs to be an interrupt pin
+
 //sensor objects
 H3LIS331DL h3lis;
 LSM9DS1 imu;
