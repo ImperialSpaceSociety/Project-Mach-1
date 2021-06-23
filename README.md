@@ -116,7 +116,7 @@ Radio Temperature: 27.88 deg C
 Radio Voltage: 3.29 Volts
 ```
 
-### Diagnositics of Flash chip
+### Diagnostics of Flash chip
 ```
 Initialising..........
 Chip Diagnostics initiated.
