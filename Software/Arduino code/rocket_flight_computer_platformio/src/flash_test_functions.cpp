@@ -668,6 +668,7 @@ void run_all_tests()
   Serial.println();
   eraseSectorTest();
   //Serial.println();
+#if 0
 
   /* #if defined(ARDUINO_ARCH_SAM) || defined(ARDUINO_ARCH_ESP8266)
       delay(10);
@@ -708,6 +709,7 @@ void run_all_tests()
   arrayTest();
   Serial.println();
   stringTest();
+#endif
 
   /* #if !defined(ARDUINO_ARCH_SAM) || !defined(ARDUINO_ARCH_ESP8266)
       Serial.println();
