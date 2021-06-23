@@ -116,6 +116,52 @@ Radio Temperature: 27.88 deg C
 Radio Voltage: 3.29 Volts
 ```
 
+### Diagnositics of Flash chip
+```
+Initialising..........
+Chip Diagnostics initiated.
+
+No Chip size defined by user. Checking library support.
+Chip identified. This chip is fully supported by the library.
+
+SPIMemory Library version: 3.3.0
+
+JEDEC ID: 0xEF7017
+Man ID: 0xEF
+Memory ID: 0x70
+Capacity: 8388608
+Max Pages: 32768
+Unique ID: 114518745233664, 0x688C52A779213900
+-----------------------------------------------------------------------------------------------------------------------------
+							Testing library code
+-----------------------------------------------------------------------------------------------------------------------------
+			Function		Test result			     Runtime
+-----------------------------------------------------------------------------------------------------------------------------
+			Power Down		   PASS				      53 us
+			Power Up		   PASS				      45 us
+
+			Erase Chip		   PASS				      13.618 s
+			Erase 72KB		   PASS				      214.66 ms
+			Erase 64KB		   PASS				      163.17 ms
+			Erase 32KB		   PASS				      119.84 ms
+			Erase 4KB		   PASS				      39.14 ms
+-----------------------------------------------------------------------------------------------------------------------------
+			Data type		I/O Result	      Write time	      Read time
+-----------------------------------------------------------------------------------------------------------------------------
+			Byte			   PASS			108 us			48 us
+			Char			   PASS			120 us			46 us
+			Word			   PASS			124 us			48 us
+			Short			   PASS			126 us			52 us
+			ULong			   PASS			140 us			58 us
+			Long			   PASS			128 us			52 us
+			Float			   PASS			140 us			54 us
+			Struct			   PASS			282 us			94 us
+			Byte Array		   PASS			2.07 ms			458 us
+			String			   PASS			408 us			164 us
+-----------------------------------------------------------------------------------------------------------------------------
+
+```
+
 ## Current progress
 * 25/9/19: The circuit board design files have been sent for manufacturing. Renders are as shown below.
 ![alt text](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/Flight%20computer/Hardware/circuit%20board%20design%20v1.1/Capture%20ft1.PNG)
