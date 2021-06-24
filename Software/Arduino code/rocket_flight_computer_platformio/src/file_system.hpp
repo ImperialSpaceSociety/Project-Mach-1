@@ -21,12 +21,10 @@ public:
     OurFile();
     void init_file_system();
     bool write_info(dataPacket_t dp);
-    void flush_file();
+    void flush_file(File *file);
     void unmounting();
-    void read_file();
-    void write_string(char *string_to_write);
-
-    File file;
+    void read_file(File *file);
+    void write_string(File *file, char *string_to_write);
 };
 
 #endif // __FILE_SYSTEM_H__

@@ -69,11 +69,11 @@ void OurFile::init_file_system()
    * write only mode (SPIFFS_WRONLY). If the file does exist
    * delete the existing content (SPIFFS_TRUNC).
    */
-    file = filesystem.open(FILE_NAME, CREATE | READ_WRITE | APPEND);
+    File file = filesystem.open(FILE_NAME, CREATE | READ_WRITE | APPEND);
 
     for (int i = 0; i < 100; i++)
     {
-        // write_string(PANGRAM);
+        write_string(&file, PANGRAM);
     }
 
     Serial.println("Retrieving filesystem info ...");
@@ -93,10 +93,10 @@ void OurFile::init_file_system()
     }
 }
 
-void OurFile::write_string(char *string_to_write)
+void OurFile::write_string(File *file, char *string_to_write)
 {
     int const bytes_to_write = strlen(string_to_write);
-    int const bytes_written = file.write((void *)string_to_write, bytes_to_write);
+    int const bytes_written = file->write((void *)string_to_write, bytes_to_write);
 
     if (bytes_written != bytes_to_write)
     {
@@ -110,10 +110,10 @@ void OurFile::write_string(char *string_to_write)
         Serial.println(" bytes written");
     }
 }
-void OurFile::flush_file()
+void OurFile::flush_file(File *file)
 {
     Serial.println("Flushing ...");
-    file.flush();
+    file->flush();
 }
 
 void OurFile::unmounting()
@@ -122,16 +122,16 @@ void OurFile::unmounting()
     filesystem.unmount();
 }
 
-void OurFile::read_file()
+void OurFile::read_file(File *file)
 {
     Serial.println("Reading ...");
-    file.lseek(0, START); /* Rewind file pointer to the start */
+    file->lseek(0, START); /* Rewind file pointer to the start */
 
     char buf[64] = {0};
-    int const bytes_read = file.read(buf, sizeof(buf));
+    int const bytes_read = file->read(buf, sizeof(buf));
     buf[bytes_read] = '\0';
 
-    file.close();
+    file->close();
     Serial.print("[");
     Serial.print(bytes_read);
     Serial.print("] ");
