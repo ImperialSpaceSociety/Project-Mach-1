@@ -29,7 +29,6 @@
 #include <MS5xxx.h>
 #include "SparkFunLSM9DS1.h"
 #include "Si446x.h"
-#include <SPIMemory.h>
 #include <FreeRTOS_SAMD21.h>
 
 #include "file_system.hpp"
