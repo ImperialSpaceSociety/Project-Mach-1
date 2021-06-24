@@ -10,21 +10,25 @@
  * INCLUDE
  **************************************************************************************/
 
-#include <Arduino_MKRMEM.h>
+#include "file_system.hpp"
 
 /**************************************************************************************
  * CONSTANTS
  **************************************************************************************/
 
 /* A pangram is a sentence using every letter of a given alphabet at least once. */
-static char const PANGRAM[] = "The quick brown fox jumps over the lazy dog.";
+static char PANGRAM[] = "The quick brown fox jumps over the lazy dog.";
 #define FILE_NAME "data.bin"
 
 /**************************************************************************************
  * SETUP/LOOP
  **************************************************************************************/
 
-void init_file_system()
+OurFile::OurFile()
+{
+}
+
+void OurFile::init_file_system()
 {
 
     flash.begin();
@@ -65,25 +69,11 @@ void init_file_system()
    * write only mode (SPIFFS_WRONLY). If the file does exist
    * delete the existing content (SPIFFS_TRUNC).
    */
-    File file = filesystem.open(FILE_NAME, CREATE | READ_WRITE | APPEND);
+    file = filesystem.open(FILE_NAME, CREATE | READ_WRITE | APPEND);
 
     for (int i = 0; i < 100; i++)
     {
-
-        int const bytes_to_write = strlen(PANGRAM);
-        int const bytes_written = file.write((void *)PANGRAM, bytes_to_write);
-
-        if (bytes_written != bytes_to_write)
-        {
-            Serial.println("write() failed with error code ");
-            Serial.println(filesystem.err());
-            return;
-        }
-        else
-        {
-            Serial.print(bytes_written);
-            Serial.println(" bytes written");
-        }
+        // write_string(PANGRAM);
     }
 
     Serial.println("Retrieving filesystem info ...");
@@ -101,7 +91,39 @@ void init_file_system()
         snprintf(msg, sizeof(msg), "SPIFFS Info:\nBytes Total: %d\nBytes Used:  %d", bytes_total, bytes_used);
         Serial.println(msg);
     }
+}
 
+void OurFile::write_string(char *string_to_write)
+{
+    int const bytes_to_write = strlen(string_to_write);
+    int const bytes_written = file.write((void *)string_to_write, bytes_to_write);
+
+    if (bytes_written != bytes_to_write)
+    {
+        Serial.println("write() failed with error code ");
+        Serial.println(filesystem.err());
+        return;
+    }
+    else
+    {
+        Serial.print(bytes_written);
+        Serial.println(" bytes written");
+    }
+}
+void OurFile::flush_file()
+{
+    Serial.println("Flushing ...");
+    file.flush();
+}
+
+void OurFile::unmounting()
+{
+    Serial.println("Unmounting ...");
+    filesystem.unmount();
+}
+
+void OurFile::read_file()
+{
     Serial.println("Reading ...");
     file.lseek(0, START); /* Rewind file pointer to the start */
 
@@ -114,10 +136,20 @@ void init_file_system()
     Serial.print(bytes_read);
     Serial.print("] ");
     Serial.println(buf);
-
-    Serial.println("Flushing ...");
-    file.flush();
-
-    Serial.println("Unmounting ...");
-    filesystem.unmount();
 }
+
+// bool write_info(dataPacket_t dp)
+// {
+//     if (flash.writeAnything(_addr, dp))
+//     {
+//         //increment address pointer
+//         _addr += PACKET_SIZE;
+
+//         return true;
+//     }
+//     else
+//     {
+//         Serial.println("Problem writing to flash.");
+//         return false;
+//     }
+// }
