@@ -32,6 +32,7 @@
 #include <SPIMemory.h>
 #include <FreeRTOS_SAMD21.h>
 
+#include "file_system.hpp"
 #include "datapacket.hpp"
 #include "radio_functions.hpp"
 #include "util.hpp"
@@ -65,6 +66,7 @@ long lasttime;
 
 //the one datapacket reference we iterate on every run
 dataPacket_t dp;
+OurFile ourfile;
 
 //**************************************************************************
 // Function Prototypes
@@ -83,6 +85,7 @@ void setup()
 {
   Wire.begin();
   Serial.begin(115200);
+  ourfile.init_file_system();
   sensor_init();
 
   Serial.println("=========================================");
