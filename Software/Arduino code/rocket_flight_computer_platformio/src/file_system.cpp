@@ -18,6 +18,7 @@
 
 /* A pangram is a sentence using every letter of a given alphabet at least once. */
 static char const PANGRAM[] = "The quick brown fox jumps over the lazy dog.";
+#define FILE_NAME "data.bin"
 
 /**************************************************************************************
  * SETUP/LOOP
@@ -25,11 +26,6 @@ static char const PANGRAM[] = "The quick brown fox jumps over the lazy dog.";
 
 void init_file_system()
 {
-
-    unsigned long const start = millis();
-    for (unsigned long now = millis(); !Serial && ((now - start) < 5000); now = millis())
-    {
-    };
 
     flash.begin();
 
@@ -57,10 +53,11 @@ void init_file_system()
     }
 
     Serial.print("Checking for file ... ");
-    File fox = filesystem.open("fox.txt", READ_ONLY);
+    File fox = filesystem.open(FILE_NAME, READ_ONLY);
     if (fox)
     {
-        Serial.println(" fox.txt exists. It will be overwritten.");
+        Serial.printf("File %s exists. Data will be appended to it.", FILE_NAME);
+        Serial.println();
     }
 
     Serial.println("Writing ...");
@@ -68,7 +65,7 @@ void init_file_system()
    * write only mode (SPIFFS_WRONLY). If the file does exist
    * delete the existing content (SPIFFS_TRUNC).
    */
-    File file = filesystem.open("fox.txt", CREATE | READ_WRITE | APPEND);
+    File file = filesystem.open(FILE_NAME, CREATE | READ_WRITE | APPEND);
 
     for (int i = 0; i < 100; i++)
     {
@@ -123,8 +120,4 @@ void init_file_system()
 
     Serial.println("Unmounting ...");
     filesystem.unmount();
-}
-
-void loop()
-{
 }
