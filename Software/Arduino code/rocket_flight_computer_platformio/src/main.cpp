@@ -34,8 +34,6 @@
 
 #include "datapacket.hpp"
 #include "radio_functions.hpp"
-#include "flash_functions.hpp"
-#include "flash_test_functions.hpp"
 #include "util.hpp"
 #include "gps.hpp"
 #include "rtos.hpp"
@@ -87,7 +85,6 @@ void setup()
   Serial.begin(115200);
   sensor_init();
 
-  flash_init();
   Serial.println("=========================================");
   Serial.println("This is the Rocket Flight Computer, v1.0");
   Serial.println("Press 1 and enter at any time to dump results from flash and exit the main loop.");
@@ -107,13 +104,6 @@ void sensor_init()
   h3lis.init();
   h3lis.importPara(VAL_X_AXIS, VAL_Y_AXIS, VAL_Z_AXIS);
 
-  /* Flash init */
-  if (flash.error())
-  {
-    Serial.println(flash.error(VERBOSE));
-  }
-  flash.begin();
-
   /* GPS init */
   gps_init();
 
@@ -128,11 +118,6 @@ void sensor_init()
 
   /* init 9 Axis accelerometer/gyro/mag */
   imu.begin();
-
-  /* test all functionalities on the flash chip, pauses for confirmation */
-  Serial.println("Running tests on flash....");
-  run_all_tests();
-  Serial.println("Tests on Flash chip complete.");
 }
 
 //read info into a datapacket
