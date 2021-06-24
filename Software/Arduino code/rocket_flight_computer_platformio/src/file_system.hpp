@@ -25,6 +25,9 @@ public:
     void unmounting();
     void read_file(File *file);
     void write_string(File *file, char *string_to_write);
+    void writing();
+
+    File *file;
 };
 
 #endif // __FILE_SYSTEM_H__

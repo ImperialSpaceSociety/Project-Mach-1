@@ -249,6 +249,8 @@ static void threadSensorRead(void *pvParameters)
   TickType_t xLastWakeTime;
   const TickType_t xFrequency = INA226_SAMPLE_INTERVAL;
 
+  ourfile.init_file_system();
+
   // Initialise the xLastWakeTime variable with the current time.
   xLastWakeTime = xTaskGetTickCount();
   for (;;)
@@ -258,8 +260,9 @@ static void threadSensorRead(void *pvParameters)
 
     // run task here.
     read_info(&dp);
-    print_info(&dp);
-    write_info(dp);
+    //print_info(&dp);
+    // write_info(dp);
+    ourfile.writing();
     radio_send_data(&dp);
   }
 }

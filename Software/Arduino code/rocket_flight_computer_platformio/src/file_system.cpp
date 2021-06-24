@@ -64,16 +64,23 @@ void OurFile::init_file_system()
         Serial.println();
     }
 
-    Serial.println("Writing ...");
+    Serial.println("Open for writing ...");
     /* Create file if it doesn't exist (SPIFFS_CREAT) and open in 
    * write only mode (SPIFFS_WRONLY). If the file does exist
    * delete the existing content (SPIFFS_TRUNC).
    */
-    File file = filesystem.open(FILE_NAME, CREATE | READ_WRITE | APPEND);
+    File file1 = filesystem.open(FILE_NAME, CREATE | READ_WRITE | APPEND);
+    file = &file1;
+    writing();
+}
+
+void OurFile::writing()
+{
+    Serial.println("Writing ...");
 
     for (int i = 0; i < 100; i++)
     {
-        write_string(&file, PANGRAM);
+        write_string(file, PANGRAM);
     }
 
     Serial.println("Retrieving filesystem info ...");
