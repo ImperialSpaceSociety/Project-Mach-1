@@ -137,32 +137,31 @@ void sensor_init()
 void read_info(dataPacket_t *dp)
 {
   //TODO: Add try-catch around the data collections, return a dummy value if failed.
-  h3lis.readXYZ(&(dp->location[0]), &(dp->location[1]), &(dp->location[2]));
-  h3lis.getAcceleration(dp->acc);
+  // h3lis.readXYZ(&(dp->location[0]), &(dp->location[1]), &(dp->location[2]));
+  // h3lis.getAcceleration(dp->acc);
 
-  // readGps(&(dp->latitude), &(dp->longitude), &(dp->altitude));
   gps_check();
 
   sensor.Readout();
   dp->temp = sensor.GetTemp();
   dp->pressure = sensor.GetPres();
 
-  imu.readGyro();
-  imu.readAccel();
-  imu.readMag();
-  imu.readTemp();
+  // imu.readGyro();
+  // imu.readAccel();
+  // imu.readMag();
+  // imu.readTemp();
 
-  dp->gyro[0] = imu.calcGyro(imu.gx);
-  dp->gyro[1] = imu.calcGyro(imu.gy);
-  dp->gyro[2] = imu.calcGyro(imu.gz);
+  // dp->gyro[0] = imu.calcGyro(imu.gx);
+  // dp->gyro[1] = imu.calcGyro(imu.gy);
+  // dp->gyro[2] = imu.calcGyro(imu.gz);
 
-  dp->accel[0] = imu.calcGyro(imu.ax);
-  dp->accel[1] = imu.calcGyro(imu.ay);
-  dp->accel[2] = imu.calcGyro(imu.az);
+  // dp->accel[0] = imu.calcGyro(imu.ax);
+  // dp->accel[1] = imu.calcGyro(imu.ay);
+  // dp->accel[2] = imu.calcGyro(imu.az);
 
-  dp->mag[0] = imu.calcGyro(imu.mx);
-  dp->mag[1] = imu.calcGyro(imu.my);
-  dp->mag[2] = imu.calcGyro(imu.mz);
+  // dp->mag[0] = imu.calcGyro(imu.mx);
+  // dp->mag[1] = imu.calcGyro(imu.my);
+  // dp->mag[2] = imu.calcGyro(imu.mz);
 }
 
 //print to serial port
@@ -281,45 +280,45 @@ static void threadSensorRead(void *pvParameters)
   TickType_t xLastWakeTime;
   const TickType_t xFrequency = INA226_SAMPLE_INTERVAL;
 
-  flash.begin();
+  // flash.begin();
 
-  Serial.println("Mounting ...");
-  if (SPIFFS_OK != filesystem.mount())
-  {
-    Serial.println("mount() failed with error code ");
-    Serial.println(filesystem.err());
-    return;
-  }
+  // Serial.println("Mounting ...");
+  // if (SPIFFS_OK != filesystem.mount())
+  // {
+  //   Serial.println("mount() failed with error code ");
+  //   Serial.println(filesystem.err());
+  //   return;
+  // }
 
-  Serial.println("Checking ...");
-  if (SPIFFS_OK != filesystem.check())
-  {
-    Serial.println("check() failed with error code ");
-    Serial.println(filesystem.err());
-    return;
-  }
+  // Serial.println("Checking ...");
+  // if (SPIFFS_OK != filesystem.check())
+  // {
+  //   Serial.println("check() failed with error code ");
+  //   Serial.println(filesystem.err());
+  //   return;
+  // }
 
-  Serial.print("Checking for file ... ");
-  File fnf = filesystem.open("404.txt", READ_ONLY);
-  if (!fnf)
-  {
-    Serial.println(" 404.txt does not exist.");
-  }
+  // Serial.print("Checking for file ... ");
+  // File fnf = filesystem.open("404.txt", READ_ONLY);
+  // if (!fnf)
+  // {
+  //   Serial.println(" 404.txt does not exist.");
+  // }
 
-  Serial.print("Checking for file ... ");
-  File fox = filesystem.open(FILE_NAME, READ_ONLY);
-  if (fox)
-  {
-    Serial.printf("File %s exists. Data will be appended to it.", FILE_NAME);
-    Serial.println();
-  }
+  // Serial.print("Checking for file ... ");
+  // File fox = filesystem.open(FILE_NAME, READ_ONLY);
+  // if (fox)
+  // {
+  //   Serial.printf("File %s exists. Data will be appended to it.", FILE_NAME);
+  //   Serial.println();
+  // }
 
-  Serial.println("Open for writing ...");
-  /* Create file if it doesn't exist (SPIFFS_CREAT) and open in 
-   * write only mode (SPIFFS_WRONLY). If the file does exist
-   * delete the existing content (SPIFFS_TRUNC).
-   */
-  File file = filesystem.open(FILE_NAME, CREATE | READ_WRITE | APPEND);
+  // Serial.println("Open for writing ...");
+  // /* Create file if it doesn't exist (SPIFFS_CREAT) and open in
+  //  * write only mode (SPIFFS_WRONLY). If the file does exist
+  //  * delete the existing content (SPIFFS_TRUNC).
+  //  */
+  // File file = filesystem.open(FILE_NAME, CREATE | READ_WRITE | APPEND);
 
   // Initialise the xLastWakeTime variable with the current time.
   xLastWakeTime = xTaskGetTickCount();
@@ -330,41 +329,40 @@ static void threadSensorRead(void *pvParameters)
 
     // run task here.
     read_info(&dp);
-    //print_info(&dp);
-    // write_info(dp);
+    print_info(&dp);
 
-    Serial.println("Writing ...");
+    // Serial.println("Writing ...");
 
-    int const bytes_to_write = sizeof(dataPacket_t);
-    int const bytes_written = file.write((void *)&dp, bytes_to_write);
+    // int const bytes_to_write = sizeof(dataPacket_t);
+    // int const bytes_written = file.write((void *)&dp, bytes_to_write);
 
-    if (bytes_written != bytes_to_write)
-    {
-      Serial.println("write() failed with error code ");
-      Serial.println(filesystem.err());
-      return;
-    }
-    else
-    {
-      Serial.print(bytes_written);
-      Serial.println(" bytes written");
-    }
+    // if (bytes_written != bytes_to_write)
+    // {
+    //   Serial.println("write() failed with error code ");
+    //   Serial.println(filesystem.err());
+    //   return;
+    // }
+    // else
+    // {
+    //   Serial.print(bytes_written);
+    //   Serial.println(" bytes written");
+    // }
 
-    Serial.println("Retrieving filesystem info ...");
-    unsigned int bytes_total = 0,
-                 bytes_used = 0;
-    if (SPIFFS_OK != filesystem.info(bytes_total, bytes_used))
-    {
-      Serial.println("check() failed with error code ");
-      Serial.println(filesystem.err());
-      return;
-    }
-    else
-    {
-      char msg[64] = {0};
-      snprintf(msg, sizeof(msg), "SPIFFS Info:\nBytes Total: %d\nBytes Used:  %d", bytes_total, bytes_used);
-      Serial.println(msg);
-    }
+    // Serial.println("Retrieving filesystem info ...");
+    // unsigned int bytes_total = 0,
+    //              bytes_used = 0;
+    // if (SPIFFS_OK != filesystem.info(bytes_total, bytes_used))
+    // {
+    //   Serial.println("check() failed with error code ");
+    //   Serial.println(filesystem.err());
+    //   return;
+    // }
+    // else
+    // {
+    //   char msg[64] = {0};
+    //   snprintf(msg, sizeof(msg), "SPIFFS Info:\nBytes Total: %d\nBytes Used:  %d", bytes_total, bytes_used);
+    //   Serial.println(msg);
+    // }
   }
 }
 
