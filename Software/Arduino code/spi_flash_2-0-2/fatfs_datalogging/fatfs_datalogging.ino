@@ -48,6 +48,17 @@ Adafruit_W25Q16BV_FatFs fatfs(flash);
 #define FILE_NAME      "data.csv"
 
 
+typedef struct{
+  int count;
+  float longitude;
+  float latitude;
+  float altitude;
+} data_t;
+
+data_t tx_data = {.count=0, .longitude=0.2, .latitude=52.3, .altitude=120.2};
+
+
+
 void setup() {
   // Initialize serial port and wait for it to open before continuing.
   Serial.begin(115200);
@@ -81,16 +92,8 @@ void loop() {
   Adafruit_SPIFlash_FAT::File dataFile = fatfs.open(FILE_NAME, FILE_WRITE);
   // Check that the file opened successfully and write a line to it.
   if (dataFile) {
-    // Take a new data reading from a sensor, etc.  For this example just
-    // make up a random number.
-    int reading = random(0,100);
-    // Write a line to the file.  You can use all the same print functions
-    // as if you're writing to the serial monitor.  For example to write
-    // two CSV (commas separated) values:
-    dataFile.print("Sensor #1");
-    dataFile.print(",");
-    dataFile.print(reading, DEC);
-    dataFile.println();
+    tx_data.count++;
+    dataFile.write((const uint8_t *)&tx_data, sizeof(data_t));
     // Finally close the file when done writing.  This is smart to do to make
     // sure all the data is written to the file.
     dataFile.close();

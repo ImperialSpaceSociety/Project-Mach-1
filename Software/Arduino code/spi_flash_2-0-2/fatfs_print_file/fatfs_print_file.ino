@@ -53,6 +53,13 @@ Adafruit_W25Q16BV_FatFs fatfs(flash);
 #define FILE_NAME      "data.csv"
 
 
+typedef struct{
+  int count;
+  float longitude;
+  float latitude;
+  float altitude;
+} data_t;
+
 void setup() {
   // Initialize serial port and wait for it to open before continuing.
   Serial.begin(115200);
@@ -88,8 +95,19 @@ void setup() {
       // Use the read function to read the next character.
       // You can alternatively use other functions like readUntil, readString, etc.
       // See the fatfs_full_usage example for more details.
-      char c = dataFile.read();
-      Serial.print(c);
+      data_t rx_data;
+      dataFile.read((uint8_t *)&rx_data, sizeof(data_t));
+            
+      Serial.print(" Count= ");
+      Serial.print(rx_data.count);
+      Serial.print(" Longitude= ");
+      Serial.print(rx_data.longitude);
+      Serial.print(" Latitude= ");
+      Serial.print(rx_data.latitude);
+      Serial.print(" Altitude= ");
+      Serial.print(rx_data.altitude);
+      Serial.println();
+    
     }
   }
   else {
