@@ -279,46 +279,6 @@ static void threadSensorRead(void *pvParameters)
   TickType_t xLastWakeTime;
   const TickType_t xFrequency = INA226_SAMPLE_INTERVAL;
 
-  // flash.begin();
-
-  // Serial.println("Mounting ...");
-  // if (SPIFFS_OK != filesystem.mount())
-  // {
-  //   Serial.println("mount() failed with error code ");
-  //   Serial.println(filesystem.err());
-  //   return;
-  // }
-
-  // Serial.println("Checking ...");
-  // if (SPIFFS_OK != filesystem.check())
-  // {
-  //   Serial.println("check() failed with error code ");
-  //   Serial.println(filesystem.err());
-  //   return;
-  // }
-
-  // Serial.print("Checking for file ... ");
-  // File fnf = filesystem.open("404.txt", READ_ONLY);
-  // if (!fnf)
-  // {
-  //   Serial.println(" 404.txt does not exist.");
-  // }
-
-  // Serial.print("Checking for file ... ");
-  // File fox = filesystem.open(FILE_NAME, READ_ONLY);
-  // if (fox)
-  // {
-  //   Serial.printf("File %s exists. Data will be appended to it.", FILE_NAME);
-  //   Serial.println();
-  // }
-
-  // Serial.println("Open for writing ...");
-  // /* Create file if it doesn't exist (SPIFFS_CREAT) and open in
-  //  * write only mode (SPIFFS_WRONLY). If the file does exist
-  //  * delete the existing content (SPIFFS_TRUNC).
-  //  */
-  // File file = filesystem.open(FILE_NAME, CREATE | READ_WRITE | APPEND);
-
   // Initialise the xLastWakeTime variable with the current time.
   xLastWakeTime = xTaskGetTickCount();
   for (;;)
@@ -330,38 +290,7 @@ static void threadSensorRead(void *pvParameters)
     read_info(&dp);
     print_info(&dp);
 
-    // Serial.println("Writing ...");
-
-    // int const bytes_to_write = sizeof(dataPacket_t);
-    // int const bytes_written = file.write((void *)&dp, bytes_to_write);
-
-    // if (bytes_written != bytes_to_write)
-    // {
-    //   Serial.println("write() failed with error code ");
-    //   Serial.println(filesystem.err());
-    //   return;
-    // }
-    // else
-    // {
-    //   Serial.print(bytes_written);
-    //   Serial.println(" bytes written");
-    // }
-
-    // Serial.println("Retrieving filesystem info ...");
-    // unsigned int bytes_total = 0,
-    //              bytes_used = 0;
-    // if (SPIFFS_OK != filesystem.info(bytes_total, bytes_used))
-    // {
-    //   Serial.println("check() failed with error code ");
-    //   Serial.println(filesystem.err());
-    //   return;
-    // }
-    // else
-    // {
-    //   char msg[64] = {0};
-    //   snprintf(msg, sizeof(msg), "SPIFFS Info:\nBytes Total: %d\nBytes Used:  %d", bytes_total, bytes_used);
-    //   Serial.println(msg);
-    // }
+    Serial.println("Writing ...");
   }
 }
 
