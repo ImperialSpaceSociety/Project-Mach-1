@@ -13,6 +13,10 @@ void setup()
 void loop(){
 
 BattLevel(&voltage, &percentage);
+Serial.print(voltage);
+Serial.print(" ");
+Serial.println(percentage);
+delay(300);
 
 }
 
