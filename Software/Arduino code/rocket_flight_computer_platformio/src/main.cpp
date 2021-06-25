@@ -33,7 +33,7 @@
 
 #include "file_system.hpp"
 #include "datapacket.hpp"
-#include "radio_functions.hpp"
+#include "telemetry.hpp"
 #include "util.hpp"
 #include "gps.hpp"
 #include "rtos.hpp"
@@ -58,6 +58,7 @@ MS5xxx sensor(&Wire);
 TaskHandle_t Handle_TaskBlink;
 TaskHandle_t Handle_SensorRead;
 TaskHandle_t Handle_monitorTask;
+TaskHandle_t Handle_TaskTelemetry;
 
 //time-sensitive util variables
 long starttime;
@@ -66,6 +67,16 @@ long lasttime;
 //the one datapacket reference we iterate on every run
 dataPacket_t dp;
 OurFile ourfile;
+
+typedef struct
+{
+  int count;
+  float longitude;
+  float latitude;
+  float altitude;
+} data_t;
+
+static data_t tx_data = {.count = 0, .longitude = 0, .latitude = 0, .altitude = 0};
 
 //**************************************************************************
 // Function Prototypes
@@ -237,6 +248,27 @@ void TaskBlink(void *pvParameters) // This is a task.
   }
 }
 
+/*
+  Send telemetry periodically
+*/
+void TaskTelemetry(void *pvParameters) // This is a task.
+{
+  (void)pvParameters;
+  TickType_t xLastWakeTime;
+  const TickType_t xFrequency = TELEMETRY_INTERVAL;
+
+  // Initialise the xLastWakeTime variable with the current time.
+  xLastWakeTime = xTaskGetTickCount();
+  for (;;)
+  {
+    // Wait for the next cycle.
+    vTaskDelayUntil(&xLastWakeTime, xFrequency);
+
+    // Transmit position data
+    radio_send_data(&dp);
+  }
+}
+
 /**
  * @brief Read the sensors and save to flash
  * 
@@ -333,8 +365,6 @@ static void threadSensorRead(void *pvParameters)
       snprintf(msg, sizeof(msg), "SPIFFS Info:\nBytes Total: %d\nBytes Used:  %d", bytes_total, bytes_used);
       Serial.println(msg);
     }
-
-    radio_send_data(&dp);
   }
 }
 
@@ -432,8 +462,9 @@ void setup_rtos()
   // Create the threads that will be managed by the rtos
   // Sets the stack size and priority of each task
   // Also initializes a handler pointer to each task, which are important to communicate with and retrieve info from tasks
-  xTaskCreate(TaskBlink, "TaskBlink", 256, NULL, tskIDLE_PRIORITY + 3, &Handle_TaskBlink);
-  xTaskCreate(threadSensorRead, "threadSensorRead", 1000, NULL, tskIDLE_PRIORITY + 2, &Handle_SensorRead);
+  //xTaskCreate(threadSensorRead, "threadSensorRead", 2000, NULL, tskIDLE_PRIORITY + 3, &Handle_SensorRead);
+  xTaskCreate(TaskTelemetry, "TaskTelemetry", 256, NULL, tskIDLE_PRIORITY + 2, &Handle_TaskTelemetry);
+  xTaskCreate(TaskBlink, "TaskBlink", 256, NULL, tskIDLE_PRIORITY + 2, &Handle_TaskBlink);
   xTaskCreate(taskMonitor, "Task Monitor", 256, NULL, tskIDLE_PRIORITY + 1, &Handle_monitorTask);
 
   // Start the RTOS, this function will never return and will schedule the tasks.

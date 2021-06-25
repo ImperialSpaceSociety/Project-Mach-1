@@ -71,6 +71,8 @@ extern "C"
 #define BLINK_INTERVAL 100
 #define BRAKE_INTERVAL 100
 #define SPEED_INTERVAL 100
+#define TELEMETRY_INTERVAL 1000
+
 
 /* Number of GPS fixes in a second */
 #define FIXS_PER_SECOND 10
