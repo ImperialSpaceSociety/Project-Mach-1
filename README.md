@@ -162,6 +162,10 @@ Unique ID: 114518745233664, 0x688C52A779213900
 
 ```
 
+### Radio working
+Image shows the view on SDR sharp when transmitting, and the RX data on a second flight computer. Transmissions done on the first one.
+![image](https://user-images.githubusercontent.com/26815217/123351184-7f9e9300-d554-11eb-8eb3-ddb65def1cbe.png)
+
 ## Current progress
 * 25/9/19: The circuit board design files have been sent for manufacturing. Renders are as shown below.
 ![alt text](https://github.com/ImperialSpaceSociety/Project-Mach-1/blob/master/Flight%20computer/Hardware/circuit%20board%20design%20v1.1/Capture%20ft1.PNG)
