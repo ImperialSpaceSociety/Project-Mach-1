@@ -39,7 +39,7 @@
 // Configuration of the flash chip pins and flash fatfs object.
 // You don't normally need to change these if using a Feather/Metro
 // M0 express board.
-#define FLASH_TYPE     SPIFLASHTYPE_W25Q16BV  // Flash chip type.
+#define FLASH_TYPE     SPIFLASHTYPE_W25Q64  // Flash chip type.
                                               // If you change this be
                                               // sure to change the fatfs
                                               // object type below to match.
