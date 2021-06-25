@@ -15,7 +15,7 @@
 #include <Si446x.h>
 
 #define CHANNEL 0
-#define MAX_PACKET_SIZE 10
+#define MAX_PACKET_SIZE 50
 
 #define PACKET_NONE		0
 #define PACKET_OK		1
@@ -29,6 +29,16 @@ typedef struct{
 } pingInfo_t;
 
 static volatile pingInfo_t pingInfo;
+
+typedef struct{
+  int count;
+  float longitude;
+  float latitude;
+  float altitude;
+} data_t;
+
+
+static volatile data_t rx_data;
 
 void SI446X_CB_RXCOMPLETE(uint8_t length, int16_t rssi)
 {
@@ -111,6 +121,20 @@ void loop()
 		Serial.print(F("Data from server: "));
 		Serial.write((uint8_t*)pingInfo.buffer, sizeof(pingInfo.buffer));
 		Serial.println();
+
+    Serial.print(F("Position Data from server: "));
+    // Convert bytes to struct. Ref: https://snipplr.com/view/1254?codeview=
+
+    data_t* msg = (data_t*)pingInfo.buffer;
+    Serial.print(" Count= ");
+    Serial.print(msg->count);
+    Serial.print(" Longitude= ");
+    Serial.print(msg->longitude);
+    Serial.print(" Latitude= ");
+    Serial.print(msg->latitude);
+    Serial.print(" Altitude= ");
+    Serial.print(msg->altitude);
+    Serial.println();
 	}
 
 	Serial.print(F("Totals: "));

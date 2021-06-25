@@ -16,7 +16,7 @@
 #include <Si446x.h>
 
 #define CHANNEL 0
-#define MAX_PACKET_SIZE 10
+#define MAX_PACKET_SIZE 50
 #define TIMEOUT 1000
 
 #define PACKET_NONE    0
@@ -32,6 +32,18 @@ typedef struct{
 } pingInfo_t;
 
 static volatile pingInfo_t pingInfo;
+
+
+typedef struct{
+  int count;
+  float longitude;
+  float latitude;
+  float altitude;
+} data_t;
+
+
+static data_t tx_data = {.count=0, .longitude=0.2, .latitude=52.3, .altitude=120.2};
+
 
 void SI446X_CB_RXCOMPLETE(uint8_t length, int16_t rssi)
 {
@@ -84,7 +96,7 @@ void loop()
   uint32_t startTime = millis();
 
   // Send the data
-  Si446x_TX(data, sizeof(data), CHANNEL, SI446X_STATE_RX);
+  Si446x_TX(&tx_data, sizeof(data_t), CHANNEL, SI446X_STATE_RX);
   sent++;
   
   Serial.println(F("Data sent, waiting for reply..."));
