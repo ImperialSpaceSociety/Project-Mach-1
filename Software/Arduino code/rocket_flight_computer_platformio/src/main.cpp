@@ -95,7 +95,6 @@ void setup()
 {
   Wire.begin();
   Serial.begin(115200);
-  ourfile.init_file_system();
   sensor_init();
 
   Serial.println("=========================================");
