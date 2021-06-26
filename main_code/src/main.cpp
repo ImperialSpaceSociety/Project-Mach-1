@@ -165,6 +165,7 @@ void sensor_init()
 //read info into a datapacket
 void read_info(dataPacket_t *dp)
 {
+  dp->timestamp = millis();
   //TODO: Add try-catch around the data collections, return a dummy value if failed.
   // h3lis.readXYZ(&(dp->location[0]), &(dp->location[1]), &(dp->location[2]));
   // h3lis.getAcceleration(dp->acc);
