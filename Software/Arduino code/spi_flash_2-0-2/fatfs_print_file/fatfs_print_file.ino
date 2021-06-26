@@ -176,7 +176,8 @@ void setup() {
       // See the fatfs_full_usage example for more details.
       dataPacket_t dp;
       dataFile.read((uint8_t *)&dp, sizeof(dataPacket_t));
-      print_info(&dp);D:\Project-Mach-1\main_code\src\gps.cpp
+//    Serial.println(sizeof(dataPacket_t));
+      print_info(&dp);
     }
   }
   else {
