@@ -64,7 +64,7 @@ extern "C"
 #define INTERVAL_BETWEEN_FLUSHING_FILE 10000UL
 
 /* poll intervals in milliseconds */
-#define INA226_SAMPLE_INTERVAL 10
+#define INA226_SAMPLE_INTERVAL 50
 #define GNSS_SAMPLE_INTERVAL 50
 #define BARO_SAMPLE_INTERVAL 250
 #define IMU_SAMPLE_INTERVAL 10
@@ -72,7 +72,6 @@ extern "C"
 #define BRAKE_INTERVAL 100
 #define SPEED_INTERVAL 100
 #define TELEMETRY_INTERVAL 1000
-
 
 /* Number of GPS fixes in a second */
 #define FIXS_PER_SECOND 10
