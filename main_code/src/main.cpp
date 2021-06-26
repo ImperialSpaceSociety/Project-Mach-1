@@ -347,7 +347,7 @@ static void threadSensorRead(void *pvParameters)
       dataFile.write((const uint8_t *)&dp, sizeof(dataPacket_t));
       // Finally close the file when done writing.  This is smart to do to make
       // sure all the data is written to the file..
-      dataFile.close();
+      dataFile.flush(); // do this periodically
       Serial.println("Wrote new measurement to data file!");
     }
     else
