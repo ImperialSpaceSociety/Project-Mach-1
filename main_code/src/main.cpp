@@ -108,6 +108,8 @@ typedef struct
 
 static data_t tx_data = {.count = 0, .longitude = 0, .latitude = 0, .altitude = 0};
 
+xQueueHandle cap_queue;
+
 //**************************************************************************
 // Function Prototypes
 //**************************************************************************
@@ -138,6 +140,7 @@ void setup()
 
 void sensor_init()
 {
+
   /* Radio init */
   Si446x_init();
   Si446x_setTxPower(22); // 10 dbm/ 10 mW
@@ -293,23 +296,17 @@ void TaskTelemetry(void *pvParameters) // This is a task.
 }
 
 /**
- * @brief Read the sensors and save to flash
- * 
- * @param pvParameters 
+ * @brief When interrupt occurs, we receive the counter value and display the time between two rising edge
  */
-static void threadSensorRead(void *pvParameters)
+static void log_to_flash(void *arg)
 {
-  (void)pvParameters;
 
-  TickType_t xLastWakeTime;
-  const TickType_t xFrequency = INA226_SAMPLE_INTERVAL;
+  dataPacket_t dps[3];
 
   // Initialize flash library and check its chip ID.
   if (!flash.begin(FLASH_TYPE))
   {
     Serial.println("Error, failed to initialize flash chip!");
-    // while (1)
-    //   ;
   }
   Serial.print("Flash chip JEDEC ID: 0x");
   Serial.println(flash.GetJEDECID(), HEX);
@@ -320,12 +317,53 @@ static void threadSensorRead(void *pvParameters)
   {
     Serial.println("Error, failed to mount newly formatted filesystem!");
     Serial.println("Was the flash chip formatted with the fatfs_format example?");
-    // while (1)
-    //   ;
   }
   Serial.println("Mounted filesystem!");
 
-  Serial.println("Logging data every 60 seconds...");
+  while (1)
+  {
+    while (xQueueReceive(cap_queue, &dps[0], portMAX_DELAY) != 1)
+      ;
+    while (xQueueReceive(cap_queue, &dps[1], portMAX_DELAY) != 1)
+      ;
+    while (xQueueReceive(cap_queue, &dps[2], portMAX_DELAY) != 1)
+      ;
+
+    // /* Do stuff with dp_now */
+
+    // Open the datalogging file for writing.  The FILE_WRITE mode will open
+    // the file for appending, i.e. it will add new data to the end of the file.
+    Adafruit_SPIFlash_FAT::File dataFile = fatfs.open(FILE_NAME, FILE_WRITE);
+    // Check that the file opened successfully and write a line to it.
+    if (dataFile)
+    {
+      dataFile.write((const uint8_t *)&dps[0], sizeof(dataPacket_t));
+      dataFile.write((const uint8_t *)&dps[1], sizeof(dataPacket_t));
+      dataFile.write((const uint8_t *)&dps[2], sizeof(dataPacket_t));
+
+      // Finally close the file when done writing.  This is smart to do to make
+      // sure all the data is written to the file..
+      dataFile.flush(); // do this periodically
+      Serial.println("Wrote new measurement to data file!");
+    }
+    else
+    {
+      Serial.println("Failed to open data file for writing!");
+    }
+  }
+}
+
+/**
+ * @brief Read the sensors and save to flash
+ * 
+ * @param pvParameters 
+ */
+static void threadSensorRead(void *pvParameters)
+{
+  (void)pvParameters;
+
+  TickType_t xLastWakeTime;
+  const TickType_t xFrequency = INA226_SAMPLE_INTERVAL;
 
   // Initialise the xLastWakeTime variable with the current time.
   xLastWakeTime = xTaskGetTickCount();
@@ -338,22 +376,7 @@ static void threadSensorRead(void *pvParameters)
     read_info(&dp);
     print_info(&dp);
 
-    // Open the datalogging file for writing.  The FILE_WRITE mode will open
-    // the file for appending, i.e. it will add new data to the end of the file.
-    Adafruit_SPIFlash_FAT::File dataFile = fatfs.open(FILE_NAME, FILE_WRITE);
-    // Check that the file opened successfully and write a line to it.
-    if (dataFile)
-    {
-      dataFile.write((const uint8_t *)&dp, sizeof(dataPacket_t));
-      // Finally close the file when done writing.  This is smart to do to make
-      // sure all the data is written to the file..
-      dataFile.flush(); // do this periodically
-      Serial.println("Wrote new measurement to data file!");
-    }
-    else
-    {
-      Serial.println("Failed to open data file for writing!");
-    }
+    xQueueSendFromISR(cap_queue, &dp, NULL);
   }
 }
 
@@ -452,14 +475,16 @@ void setup_rtos()
   // if this is not set, serial information is not printed by default
   vSetErrorSerial(&SERIAL);
 
+  cap_queue = xQueueCreate(3, sizeof(dataPacket_t));
+
   // Create the threads that will be managed by the rtos
   // Sets the stack size and priority of each task
   // Also initializes a handler pointer to each task, which are important to communicate with and retrieve info from tasks
-  xTaskCreate(threadSensorRead, "threadSensorRead", 2000, NULL, tskIDLE_PRIORITY + 1, &Handle_SensorRead);
+  xTaskCreate(threadSensorRead, "threadSensorRead", 1000, NULL, tskIDLE_PRIORITY + 3, &Handle_SensorRead);
   xTaskCreate(TaskTelemetry, "TaskTelemetry", 256, NULL, tskIDLE_PRIORITY + 1, &Handle_TaskTelemetry);
-  xTaskCreate(TaskBlink, "TaskBlink", 256, NULL, tskIDLE_PRIORITY + 3, &Handle_TaskBlink);
+  xTaskCreate(TaskBlink, "TaskBlink", 256, NULL, tskIDLE_PRIORITY + 1, &Handle_TaskBlink);
   xTaskCreate(taskMonitor, "Task Monitor", 256, NULL, tskIDLE_PRIORITY + 1, &Handle_monitorTask);
-
+  xTaskCreate(log_to_flash, "Log to flash", 400, NULL, tskIDLE_PRIORITY + 3, NULL);
   // Start the RTOS, this function will never return and will schedule the tasks.
   vTaskStartScheduler();
 
