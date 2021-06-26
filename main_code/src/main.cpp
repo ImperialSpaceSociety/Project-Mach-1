@@ -197,6 +197,10 @@ void read_info(dataPacket_t *dp)
 //print to serial port
 void print_info(dataPacket_t *dp)
 {
+  Serial.print(dp->gps_unix_time);
+  Serial.print(", ");
+  Serial.print(dp->gps_ms_in_second);
+  Serial.print(", ");
   Serial.print(dp->timestamp);
   Serial.print(", ");
   Serial.print(dp->longitude);
@@ -342,7 +346,7 @@ static void threadSensorRead(void *pvParameters)
     {
       dataFile.write((const uint8_t *)&dp, sizeof(dataPacket_t));
       // Finally close the file when done writing.  This is smart to do to make
-      // sure all the data is written to the file.
+      // sure all the data is written to the file..
       dataFile.close();
       Serial.println("Wrote new measurement to data file!");
     }

@@ -9,5 +9,6 @@
 
 void print_info(dataPacket_t *dp);
 extern SFE_UBLOX_GNSS ubloxGps;
+extern dataPacket_t dp;
 
 #endif // __MAIN_H__

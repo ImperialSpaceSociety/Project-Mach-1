@@ -33,9 +33,30 @@
  */
 
 #include <Wire.h> //Needed for I2C to GPS
+#include "config.h"
 
 #include <SparkFun_u-blox_GNSS_Arduino_Library.h> //http://librarymanager/All#SparkFun_u-blox_GNSS
+#include "main.hpp"
+#include <time.h>
 SFE_UBLOX_GNSS myGNSS;
+
+unsigned long tmConvert_t(short YY, short MM, short DD, short hh, short mm, short ss)
+{
+
+    struct tm t;
+    time_t t_of_day;
+
+    t.tm_year = YY - 1900; // Year - 1900
+    t.tm_mon = MM - 1;     // Month, where 0 = jan
+    t.tm_mday = DD;        // Day of the month
+    t.tm_hour = hh;
+    t.tm_min = mm;
+    t.tm_sec = ss;
+    t.tm_isdst = 0; // Is DST on? 1 = yes, 0 = no, -1 = unknown
+    t_of_day = mktime(&t);
+
+    return (unsigned long)t_of_day;
+}
 
 // Callback: printPVTdata will be called when new NAV PVT data arrives
 // See u-blox_structs.h for the full definition of UBX_NAV_PVT_data_t
@@ -48,28 +69,14 @@ void printPVTdata(UBX_NAV_PVT_data_t ubxDataStruct)
 {
     Serial.println();
 
-    Serial.print(F("Time: "));        // Print the time
-    uint8_t hms = ubxDataStruct.hour; // Print the hours
-    if (hms < 10)
-        Serial.print(F("0")); // Print a leading zero if required
-    Serial.print(hms);
-    Serial.print(F(":"));
-    hms = ubxDataStruct.min; // Print the minutes
-    if (hms < 10)
-        Serial.print(F("0")); // Print a leading zero if required
-    Serial.print(hms);
-    Serial.print(F(":"));
-    hms = ubxDataStruct.sec; // Print the seconds
-    if (hms < 10)
-        Serial.print(F("0")); // Print a leading zero if required
-    Serial.print(hms);
-    Serial.print(F("."));
-    unsigned long millisecs = ubxDataStruct.iTOW % 1000; // Print the milliseconds
-    if (millisecs < 100)
-        Serial.print(F("0")); // Print the trailing zeros correctly
-    if (millisecs < 10)
-        Serial.print(F("0"));
-    Serial.print(millisecs);
+    Serial.printf(" GPS time: %02d/%02d/%04d, %02d:%02d:%02d.%04d ",
+                  ubxDataStruct.day,
+                  ubxDataStruct.month,
+                  ubxDataStruct.year,
+                  ubxDataStruct.hour,
+                  ubxDataStruct.min,
+                  ubxDataStruct.sec,
+                  ubxDataStruct.iTOW % 1000);
 
     long latitude = ubxDataStruct.lat; // Print the latitude
     Serial.print(F(" Lat: "));
@@ -84,6 +91,20 @@ void printPVTdata(UBX_NAV_PVT_data_t ubxDataStruct)
     Serial.print(F(" Height above MSL: "));
     Serial.print(altitude);
     Serial.println(F(" (mm)"));
+
+    unsigned long unix_time = tmConvert_t(
+        ubxDataStruct.year,
+        ubxDataStruct.month - 1,
+        ubxDataStruct.day,
+        ubxDataStruct.hour,
+        ubxDataStruct.min,
+        ubxDataStruct.sec);
+
+    dp.longitude = ubxDataStruct.lon;
+    dp.latitude = ubxDataStruct.lat;
+    dp.altitude = ubxDataStruct.hMSL;
+    dp.gps_unix_time = unix_time;
+    dp.gps_ms_in_second = ubxDataStruct.iTOW % 1000;
 }
 
 void gps_init()
@@ -99,7 +120,7 @@ void gps_init()
     myGNSS.setI2COutput(COM_TYPE_UBX);                 //Set the I2C port to output UBX only (turn off NMEA noise)
     myGNSS.saveConfigSelective(VAL_CFG_SUBSEC_IOPORT); //Save (only) the communications port settings to flash and BBR
 
-    myGNSS.setNavigationFrequency(10); //Produce 10 solutions per second
+    myGNSS.setNavigationFrequency(FIXS_PER_SECOND); //Produce 10 solutions per second
 
     myGNSS.setAutoPVTcallback(&printPVTdata); // Enable automatic NAV PVT messages with callback to printPVTdata
 }

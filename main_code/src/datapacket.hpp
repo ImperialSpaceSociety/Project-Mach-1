@@ -6,6 +6,9 @@
 typedef struct
 {
     unsigned long timestamp;
+    unsigned long gps_unix_time;
+    unsigned long gps_ms_in_second;
+
     //h3lis, location and accuracy
     int16_t location[3];
     double acc[3];
