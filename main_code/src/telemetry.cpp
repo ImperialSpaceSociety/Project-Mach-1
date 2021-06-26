@@ -15,6 +15,7 @@
 
 #include <Si446x.h>
 #include "telemetry.hpp"
+#include <FreeRTOS_SAMD21.h>
 
 #define CHANNEL 0
 #define MAX_PACKET_SIZE 50
@@ -106,7 +107,7 @@ void send()
     uint32_t sendStartTime = millis();
     while (1)
     {
-        delay(1);
+        vTaskDelay((1 * 1000) / portTICK_PERIOD_US);
         success = pingInfo.ready;
         if (success != PACKET_NONE)
             break;
