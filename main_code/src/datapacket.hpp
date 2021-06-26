@@ -5,6 +5,7 @@
 
 typedef struct
 {
+    unsigned long timestamp;
     //h3lis, location and accuracy
     int16_t location[3];
     double acc[3];

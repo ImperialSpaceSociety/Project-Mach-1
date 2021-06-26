@@ -196,6 +196,10 @@ void read_info(dataPacket_t *dp)
 //print to serial port
 void print_info(dataPacket_t *dp)
 {
+  Serial.print("Timestamp: ");
+  Serial.print(dp->timestamp);
+  Serial.println("milliseconds since boot");
+
   Serial.print("x, y, z = ");
   Serial.print(dp->location[0]);
   Serial.print("\t");
