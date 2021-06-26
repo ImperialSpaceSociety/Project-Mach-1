@@ -105,6 +105,12 @@ void printPVTdata(UBX_NAV_PVT_data_t ubxDataStruct)
     dp.altitude = ubxDataStruct.hMSL;
     dp.gps_unix_time = unix_time;
     dp.gps_ms_in_second = ubxDataStruct.iTOW % 1000;
+    dp.numSV = ubxDataStruct.numSV;
+    dp.velN = ubxDataStruct.velN;       // NED north velocity: mm/s
+    dp.velE = ubxDataStruct.velE;       // NED east velocity: mm/s
+    dp.velD = ubxDataStruct.velD;       // NED down velocity: mm/s
+    dp.gSpeed = ubxDataStruct.gSpeed;   // Ground Speed (2-D): mm/s
+    dp.headMot = ubxDataStruct.headMot; // Heading of motion (2-D): deg * 1e-5
 }
 
 void gps_init()
