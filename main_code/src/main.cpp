@@ -422,11 +422,15 @@ void taskMonitor(void *pvParameters)
     SERIAL.println("[Stacks Free Bytes Remaining] ");
 
     measurement = uxTaskGetStackHighWaterMark(Handle_TaskBlink);
-    SERIAL.print("Thread A: ");
+    SERIAL.print("TaskBlink: ");
     SERIAL.println(measurement);
 
     measurement = uxTaskGetStackHighWaterMark(Handle_SensorRead);
-    SERIAL.print("Thread B: ");
+    SERIAL.print("SensorRead: ");
+    SERIAL.println(measurement);
+
+    measurement = uxTaskGetStackHighWaterMark(Handle_TaskTelemetry);
+    SERIAL.print("TaskTelemetry: ");
     SERIAL.println(measurement);
 
     measurement = uxTaskGetStackHighWaterMark(Handle_monitorTask);
