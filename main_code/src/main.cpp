@@ -323,11 +323,17 @@ static void log_to_flash(void *arg)
   while (1)
   {
     while (xQueueReceive(cap_queue, &dps[0], portMAX_DELAY) != 1)
-      ;
+    {
+      myDelayMs(1);
+    };
     while (xQueueReceive(cap_queue, &dps[1], portMAX_DELAY) != 1)
-      ;
+    {
+      myDelayMs(1);
+    };
     while (xQueueReceive(cap_queue, &dps[2], portMAX_DELAY) != 1)
-      ;
+    {
+      myDelayMs(1);
+    };
 
     // /* Do stuff with dp_now */
 
@@ -480,8 +486,8 @@ void setup_rtos()
   // Create the threads that will be managed by the rtos
   // Sets the stack size and priority of each task
   // Also initializes a handler pointer to each task, which are important to communicate with and retrieve info from tasks
-  xTaskCreate(threadSensorRead, "threadSensorRead", 1000, NULL, tskIDLE_PRIORITY + 3, &Handle_SensorRead);
-  xTaskCreate(TaskTelemetry, "TaskTelemetry", 256, NULL, tskIDLE_PRIORITY + 1, &Handle_TaskTelemetry);
+  xTaskCreate(threadSensorRead, "threadSensorRead", 1000, NULL, tskIDLE_PRIORITY + 4, &Handle_SensorRead);
+  xTaskCreate(TaskTelemetry, "TaskTelemetry", 256, NULL, tskIDLE_PRIORITY + 3, &Handle_TaskTelemetry);
   xTaskCreate(TaskBlink, "TaskBlink", 256, NULL, tskIDLE_PRIORITY + 1, &Handle_TaskBlink);
   xTaskCreate(taskMonitor, "Task Monitor", 256, NULL, tskIDLE_PRIORITY + 1, &Handle_monitorTask);
   xTaskCreate(log_to_flash, "Log to flash", 400, NULL, tskIDLE_PRIORITY + 3, NULL);
