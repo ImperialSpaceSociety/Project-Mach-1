@@ -128,10 +128,10 @@ void loop()
     data_t* msg = (data_t*)pingInfo.buffer;
     Serial.print(" Count= ");
     Serial.print(msg->count);
-    Serial.print(" Longitude= ");
-    Serial.print(msg->longitude/1e7,8);
     Serial.print(" Latitude= ");
     Serial.print(msg->latitude/1e7,8);
+    Serial.print(" Longitude= ");
+    Serial.print(msg->longitude/1e7,8);
     Serial.print(" Altitude= ");
     Serial.print(msg->altitude/1e3);
     Serial.println();
