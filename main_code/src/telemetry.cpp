@@ -93,7 +93,7 @@ void send()
     uint32_t startTime = millis();
 
     // Send the data
-    Si446x_TX(&tx_data, sizeof(data_t), CHANNEL, SI446X_STATE_RX);
+    Si446x_TX(&tx_data, sizeof(data_t), CHANNEL, SI446X_STATE_SLEEP);
     sent++;
 
     tx_data.count++;
