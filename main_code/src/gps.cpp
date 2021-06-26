@@ -108,7 +108,4 @@ void gps_check()
 {
     myGNSS.checkUblox();     // Check for the arrival of new data and process it.
     myGNSS.checkCallbacks(); // Check if any callbacks are waiting to be processed.
-
-    Serial.print(".");
-    //   delay(50);
 }

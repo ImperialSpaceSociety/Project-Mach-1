@@ -167,8 +167,8 @@ void read_info(dataPacket_t *dp)
 {
   dp->timestamp = millis();
   //TODO: Add try-catch around the data collections, return a dummy value if failed.
-  // h3lis.readXYZ(&(dp->location[0]), &(dp->location[1]), &(dp->location[2]));
-  // h3lis.getAcceleration(dp->acc);
+  h3lis.readXYZ(&(dp->location[0]), &(dp->location[1]), &(dp->location[2]));
+  h3lis.getAcceleration(dp->acc);
 
   gps_check();
 
@@ -176,82 +176,68 @@ void read_info(dataPacket_t *dp)
   dp->temp = sensor.GetTemp();
   dp->pressure = sensor.GetPres();
 
-  // imu.readGyro();
-  // imu.readAccel();
-  // imu.readMag();
-  // imu.readTemp();
+  imu.readGyro();
+  imu.readAccel();
+  imu.readMag();
+  imu.readTemp();
 
-  // dp->gyro[0] = imu.calcGyro(imu.gx);
-  // dp->gyro[1] = imu.calcGyro(imu.gy);
-  // dp->gyro[2] = imu.calcGyro(imu.gz);
+  dp->gyro[0] = imu.calcGyro(imu.gx);
+  dp->gyro[1] = imu.calcGyro(imu.gy);
+  dp->gyro[2] = imu.calcGyro(imu.gz);
 
-  // dp->accel[0] = imu.calcGyro(imu.ax);
-  // dp->accel[1] = imu.calcGyro(imu.ay);
-  // dp->accel[2] = imu.calcGyro(imu.az);
+  dp->accel[0] = imu.calcGyro(imu.ax);
+  dp->accel[1] = imu.calcGyro(imu.ay);
+  dp->accel[2] = imu.calcGyro(imu.az);
 
-  // dp->mag[0] = imu.calcGyro(imu.mx);
-  // dp->mag[1] = imu.calcGyro(imu.my);
-  // dp->mag[2] = imu.calcGyro(imu.mz);
+  dp->mag[0] = imu.calcGyro(imu.mx);
+  dp->mag[1] = imu.calcGyro(imu.my);
+  dp->mag[2] = imu.calcGyro(imu.mz);
 }
 
 //print to serial port
 void print_info(dataPacket_t *dp)
 {
-  Serial.print("Timestamp: ");
   Serial.print(dp->timestamp);
-  Serial.println("milliseconds since boot");
-
-  Serial.print("x, y, z = ");
-  Serial.print(dp->location[0]);
-  Serial.print("\t");
-  Serial.print(dp->location[1]);
-  Serial.print("\t");
-  Serial.println(dp->location[2]);
-
-  Serial.print("accelerate of x, y, z = ");
-  Serial.print(dp->acc[0]);
-  Serial.print("g");
-  Serial.print("\t");
-  Serial.print(dp->acc[1]);
-  Serial.print("g");
-  Serial.print("\t");
-  Serial.print(dp->acc[2]);
-  Serial.println("g");
-
-  Serial.print("Temperature [0.01 C]: ");
-  Serial.print(dp->temp);
-  Serial.print("Pressure [Pa]: ");
-  Serial.println(dp->pressure);
-
-  Serial.print("Gyro: ");
-  Serial.print(dp->gyro[0], 2);
   Serial.print(", ");
-  Serial.print(dp->gyro[1], 2);
-  Serial.print(", ");
-  Serial.print(dp->gyro[2], 2);
-  Serial.println(" deg/s");
-  Serial.print("Acceleration: ");
-  Serial.print(dp->accel[0], 2);
-  Serial.print(", ");
-  Serial.print(dp->accel[1], 2);
-  Serial.print(", ");
-  Serial.print(dp->accel[2], 2);
-  Serial.println(" g");
-  Serial.print("Mag: ");
-  Serial.print(dp->mag[0], 2);
-  Serial.print(", ");
-  Serial.print(dp->mag[1], 2);
-  Serial.print(", ");
-  Serial.print(dp->mag[2], 2);
-  Serial.println(" gauss");
-
-  Serial.print("GPS info: ");
   Serial.print(dp->longitude);
   Serial.print(", ");
   Serial.print(dp->latitude);
   Serial.print(", ");
   Serial.print(dp->altitude);
-  Serial.println();
+  Serial.print(", ");
+  Serial.print(dp->temp);
+  Serial.print(", ");
+  Serial.print(dp->pressure);
+  Serial.print(", ");
+  Serial.print(dp->location[0]);
+  Serial.print(", ");
+  Serial.print(dp->location[1]);
+  Serial.print(", ");
+  Serial.print(dp->location[2]);
+  Serial.print(", ");
+  Serial.print(dp->acc[0]);
+  Serial.print(", ");
+  Serial.print(dp->acc[1]);
+  Serial.print(", ");
+  Serial.print(dp->acc[2]);
+  Serial.print(", ");
+  Serial.print(dp->gyro[0], 2);
+  Serial.print(", ");
+  Serial.print(dp->gyro[1], 2);
+  Serial.print(", ");
+  Serial.print(dp->gyro[2], 2);
+  Serial.print(", ");
+  Serial.print(dp->accel[0], 2);
+  Serial.print(", ");
+  Serial.print(dp->accel[1], 2);
+  Serial.print(", ");
+  Serial.print(dp->accel[2], 2);
+  Serial.print(", ");
+  Serial.print(dp->mag[0], 2);
+  Serial.print(", ");
+  Serial.print(dp->mag[1], 2);
+  Serial.print(", ");
+  Serial.println(dp->mag[2], 2);
 }
 
 /*
@@ -348,8 +334,6 @@ static void threadSensorRead(void *pvParameters)
     read_info(&dp);
     print_info(&dp);
 
-    Serial.println("Writing ...");
-
     // Open the datalogging file for writing.  The FILE_WRITE mode will open
     // the file for appending, i.e. it will add new data to the end of the file.
     Adafruit_SPIFlash_FAT::File dataFile = fatfs.open(FILE_NAME, FILE_WRITE);
@@ -366,8 +350,6 @@ static void threadSensorRead(void *pvParameters)
     {
       Serial.println("Failed to open data file for writing!");
     }
-
-    Serial.println("Trying again in 60 seconds...");
   }
 }
 
