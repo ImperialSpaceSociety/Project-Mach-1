@@ -317,8 +317,8 @@ static void threadSensorRead(void *pvParameters)
   if (!flash.begin(FLASH_TYPE))
   {
     Serial.println("Error, failed to initialize flash chip!");
-    while (1)
-      ;
+    // while (1)
+    //   ;
   }
   Serial.print("Flash chip JEDEC ID: 0x");
   Serial.println(flash.GetJEDECID(), HEX);
