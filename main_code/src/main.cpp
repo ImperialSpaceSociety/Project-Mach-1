@@ -355,8 +355,7 @@ static void threadSensorRead(void *pvParameters)
     // Check that the file opened successfully and write a line to it.
     if (dataFile)
     {
-      tx_data.count++;
-      dataFile.write((const uint8_t *)&tx_data, sizeof(data_t));
+      dataFile.write((const uint8_t *)&dp, sizeof(dataPacket_t));
       // Finally close the file when done writing.  This is smart to do to make
       // sure all the data is written to the file.
       dataFile.close();
