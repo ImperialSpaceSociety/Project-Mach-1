@@ -324,15 +324,15 @@ static void log_to_flash(void *arg)
   {
     while (xQueueReceive(cap_queue, &dps[0], portMAX_DELAY) != 1)
     {
-      myDelayMs(1);
+      // myDelayMs(1);
     };
     while (xQueueReceive(cap_queue, &dps[1], portMAX_DELAY) != 1)
     {
-      myDelayMs(1);
+      // myDelayMs(1);
     };
     while (xQueueReceive(cap_queue, &dps[2], portMAX_DELAY) != 1)
     {
-      myDelayMs(1);
+      // myDelayMs(1);
     };
 
     // /* Do stuff with dp_now */
