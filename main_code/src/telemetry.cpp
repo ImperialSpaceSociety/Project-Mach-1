@@ -169,7 +169,7 @@ void send()
 void radio_send_data(dataPacket_t *dp)
 {
 
-    tx_data.altitude = dp->altitude;
+    tx_data.longitude = dp->longitude;
     tx_data.latitude = dp->latitude;
     tx_data.altitude = dp->altitude;
     send();
