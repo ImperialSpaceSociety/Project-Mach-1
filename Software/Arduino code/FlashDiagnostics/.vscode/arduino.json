@@ -1,0 +1,7 @@
+{
+    "board": "adafruit:samd:rocket_flight_computer",
+    "output": "Build",
+    "configuration": "usbstack=arduino,debug=off",
+    "sketch": "FlashDiagnostics.ino",
+    "port": "COM11"
+}
