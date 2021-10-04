@@ -98,14 +98,22 @@ Ideally, once the Arduino bootloader is uploaded, the Segger debugger will not b
 # Using Platform.io to program the flight computer.
 We use Platform.io to program the flight computer as its much more conventient than using the Arduino environment. The platform.ini file captures all the dependencies(libraries, board files) and automatically downloads them. It even downloads the complilers all in the background, so its a simple matter of a single click on the`upload` button to compile and upload to the flight computer.
 
+### Project code
 There are 4 pieces of code that are required.
 1. [main_code](main_code/). This is the code that flies on the rocket flight computer. It polls all the sensors(GPS, Accelrometers, barometer) and logs them to the SPI flash chip 3-4 times a second. It runs FreeRTOS for scheduling. 
-2. [ground_station_receiver](Software/Arduino code/ground_station_receiver/). This is the code that runs on the ground station. It will receive packets from the rocket flight computer, and print out the location of the flight computer(longitude, latitude, altitude) and the received signal strength.
-3. [spi_flash_dumper](Software/Arduino code/spi_flash_dumper/). The flash dumper must be run on the flight computer after the launch. It will dump all the contents of the flash chip, which has stored all the flight data. The format will be in a csv format. The fields in each line will be in the following format:
+2. [ground_station_receiver](Software/Arduino%20code/ground_station_receiver/). This is the code that runs on the ground station. It will receive packets from the rocket flight computer, and print out the location of the flight computer(longitude, latitude, altitude) and the received signal strength.
+3. [spi_flash_dumper](Software/Arduino%20code/spi_flash_dumper/). The flash dumper must be run on the flight computer after the launch. It will dump all the contents of the flash chip, which has stored all the flight data. The format will be in a csv format. The fields in each line will be in the following format:
 ```
 gps_unix_time, gps_millisecond, timestamp, longitude, latitude, altitude, temperature, pressure, h3lis_gyro[0], h3lis_gyro[1], h3lis_gyro[2], h3lis_accelerometer[0], h3lis_accelerometer[1], h3lis_accelerometer[2], lsm9d_gyro[0], lsm9d_gyro[1], lsm9d_gyro[2], lsm9d_accel[0], lsm9d_accel[1], lsm9d_accel[2], lsm9d_mag[0], lsm9d_mag[1], lsm9d_mag[2]
 ```
-4. [spi_flash_deleter](Software/Arduino code/spi_flash_deleter/). This program must be run to delete all the contents of the spi flash chip. After a flight, there is a good chance that the flash chip will be full, so delete all contents by running this code on there. Note, the user will have to type in `OK` into the serial terminal inorder for the erase to happen.
+4. [spi_flash_deleter](Software/Arduino%20code/spi_flash_deleter/). This program must be run to delete all the contents of the spi flash chip. After a flight, there is a good chance that the flash chip will be full, so delete all contents by running this code on there. Note, the user will have to type in `OK` into the serial terminal inorder for the erase to happen.
+
+### How to upload to flight computer.
+To get platform.io, install [Visual Studio code](https://code.visualstudio.com/). Then get the [platform.io](https://platformio.org/install) plugin. Then open the flight computer project you want to use. It should look like in the picture below. Hit the upload button as shown in the picture below to compile and upload to the flight computer. Also, ensure your computer in connected to the device via a USB cable. If all fails, try uploading the boot loader again as described in the [Burning the bootloader](#burning-the-bootloader) section.
+
+
+![image](https://user-images.githubusercontent.com/26815217/135834528-22b97ea2-5a86-4783-be0e-1b39e043973d.png)
+
 
 # Using Arduino to program(depreciated)
 This was the old way of programming the flight computer, but its no longer used. Use the method described in the above section.
