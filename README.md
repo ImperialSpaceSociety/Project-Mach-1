@@ -116,7 +116,7 @@ To get platform.io, install [Visual Studio code](https://code.visualstudio.com/)
 
 
 # Using Arduino to program(depreciated)
-This was the old way of programming the flight computer, but its no longer used. Use the method described in the above section.
+This was the old way of programming the flight computer, but its no longer used. Use the method described in the [Using Platform.io to program the flight computer](#using-platformio-to-program-the-flight-computer) section.
 1. Install the Arduino IDE
 2. Install Arduino support for the SAMD series of microcontrollers. To do so, go to file > preferences and add `https://adafruit.github.io/arduino-board-index/package_adafruit_index.json` to Additional Board Manager Urls like so: ![image](https://user-images.githubusercontent.com/26815217/97046336-228ab180-156f-11eb-9b23-e58ebe139e13.png)
 3. Then go to Tools > Boards > Boards Manager like so:![image](https://user-images.githubusercontent.com/26815217/97046437-4cdc6f00-156f-11eb-8568-0db63647302c.png)
