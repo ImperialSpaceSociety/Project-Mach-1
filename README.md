@@ -74,7 +74,15 @@ The main buses are as follows:
 
 Ideally, once the Arduino bootloader is uploaded, the Segger debugger will not be necessary anymore; All future programming can be done with the Arduino IDE.
 
-# Using Arduino to program
+# Using Platform.io to program the flight computer.
+We use Platform.io to program the flight computer as its much more conventient than using the Arduino environment. The platform.ini file captures all the dependencies(libraries, board files) and automatically downloads them. It even downloads the complilers all in the background, so its a simple matter of a single click on the`upload` button to compile and upload to the flight computer.
+
+There are 4 pieces of code that are required.
+1. [main_code](main_code/). This is the code that flies on the rocket flight computer. It polls all the sensors(GPS, Accelrometers, barometer) and logs them to the SPI flash chip 3-4 times a second. It runs FreeRTOS for scheduling. 
+2. 
+
+# Using Arduino to program(depreciated)
+This was the old way of programming the flight computer, but its no longer used. Use the method described in the above section.
 1. Install the Arduino IDE
 2. Install Arduino support for the SAMD series of microcontrollers. To do so, go to file > preferences and add `https://adafruit.github.io/arduino-board-index/package_adafruit_index.json` to Additional Board Manager Urls like so: ![image](https://user-images.githubusercontent.com/26815217/97046336-228ab180-156f-11eb-9b23-e58ebe139e13.png)
 3. Then go to Tools > Boards > Boards Manager like so:![image](https://user-images.githubusercontent.com/26815217/97046437-4cdc6f00-156f-11eb-8568-0db63647302c.png)
