@@ -57,6 +57,17 @@ Assuming ascii encoding, 504 bits per string for raw data. Including commas and 
 * Molex 2066400001: GNSS Active Patch Antenna with Low-Noise Amplifier
 * Winbond w25q64JV: Flash chip 64 Mbytes
 
+# Flight history
+
+This flight computer was launched in July 2021 but was not recovered. Its now very easy to program using platform.io. No need to mess with board files.
+
+However, the flight computer has 4 major issues.
+1. The telemetry radio is terrible. The max range is only around 80 meters, as we discovered at the launch site.
+2. The flash chip is quite small. It can only record for around 40 minutes at 3-4 readings a second.
+3. The flash write speed is slow. It could be a software issue. I could only write 3-4 readings a second.
+4. The position of the power connector for battery is in an awkward position, making it difficult to attach the battery
+
+It may be best to start from scratch using a well known processor, such as an ESP32, and a well designed radio module. From the flight, we discovered that the radio has to work flawlessly. Or else, we will loose the rocket. So maximising range and reliablity of the telemetery is vital. An off the shelf radio module as they will likely have all the RF systems optimised. Its quite hard to do it on a custom PCB.
 
 ## Software architecture
 We use the Arduino development environment to program the rocket flight computer. We use the arduino board files based off the Adafruit ItsyBitsy M0 Express, which uses the G variant of the SAMD21. The flight computer uses the J variant. 
