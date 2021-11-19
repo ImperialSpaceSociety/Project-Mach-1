@@ -1,0 +1,10 @@
+•	2 rockets
+•	GPS 
+•	Adc + serial 
+•	Radio 5km range (telemetry would be ok, but not too much)
+•	Temperature, humidity, pressure
+•	Oxygen gas, co2 gases sensors probably connected externally (depends on size)
+•	Acceleration – use both existing sensors
+•	Memory – flash chip
+•	Schematics and pcb ready by March
+•	Rocket done by June
