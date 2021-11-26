@@ -1,1 +1,2 @@
 https://www.sensirion.com/en/environmental-sensors/carbon-dioxide-sensors/carbon-dioxide-sensor-scd4x/
+https://www.co2meter.com/collections/carbon-dioxide-sensors/products/lp8-miniature-co2-sensor?variant=838767706132 This also works. It's very light. Has arduino stuff.
