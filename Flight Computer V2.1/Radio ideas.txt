@@ -1,1 +1,5 @@
 Ideas for radios here:
+
+http://eggtimerrocketry.com/wp-content/uploads/2018/10/Eggfinder-Mini-Assembly-Manual-A7-Pics.pdf
+
+use lora without datarate limitations (so not lorawan)
