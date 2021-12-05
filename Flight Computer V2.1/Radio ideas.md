@@ -18,6 +18,8 @@ use lora without datarate limitations (so not lorawan)
   - Has Arduino libraries ready to use
   - Cheap: most modules are under 10 GBP.
 
+  - http://en.ashining.com/
+
 - Wide array of pre-built modules in many form factors:
   - https://item.taobao.com/item.htm?spm=a230r.1.14.61.c6207623p6iLYO&id=569473209313&ns=1&abbucket=16#detail
   - https://item.taobao.com/item.htm?spm=a230r.1.14.16.17807623d8OA8n&id=534906947976&ns=1&abbucket=16#detail
