@@ -1,1 +1,2 @@
 https://www.rapidonline.com/adafruit-1893-mpl3115a2-i2c-barometric-pressure-altitude-temperature-sensor-73-5402
+https://www.adafruit.com/product/1603 //similar to one above
