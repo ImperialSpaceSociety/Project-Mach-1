@@ -34,3 +34,6 @@ use lora without datarate limitations (so not lorawan)
 
 # XBEE®868LP
 - https://docs.rs-online.com/d0cc/0900766b8148f252.pdf
+
+# XBP9B-XCST-021
+- https://www.mouser.co.uk/ProductDetail/DIGI/XBP9B-XCST-021?qs=bzXpJip73srHwKnGuHrX3A%3D%3D
