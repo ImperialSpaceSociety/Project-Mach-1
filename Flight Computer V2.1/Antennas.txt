@@ -1,5 +1,10 @@
+433 MHz
 https://www.mouser.co.uk/ProductDetail/RF-Solutions/FLEXI-SMA-433?qs=17u8i%2FzlE8%2FDqnU8%252BDHwiQ%3D%3D
 https://www.mouser.co.uk/ProductDetail/Linx-Technologies/ANT-433-CW-RH-SMA?qs=K5ta8V%252BWhtbVYGyw%2FjO%2FcQ%3D%3D
 https://www.mouser.co.uk/ProductDetail/Linx-Technologies/ANT-433-CW-RAH?qs=K5ta8V%252BWhtbJFb1Sxc%2FSqQ%3D%3D
 https://www.mouser.co.uk/ProductDetail/Linx-Technologies/ANT-433-PW-QW?qs=K5ta8V%252BWhtZ%252B4doyKo6VDA%3D%3D
 https://www.mouser.co.uk/ProductDetail/Linx-Technologies/ANT-433-WRT-RPS?qs=3i7pWHhmHi81AF1IfQVMmw%3D%3D
+
+900 MHz
+https://www.mouser.co.uk/ProductDetail/Linx-Technologies/ANT-915-IPW1-RPS?qs=7D1LtPJG0i2QUzQEZDcegg%3D%3D
+https://www.mouser.co.uk/ProductDetail/Linx-Technologies/ANT-916-PW-QW-UFL?qs=Ajmft%252BTTukHgEnIxkZk22Q%3D%3D
