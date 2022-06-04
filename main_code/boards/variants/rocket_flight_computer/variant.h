@@ -27,10 +27,10 @@
  *----------------------------------------------------------------------------*/
 
 /** Frequency of the board main oscillator */
-#define VARIANT_MAINOSC		(32768ul)
+#define VARIANT_MAINOSC (32768ul)
 
 /** Master clock frequency */
-#define VARIANT_MCK	(F_CPU)
+#define VARIANT_MCK (F_CPU)
 
 /*----------------------------------------------------------------------------
  *        Headers
@@ -53,18 +53,18 @@ extern "C"
  *----------------------------------------------------------------------------*/
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT           (45u)
-#define NUM_DIGITAL_PINS     (42u)
-#define NUM_ANALOG_INPUTS    (3u)
-#define NUM_ANALOG_OUTPUTS   (0u)
+#define PINS_COUNT (45u)
+#define NUM_DIGITAL_PINS (42u)
+#define NUM_ANALOG_INPUTS (3u)
+#define NUM_ANALOG_OUTPUTS (0u)
 
-#define digitalPinToPort(P)        ( &(PORT->Group[g_APinDescription[P].ulPort]) )
-#define digitalPinToBitMask(P)     ( 1 << g_APinDescription[P].ulPin )
+#define digitalPinToPort(P) (&(PORT->Group[g_APinDescription[P].ulPort]))
+#define digitalPinToBitMask(P) (1 << g_APinDescription[P].ulPin)
 //#define analogInPinToBit(P)        ( )
-#define portOutputRegister(port)   ( &(port->OUT.reg) )
-#define portInputRegister(port)    ( &(port->IN.reg) )
-#define portModeRegister(port)     ( &(port->DIR.reg) )
-#define digitalPinHasPWM(P)        ( g_APinDescription[P].ulPWMChannel != NOT_ON_PWM || g_APinDescription[P].ulTCChannel != NOT_ON_TIMER )
+#define portOutputRegister(port) (&(port->OUT.reg))
+#define portInputRegister(port) (&(port->IN.reg))
+#define portModeRegister(port) (&(port->DIR.reg))
+#define digitalPinHasPWM(P) (g_APinDescription[P].ulPWMChannel != NOT_ON_PWM || g_APinDescription[P].ulTCChannel != NOT_ON_TIMER)
 
 /*
  * digitalPinToTimer(..) is AVR-specific and is not defined for SAMD
@@ -76,123 +76,130 @@ extern "C"
 // #define digitalPinToTimer(P)
 
 // Interrupts
-#define digitalPinToInterrupt(P)   ( g_APinDescription[P].ulExtInt )
+#define digitalPinToInterrupt(P) (g_APinDescription[P].ulExtInt)
 
-// LEDs
+  // LEDs
 
-#define PIN_LED_38			 (38u)
-#define PIN_LED_39			 (39u)
-#define PIN_LED_RED          PIN_LED_38
-#define PIN_LED_BLUE         PIN_LED_39
-#define LED_BUILTIN          PIN_LED_RED
+#define PIN_LED_38 (38u)
+#define PIN_LED_39 (39u)
+#define PIN_LED_RED PIN_LED_38
+#define PIN_LED_BLUE PIN_LED_39
+#define LED_BUILTIN PIN_LED_RED
 
 /*
  * Analog pins
  */
-#define PIN_A0               (42ul)
-#define PIN_A1               (PIN_A0 + 1)
-#define PIN_A2               (PIN_A0 + 2)
+#define PIN_A0 (42ul)
+#define PIN_A1 (PIN_A0 + 1)
+#define PIN_A2 (PIN_A0 + 2)
 
+  static const uint8_t A0 = PIN_A0;
+  static const uint8_t A1 = PIN_A1;
+  static const uint8_t A2 = PIN_A2;
 
-
-static const uint8_t A0  = PIN_A0 ;
-static const uint8_t A1  = PIN_A1 ;
-static const uint8_t A2  = PIN_A2 ;
-
-#define ADC_RESOLUTION      12
+#define ADC_RESOLUTION 12
 
 /*
  * Serial interfaces
  */
 // Serial
-#define PIN_SERIAL_RX       (0ul)
-#define PIN_SERIAL_TX       (1ul)
-#define PAD_SERIAL_TX       (UART_TX_PAD_2)
-#define PAD_SERIAL_RX       (SERCOM_RX_PAD_1)
+#define PIN_SERIAL_RX (0ul)
+#define PIN_SERIAL_TX (1ul)
+#define PAD_SERIAL_TX (UART_TX_PAD_2)
+#define PAD_SERIAL_RX (SERCOM_RX_PAD_1)
 
 // Serial1
-#define PIN_SERIAL1_RX       (13ul)
-#define PIN_SERIAL1_TX       (12ul)
+#define PIN_SERIAL1_RX (13ul)
+#define PIN_SERIAL1_TX (12ul)
 
-#define PAD_SERIAL1_TX       (UART_TX_PAD_0)
-#define PAD_SERIAL1_RX       (SERCOM_RX_PAD_1)
+#define PAD_SERIAL1_TX (UART_TX_PAD_0)
+#define PAD_SERIAL1_RX (SERCOM_RX_PAD_1)
 
+// ADD
+// Serial2
+#define PIN_SERIAL2_RX (7ul) // PA09
+#define PIN_SERIAL2_TX (6ul) // PA08
 
-/*
- * SPI Interfaces
- */
+#define PAD_SERIAL2_TX (UART_TX_PAD_0)
+#define PAD_SERIAL2_RX (SERCOM_RX_PAD_1)
 
+  /*
+   * SPI Interfaces
+   */
 
 #define SPI_INTERFACES_COUNT 2
 
-
 // SPI Radio SPI
-#define PIN_SPI_MISO         (34u) // pad 2
-#define PIN_SPI_SS           (35u) // pad 3
-#define PIN_SPI_MOSI         (32u) // pad 0
-#define PIN_SPI_SCK          (33u) // pad 1
+#define PIN_SPI_MISO (34u) // pad 2
+#define PIN_SPI_SS (35u)   // pad 3
+#define PIN_SPI_MOSI (32u) // pad 0
+#define PIN_SPI_SCK (33u)  // pad 1
 
-#define PERIPH_SPI           sercom4
-#define PAD_SPI_TX           SPI_PAD_0_SCK_1
-#define PAD_SPI_RX           SERCOM_RX_PAD_2
+#define PERIPH_SPI sercom4
+#define PAD_SPI_TX SPI_PAD_0_SCK_1
+#define PAD_SPI_RX SERCOM_RX_PAD_2
 
-
-
-
-
-static const uint8_t MISO = PIN_SPI_MISO;
-static const uint8_t SS   = PIN_SPI_SS ;
-static const uint8_t SS_RADIO  = PIN_SPI_SS ;
-static const uint8_t MOSI = PIN_SPI_MOSI ;
-static const uint8_t SCK  = PIN_SPI_SCK ;
+  static const uint8_t MISO = PIN_SPI_MISO;
+  static const uint8_t SS = PIN_SPI_SS;
+  static const uint8_t SS_RADIO = PIN_SPI_SS;
+  static const uint8_t MOSI = PIN_SPI_MOSI;
+  static const uint8_t SCK = PIN_SPI_SCK;
 
 // SPI1 Flash SPI
-#define PIN_SPI1_MISO        (21u)
-#define PIN_SPI1_SS          (22u)
-#define PIN_SPI1_MOSI        (23u)
-#define PIN_SPI1_SCK         (24u)
+#define PIN_SPI1_MISO (21u)
+#define PIN_SPI1_SS (22u)
+#define PIN_SPI1_MOSI (23u)
+#define PIN_SPI1_SCK (24u)
 
-#define PERIPH_SPI1           sercom5
-#define PAD_SPI1_TX          SPI_PAD_0_SCK_1
-#define PAD_SPI1_RX          SERCOM_RX_PAD_2
+#define PERIPH_SPI1 sercom5
+#define PAD_SPI1_TX SPI_PAD_0_SCK_1
+#define PAD_SPI1_RX SERCOM_RX_PAD_2
 
-static const uint8_t MISO1 = PIN_SPI1_MISO;
-static const uint8_t SS1   = PIN_SPI1_SS;
-static const uint8_t SS_FLASH  = PIN_SPI1_SS;
-static const uint8_t MOSI1 = PIN_SPI1_MOSI;
-static const uint8_t SCK1  = PIN_SPI1_SCK;
+  static const uint8_t MISO1 = PIN_SPI1_MISO;
+  static const uint8_t SS1 = PIN_SPI1_SS;
+  static const uint8_t SS_FLASH = PIN_SPI1_SS;
+  static const uint8_t MOSI1 = PIN_SPI1_MOSI;
+  static const uint8_t SCK1 = PIN_SPI1_SCK;
 
-// Analog
+  // Analog
 
-static const uint8_t PIN_DAC0     = PIN_A0; // or (35u) implications for cores/arduino/wiring_analog.c analogWrite()
+  static const uint8_t PIN_DAC0 = PIN_A0; // or (35u) implications for cores/arduino/wiring_analog.c analogWrite()
 
 /*
  * Wire Interfaces
  */
-#define WIRE_INTERFACES_COUNT 2
 
-#define PIN_WIRE_SDA         (18u)
-#define PIN_WIRE_SCL         (19u)
+// CHANGE
+#define WIRE_INTERFACES_COUNT 1
 
-#define PERIPH_WIRE          sercom3
-#define WIRE_IT_HANDLER      SERCOM3_Handler
+#define PIN_WIRE_SDA (18u)
+#define PIN_WIRE_SCL (19u)
 
-#define PIN_WIRE1_SDA         (6u)
-#define PIN_WIRE1_SCL         (7u)
+#define PERIPH_WIRE sercom3
+#define WIRE_IT_HANDLER SERCOM3_Handler
 
-#define PERIPH_WIRE1          sercom0
-#define WIRE1_IT_HANDLER      SERCOM0_Handler
+  // CHANGE
+  /*
+  #define PIN_WIRE1_SDA (6u)
+  #define PIN_WIRE1_SCL (7u)
 
-static const uint8_t SDA = PIN_WIRE_SDA;
-static const uint8_t SCL = PIN_WIRE_SCL;
+  #define PERIPH_WIRE1 sercom0
+  #define WIRE1_IT_HANDLER SERCOM0_Handler
 
-static const uint8_t SDA1 = PIN_WIRE1_SDA;
-static const uint8_t SCL1 = PIN_WIRE1_SCL;
+  */
+  static const uint8_t SDA = PIN_WIRE_SDA;
+  static const uint8_t SCL = PIN_WIRE_SCL;
+
+// CHANGE
+/*
+  static const uint8_t SDA1 = PIN_WIRE1_SDA;
+  static const uint8_t SCL1 = PIN_WIRE1_SCL;
+  */
 /*
  * USB
  */
-#define PIN_USB_DM          (47ul)
-#define PIN_USB_DP          (48ul)
+#define PIN_USB_DM (47ul)
+#define PIN_USB_DP (48ul)
 
 #define PIN_USB_HOST_ENABLE (51ul) // pin is actually not connected to anything
 
@@ -214,7 +221,7 @@ static const uint8_t SCL1 = PIN_WIRE1_SCL;
 /*  =========================
  *  ===== SERCOM DEFINITION
  *  =========================
-*/
+ */
 extern SERCOM sercom0;
 extern SERCOM sercom1;
 extern SERCOM sercom2;
@@ -222,8 +229,11 @@ extern SERCOM sercom3;
 extern SERCOM sercom4;
 extern SERCOM sercom5;
 
-//extern Uart Serial;
+// extern Uart Serial;
 extern Uart Serial1;
+
+// ADD
+extern Uart Serial2;
 
 #endif
 
@@ -242,13 +252,11 @@ extern Uart Serial1;
 //
 // SERIAL_PORT_HARDWARE_OPEN  Hardware serial ports which are open for use.  Their RX & TX
 //                            pins are NOT connected to anything by default.
-#define SERIAL_PORT_USBVIRTUAL      SerialUSB
-#define SERIAL_PORT_MONITOR         SerialUSB
+#define SERIAL_PORT_USBVIRTUAL SerialUSB
+#define SERIAL_PORT_MONITOR SerialUSB
 
 // Serial has no physical pins broken out, so it's not listed as HARDWARE port
-#define SERIAL_PORT_HARDWARE        Serial
-#define SERIAL_PORT_HARDWARE_OPEN   Serial
-
-
+#define SERIAL_PORT_HARDWARE Serial
+#define SERIAL_PORT_HARDWARE_OPEN Serial
 
 #endif /* _VARIANT_ROCKET_FLIGHT_COMPUTER */

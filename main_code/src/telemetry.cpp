@@ -77,7 +77,7 @@ void telemetry_init()
     Si446x_init();
 
     /**
-     *  This is the legal EIRP limit in this frequency band(434 Mhz) in the Uk 
+     *  This is the legal EIRP limit in this frequency band(434 Mhz) in the Uk
      */
     Si446x_setTxPower(22); // 10 mW/ 10 dbm.
 }
@@ -169,8 +169,19 @@ void send()
 void radio_send_data(dataPacket_t *dp)
 {
 
-    tx_data.longitude = dp->longitude;
-    tx_data.latitude = dp->latitude;
-    tx_data.altitude = dp->altitude;
-    send();
+    /*
+        tx_data.longitude = dp->longitude;
+        tx_data.latitude = dp->latitude;
+        tx_data.altitude = dp->altitude;
+        send();
+
+    */
+    Serial.print("Sending telemetry over Serial2\n");
+    Serial2.print("NW: ");
+    Serial2.print(dp->longitude);
+    Serial2.print(", ");
+    Serial2.print(dp->latitude);
+    Serial2.print("\nA: ");
+    Serial2.print(dp->altitude);
+    Serial2.print("\n");
 }

@@ -1,12 +1,12 @@
 /**
  * @file config.h
  * @author Medad Rufus Newman (mailto@medadnewman.co.uk)
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2021-06-22
- * 
+ *
  * @copyright Copyright (c) 2021
- * 
+ *
  */
 #ifdef __cplusplus
 extern "C"
@@ -30,7 +30,7 @@ extern "C"
 
 /* Config section */
 
-//please get these value by running H3LIS331DL_AdjVal Sketch.
+// please get these value by running H3LIS331DL_AdjVal Sketch.
 #define VAL_X_AXIS 203
 #define VAL_Y_AXIS 165
 #define VAL_Z_AXIS 141
@@ -45,7 +45,7 @@ extern "C"
 #define SI446X_SDN 31
 #define SI446X_IRQ 30 // This needs to be an interrupt pin
 
-#define ERROR_LED_PIN PIN_LED_BLUE   //Led Pin: Typical Arduino Board
+#define ERROR_LED_PIN PIN_LED_BLUE   // Led Pin: Typical Arduino Board
 #define ERROR_LED_LIGHTUP_STATE HIGH // the state that makes the led light up on your board, either low or high
 
 /*
@@ -64,7 +64,7 @@ extern "C"
 #define INTERVAL_BETWEEN_FLUSHING_FILE 10000UL
 
 /* poll intervals in milliseconds */
-#define INA226_SAMPLE_INTERVAL 50
+#define INA226_SAMPLE_INTERVAL 1000
 #define GNSS_SAMPLE_INTERVAL 50
 #define BARO_SAMPLE_INTERVAL 250
 #define IMU_SAMPLE_INTERVAL 10

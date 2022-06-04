@@ -4,7 +4,7 @@
  * version : 1.0
  * Date: 18/02/2020
  * Currently the code only polls the H2LIS100 acclerometer and prints out the values.
- * 
+ *
  * Rocket Flight computer modes
  * - Preflight mode - empty loop, constant running checks, listen to arming command, sent n seconds before launch
  * - Armed mode - Test ignition continueity. wait for launch command.
@@ -48,7 +48,7 @@
 // Select the serial port the project should use and communicate over
 // Some boards use SerialUSB, some use Serial
 //#define SERIAL SerialUSB //Sparkfun Samd21 Boards
-#define SERIAL Serial //Adafruit, other Samd21 Boards
+#define SERIAL Serial // Adafruit, other Samd21 Boards
 
 // Configuration of the flash chip pins and flash fatfs object.
 // You don't normally need to change these if using a Feather/Metro
@@ -81,7 +81,7 @@ Adafruit_W25Q16BV_FatFs fatfs(flash);
 //**************************************************************************
 // global variables
 //**************************************************************************
-//sensor objects
+// sensor objects
 H3LIS331DL h3lis;
 LSM9DS1 imu;
 MS5xxx sensor(&Wire);
@@ -91,11 +91,11 @@ TaskHandle_t Handle_SensorRead;
 TaskHandle_t Handle_monitorTask;
 TaskHandle_t Handle_TaskTelemetry;
 
-//time-sensitive util variables
+// time-sensitive util variables
 long starttime;
 long lasttime;
 
-//the one datapacket reference we iterate on every run
+// the one datapacket reference we iterate on every run
 dataPacket_t dp;
 
 typedef struct
@@ -127,6 +127,8 @@ void setup()
 {
   Wire.begin();
   Serial.begin(115200);
+  Serial2.begin(9600);
+
   sensor_init();
 
   Serial.println("=========================================");
@@ -134,6 +136,14 @@ void setup()
   Serial.println("Press 1 and enter at any time to dump results from flash and exit the main loop.");
   Serial.println("=========================================");
   starttime = millis();
+
+  /*
+  while (1)
+  {
+    Serial.println("TESTING\n");
+    Serial2.println("TESTING\n");
+  }
+  */
 
   setup_rtos();
 }
@@ -165,11 +175,11 @@ void sensor_init()
   imu.begin();
 }
 
-//read info into a datapacket
+// read info into a datapacket
 void read_info(dataPacket_t *dp)
 {
   dp->timestamp = millis();
-  //TODO: Add try-catch around the data collections, return a dummy value if failed.
+  // TODO: Add try-catch around the data collections, return a dummy value if failed.
   h3lis.readXYZ(&(dp->location[0]), &(dp->location[1]), &(dp->location[2]));
   h3lis.getAcceleration(dp->acc);
 
@@ -197,7 +207,7 @@ void read_info(dataPacket_t *dp)
   dp->mag[2] = imu.calcGyro(imu.mz);
 }
 
-//print to serial port
+// print to serial port
 void print_info(dataPacket_t *dp)
 {
   Serial.print(dp->gps_unix_time);
@@ -361,8 +371,8 @@ static void log_to_flash(void *arg)
 
 /**
  * @brief Read the sensors and save to flash
- * 
- * @param pvParameters 
+ *
+ * @param pvParameters
  */
 static void threadSensorRead(void *pvParameters)
 {
@@ -392,7 +402,7 @@ static void threadSensorRead(void *pvParameters)
 // Run time stats are generated from all task timing collected since startup
 // No easy way yet to clear the run time stats yet
 //*****************************************************************
-static char ptrTaskList[400]; //temporary string buffer for task stats
+static char ptrTaskList[400]; // temporary string buffer for task stats
 
 void taskMonitor(void *pvParameters)
 {
@@ -422,16 +432,16 @@ void taskMonitor(void *pvParameters)
     SERIAL.println("Task            ABS             %Util");
     SERIAL.println("****************************************************");
 
-    vTaskGetRunTimeStats(ptrTaskList); //save stats to char array
-    SERIAL.println(ptrTaskList);       //prints out already formatted stats
+    vTaskGetRunTimeStats(ptrTaskList); // save stats to char array
+    SERIAL.println(ptrTaskList);       // prints out already formatted stats
     SERIAL.flush();
 
     SERIAL.println("****************************************************");
     SERIAL.println("Task            State   Prio    Stack   Num     Core");
     SERIAL.println("****************************************************");
 
-    vTaskList(ptrTaskList);      //save stats to char array
-    SERIAL.println(ptrTaskList); //prints out already formatted stats
+    vTaskList(ptrTaskList);      // save stats to char array
+    SERIAL.println(ptrTaskList); // prints out already formatted stats
     SERIAL.flush();
 
     SERIAL.println("****************************************************");
