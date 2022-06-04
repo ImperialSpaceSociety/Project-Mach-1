@@ -1,6 +1,8 @@
 - Ground station:
 	https://eu.mouser.com/ProductDetail/DIGI/XBP9B-DPST-041?qs=sGAEpiMZZMueQxo7L%2FBPyGGKstDE3Y5Sx0Ku57CdA00%3D&countrycode=GB&currencycode=GBP
 	
+	Datasheet: https://hub.digi.com/support/products/digi-xbee/digi-xbee-pro-900hp/
+	
 - Rocket:
 	https://eu.mouser.com/ProductDetail/DIGI/XBP9XT-DMRS-001?qs=sGAEpiMZZMsyYdr3R27aV7SQSmvFx974c3AdoJvZNI0%3D&countrycode=GB&currencycode=GBP
 	
